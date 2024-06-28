@@ -28,18 +28,19 @@ vlib work
 
 # compile source files
 vlog ../../verilog-ethernet/rtl/*.v
-#vlog ../../verilog-ethernet/tb/test_udp_64.v
+vlog ../../verilog-ethernet/lib/axis/rtl/*.v
+vlog ../../verilog-ethernet/tb/test_udp_64.v
 
 
 # start and run simulation
-vsim -voptargs=+acc work.tb
+vsim -voptargs=+acc work.test_udp_64
 
 view list
 view wave
 
 -- display input and output signals as hexidecimal values
 # Diplays All Signals recursively
-add wave -hex -r /tb/*
+add wave -hex -r /test_udp_64/*
 #add wave -noupdate -divider -height 32 "Clock Divider"
 #add wave -hex /tb/dut/clk
 
