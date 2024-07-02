@@ -33,7 +33,7 @@
 
 
 % ----- Identifying Information -----------------------------------------------
-\newcommand{\myassignment}{Lab 2: Complex Combinational Logic and Debugging : Hardware-based Data Encryption Standard (DES-ECB/DES-CBC)}
+\newcommand{\myassignment}{Lab 2: Complex Combinational Logic and Debugging : Hardware-based Secure Hash Algorithm}
 \newcommand{\myduedate}{Assigned: Monday 9/25; Due \textbf{Monday 10/16} (midnight)}
 \newcommand{\myinstructor}{Instructor: James E. Stine, Jr.}
 % -----------------------------------------------------------------------------
@@ -63,13 +63,10 @@ favor because we
 could use
 digital logic to help break into these devices.
 
-For this laboratory, we are going to develop a DES crypto-based
-hardware implementation
-in two parts.  The first part will involve designing the
-DES encryption and decryption units found in this laboratory,
-and second laboratory which we will
-use for our project will be a cracker or a
-device that can break into the device via hardware.
+For this laboratory, we are going to develop a hardware-based Secure Hash Algorith (SHA)
+implementation
+in two parts.  The primary part of this laboratory will involve designing the 
+SHA algorithm found in this laboratory.
 Security is not only important but many people feel that its one of the most important
 topics that engineers
 need to learn in the 21st century.  Therefore, I
@@ -77,36 +74,38 @@ believe this laboratory will be a great experience in learning some
 security and the basics related to making sure someone does not have
 unwanted guests within their systems.  The ideas can also be
 translated easily into more advanced cryptographic systems, such as
-Advanced Encryption Standard (AES) and SHA 256 hash function that is
+Advanced Encryption Standard (AES) function that is
 commonly used in bitcoin and web-based authentication.
 
-DES is an example of a block cipher, which takes as its input a fixed
-length of plaintext and converts it to a fixed length ciphertext.
-The plaintext and ciphertexts are both $64$-bit in DES.  DES also
-takes an additional $56$-bit key as it input.  The key scrambles the
-plaintext such that different keys with the same plaintext produce
-different ciphertexts.  In addition to supporting encryption,
-DES decrypts the ciphertext into the orignal plaintext using the \textbf{same}
-key.  This is called symmetric encryption as the same key is used
-for both encryption and decryption.
+The most widely used cryptographic operations are encryption and
+decryption for secrecy, hashing for integrity, and signatures for
+authenticity. Pure software implementations are slow, power-hungry,
+and vulnerable to timing attacks that can be exploited
+remotely. Modern instruction sets provide dedicated cryptography
+instructions that are faster, simpler, and provide better performance
+than pure software implementations. Moreover, having cryptographic
+instructions promotes standardized software and reduced code size,
+which helps reduce the risk of inadvertent security flaws. 
 
-%% The DES uses a symmetric-key algorithm for the encryption of data.
-%% Symmetric cryptography just means that the same key is used both for
-%% encryption and decryption.  Although symmetric-key algorithms can use
-%% the keys both ways, they sometimes are different using some simple
-%% transformations between the two.
-%% % Add stuff on ciphertext and plaintext
-%% DES uses a $56$-bit key and a $64$-bit block size.  It
-%% also computes the cipher or translated message in $16$
-%% rounds.
-%% The DES encryption algorithm takes an $64$-bit block of plaintext
-%% (e.g., \verb!1011_1101!) and a $56$-bit key as input and
-%% produces an $64$-bit block of ciphertext as output.
-%% Similarly, the DES decryption algorithm takes an
-%% $64$-bit block of ciphertext and the \textbf{same}
-%% $56$-bit key used to produce that
-%% ciphertext as input and produces the original $8$-bit block of
-%% plaintext.
+
+The Secure Hash Algorithm 2 (SHA-2) is the hash function used in most
+internet protocols, such as TLS, SSL, PGP, etc., as well as to verify
+transactions in Bitcoin and other cryptocurrencies. It was designed by
+the US National Security Agency (NSA) and was first published in
+2001. It is now a standard maintained by the National Institute of
+Standards and Technology~\cite{nist-sha}.
+SHA-2 generates $224$-, $256$-, $384$-, or $512$-bit message digests,
+replacing the SHA-1, MD4, and MD5 algorithms that produced shorter
+digests and are no longer considered secure. 
+Other flavors of SHA-2 are similar but truncate the digest to
+fewer bits after it is computed, trading compactness for reduced
+security. 
+
+
+
+
+
+
 
 The DES encryption algorithm involves 
 two permutations (P-boxes), which we call initial and final permutations, and
