@@ -240,10 +240,7 @@ module stimulus;
 	.rx_lfc_en(rx_lfc_en),
 	.tx_lfc_resend(tx_lfc_resend),
 	.tx_lfc_req(tx_lfc_req)	
-	);
-
-
-   
+	);   
 
    // 1 ns clock
    initial 
