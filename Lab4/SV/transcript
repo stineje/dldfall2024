@@ -1,7 +1,21 @@
+# //  Questa Sim-64
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
 # do run.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 09:54:58 on Jun 28,2024
-# vlog ../../verilog-ethernet/rtl/arp.v ../../verilog-ethernet/rtl/arp_cache.v ../../verilog-ethernet/rtl/arp_eth_rx.v ../../verilog-ethernet/rtl/arp_eth_tx.v ../../verilog-ethernet/rtl/axis_baser_rx_64.v ../../verilog-ethernet/rtl/axis_baser_tx_64.v ../../verilog-ethernet/rtl/axis_eth_fcs.v ../../verilog-ethernet/rtl/axis_eth_fcs_check.v ../../verilog-ethernet/rtl/axis_eth_fcs_check_64.v ../../verilog-ethernet/rtl/axis_eth_fcs_insert.v ../../verilog-ethernet/rtl/axis_eth_fcs_insert_64.v ../../verilog-ethernet/rtl/axis_gmii_rx.v ../../verilog-ethernet/rtl/axis_gmii_tx.v ../../verilog-ethernet/rtl/axis_xgmii_rx_32.v ../../verilog-ethernet/rtl/axis_xgmii_rx_64.v ../../verilog-ethernet/rtl/axis_xgmii_tx_32.v ../../verilog-ethernet/rtl/axis_xgmii_tx_64.v ../../verilog-ethernet/rtl/eth_arb_mux.v ../../verilog-ethernet/rtl/eth_axis_rx.v ../../verilog-ethernet/rtl/eth_axis_tx.v ../../verilog-ethernet/rtl/eth_demux.v ../../verilog-ethernet/rtl/eth_mac_10g.v ../../verilog-ethernet/rtl/eth_mac_10g_fifo.v ../../verilog-ethernet/rtl/eth_mac_1g.v ../../verilog-ethernet/rtl/eth_mac_1g_fifo.v ../../verilog-ethernet/rtl/eth_mac_1g_gmii.v ../../verilog-ethernet/rtl/eth_mac_1g_gmii_fifo.v ../../verilog-ethernet/rtl/eth_mac_1g_rgmii.v ../../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v ../../verilog-ethernet/rtl/eth_mac_mii.v ../../verilog-ethernet/rtl/eth_mac_mii_fifo.v ../../verilog-ethernet/rtl/eth_mac_phy_10g.v ../../verilog-ethernet/rtl/eth_mac_phy_10g_fifo.v ../../verilog-ethernet/rtl/eth_mac_phy_10g_rx.v ../../verilog-ethernet/rtl/eth_mac_phy_10g_tx.v ../../verilog-ethernet/rtl/eth_mux.v ../../verilog-ethernet/rtl/eth_phy_10g.v ../../verilog-ethernet/rtl/eth_phy_10g_rx.v ../../verilog-ethernet/rtl/eth_phy_10g_rx_ber_mon.v ../../verilog-ethernet/rtl/eth_phy_10g_rx_frame_sync.v ../../verilog-ethernet/rtl/eth_phy_10g_rx_if.v ../../verilog-ethernet/rtl/eth_phy_10g_rx_watchdog.v ../../verilog-ethernet/rtl/eth_phy_10g_tx.v ../../verilog-ethernet/rtl/eth_phy_10g_tx_if.v ../../verilog-ethernet/rtl/gmii_phy_if.v ../../verilog-ethernet/rtl/iddr.v ../../verilog-ethernet/rtl/ip.v ../../verilog-ethernet/rtl/ip_64.v ../../verilog-ethernet/rtl/ip_arb_mux.v ../../verilog-ethernet/rtl/ip_complete.v ../../verilog-ethernet/rtl/ip_complete_64.v ../../verilog-ethernet/rtl/ip_demux.v ../../verilog-ethernet/rtl/ip_eth_rx.v ../../verilog-ethernet/rtl/ip_eth_rx_64.v ../../verilog-ethernet/rtl/ip_eth_tx.v ../../verilog-ethernet/rtl/ip_eth_tx_64.v ../../verilog-ethernet/rtl/ip_mux.v ../../verilog-ethernet/rtl/lfsr.v ../../verilog-ethernet/rtl/mac_ctrl_rx.v ../../verilog-ethernet/rtl/mac_ctrl_tx.v ../../verilog-ethernet/rtl/mac_pause_ctrl_rx.v ../../verilog-ethernet/rtl/mac_pause_ctrl_tx.v ../../verilog-ethernet/rtl/mii_phy_if.v ../../verilog-ethernet/rtl/oddr.v ../../verilog-ethernet/rtl/ptp_clock.v ../../verilog-ethernet/rtl/ptp_clock_cdc.v ../../verilog-ethernet/rtl/ptp_perout.v ../../verilog-ethernet/rtl/ptp_tag_insert.v ../../verilog-ethernet/rtl/ptp_td_leaf.v ../../verilog-ethernet/rtl/ptp_td_phc.v ../../verilog-ethernet/rtl/ptp_td_rel2tod.v ../../verilog-ethernet/rtl/ptp_ts_extract.v ../../verilog-ethernet/rtl/rgmii_phy_if.v ../../verilog-ethernet/rtl/ssio_ddr_in.v ../../verilog-ethernet/rtl/ssio_ddr_in_diff.v ../../verilog-ethernet/rtl/ssio_ddr_out.v ../../verilog-ethernet/rtl/ssio_ddr_out_diff.v ../../verilog-ethernet/rtl/ssio_sdr_in.v ../../verilog-ethernet/rtl/ssio_sdr_in_diff.v ../../verilog-ethernet/rtl/ssio_sdr_out.v ../../verilog-ethernet/rtl/ssio_sdr_out_diff.v ../../verilog-ethernet/rtl/udp.v ../../verilog-ethernet/rtl/udp_64.v ../../verilog-ethernet/rtl/udp_arb_mux.v ../../verilog-ethernet/rtl/udp_checksum_gen.v ../../verilog-ethernet/rtl/udp_checksum_gen_64.v ../../verilog-ethernet/rtl/udp_complete.v ../../verilog-ethernet/rtl/udp_complete_64.v ../../verilog-ethernet/rtl/udp_demux.v ../../verilog-ethernet/rtl/udp_ip_rx.v ../../verilog-ethernet/rtl/udp_ip_rx_64.v ../../verilog-ethernet/rtl/udp_ip_tx.v ../../verilog-ethernet/rtl/udp_ip_tx_64.v ../../verilog-ethernet/rtl/udp_mux.v ../../verilog-ethernet/rtl/xgmii_baser_dec_64.v ../../verilog-ethernet/rtl/xgmii_baser_enc_64.v ../../verilog-ethernet/rtl/xgmii_deinterleave.v ../../verilog-ethernet/rtl/xgmii_interleave.v 
+# Start time: 11:52:16 on Jul 02,2024
+# vlog -reportprogress 300 ../../verilog-ethernet/rtl/arp.v ../../verilog-ethernet/rtl/arp_cache.v ../../verilog-ethernet/rtl/arp_eth_rx.v ../../verilog-ethernet/rtl/arp_eth_tx.v ../../verilog-ethernet/rtl/axis_baser_rx_64.v ../../verilog-ethernet/rtl/axis_baser_tx_64.v ../../verilog-ethernet/rtl/axis_eth_fcs.v ../../verilog-ethernet/rtl/axis_eth_fcs_check.v ../../verilog-ethernet/rtl/axis_eth_fcs_check_64.v ../../verilog-ethernet/rtl/axis_eth_fcs_insert.v ../../verilog-ethernet/rtl/axis_eth_fcs_insert_64.v ../../verilog-ethernet/rtl/axis_gmii_rx.v ../../verilog-ethernet/rtl/axis_gmii_tx.v ../../verilog-ethernet/rtl/axis_xgmii_rx_32.v ../../verilog-ethernet/rtl/axis_xgmii_rx_64.v ../../verilog-ethernet/rtl/axis_xgmii_tx_32.v ../../verilog-ethernet/rtl/axis_xgmii_tx_64.v ../../verilog-ethernet/rtl/eth_arb_mux.v ../../verilog-ethernet/rtl/eth_axis_rx.v ../../verilog-ethernet/rtl/eth_axis_tx.v ../../verilog-ethernet/rtl/eth_demux.v ../../verilog-ethernet/rtl/eth_mac_10g.v ../../verilog-ethernet/rtl/eth_mac_10g_fifo.v ../../verilog-ethernet/rtl/eth_mac_1g.v ../../verilog-ethernet/rtl/eth_mac_1g_fifo.v ../../verilog-ethernet/rtl/eth_mac_1g_gmii.v ../../verilog-ethernet/rtl/eth_mac_1g_gmii_fifo.v ../../verilog-ethernet/rtl/eth_mac_1g_rgmii.v ../../verilog-ethernet/rtl/eth_mac_1g_rgmii_fifo.v ../../verilog-ethernet/rtl/eth_mac_mii.v ../../verilog-ethernet/rtl/eth_mac_mii_fifo.v ../../verilog-ethernet/rtl/eth_mac_phy_10g.v ../../verilog-ethernet/rtl/eth_mac_phy_10g_fifo.v ../../verilog-ethernet/rtl/eth_mac_phy_10g_rx.v ../../verilog-ethernet/rtl/eth_mac_phy_10g_tx.v ../../verilog-ethernet/rtl/eth_mux.v ../../verilog-ethernet/rtl/eth_phy_10g.v ../../verilog-ethernet/rtl/eth_phy_10g_rx.v ../../verilog-ethernet/rtl/eth_phy_10g_rx_ber_mon.v ../../verilog-ethernet/rtl/eth_phy_10g_rx_frame_sync.v ../../verilog-ethernet/rtl/eth_phy_10g_rx_if.v ../../verilog-ethernet/rtl/eth_phy_10g_rx_watchdog.v ../../verilog-ethernet/rtl/eth_phy_10g_tx.v ../../verilog-ethernet/rtl/eth_phy_10g_tx_if.v ../../verilog-ethernet/rtl/gmii_phy_if.v ../../verilog-ethernet/rtl/iddr.v ../../verilog-ethernet/rtl/ip.v ../../verilog-ethernet/rtl/ip_64.v ../../verilog-ethernet/rtl/ip_arb_mux.v ../../verilog-ethernet/rtl/ip_complete.v ../../verilog-ethernet/rtl/ip_complete_64.v ../../verilog-ethernet/rtl/ip_demux.v ../../verilog-ethernet/rtl/ip_eth_rx.v ../../verilog-ethernet/rtl/ip_eth_rx_64.v ../../verilog-ethernet/rtl/ip_eth_tx.v ../../verilog-ethernet/rtl/ip_eth_tx_64.v ../../verilog-ethernet/rtl/ip_mux.v ../../verilog-ethernet/rtl/lfsr.v ../../verilog-ethernet/rtl/mac_ctrl_rx.v ../../verilog-ethernet/rtl/mac_ctrl_tx.v ../../verilog-ethernet/rtl/mac_pause_ctrl_rx.v ../../verilog-ethernet/rtl/mac_pause_ctrl_tx.v ../../verilog-ethernet/rtl/mii_phy_if.v ../../verilog-ethernet/rtl/oddr.v ../../verilog-ethernet/rtl/ptp_clock.v ../../verilog-ethernet/rtl/ptp_clock_cdc.v ../../verilog-ethernet/rtl/ptp_perout.v ../../verilog-ethernet/rtl/ptp_tag_insert.v ../../verilog-ethernet/rtl/ptp_td_leaf.v ../../verilog-ethernet/rtl/ptp_td_phc.v ../../verilog-ethernet/rtl/ptp_td_rel2tod.v ../../verilog-ethernet/rtl/ptp_ts_extract.v ../../verilog-ethernet/rtl/rgmii_phy_if.v ../../verilog-ethernet/rtl/ssio_ddr_in.v ../../verilog-ethernet/rtl/ssio_ddr_in_diff.v ../../verilog-ethernet/rtl/ssio_ddr_out.v ../../verilog-ethernet/rtl/ssio_ddr_out_diff.v ../../verilog-ethernet/rtl/ssio_sdr_in.v ../../verilog-ethernet/rtl/ssio_sdr_in_diff.v ../../verilog-ethernet/rtl/ssio_sdr_out.v ../../verilog-ethernet/rtl/ssio_sdr_out_diff.v ../../verilog-ethernet/rtl/udp.v ../../verilog-ethernet/rtl/udp_64.v ../../verilog-ethernet/rtl/udp_arb_mux.v ../../verilog-ethernet/rtl/udp_checksum_gen.v ../../verilog-ethernet/rtl/udp_checksum_gen_64.v ../../verilog-ethernet/rtl/udp_complete.v ../../verilog-ethernet/rtl/udp_complete_64.v ../../verilog-ethernet/rtl/udp_demux.v ../../verilog-ethernet/rtl/udp_ip_rx.v ../../verilog-ethernet/rtl/udp_ip_rx_64.v ../../verilog-ethernet/rtl/udp_ip_tx.v ../../verilog-ethernet/rtl/udp_ip_tx_64.v ../../verilog-ethernet/rtl/udp_mux.v ../../verilog-ethernet/rtl/xgmii_baser_dec_64.v ../../verilog-ethernet/rtl/xgmii_baser_enc_64.v ../../verilog-ethernet/rtl/xgmii_deinterleave.v ../../verilog-ethernet/rtl/xgmii_interleave.v 
 # -- Compiling module arp
 # -- Compiling module arp_cache
 # -- Compiling module arp_eth_rx
@@ -138,16 +152,158 @@
 # 	udp_mux
 # 	xgmii_deinterleave
 # 	xgmii_interleave
-# End time: 09:54:59 on Jun 28,2024, Elapsed time: 0:00:01
+# End time: 11:52:16 on Jul 02,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.tb 
-# Start time: 09:54:59 on Jun 28,2024
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 11:52:16 on Jul 02,2024
+# vlog -reportprogress 300 ../../verilog-ethernet/lib/axis/rtl/arbiter.v ../../verilog-ethernet/lib/axis/rtl/axis_adapter.v ../../verilog-ethernet/lib/axis/rtl/axis_arb_mux.v ../../verilog-ethernet/lib/axis/rtl/axis_async_fifo.v ../../verilog-ethernet/lib/axis/rtl/axis_async_fifo_adapter.v ../../verilog-ethernet/lib/axis/rtl/axis_broadcast.v ../../verilog-ethernet/lib/axis/rtl/axis_cobs_decode.v ../../verilog-ethernet/lib/axis/rtl/axis_cobs_encode.v ../../verilog-ethernet/lib/axis/rtl/axis_crosspoint.v ../../verilog-ethernet/lib/axis/rtl/axis_demux.v ../../verilog-ethernet/lib/axis/rtl/axis_fifo.v ../../verilog-ethernet/lib/axis/rtl/axis_fifo_adapter.v ../../verilog-ethernet/lib/axis/rtl/axis_frame_join.v ../../verilog-ethernet/lib/axis/rtl/axis_frame_len.v ../../verilog-ethernet/lib/axis/rtl/axis_frame_length_adjust.v ../../verilog-ethernet/lib/axis/rtl/axis_frame_length_adjust_fifo.v ../../verilog-ethernet/lib/axis/rtl/axis_ll_bridge.v ../../verilog-ethernet/lib/axis/rtl/axis_mux.v ../../verilog-ethernet/lib/axis/rtl/axis_pipeline_fifo.v ../../verilog-ethernet/lib/axis/rtl/axis_pipeline_register.v ../../verilog-ethernet/lib/axis/rtl/axis_ram_switch.v ../../verilog-ethernet/lib/axis/rtl/axis_rate_limit.v ../../verilog-ethernet/lib/axis/rtl/axis_register.v ../../verilog-ethernet/lib/axis/rtl/axis_srl_fifo.v ../../verilog-ethernet/lib/axis/rtl/axis_srl_register.v ../../verilog-ethernet/lib/axis/rtl/axis_stat_counter.v ../../verilog-ethernet/lib/axis/rtl/axis_switch.v ../../verilog-ethernet/lib/axis/rtl/axis_tap.v ../../verilog-ethernet/lib/axis/rtl/ll_axis_bridge.v ../../verilog-ethernet/lib/axis/rtl/priority_encoder.v ../../verilog-ethernet/lib/axis/rtl/sync_reset.v 
+# -- Compiling module arbiter
+# -- Compiling module axis_adapter
+# -- Compiling module axis_arb_mux
+# -- Compiling module axis_async_fifo
+# -- Compiling module axis_async_fifo_adapter
+# -- Compiling module axis_broadcast
+# -- Compiling module axis_cobs_decode
+# -- Compiling module axis_cobs_encode
+# -- Compiling module axis_crosspoint
+# -- Compiling module axis_demux
+# -- Compiling module axis_fifo
+# -- Compiling module axis_fifo_adapter
+# -- Compiling module axis_frame_join
+# -- Compiling module axis_frame_len
+# -- Compiling module axis_frame_length_adjust
+# -- Compiling module axis_frame_length_adjust_fifo
+# -- Compiling module axis_ll_bridge
+# -- Compiling module axis_mux
+# -- Compiling module axis_pipeline_fifo
+# -- Compiling module axis_pipeline_register
+# -- Compiling module axis_ram_switch
+# -- Compiling module axis_rate_limit
+# -- Compiling module axis_register
+# -- Compiling module axis_srl_fifo
+# -- Compiling module axis_srl_register
+# -- Compiling module axis_stat_counter
+# -- Compiling module axis_switch
+# -- Compiling module axis_tap
+# -- Compiling module ll_axis_bridge
+# -- Compiling module priority_encoder
+# -- Compiling module sync_reset
+# 
+# Top level modules:
+# 	axis_arb_mux
+# 	axis_async_fifo_adapter
+# 	axis_broadcast
+# 	axis_cobs_decode
+# 	axis_cobs_encode
+# 	axis_crosspoint
+# 	axis_demux
+# 	axis_fifo_adapter
+# 	axis_frame_join
+# 	axis_frame_len
+# 	axis_frame_length_adjust_fifo
+# 	axis_ll_bridge
+# 	axis_mux
+# 	axis_pipeline_fifo
+# 	axis_pipeline_register
+# 	axis_ram_switch
+# 	axis_rate_limit
+# 	axis_srl_fifo
+# 	axis_srl_register
+# 	axis_stat_counter
+# 	axis_switch
+# 	axis_tap
+# 	ll_axis_bridge
+# 	sync_reset
+# End time: 11:52:17 on Jul 02,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 11:52:17 on Jul 02,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 11:52:17 on Jul 02,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 11:52:17 on Jul 02,2024
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: (vopt-13130) Failed to find design unit tb.
-#         Searched libraries:
-#             work
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 09:54:59 on Jun 28,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+# ** Note: (vopt-143) Recognized 1 FSM in module "axis_gmii_tx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axis_gmii_rx(fast)".
+# ** Warning: tb.sv(88): (vopt-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 98, found 33.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_rx_pfc_en'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_rx_pfc_opcode'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_rx_lfc_en'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_rx_lfc_opcode'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_refresh'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_quanta'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_en'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_opcode'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_eth_type'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_eth_src'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_eth_dst'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_refresh'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_quanta'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_en'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_opcode'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_eth_type'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_eth_src'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_eth_dst'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_enable'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_forward'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_opcode_pfc'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_opcode_pfc'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_opcode_lfc'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_opcode_lfc'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_eth_type'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_eth_src'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_eth_src'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_eth_dst_ucast'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_eth_dst_ucast'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_eth_dst_mcast'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_eth_dst_mcast'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_rx_enable'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_enable'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_ifg'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_pfc_paused'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_pfc_xoff'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_pfc_xon'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_pfc_pkt'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_lfc_paused'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_lfc_xoff'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_lfc_xon'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_lfc_pkt'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_pfc_paused'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_pfc_xoff'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_pfc_xon'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_pfc_pkt'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_lfc_paused'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_lfc_xoff'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_lfc_xon'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_lfc_pkt'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_mcf'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_mcf'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'tx_pause_ack'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'tx_pause_req'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'tx_lfc_pause_en'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'rx_pfc_ack'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'rx_pfc_req'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'rx_pfc_en'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'tx_pfc_resend'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'tx_pfc_req'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'rx_lfc_ack'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'rx_lfc_req'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'rx_lfc_en'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'tx_lfc_resend'.
+# ** Warning: tb.sv(88): (vopt-2718) [TFMPC] - Missing connection for port 'tx_lfc_req'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=66.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# End time: 11:52:43 on Jul 02,2024, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 66
