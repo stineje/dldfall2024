@@ -11,17 +11,17 @@ z2
 cModel Technology
 Z0 d/home/jstine/ecen2233/dldfall2024/Lab4/SV
 T_opt
-!s110 1719949173
-VF81eVin9PkHS:1X@IBPVl1
+!s110 1719949512
+VGe^^Wo<PBkOYgLeV;e=<d3
 04 8 4 work stimulus fast 0
-=1-cc483a29a3f0-66845775-1e03c-a851
+=1-cc483a29a3f0-668458c7-e72f2-b3e2
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;2021.3_1;73
 varbiter
-Z2 !s110 1719949172
+Z2 !s110 1719949511
 !i10b 1
 !s100 U7Vi8F^LYm^aUAjWPz;302
 I<A8fXWP>2zY@PY9NHh=P41

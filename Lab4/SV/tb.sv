@@ -14,10 +14,7 @@ module stimulus;
    parameter TX_USER_WIDTH = (TX_PTP_TAG_ENABLE ? TX_PTP_TAG_WIDTH : 0) + 1;
    parameter RX_USER_WIDTH = (RX_PTP_TS_ENABLE ? RX_PTP_TS_WIDTH : 0) + 1;
    
-   // Inputs
-   logic                        rst;
-   logic [7:0] 		        current_test = 0;
-   
+   // Inputs (20)
    logic 		        rx_clk;
    logic 		        rx_rst;
    logic 		        tx_clk;
@@ -37,7 +34,7 @@ module stimulus;
    logic 		        tx_mii_select = 0;
    logic [7:0] 		        ifg_delay = 0;
    
-   // Outputs
+   // Outputs (15)
    logic 		        tx_axis_tready;
    logic [DATA_WIDTH-1:0]       rx_axis_tdata;
    logic 		        rx_axis_tvalid;
@@ -130,9 +127,6 @@ module stimulus;
    integer 			desc3;
    integer 			i;  
    integer 			j;
-
-   assign rx_rst = rst;
-   assign tx_rst = rst;   
 
    eth_mac_1g #(
 		.DATA_WIDTH(DATA_WIDTH),
@@ -275,8 +269,9 @@ module stimulus;
 
    initial
      begin
-	#0 rst = 1'b1;
-	#142 rst = 1'b0;
+	#0 tx_rst = 1'b1;	
+	#0 rx_rst = 1'b1;
+	#142 rx_rst = 1'b0;
      end
 	  
 
