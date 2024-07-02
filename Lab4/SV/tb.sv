@@ -55,7 +55,69 @@ module stimulus;
    logic 			rx_error_bad_frame;
    logic 			rx_error_bad_fcs;
 
+   // Status
+   logic 			stat_tx_mcf;
+   logic 			stat_rx_mcf;
+   logic 			stat_tx_lfc_pkt;
+   logic 			stat_tx_lfc_xon;
+   logic 			stat_tx_lfc_xoff;
+   logic 			stat_tx_lfc_paused;
+   logic 			stat_tx_pfc_pkt;
+   logic [7:0] 			stat_tx_pfc_xon;
+   logic [7:0] 			stat_tx_pfc_xoff;
+   logic [7:0] 			stat_tx_pfc_paused;
+   logic 			stat_rx_lfc_pkt;
+   logic 			stat_rx_lfc_xon;
+   logic 			stat_rx_lfc_xoff;
+   logic 			stat_rx_lfc_paused;
+   logic 			stat_rx_pfc_pkt;
+   logic [7:0] 			stat_rx_pfc_xon;
+   logic [7:0] 			stat_rx_pfc_xoff;
+   logic [7:0] 			stat_rx_pfc_paused;   
+   
+   // Configuration
+   logic [7:0] 			cfg_ifg;
+   logic 			cfg_tx_enable;
+   logic 			cfg_rx_enable;
+   logic [47:0] 		cfg_mcf_rx_eth_dst_mcast;
+   logic 			cfg_mcf_rx_check_eth_dst_mcast;
+   logic [47:0] 		cfg_mcf_rx_eth_dst_ucast;
+   logic 			cfg_mcf_rx_check_eth_dst_ucast;
+   logic [47:0] 		cfg_mcf_rx_eth_src;
+   logic 			cfg_mcf_rx_check_eth_src;
+   logic [15:0] 		cfg_mcf_rx_eth_type;
+   logic [15:0] 		cfg_mcf_rx_opcode_lfc;
+   logic 			cfg_mcf_rx_check_opcode_lfc;
+   logic [15:0] 		cfg_mcf_rx_opcode_pfc;
+   logic 			cfg_mcf_rx_check_opcode_pfc;
+   logic 			cfg_mcf_rx_forward;
+   logic 			cfg_mcf_rx_enable;
+   logic [47:0] 		cfg_tx_lfc_eth_dst;
+   logic [47:0] 		cfg_tx_lfc_eth_src;
+   logic [15:0] 		cfg_tx_lfc_eth_type;
+   logic [15:0] 		cfg_tx_lfc_opcode;
+   logic 			cfg_tx_lfc_en;
+   logic [15:0] 		cfg_tx_lfc_quanta;
+   logic [15:0] 		cfg_tx_lfc_refresh;
+   logic [47:0] 		cfg_tx_pfc_eth_dst;
+   logic [47:0] 		cfg_tx_pfc_eth_src;
+   logic [15:0] 		cfg_tx_pfc_eth_type;
+   logic [15:0] 		cfg_tx_pfc_opcode;
+   logic 			cfg_tx_pfc_en;
+   logic [8*16-1:0] 		cfg_tx_pfc_quanta;
+   logic [8*16-1:0] 		cfg_tx_pfc_refresh;
+   logic [15:0] 		cfg_rx_lfc_opcode;
+   logic 			cfg_rx_lfc_en;
+   logic [15:0] 		cfg_rx_pfc_opcode;
+   logic 			cfg_rx_pfc_enq;
 
+   // Priority Flow Control (PFC) (IEEE 802.3 annex 31D PFC)
+   logic [7:0] 			tx_pfc_req;   
+   logic 			tx_pfc_resend;   
+   logic [7:0] 			rx_pfc_en;   
+   logic [7:0] 			rx_pfc_req;   
+   logic [7:0] 			rx_pfc_ack;   
+				
    logic 			clk;
    logic [31:0] 		errors;
    logic [31:0] 		vectornum;
@@ -117,17 +179,88 @@ module stimulus;
 	.tx_error_underflow(tx_error_underflow),
 	.rx_start_packet(rx_start_packet),
 	.rx_error_bad_frame(rx_error_bad_frame),
-	.rx_error_bad_fcs(rx_error_bad_fcs)
+	.rx_error_bad_fcs(rx_error_bad_fcs),
 	//.ifg_delay(ifg_delay)
-	);      
+	.cfg_rx_pfc_en(cfg_rx_pfc_en),
+	.cfg_rx_pfc_opcode(cfg_rx_pfc_opcode),
+	.cfg_rx_lfc_en(cfg_rx_lfc_en),
+	.cfg_rx_lfc_opcode(cfg_rx_lfc_opcode),
+	.cfg_tx_pfc_refresh(cfg_tx_pfc_refresh),
+	.cfg_tx_pfc_quanta(cfg_tx_pfc_quanta),
+	.cfg_tx_pfc_en(cfg_tx_pfc_en),
+	.cfg_tx_pfc_opcode(cfg_tx_pfc_opcode),
+	.cfg_tx_pfc_eth_type(cfg_tx_pfc_eth_type),
+	.cfg_tx_pfc_eth_src(cfg_tx_pfc_eth_src),
+	.cfg_tx_pfc_eth_dst(cfg_tx_pfc_eth_dst),
+	.cfg_tx_lfc_refresh(cfg_tx_lfc_refresh),
+	.cfg_tx_lfc_quanta(cfg_tx_lfc_quanta),
+	.cfg_tx_lfc_en(cfg_tx_lfc_en),
+	.cfg_tx_lfc_opcode(cfg_tx_lfc_opcode),
+	.cfg_tx_lfc_eth_type(cfg_tx_lfc_eth_type),
+	.cfg_tx_lfc_eth_src(cfg_tx_lfc_eth_src),
+	.cfg_tx_lfc_eth_dst(cfg_tx_lfc_eth_dst),
+	.cfg_mcf_rx_enable(cfg_mcf_rx_enable),
+	.cfg_mcf_rx_forward(cfg_mcf_rx_forward),
+	.cfg_mcf_rx_check_opcode_pfc(cfg_mcf_rx_check_opcode_pfc),
+	.cfg_mcf_rx_opcode_pfc(cfg_mcf_rx_opcode_pfc),
+	.cfg_mcf_rx_check_opcode_lfc(cfg_mcf_rx_check_opcode_lfc),
+	.cfg_mcf_rx_opcode_lfc(cfg_mcf_rx_opcode_lfc),
+	.cfg_mcf_rx_eth_type(cfg_mcf_rx_eth_type),
+	.cfg_mcf_rx_check_eth_src(cfg_mcf_rx_check_eth_src),
+	.cfg_mcf_rx_eth_src(cfg_mcf_rx_eth_src),
+	.cfg_mcf_rx_check_eth_dst_ucast(cfg_mcf_rx_check_eth_dst_ucast),
+	.cfg_mcf_rx_eth_dst_ucast(cfg_mcf_rx_eth_dst_ucast),
+	.cfg_mcf_rx_check_eth_dst_mcast(cfg_mcf_rx_check_eth_dst_mcast),
+	.cfg_mcf_rx_eth_dst_mcast(cfg_mcf_rx_eth_dst_mcast),
+	.cfg_rx_enable(cfg_rx_enable),
+	.cfg_tx_enable(cfg_tx_enable),
+	.cfg_ifg(cfg_ifg),
+	.stat_rx_pfc_paused(stat_rx_pfc_paused),
+	.stat_rx_pfc_xoff(stat_rx_pfc_xoff),
+	.stat_rx_pfc_xon(stat_rx_pfc_xon),
+	.stat_rx_pfc_pkt(stat_rx_pfc_pkt),
+	.stat_rx_lfc_paused(stat_rx_lfc_paused),
+	.stat_rx_lfc_xoff(stat_rx_lfc_xoff),
+	.stat_rx_lfc_xon(stat_rx_lfc_xon),
+	.stat_rx_lfc_pkt(stat_rx_lfc_pkt),
+	.stat_tx_pfc_paused(stat_tx_pfc_paused),
+	.stat_tx_pfc_xoff(stat_tx_pfc_xoff),
+	.stat_tx_pfc_xon(stat_tx_pfc_xon),
+	.stat_tx_pfc_pkt(stat_tx_pfc_pkt),
+	.stat_tx_lfc_paused(stat_tx_lfc_paused),
+	.stat_tx_lfc_xoff(stat_tx_lfc_xoff),
+	.stat_tx_lfc_xon(stat_tx_lfc_xon),
+	.stat_tx_lfc_pkt(stat_tx_lfc_pkt),
+	.stat_rx_mcf(stat_rx_mcf),
+	.stat_tx_mcf(stat_tx_mcf),
+	.tx_pause_ack(tx_pause_ack),
+	.tx_pause_req(tx_pause_req),
+	.tx_lfc_pause_en(tx_lfc_pause_en),
+	.rx_pfc_ack(rx_pfc_ack),
+	.rx_pfc_req(rx_pfc_req),
+	.rx_pfc_en(rx_pfc_en),
+	.tx_pfc_resend(tx_pfc_resend),
+	.tx_pfc_req(tx_pfc_req),
+	.rx_lfc_ack(rx_lfc_ack),
+	.rx_lfc_req(rx_lfc_req),
+	.rx_lfc_en(rx_lfc_en),
+	.tx_lfc_resend(tx_lfc_resend),
+	.tx_lfc_req(tx_lfc_req)	
+	);
+
+
    
 
    // 1 ns clock
    initial 
      begin	
 	rx_clk = 1'b1;
-	tx_clk = 1'b1;	
 	forever #5 rx_clk = ~rx_clk;
+     end
+
+   initial 
+     begin	
+	tx_clk = 1'b1;	
 	forever #5 tx_clk = ~tx_clk;	
      end
 
