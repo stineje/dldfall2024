@@ -1,6 +1,6 @@
 
 # FPGA settings
-FPGA_PART = xc7a35t-csg324-1
+FPGA_PART = xc7a100t-csg324-1 #changed for when implementing
 FPGA_TOP = fpga
 FPGA_ARCH = artix7
 

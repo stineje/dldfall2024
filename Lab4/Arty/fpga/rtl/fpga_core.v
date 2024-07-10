@@ -94,6 +94,7 @@ wire rx_axis_tlast;
 wire rx_axis_tuser;
 
 wire [7:0] tx_axis_tdata;
+wire tx_axis_tkeep;
 wire tx_axis_tvalid;
 wire tx_axis_tready;
 wire tx_axis_tlast;
@@ -336,6 +337,7 @@ eth_mac_inst (
     .tx_axis_tdata(tx_axis_tdata),
     .tx_axis_tvalid(tx_axis_tvalid),
     .tx_axis_tready(tx_axis_tready),
+    .tx_axis_tkeep(tx_axis_tkeep), //added to match
     .tx_axis_tlast(tx_axis_tlast),
     .tx_axis_tuser(tx_axis_tuser),
 

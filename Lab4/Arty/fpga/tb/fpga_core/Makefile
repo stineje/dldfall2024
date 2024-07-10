@@ -20,7 +20,7 @@
 
 TOPLEVEL_LANG = verilog
 
-SIM ?= icarus
+SIM ?= questa #changed this
 WAVES ?= 0
 
 COCOTB_HDL_TIMEUNIT = 1ns
@@ -30,36 +30,38 @@ DUT      = fpga_core
 TOPLEVEL = $(DUT)
 MODULE   = test_$(DUT)
 VERILOG_SOURCES += ../../rtl/$(DUT).v
-VERILOG_SOURCES += ../../lib/eth/rtl/eth_mac_mii_fifo.v
-VERILOG_SOURCES += ../../lib/eth/rtl/eth_mac_mii.v
-VERILOG_SOURCES += ../../lib/eth/rtl/ssio_sdr_in.v
-VERILOG_SOURCES += ../../lib/eth/rtl/mii_phy_if.v
-VERILOG_SOURCES += ../../lib/eth/rtl/eth_mac_1g.v
-VERILOG_SOURCES += ../../lib/eth/rtl/axis_gmii_rx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/axis_gmii_tx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/lfsr.v
-VERILOG_SOURCES += ../../lib/eth/rtl/eth_axis_rx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/eth_axis_tx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/udp_complete.v
-VERILOG_SOURCES += ../../lib/eth/rtl/udp_checksum_gen.v
-VERILOG_SOURCES += ../../lib/eth/rtl/udp.v
-VERILOG_SOURCES += ../../lib/eth/rtl/udp_ip_rx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/udp_ip_tx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/ip_complete.v
-VERILOG_SOURCES += ../../lib/eth/rtl/ip.v
-VERILOG_SOURCES += ../../lib/eth/rtl/ip_eth_rx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/ip_eth_tx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/ip_arb_mux.v
-VERILOG_SOURCES += ../../lib/eth/rtl/arp.v
-VERILOG_SOURCES += ../../lib/eth/rtl/arp_cache.v
-VERILOG_SOURCES += ../../lib/eth/rtl/arp_eth_rx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/arp_eth_tx.v
-VERILOG_SOURCES += ../../lib/eth/rtl/eth_arb_mux.v
-VERILOG_SOURCES += ../../lib/eth/lib/axis/rtl/arbiter.v
-VERILOG_SOURCES += ../../lib/eth/lib/axis/rtl/priority_encoder.v
-VERILOG_SOURCES += ../../lib/eth/lib/axis/rtl/axis_fifo.v
-VERILOG_SOURCES += ../../lib/eth/lib/axis/rtl/axis_async_fifo.v
-VERILOG_SOURCES += ../../lib/eth/lib/axis/rtl/axis_async_fifo_adapter.v
+# /home/casager/dldfall2024/Lab4/Arty/fpga/lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl
+#for some reason path was messed up so had to add
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ssio_sdr_in.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/mii_phy_if.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_1g.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/axis_gmii_rx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/axis_gmii_tx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/lfsr.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_axis_rx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_axis_tx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_ip_rx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_ip_tx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_complete.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_eth_rx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_eth_tx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp_cache.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp_eth_rx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp_eth_tx.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_arb_mux.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/arbiter.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/priority_encoder.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo.v
+VERILOG_SOURCES += ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo_adapter.v
 
 # module parameters
 #export PARAM_A := value
