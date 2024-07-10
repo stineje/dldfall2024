@@ -1,3 +1,0 @@
-[submodule "verilog-ethernet"]
-	path = verilog-ethernet
-	url = git@github.com:alexforencich/verilog-ethernet.git
