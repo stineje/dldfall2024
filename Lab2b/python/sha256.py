@@ -57,9 +57,9 @@ def generate_hash(message: bytearray) -> bytearray:
                 # 4 bytes at a time
                 message_schedule.append(bytes(message_block[t*4:(t*4)+4]))
             else:
-                term1 = _sigma1(int.from_bytes(message_schedule[t-2], 'big'))
+                term1 = sigma1(int.from_bytes(message_schedule[t-2], 'big'))
                 term2 = int.from_bytes(message_schedule[t-7], 'big')
-                term3 = _sigma0(int.from_bytes(message_schedule[t-15], 'big'))
+                term3 = sigma0(int.from_bytes(message_schedule[t-15], 'big'))
                 term4 = int.from_bytes(message_schedule[t-16], 'big')
 
                 # append a 4-byte byte object
@@ -80,10 +80,10 @@ def generate_hash(message: bytearray) -> bytearray:
 
         # Iterate for t=0 to 63
         for t in range(64):
-            t1 = ((h + _Sigma1(e) + _ch(e, f, g) + K[t] +
+            t1 = ((h + Sigma1(e) + ch(e, f, g) + K[t] +
                    int.from_bytes(message_schedule[t], 'big')) % 2**32)
 
-            t2 = (_Sigma0(a) + _maj(a, b, c)) % 2**32
+            t2 = (Sigma0(a) + maj(a, b, c)) % 2**32
 
             h = g
             g = f
@@ -109,37 +109,37 @@ def generate_hash(message: bytearray) -> bytearray:
             (h4).to_bytes(4, 'big') + (h5).to_bytes(4, 'big') +
             (h6).to_bytes(4, 'big') + (h7).to_bytes(4, 'big'))
 
-def _sigma0(num: int):
-    num = (_rotate_right(num, 7) ^
-           _rotate_right(num, 18) ^
+def sigma0(num: int):
+    num = (ror(num, 7) ^
+           ror(num, 18) ^
            (num >> 3))
     return num
 
-def _sigma1(num: int):
-    num = (_rotate_right(num, 17) ^
-           _rotate_right(num, 19) ^
+def sigma1(num: int):
+    num = (ror(num, 17) ^
+           ror(num, 19) ^
            (num >> 10))
     return num
 
-def _Sigma0(num: int):
-    num = (_rotate_right(num, 2) ^
-           _rotate_right(num, 13) ^
-           _rotate_right(num, 22))
+def Sigma0(num: int):
+    num = (ror(num, 2) ^
+           ror(num, 13) ^
+           ror(num, 22))
     return num
 
-def _Sigma1(num: int):
-    num = (_rotate_right(num, 6) ^
-           _rotate_right(num, 11) ^
-           _rotate_right(num, 25))
+def Sigma1(num: int):
+    num = (ror(num, 6) ^
+           ror(num, 11) ^
+           ror(num, 25))
     return num
 
-def _ch(x: int, y: int, z: int):
+def ch(x: int, y: int, z: int):
     return (x & y) ^ (~x & z)
 
-def _maj(x: int, y: int, z: int):
+def maj(x: int, y: int, z: int):
     return (x & y) ^ (x & z) ^ (y & z)
 
-def _rotate_right(num: int, shift: int, size: int = 32):
+def ror(num: int, shift: int, size: int = 32):
     return (num >> shift) | (num << size - shift)
 
 if __name__ == "__main__":
