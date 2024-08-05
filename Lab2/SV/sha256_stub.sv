@@ -32,3 +32,42 @@ module sha_main	#(parameter PADDED_SIZE = 512)
 
 endmodule // sha_main
 
+module majority (input logic [31:0] x, y, z, output logic maj);
+
+
+
+endmodule // majority
+
+module choice (input logic [31:0] x, y, z, output logic maj);
+
+
+
+endmodule // choice
+
+module Sigma0 (input logic [31:0] x, y, z, output logic maj);
+
+
+
+endmodule // Sigma0
+
+module sigma0 (input logic [31:0] x, y, z, output logic maj);
+
+
+
+endmodule // sigma0
+
+module Sigma1 (input logic [31:0] x, y, z, output logic maj);
+
+
+
+endmodule // Sigma1
+
+module sigma1 (input logic [31:0] x, y, z, output logic maj);
+
+
+
+endmodule // sigma1
+
+     
+   
+

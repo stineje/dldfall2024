@@ -143,6 +143,7 @@ ciphertext without the key is impractically difficult.
 \end{figure}
 
 \subsection{Rotation}
+\label{swizzle.sec}
 
 One of the most common operations in cryptography is called rotation.
 Rotation is similar to shifting except anything that is shifted out of
@@ -310,11 +311,12 @@ be found here: \url{https://en.wikipedia.org/wiki/ASCII}.
 You will need to convert your text that you want to create a hash for
 with ASCII codes.  You can either look it up manually using
 Table~\ref{ascii.tbl} or use the included Python file to convert it
-automatically.  Use these hex values to include in your SystemVerilog
+automatically.  Use these hex values to include in your SV
 manual that will generate the hash value.  
 \begin{table} [t!]
   \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
+  {\small
+  \begin{tabular}{|c|c|c||c|c|c||c|c|c||c|c|c||c|c|c||c|c|} \hline
     Dec & Hex & Char & Dec & Hex & Char & Dec & Hex & Char & Dec & Hex & Char & Dec & Hex & Char\\ \hline \hline
     048 & 0x30 & 0 & 064 & 0x40 & @ &  080 & 0x50 & P        & 096 & 0x60 & \textquoteleft & 112 & 0x70 & p        \\ \hline
     049 & 0x31 & 1 & 065 & 0x41 & A &  081 & 0x51 & Q        & 097 & 0x61 & a              & 113 & 0x71 & q        \\ \hline
@@ -333,20 +335,21 @@ manual that will generate the hash value.
     062 & 0x3E & > & 078 & 0x4E & N &  094 & 0x5E & \^{}     & 110 & 0x6E & n              & 126 & 0x7E & \~{}     \\ \hline
     063 & 0x3F & ? & 079 & 0x4F & O &  095 & 0x5F & \char`\_ & 111 & 0x6F & o              & 127 & 0x7F & \DEL     \\ \hline
   \end{tabular}
+  }
   \caption{Common English ASCII Characters}
   \label{ascii.tbl}
 \end{table}
 
 
 \subsection{Preprocessing}
+\label{padding.sec}
 
-Before the actual hash computation, the message x has to be padded to
+Before the actual hash computation, the message $x$ has to be padded to
 fit a size of a multiple of $512$ bit. For the internal processing, the
 padded message must then be divided into blocks. This will be
-dependent on the size of the message you plan on sending.  Also, the initial
-value $H_0$ is set to a predefined constant.
+dependent on the size of the message you plan on sending (e.g., SHA-256).
 
-For example, Assume that we have a message x with a length of $l$
+For example, Assume that we have a message $x$ with a length of $l$
 bits. To obtain an overall message size of a multiple of $512$ bits, we
 append a single “1” followed by $k$ zero bits and the binary $64$-bit
 representation of $l$. Consequently, the number of required zeros $k$ is
@@ -355,8 +358,22 @@ given by
   k & = & 512 - 64 - 1 - l
 \end{eqnarray*}
 
+For example, the (8-bit ASCII) message “abc” has length $8 \times 3 = 24$,
+so the message is padded with a one bit, then $448 - (24 + 1) = 423$
+zero bits, and then
+the message length (i.e., $64$), to become the $512$-bit padded
+message.  This is illustrated in Figure~\ref{padding.fig}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{padding.png}
+  \caption{Padding example for ``abc'' for a $512$-bit padded message~\cite{1250396}}
+  \label{padding.fig}
+\end{figure}
+
 This can be done easily within SystemVerilog with bitswizzling as
-indicated previously.  An example of this could be the following HDL:
+indicated in Section~\ref{swizzle.sec}.
+An example of this could be the following SV Hardware Descriptive
+Language (HDL):
 \begin{verbatim}
 assign padded = {message, 1'b1, {zero_width{1'b0}},  {back_0_width{1'b0}}, MSG_SIZE};
 \end{verbatim}
@@ -371,36 +388,176 @@ the total amount of time for the computation.  Software, on the other
 hand, typically is slower as it requires waiting for previous
 operations to complete before it can move forward.
 
+\subsubsection{Modular Addition}
+\label{modular.sec}
+
+The computation of the hash function is a combination of rotations,
+shifts, and additions.  Addition is tricky as it has to be done not to
+exceed the size of the addition (in this case, since it is a block of
+$32$-bits, then it should not exceed $2^{32}$ or modulo $32$.  This is
+called modular arithmetic and can be summarized in the following equation.
+\begin{eqnarray*}
+  \mid X+Y \mid_m = \Biggl\{
+   \begin{array}{@{}ll@{}}
+      X+Y,      & \text{ if $X+Y < m$}  \\
+      X+Y-m,    & \text{ if $X+Y \geq m$} 
+   \end{array}
+\end{eqnarray*}  
+Modular arithmetic is key to many cryptographic algorithm.
+Fortunately, for our implementation it is quite easy as we just have
+to drop off the MSB.
+
+\subsubsection{constants}
+
+Before hash computation begins for each of the secure hash algorithms,
+the initial hash value,
+$H^0$, must be set. For SHA-256, the size and number of words in $H^0$
+depends on the message digest size.  These words area obtained by
+taking the first thirty-two bits of the fractional parts of the square
+roots of the first eight prime numbers to ensure the numbers are
+random.  That is, the fractional parts of $2, 3, 5, 7, 11, 13, 17,
+19$.  These value are different for differt versions of the Secure
+Hash Standard~\cite{1250396}.
+\begin{eqnarray*}
+  H_0^0 & = & \verb!0x6a09e667!\\
+  H_1^0 & = & \verb!0xbb67ae85!\\
+  H_2^0 & = & \verb!0x3c6ef372!\\
+  H_3^0 & = & \verb!0xa54ff53a!\\
+  H_4^0 & = & \verb!0x510e527f!\\
+  H_5^0 & = & \verb!0x9b05688c!\\
+  H_6^0 & = & \verb!0x1f83d9ab!\\
+  H_7^0 & = & \verb!0x5be0cd19!\\
+\end{eqnarray*}
+
+There are some additional constants utilized within the main hash
+computation.  These are computed similar based on the cube roots of
+the first sixty-four prime numbers and labeled
+$K_0^{256}, K_1^{256}, \ldots K_{63}^{256}$.
+\begin{verbatim}
+428a2f98 71374491 b5c0fbcf e9b5dba5 3956c25b 59f111f1 923f82a4 ab1c5ed5
+d807aa98 12835b01 243185be 550c7dc3 72be5d74 80deb1fe 9bdc06a7 c19bf174
+e49b69c1 efbe4786 0fc19dc6 240ca1cc 2de92c6f 4a7484aa 5cb0a9dc 76f988da
+983e5152 a831c66d b00327c8 bf597fc7 c6e00bf3 d5a79147 06ca6351 14292967
+27b70a85 2e1b2138 4d2c6dfc 53380d13 650a7354 766a0abb 81c2c92e 92722c85
+a2bfe8a1 a81a664b c24b8b70 c76c51a3 d192e819 d6990624 f40e3585 106aa070
+19a4c116 1e376c08 2748774c 34b0bcb5 391c0cb3 4ed8aa4a 5b9cca4f 682e6ff3
+748f82ee 78a5636f 84c87814 8cc70208 90befffa a4506ceb bef9a3f7 c67178f2
+\end{verbatim}
+
+\subsubsection{Main SHA-256 computation}
+
 SHA-256 in hardware is typically very easy if taken systematically.
-The operation is as follow:
+For this laboratory, we will only use 1 $m$-bit block or 1 $512$-bit
+block.  In theory, hardware may be composed of multiple blocks.
+
+SHA-256 can be used to hash a message, $M$, having a length of $l$
+bits, where $0 \leq l < 2^{64}$. The
+algorithm uses 1) a message schedule of sixty-four $32$-bit words,
+2) eight working variables of $32$
+bits labeled $a$ through $h$, and 3) a hash value of eight $32$-bit words.
+The final result of SHA-256 is a $256$-bit
+message digest.
+The words of the message schedule are labeled
+$W_0, W_1, \ldots, W_{63}$. The
+eight working variables are labeled $a$, $b$, $c$, $d$, $e$, $f$, $g$,
+and $h$.
+The words of the hash value are labeled $H_0^i, H_1^i, \ldots H_7^i$.
+which will hold the initial hash value, $H^0$, replaced by each
+successive intermediate hash value
+(after each message block is processed), $H^i$, and ending with the
+final hash value, $H^N$.  For cryptographic systems, this is sometimes
+called a round and its similar to 
+
+The operation looks more complicated than it is but its just a series
+of computations in parallel.  The key is to get the order of
+processing correct and, of course, the number of steps.
+A key piece item to remember is that
+addition (+) is performed modulo $2^{32}$ as described in Section~\ref{modular.sec}.
 \begin{enumerate}
-\item Update working variables as follows where $Temp1 = h + \Sigma_1
-  + Choice + k63 + w63$ and $Temp2 = \Sigma_0 + Majority$.  These two
-  equations are broken down as listed above for $\Sigma1$, $\Sigma0$
-  and $Choice = (e \cdot f) \oplus (\overline{e} \cdot g)$ and
-  $Majoirty = (a \cdot b) \oplus (a \cdot c) \oplus (b \cdot c)$.
+  \item Processsing: set the inital hash values $H^0$ as previously
+    specified as well as the padding (see Section~\ref{padding.sec}).
+  \item Prepare the message:
+    \begin{itemize}
+  \item Since we are only operating on $1$ group or $N=1$, we can
+    break the computation down into blocks of $32$ for each part
+    of the message and operate on the message for $64$ rounds (i.e.,
+    $0 \leq t 15$).
+    That is, Each message block, $M^1, M^2, \ldots, M^{64}$. 
+    is processed in order.
+  \item For blocks $16 \leq t \leq 63$, we need to compute
+    $W_t = \sigma_1^{256} (W_{t-2}) + W_{t-7} + \sigma_0^{256} (W_{t-15}) + W_{t-16}$
+    where
+    \begin{eqnarray*}
+      \sigma_0^{512}(x) = \text{ror}^{7}(x) \oplus \text{ror}^{18}(x) \oplus (x~\verb!>>!~3)    \\
+      \sigma_1^{512}(x) = \text{ror}^{17}(x) \oplus \text{ror}^{19}(x) \oplus (x~\verb!>>!~10)    
+    \end{eqnarray*}
+  \item This can be summarized as follows:
+    \begin{eqnarray*}
+      W_t = \Biggl\{
+      \begin{array}{@{}ll@{}}
+        M_t^i,      & (0 \leq t \leq 15)  \\
+        \sigma_1^{256} (W_{t-2}) + W_{t-7} + \sigma_0^{256} (W_{t-15}) +  W_{t-16},  & (16 \leq t \leq 63) 
+      \end{array}
+    \end{eqnarray*}  
+    
+    \end{itemize}
+    
+    \item Initialize the seven working variables with the (i-1)st
+      hash:
+      \begin{itemize}
+      \item $a = H_0^{i-1}$
+      \item $b = H_1^{i-1}$
+      \item $c = H_2^{i-1}$
+      \item $d = H_3^{i-1}$
+      \item $e = H_4^{i-1}$
+      \item $f = H_5^{i-1}$
+      \item $g = H_6^{i-1}$
+      \end{itemize}
+
+    \item Compute the following items for $t = 0:63$ using      
+      $T_1 = h + \Sigma_1^{256} (e) + \text{Choice}(e,f,g) + K_t^{63} + W_t$ and
+      $T_2 = \Sigma_0^{256} (a) + \text{Majority}(a,b,c)$.  These 
+      equations are broken down as for $\Sigma_1$, $\Sigma_0$
+      and $\text{Choice(x,y,z)} = (x \cdot y) \oplus (\overline{x} \cdot z)$ and
+      $\text{Majority(x,y,z)} = (x \cdot y) \oplus (x \cdot z) \oplus (y
+      \cdot z)$.  The values of $\Sigma_1^{256}$ and $\Sigma_0^{256}$
+      are similar to the lower case versions above or except that it
+      is only composed of xor and ror (i.e., no right shifts) or the following.
+          \begin{eqnarray*}
+      \Sigma_0^{512}(x) = \text{ror}^{2}(x) \oplus \text{ror}^{13}(x) \oplus \text{ror}^{22}(x)    \\
+      \Sigma_1^{512}(x) = \text{ror}^{6}(x) \oplus \text{ror}^{11}(x) \oplus \text{ror}^{25}(x)    
+    \end{eqnarray*}
   \begin{itemize}
   \item $h = g$
   \item $g = f$
   \item $f = e$
-  \item $e = d + Temp1$
+  \item $e = d + T_1$
   \item $d = c$
   \item $c = b$
   \item $b = a$
-  \item $a = Temp1 + Temp2$
+  \item $a = T_1 + T_2$
   \end{itemize}
+  
   \item Add the working variables above to the current hash variable
     to the current variables
     \begin{itemize}
-    \item $h0 = h0 + a$
-    \item $h2 = h1 + b$
-    \item $h2 = h2 + c$
-    \item $h3 = h3 + d$
-    \item $h4 = h4 + e$
-    \item $h5 = h5 + f$
-    \item $h6 = h6 + g$
-    \item $h7 = h7 + h$
-     \end{itemize}
+    \item $H_0^1 = a + H_0^0$
+    \item $H_1^1 = b + H_2^0$
+    \item $H_2^1 = c + H_3^0$
+    \item $H_3^1 = d + H_3^0$
+    \item $H_4^1 = e + H_4^0$
+    \item $H_5^1 = f + H_5^0$
+    \item $H_6^1 = g + H_6^0$
+    \item $H_7^1 = h + H_7^0$
+    \end{itemize}
+
+    \item Finally, concatenate or squish all the values in the
+      previous step together forming a $512$-bit message (i.e., $32$
+      hexadecimal digits).
+      \begin{eqnarray*}
+        H_0^1 || H_1^1 || H_2^1 || H_3^1 || H_4^1 || H_5^1 || H_6^1 || H_7^1
+        \end{eqnarray*}
+    
 \end{enumerate}
 
 
