@@ -3,6 +3,7 @@
 
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{ascii}
 \usepackage{secdot}
 \usepackage{epsfig}
 \usepackage{cprotect}
@@ -19,6 +20,7 @@
 \usepackage{setspace}
 \usepackage{array}
 \usepackage{fancyhdr}
+\usepackage{fancyvrb}
 \usepackage{lastpage}
 \usepackage[T1]{fontenc}
 
@@ -92,7 +94,7 @@ internet protocols, such as TLS, SSL, PGP, etc., as well as to verify
 transactions in Bitcoin and other cryptocurrencies. It was designed by
 the US National Security Agency (NSA) and was first published in
 2001. It is now a standard maintained by the National Institute of
-Standards and Technology~\cite{nist-sha}.
+Standards and Technology~\cite{1250396}.
 SHA-2 generates $224$-, $256$-, $384$-, or $512$-bit message digests,
 replacing the SHA-1, MD4, and MD5 algorithms that produced shorter
 digests and are no longer considered secure. 
@@ -235,37 +237,171 @@ The message digest (also called the hash) $H$ is formed from $8$ $w$-bit
 words. Each block goes through $r$ rounds of hashing, which involve
 applying some shifts, rotates, and logical and addition
 operations. The hashing steps involve sigma ($\Sigma$/$\sigma$) functions that are
-expressed in terms of right rotations (ror) and right shifts (>>) of
+expressed in terms of right rotations (\verb!ror!) and right shifts (\verb!>>!) of
 the words. The hash is initialized with $8$ $w$-bit constants $H_j^{0}$
 and uses $r$ $w$-bit round constants $K_t$ tabulated in the SHA-2
 specification.
 \begin{table}
   \centering
-  {\scriptsize
+  {\footnotesize
   \begin{tabular}{|c|c|c|c|c|c|c|} \hline
-    SHA-2 Algorithm & Variable & SHA-256 & SHA-512 \\ \hline
-    Message Digest Size (bits)	& d & 256 & 512 \\ \hline
-    Block Size (bits) & m & 512	& 1024 \\ \hline
-    Word Size (bits) & w & 32 & 64 \\ \hline
+    SHA-2 Algorithm & Var & SHA-256 & SHA-512 \\ \hline \hline
+    Msg Digest Size (bits/bytes) & d & 256/64 & 512/128 \\ \hline
+    Block Size (bits/bytes) & m & 512/128 & 1024/256 \\ \hline
+    Word Size (bits/bytes) & w & 32/4 & 64/16 \\ \hline
     Rounds & r & 64 & 80 \\ \hline
     $\Sigma_0^{d} (x)$ & &
-    $(x~ror~2) \oplus (x~ror~13) \oplus (x~ror~22)$ &
-    $(x~ror~28) \oplus (x~ror~34) \oplus (x~ror~39)$ \\ \hline
+    \verb!(x ror 2) ^ (x ror 13) ^ (x ror 22)! &
+    \verb!(x ror 28) ^ (x ror 34) ^ (x ror 39)! \\ \hline
     $\Sigma_1^{d} (x)$ & &
-    $(x~ror~6) \oplus (x~ror~11) \oplus (x~ror~25)$ &
-    $(x~ror~14) \oplus (x~ror~18) \oplus (x~ror~41)$ \\ \hline
+    \verb!(x ror 6) ^ (x ror 11) ^ (x ror 25)! &
+    \verb!(x ror 14) ^ (x ror 18) ^ (x ror 41)! \\ \hline
     $\sigma_0^{d} (x)$ & &
-    $(x~ror~7) \oplus (x~ror~18) \oplus (x >>3)$ &
-    $(x~ror~1) \oplus (x~ror~8) \oplus (x >>7)$ \\ \hline
+    \verb!(x ror 7) ^ (x ror 18) ^ (x >> 3)! &
+    \verb!(x ror 1) ^ (x ror 8) ^ (x >> 7)! \\ \hline
     $\sigma_1^{d} (x)$ & &
-    $(x~ror~17) \oplus (x~ror~19) \oplus (x >>10)$ &
-    $(x~ror~19) \oplus (x~ror~61) \oplus (x >>6)$ \\ \hline
+    \verb!(x ror 17) ^ (x ror 19) ^ (x >> 10)! &
+    \verb!(x ror 19) ^ (x ror 61) ^ (x >> 6)! \\ \hline
   \end{tabular}
   }
   \caption{SHA-2 structure and sigma operations}
 \end{table}
 
+The Secure Hash Algorithm~\cite{1250396} is one of the most widely
+utilized message digest functions.  We will be implementing this
+hardware cryptographic system in hardware on the FPGA.  It will
+involve two basic steps:
+\begin{enumerate}
+  \item Proprocessing - This sounds exactly what it sounds like; that
+    is, the message $x$ has to be padded to fit a size of a multiple
+    of $512$ bits.
+    \item Hash Computation - Each message block xi is processed in
+      four stages with $64$ rounds each as shown in
+      Figure~\ref{sha2.fig}.  For this laboratory, we will handle this
+      combinationally.  Later in the semester, we will explore ways we
+      can do this with sequential logic too.
+\end{enumerate}
+\begin{figure} [t!]
+  \centering
+  \includegraphics[scale=0.7]{sha256.png}
+  \caption{SHA-256 Block Diagram}
+  \label{sha2.fig}
+\end{figure}
 
+\subsection{ASCII}
+
+ASCII stands for American Standard Code for Information
+Interchange. Computers can only understand numbers, so an ASCII code
+is the numerical representation of a character such as 'a' or '@' or
+an action of some sort. ASCII was developed a long time ago and now
+the non-printing characters are rarely used for their original
+purpose. Table~\ref{ascii.tbl} is an abbreivated
+ASCII character table. ASCII was
+actually designed for use with teletypes, so the descriptions are
+somewhat obscure.
+ASCII has expanded for other uses, however, its use is still
+utilized as it is easy to use for the english alphabet (sometimes being
+called US-ASCII).
+ASCII has just $128$ code points, of which only $95$ are printable
+characters, which severely limit its scope.  However, this has been
+expanded to handle other alphabets.  More elaborate ASCII tables can
+be found here: \url{https://en.wikipedia.org/wiki/ASCII}.
+
+You will need to convert your text that you want to create a hash for
+with ASCII codes.  You can either look it up manually using
+Table~\ref{ascii.tbl} or use the included Python file to convert it
+automatically.  Use these hex values to include in your SystemVerilog
+manual that will generate the hash value.  
+\begin{table} [t!]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
+    Dec & Hex & Char & Dec & Hex & Char & Dec & Hex & Char & Dec & Hex & Char & Dec & Hex & Char\\ \hline \hline
+    048 & 0x30 & 0 & 064 & 0x40 & @ &  080 & 0x50 & P        & 096 & 0x60 & \textquoteleft & 112 & 0x70 & p        \\ \hline
+    049 & 0x31 & 1 & 065 & 0x41 & A &  081 & 0x51 & Q        & 097 & 0x61 & a              & 113 & 0x71 & q        \\ \hline
+    050 & 0x32 & 2 & 066 & 0x42 & B &  082 & 0x52 & R        & 098 & 0x62 & b              & 114 & 0x72 & r        \\ \hline
+    051 & 0x33 & 3 & 067 & 0x43 & C &  083 & 0x53 & S        & 099 & 0x63 & c              & 115 & 0x73 & s        \\ \hline
+    052 & 0x34 & 4 & 068 & 0x44 & D &  084 & 0x54 & T        & 100 & 0x64 & d              & 116 & 0x74 & t        \\ \hline
+    053 & 0x35 & 5 & 069 & 0x45 & E &  085 & 0x55 & U        & 101 & 0x65 & e              & 117 & 0x75 & u        \\ \hline
+    054 & 0x36 & 6 & 070 & 0x46 & F &  086 & 0x56 & V        & 102 & 0x66 & f              & 118 & 0x76 & v        \\ \hline
+    055 & 0x37 & 7 & 071 & 0x47 & G &  087 & 0x57 & W        & 103 & 0x67 & g              & 119 & 0x77 & w        \\ \hline
+    056 & 0x38 & 8 & 072 & 0x48 & H &  088 & 0x58 & X        & 104 & 0x68 & h              & 120 & 0x78 & x        \\ \hline
+    057 & 0x39 & 9 & 073 & 0x49 & I &  089 & 0x59 & Y        & 105 & 0x69 & i              & 121 & 0x79 & y        \\ \hline
+    058 & 0x3A & : & 074 & 0x4A & J &  090 & 0x5A & Z        & 106 & 0x6A & j              & 122 & 0x7A & z        \\ \hline
+    059 & 0x3B & ; & 075 & 0x4B & K &  091 & 0x5B & [        & 107 & 0x6B & k              & 123 & 0x7B & \char`\{ \\ \hline
+    060 & 0x3C & < & 076 & 0x4C & L &  092 & 0x5C & \char`   & 108 & 0x6C & l              & 124 & 0x7C & |        \\ \hline
+    061 & 0x3D & = & 077 & 0x4D & M &  093 & 0x5D & ]        & 109 & 0x6D & m              & 125 & 0x7D & \char`\} \\ \hline
+    062 & 0x3E & > & 078 & 0x4E & N &  094 & 0x5E & \^{}     & 110 & 0x6E & n              & 126 & 0x7E & \~{}     \\ \hline
+    063 & 0x3F & ? & 079 & 0x4F & O &  095 & 0x5F & \char`\_ & 111 & 0x6F & o              & 127 & 0x7F & \DEL     \\ \hline
+  \end{tabular}
+  \caption{Common English ASCII Characters}
+  \label{ascii.tbl}
+\end{table}
+
+
+\subsection{Preprocessing}
+
+Before the actual hash computation, the message x has to be padded to
+fit a size of a multiple of $512$ bit. For the internal processing, the
+padded message must then be divided into blocks. This will be
+dependent on the size of the message you plan on sending.  Also, the initial
+value $H_0$ is set to a predefined constant.
+
+For example, Assume that we have a message x with a length of $l$
+bits. To obtain an overall message size of a multiple of $512$ bits, we
+append a single “1” followed by $k$ zero bits and the binary $64$-bit
+representation of $l$. Consequently, the number of required zeros $k$ is
+given by
+\begin{eqnarray*}
+  k & = & 512 - 64 - 1 - l
+\end{eqnarray*}
+
+This can be done easily within SystemVerilog with bitswizzling as
+indicated previously.  An example of this could be the following HDL:
+\begin{verbatim}
+assign padded = {message, 1'b1, {zero_width{1'b0}},  {back_0_width{1'b0}}, MSG_SIZE};
+\end{verbatim}
+
+
+\subsection{Hash Computation}
+
+The real advantage to using digital logic is that much of the
+computation can be done in parallel.  That is, when one piece of logic
+is being computed, another part can be done at the same time reducing
+the total amount of time for the computation.  Software, on the other
+hand, typically is slower as it requires waiting for previous
+operations to complete before it can move forward.
+
+SHA-256 in hardware is typically very easy if taken systematically.
+The operation is as follow:
+\begin{enumerate}
+\item Update working variables as follows where $Temp1 = h + \Sigma_1
+  + Choice + k63 + w63$ and $Temp2 = \Sigma_0 + Majority$.  These two
+  equations are broken down as listed above for $\Sigma1$, $\Sigma0$
+  and $Choice = (e \cdot f) \oplus (\overline{e} \cdot g)$ and
+  $Majoirty = (a \cdot b) \oplus (a \cdot c) \oplus (b \cdot c)$.
+  \begin{itemize}
+  \item $h = g$
+  \item $g = f$
+  \item $f = e$
+  \item $e = d + Temp1$
+  \item $d = c$
+  \item $c = b$
+  \item $b = a$
+  \item $a = Temp1 + Temp2$
+  \end{itemize}
+  \item Add the working variables above to the current hash variable
+    to the current variables
+    \begin{itemize}
+    \item $h0 = h0 + a$
+    \item $h2 = h1 + b$
+    \item $h2 = h2 + c$
+    \item $h3 = h3 + d$
+    \item $h4 = h4 + e$
+    \item $h5 = h5 + f$
+    \item $h6 = h6 + g$
+    \item $h7 = h7 + h$
+     \end{itemize}
+\end{enumerate}
 
 
 
@@ -584,29 +720,6 @@ the Java code) or the DES implementation in Java, as well.
 %design can be and doing some calculations on how fast you can encrypt
 %and decrypt your data.
 
-You also have the opportunity to enhance the DES and creating 3DES
-which is sometimes called triple DES.  Triple DES is still used in
-some application and even used for some Microsoft keys that were used
-when purchasing software; however, I think they stopped using these
-several years ago.  Interestingly, four out of
-$2^{56}$ possible keys are called weak keys.
-A weak key is the one that, after parity removal operation,
-consists either of all $0$s, all $1$s, or half $0$s and half $1$s.
-These keys are shown in Table~\ref{weak.tbl} and I encourage you to
-try these keys in your hardware but do not use them in real life ;).
-\begin{table}
-  \centering
-  \begin{tabular}{|c|c|c|c|c|}\hline
-    Keys with parity ($64$ bits) & Actual key ($56$ bits)
-    \\ \hline \hline
-    \verb!0x0101_0101_0101_0101! & \verb!0x00_0000_0000_0000! \\ \hline
-    \verb!0x1F1F_1F1F_0E0E_0E0E! & \verb!0x00_0000_0FFF_FFFF! \\ \hline
-    \verb!0xE0E0_E0E0_F1F1_F1F1! & \verb!0xFF_FFFF_F000_0000! \\ \hline
-    \verb!0xFEFE_FEFE_FEFE_FEFE! & \verb!0xFF_FFFF_FFFF_FFFF! \\ \hline
-  \end{tabular}
-  \caption{DES Weak Keys}
-  \label{weak.tbl}
-  \end{table}
 
 
 \section{Submission}
