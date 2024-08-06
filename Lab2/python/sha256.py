@@ -10,9 +10,6 @@ K = [
 ]
 
 def generate_hash(message: bytearray) -> bytearray:
-    """Return a SHA-256 hash from the message passed.
-    The argument should be a bytes, bytearray, or
-    string object."""
 
     if isinstance(message, str):
         message = bytearray(message, 'ascii')
@@ -26,9 +23,7 @@ def generate_hash(message: bytearray) -> bytearray:
     message.append(0x80)
     while (len(message) * 8 + 64) % 512 != 0:
         message.append(0x00)
-
     message += length.to_bytes(8, 'big') # pad to 8 bytes or 64 bits
-
     assert (len(message) * 8) % 512 == 0, "Padding did not complete properly!"
 
     # Parsing
@@ -56,6 +51,7 @@ def generate_hash(message: bytearray) -> bytearray:
                 # starting from leftmost word
                 # 4 bytes at a time
                 message_schedule.append(bytes(message_block[t*4:(t*4)+4]))
+                print("W_" + str(t) + "= " + hex(int.from_bytes(message_schedule[t], 'big')))
             else:
                 term1 = sigma1(int.from_bytes(message_schedule[t-2], 'big'))
                 term2 = int.from_bytes(message_schedule[t-7], 'big')
@@ -65,8 +61,10 @@ def generate_hash(message: bytearray) -> bytearray:
                 # append a 4-byte byte object
                 schedule = ((term1 + term2 + term3 + term4) % 2**32).to_bytes(4, 'big')
                 message_schedule.append(schedule)
+                print("W_" + str(t) + "= " + hex(int.from_bytes(message_schedule[t], 'big')))
 
         assert len(message_schedule) == 64
+        print("-------------")        
 
         # Initialize working variables
         a = h0
@@ -77,14 +75,23 @@ def generate_hash(message: bytearray) -> bytearray:
         f = h5
         g = h6
         h = h7
+        print("Initial working variables")
+        print("a = " + hex(a))
+        print("b = " + hex(b))
+        print("c = " + hex(c))
+        print("d = " + hex(d))
+        print("e = " + hex(e))
+        print("f = " + hex(f))
+        print("g = " + hex(g))
+        print("h = " + hex(h))
+        print("-------------")
 
-        # Iterate for t=0 to 63
+        # Iterate for t=0 to 63 (main computation)
         for t in range(64):
+            # addition module 2^{32}
             t1 = ((h + Sigma1(e) + ch(e, f, g) + K[t] +
                    int.from_bytes(message_schedule[t], 'big')) % 2**32)
-
             t2 = (Sigma0(a) + maj(a, b, c)) % 2**32
-
             h = g
             g = f
             f = e
@@ -93,6 +100,16 @@ def generate_hash(message: bytearray) -> bytearray:
             c = b
             b = a
             a = (t1 + t2) % 2**32
+            print("Step " + str(t))
+            print("a = " + hex(a))
+            print("b = " + hex(b))
+            print("c = " + hex(c))
+            print("d = " + hex(d))
+            print("e = " + hex(e))
+            print("f = " + hex(f))
+            print("g = " + hex(g))
+            print("h = " + hex(h))
+            print("-------------")
 
         # Compute intermediate hash value
         h0 = (h0 + a) % 2**32
