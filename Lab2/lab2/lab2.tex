@@ -197,8 +197,8 @@ message had been corrupted.
 \begin{verbatim}
 7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069  -
 \end{verbatim}
-You can also interactively watch SHA-$256$ run at
-\url{https://sha256algorithm.com}.
+%You can also interactively watch SHA-$256$ run at
+%\url{https://sha256algorithm.com}.
 
 Table summarizes the structure of SHA-$256$ and SHA-$512$. The hash
 operates on a message $M$ comprising $N$ $m$-bit blocks; it is padded if
@@ -287,7 +287,7 @@ You will need to convert your text that you want to create a hash for
 with ASCII codes.  You can either look it up manually using
 Table~\ref{ascii.tbl} or use the included Python file to convert it
 automatically.  Use these hex values to include in your SV
-manual that will generate the hash value.  
+manually that will generate the hash value appropriately.  
 \begin{table} [t!]
   \centering
   {\small
@@ -352,7 +352,7 @@ Language (HDL).
 \begin{verbatim}
 assign padded = {message, 1'b1, {zero_width{1'b0}},  {back_0_width{1'b0}}, MSG_SIZE};
 \end{verbatim}
-The key to this is computing each value correctly.  the
+The key to this is computing each value correctly.  The
 \verb!MSG_SIZE! should be the message length to correctly fill the
 message size to $512$ bits.  This value of $512$ is specific to
 SHA-256 and is different for other SHA variants (e.g., SHA-512).
