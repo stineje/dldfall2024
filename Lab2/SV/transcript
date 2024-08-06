@@ -1,9 +1,35 @@
-# //  ModelSim SE-64 2021.3 Jul 13 2021
+# do sha256.do
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 22:20:33 on Aug 05,2024
+# vlog sha256_stub.sv tb_sha256.sv 
+# -- Compiling module sha_256
+# -- Compiling module sha_padder
+# -- Compiling module sha256
+# -- Compiling module prepare
+# -- Compiling module main_comp
+# -- Compiling module intermediate_hash
+# -- Compiling module majority
+# -- Compiling module choice
+# -- Compiling module Sigma0
+# -- Compiling module sigma0
+# -- Compiling module Sigma1
+# -- Compiling module sigma1
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 22:20:33 on Aug 05,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 22:20:33 on Aug 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
 # //
 # //  Copyright 1991-2021 Mentor Graphics Corporation
 # //  All Rights Reserved.
 # //
-# //  ModelSim SE-64 and its associated documentation contain trade
+# //  QuestaSim and its associated documentation contain trade
 # //  secrets and commercial or financial information that are the property of
 # //  Mentor Graphics Corporation and are privileged, confidential,
 # //  and exempt from disclosure under the Freedom of Information Act,
@@ -11,28 +37,27 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# do rca8.do
-# Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 07:37:26 on Sep 29,2022
-# vlog -reportprogress 300 ha.sv fa.sv rca8.sv test_rca8.sv 
-# -- Compiling module ha
-# -- Compiling module fa
-# -- Compiling module rca8
-# -- Compiling module stimulus
-# 
-# Top level modules:
-# 	stimulus
-# End time: 07:37:27 on Sep 29,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.stimulus 
-# Start time: 07:37:27 on Sep 29,2022
-# ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
 # Loading work.stimulus(fast)
-# Loading work.rca8(fast)
-# Loading work.fa(fast)
-# Loading work.ha(fast)
-# .main_pane.list.interior.cs.body
-# .main_pane.wave.interior.cs.body.pw.wf
-# End time: 07:39:15 on Sep 29,2022, Elapsed time: 0:01:48
+# Loading work.sha_256(fast)
+# Loading work.sha_padder(fast)
+# Loading work.sha256(fast)
+# Loading work.prepare(fast)
+# Loading work.sigma1(fast)
+# Loading work.sigma0(fast)
+# Loading work.main_comp(fast)
+# Loading work.Sigma1(fast)
+# Loading work.Sigma0(fast)
+# Loading work.choice(fast)
+# Loading work.majority(fast)
+# Loading work.intermediate_hash(fast)
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# configure wave not supported in batch mode
+# End time: 22:20:34 on Aug 05,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
