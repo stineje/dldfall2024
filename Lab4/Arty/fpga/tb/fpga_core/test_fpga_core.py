@@ -47,7 +47,7 @@ class TB:
 
         cocotb.start_soon(Clock(dut.clk, 8, units="ns").start())
 
-        self.mii_phy = MiiPhy(dut.phy_txd, None, dut.phy_tx_en, dut.phy_tx_clk,
+        self.mii_phy = MiiPhy(dut.phy_txd, None, dut.phy_tx_en, dut.phy_tx_clk, #arguments for fpga core defined here and below
             dut.phy_rxd, dut.phy_rx_er, dut.phy_rx_dv, dut.phy_rx_clk, speed=speed)
 
         dut.phy_crs.setimmediatevalue(0)
