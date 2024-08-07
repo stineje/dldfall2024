@@ -55,11 +55,15 @@ Digital systems are important in all areas of society and using
 combinational logic is a key element to this
 development~\cite{ddca-riscv}.  This
 laboratory will give you more experience with combinational logic
-for digital systems.  
-Security is a major design concern for all devices, including those  we
-use every day, such as cellular phones and computers.
+for digital systems.  It will also give probably your first real
+experience with debugging digital systems as well as tips/hints to
+attack problems related to their implementation.
 
-For this laboratory, we are going to develop a hardware-based Secure Hash Algorith (SHA)
+Security is a major design concern for all devices, including those
+that we
+use every day, such as cellular phones and computers.
+For this laboratory, we are going to develop a hardware-based Secure
+Hash Algorith (SHA)
 implementation
 in two parts.  The primary part of this laboratory will involve designing the 
 SHA algorithm found in this laboratory.
@@ -71,7 +75,7 @@ security and the basics related to making sure someone does not have
 unwanted guests within their systems.  The ideas can also be
 translated easily into more advanced cryptographic systems, such as
 Advanced Encryption Standard (AES) function that is
-commonly used in bitcoin and web-based authentication.
+commonly used in Bitcoin and web-based authentication.
 
 The most widely used cryptographic operations are encryption and
 decryption for secrecy, hashing for integrity, and signatures for
@@ -122,23 +126,29 @@ words, a rotation or sometimes called a circular shift is an operation
 similar to shift except that the bits that fall off at one end are put
 back to the other end.  It is easy to see this as an example.
 
-If we have $n$ that is stored using $8$ bits.
+If we have a value $n$ that is stored using $8$ bits.
 A left rotation of \verb!n = 1110_0101! by $3$ makes
 \verb!n = 0010_1111! (Left shifted by 3 and first 3 bits are put back
 in least-significant positions.  Fortunately, SystemVerilog (SV) makes
 rotation and shifting easy to create with bit-swizzling.
+Bit shifts and especially rotations are so widely used because they
+promote good diffusion~\cite{6769090}.
 
-Bit swizzling is SV is achieved with the curly braces \{ and \}.
+Bit swizzling in SV is achieved with the curly braces \{ and \} and
+makes shifting and rotation simple.
 Using an example from our textbook~\cite{ddca-riscv}, where $y$ is
 given as a $9$-bit value
-$c_2c_1d_0d_0d_0c_0101$ using bit swizzling operations.  This can be
+$\{c_2c_1d_0d_0d_0c_0101\}$ using bit swizzling operations.  This can be
 created in SV by the following statement.
 \begin{verbatim}
 assign y = {c[2:1], {3{d[0]}}, c[0], 3’b101};
 \end{verbatim}
-In reality, the \{\} operator is used to concatenate busses. The
-\verb!{3{d[0]}}! indicates three copies of \verb!d[0]!.
-As stated in our textbook do not confuse the $3$-bit binary constant
+In reality, the \{~\} operator is used to concatenate busses and
+wires.  The
+\verb!{3{d[0]}}! indicates three copies of \verb!d[0]! and is
+sometimes called replication.
+As stated in our textbook~\cite{ddca-riscv}, do not confuse the
+$3$-bit binary constant
 \verb!3‘b101! with a bus named $b$.
 It is important to note that it is critical to specify the length of
 $3$ bits in the constant; otherwise, it would have had an unknown
@@ -179,7 +189,7 @@ same repo.
 To conserve space, GitHub actually shortens
 the hash even though its $40$ characters or $160$-bits in length (i.e.,
 \verb!38fefbbd46d62f394949b0448707c4f24cb60a3a!). 
-\begin{figure}
+\begin{figure} [t!]
   \centering
   \includegraphics[scale=0.5]{github.png}
   \caption{Example GitHub repository showing SHA-1 Hash of \texttt{0x38fefbb}}
@@ -190,15 +200,16 @@ For this laboratory, we will implement SHA-$256$ which is the most
 popular form that people are most familiar with. Most Linux
 distributions come with programs to compute the SHA-256 hash function
 to verify data integrity. For example, the following produces the hash
-for “Hello World!” using SHA-256: echo -n "Hello World!" |
-sha256sum. If somebody changed the exclamation point to a question
-mark, sha256sum would give a different hash, revealing that the
-message had been corrupted.
+for \verb!Hello World!! using SHA-256: echo -n "Hello World!" |
+sha256sum.  
 \begin{verbatim}
 7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069  -
 \end{verbatim}
-%You can also interactively watch SHA-$256$ run at
-%\url{https://sha256algorithm.com}.
+If somebody changed the exclamation point within the
+\verb!Hello World!! message to a question
+mark, sha256sum would give a different hash, revealing that the
+message had been corrupted.  It can also be a convenient way to store
+passwords in software systems as it always unique for a given message.
 
 Table summarizes the structure of SHA-$256$ and SHA-$512$. The hash
 operates on a message $M$ comprising $N$ $m$-bit blocks; it is padded if
@@ -254,14 +265,15 @@ involve two basic steps:
 \end{enumerate}
 \begin{figure} [t!]
   \centering
-  \includegraphics[scale=0.8]{sha256.png}
+  \includegraphics[scale=0.7]{sha256.png}
   \caption{SHA-256 Block Diagram}
   \label{sha2.fig}
 \end{figure}
 
 The IV in Figure~\ref{sha2.fig} is called the Initialization Vector
-and we are not using it in this laboratory.  However, the IV is commonly
-used to give another layer of security to systems.  For example, when
+and we are not using it in this laboratory.  The IV is commonly
+used in cryptographic systems to give another layer of security to
+systems.  For example, when
 you use your credit card and are asked to put in your pin to complete a purchase.
 
 \subsection{ASCII}
@@ -432,7 +444,7 @@ value of $H$ is given as:
 		      32'h3c6ef372, 32'ha54ff53a, 32'h510e527f, 32'h9b05688c,
 		      32'h1f83d9ab, 32'h5be0cd19};
 \end{verbatim}
-Therefore, to get $H_0^0$ you just use \verb!H[255:224]!.  There are
+Therefore, to get $H_0^0$ you should  use \verb!H[255:224]!.  There are
 some clever ways of indexing the values in this array, but I will
 leave that up to you if you wish to explore them.
 
@@ -543,11 +555,11 @@ addition (+) is performed modulo $2^{32}$ as described in Section~\ref{modular.s
   This block is done $64$ times and each value of $a$-$h$ is passed to the
   next block (e.g., The output $a$ will be the next value of $H_0^1$
   from Step~$3$.  Figure~\ref{sha256compression.fig} shows a visual idea
-  of what this step is accomplishing - again, its performed $64$
+  of what this step is accomplishing - again, it is performed $64$
   times.
-  \begin{figure}
+  \begin{figure} [t!]
   \centering
-  \includegraphics[scale=0.95]{sha256compression.png}
+  \includegraphics[scale=0.7]{sha256compression.png}
   \caption{Hash Computation Block}
   \label{sha256compression.fig}
   \end{figure}
@@ -625,28 +637,35 @@ hardware can impact the future, I encourage you to read more about it
 through searching on the Internet as well as this great
 reference~\cite{10.5555/1721909}.
 One of the hard parts of any engineering problem is
-to understand what is going on and making sure you are correct.
-Therefore, digital designers rely heavily on getting good data to make
-sure they are right.  Typically, this is done either on paper and
+to understand what is going on and making sure you are correct.  This
+will be quite apparent within this laboratory.
+
+To make things go
+smoothly, I encourage you to understand how the algorithm works first.
+Digital designers rely heavily on getting good \textit{known} data to make
+sure what their logic produces is correct.  Typically, this is done
+either on paper and
 pencil or through software.  My main goal for this laboratory is give
 you a good experience in debugging while giving you a challenge for
-implementing combinational logic.
+implementing an interesting and complex piece of combinational logic.
 
-We will use software for this approach
-and use a piece of software written in Python.  Python is rated the
+We will use software for our verification in this laboratory 
+using some software written in Python.  Python is now rated the
 number one programming language by the IEEE and the ACM.  I encourage
-you to learn more about Python.
-If you need
-to install Python on your machine at home or laptop, go to
+you to learn more about Python, as it is utilized quite extensively in
+current commercial systems.
+If you need to install Python on your machine at home or laptop, go to
 \url{https://www.python.org/downloads/windows/} and
 download the appropriate version.
 
-The main python output is quite verbose, but it should be available in
-your python directory of your repoistory.  To run the program,
-navigate to this python subdirectory and type
+The main Python output is quite verbose, but it should be available in
+your \verb!python! subdirectory of your repoistory.  To run the program,
+navigate to this \verb!python! subdirectory and type
 \verb!python3 sha256.py!.  It will output a ton of information for
-each step in hexadecimal listed above you can use for debugging.  The
-key is to take things gradually and debug things step by step first.  
+each step in hexadecimal listed above you can use for debugging and
+verification.  The
+key in this laboratory or any complex digital system
+is to take things slowly and debug things step by step first.  
 
 Verification is extremely difficult
 because there are so many moving parts.  Use the
@@ -659,11 +678,13 @@ will be the following elements:
 \begin{enumerate}
   \item Design the SHA-256 combinatianal block for generating the hash
     in SystemVerilog and simulate with ModelSim.
-  \item Use the Python output or web page to help you with verifying the
+  \item Use the Python output or the following web page to help you with verifying the
     correct operation within ModelSim.
     There is also a decent online
     SHA-256 calculator available at \url{https://stepansnigirev.github.io/visual-sha256/} that
-    shows some good input/output value from either encryption or decryption.  
+    shows some good input/output value from either encryption or
+    decryption.  You should use whatever you feel comfortable with and
+    helps you debug your implementation.
   \item Generate and test at least $5$ random messages and their respective hash generation
     using the testbench.
   \item After verifying your design with a testbench in ModelSim,
