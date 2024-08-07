@@ -617,9 +617,6 @@ Package pdftex.def Info: modelsim-tips2.png  used on input line 811.
 
 AED: lastpage setting LastPage
 [12 <./modelsim-tips2.png>] (./lab2.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `lab2.out' has not changed.
 (rerunfilecheck)             Checksum: CCBB9D9798C5C25A0C4DC1D224228165;2492.
  ) 
@@ -657,7 +654,7 @@ type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
 pe1/public/cm-super/sfti1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/public/cm-super/sftt0800.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
 public/cm-super/sftt1000.pfb>
-Output written on lab2.pdf (12 pages, 730776 bytes).
+Output written on lab2.pdf (12 pages, 730791 bytes).
 PDF statistics:
  362 PDF objects out of 1000 (max. 8388607)
  281 compressed objects within 3 object streams
