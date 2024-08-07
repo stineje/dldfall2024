@@ -524,7 +524,7 @@ addition (+) is performed modulo $2^{32}$ as described in Section~\ref{modular.s
       multiplexor.
       The values of $\Sigma_1^{256}$ and $\Sigma_0^{256}$
       are similar to the lower case versions above or except that it
-      is only composed of xor and ror (i.e., no right shifts) or the following.
+      is only composed of xor and ror (i.e., there are no right shifts) or the following.
       \begin{eqnarray*}
         \Sigma_0^{256}(x) = \text{ror}^{2}(x) \oplus \text{ror}^{13}(x) \oplus \text{ror}^{22}(x)    \\
         \Sigma_1^{256}(x) = \text{ror}^{6}(x) \oplus \text{ror}^{11}(x) \oplus \text{ror}^{25}(x)    
@@ -627,7 +627,9 @@ One of the hard parts of any engineering problem is
 to understand what is going on and making sure you are correct.
 Therefore, digital designers rely heavily on getting good data to make
 sure they are right.  Typically, this is done either on paper and
-pencil or through software.
+pencil or through software.  My main goal for this laboratory is give
+you a good experience in debugging while giving you a challenge for
+implementing combinational logic.
 
 We will use software for this approach
 and use a piece of software written in Python.  Python is rated the
@@ -647,21 +649,22 @@ key is to take things gradually and debug things step by step first.
 
 Verification is extremely difficult
 because there are so many moving parts.  Use the
-Python program to verify each block out of the HDL.  The web page I
-previously gave out also can be used to debug things at
-\url{http://www.sha256algorithm.com}.  
+Python program to verify each block out of the HDL.  There is also a
+great web page that can be used to debug things at
+\url{http://www.sha256algorithm.com}, as well.
 
 The main tasks for this laboratory
 will be the following elements:
 \begin{enumerate}
-  \item Design the SHA-256 combinatianal block for both encryption and
-    decryption in SystemVerilog and simulate with ModelSim.
+  \item Design the SHA-256 combinatianal block for generating the hash
+    in SystemVerilog and simulate with ModelSim.
   \item Use the Python output or web page to help you with verifying the
     correct operation within ModelSim.
     There is also a decent online
     SHA-256 calculator available at \url{https://stepansnigirev.github.io/visual-sha256/} that
     shows some good input/output value from either encryption or decryption.  
-  \item Test at least $5$ random messages using the testbench.
+  \item Generate and test at least $5$ random messages and their respective hash generation
+    using the testbench.
   \item After verifying your design with a testbench in ModelSim,
     implement your design on the DSDB board and use the    
     $7$-segment display to display your message and the resulting hash.
@@ -814,7 +817,10 @@ would only try this option if you get everything verified within your
 design.  
 One possible improvement is to work on optimizing the verification
 of your design.  You can do any other modification (e.g., re-writing
-the Python code) or implementing SHA-512, as well.
+the Python code) or implementing SHA-512, as well.  By the way, once
+you get SHA-256 working, it should not be difficult to extend to
+SHA-512.
+
 
 
 \section{Submission}

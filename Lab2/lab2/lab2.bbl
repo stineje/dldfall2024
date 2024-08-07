@@ -6,16 +6,6 @@ Sarah Harris and David Harris,
 \newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edition,
   2021.
 
-\bibitem{fips463}
-{National Institute of Standards and Technology},
-\newblock ``{Data Encryption Standard (DES)},'' FIPS Publication 46-3, October
-  1999.
-
-\bibitem{Biryukov2005}
-Alex Biryukov and Christophe De~Canni{\`e}re,
-\newblock {\em {Data Encryption Standard (DES)}}, pp. 129--135,
-\newblock Springer US, Boston, MA, 2005.
-
 \bibitem{1250396}
 National~Institute of~Standards, Technology (NIST), and Quynh Dang,
 \newblock ``Secure hash standard,'' 2015-08-04 00:08:00 2015.

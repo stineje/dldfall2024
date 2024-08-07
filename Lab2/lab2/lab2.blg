@@ -3,46 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: lab2.aux
 The style file: IEEEbib.bst
 Database file #1: lab2.bib
-Warning--can't use both author and editor fields in Biryukov2005
-You've used 8 entries,
+You've used 6 entries,
             1838 wiz_defined-function locations,
-            508 strings with 4697 characters,
-and the built_in function-call counts, 1566 in all, are:
-= -- 145
-> -- 51
-< -- 1
-+ -- 21
-- -- 13
-* -- 105
-:= -- 245
-add.period$ -- 8
-call.type$ -- 8
-change.case$ -- 8
+            493 strings with 4411 characters,
+and the built_in function-call counts, 1071 in all, are:
+= -- 95
+> -- 39
+< -- 0
++ -- 16
+- -- 10
+* -- 77
+:= -- 181
+add.period$ -- 6
+call.type$ -- 6
+change.case$ -- 7
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 72
-empty$ -- 168
-format.name$ -- 13
-if$ -- 363
+cite$ -- 6
+duplicate$ -- 47
+empty$ -- 115
+format.name$ -- 10
+if$ -- 241
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 8
-newline$ -- 41
-num.names$ -- 8
-pop$ -- 32
+int.to.str$ -- 6
+missing$ -- 6
+newline$ -- 32
+num.names$ -- 6
+pop$ -- 21
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 33
+skip$ -- 13
 stack$ -- 0
-substring$ -- 74
-swap$ -- 17
-text.length$ -- 1
+substring$ -- 42
+swap$ -- 5
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 13
-width$ -- 9
-write$ -- 90
-(There was 1 warning)
+warning$ -- 0
+while$ -- 8
+width$ -- 7
+write$ -- 68
