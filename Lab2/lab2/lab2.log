@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  6 AUG 2024 21:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  6 AUG 2024 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -623,7 +623,7 @@ Package rerunfilecheck Info: File `lab2.out' has not changed.
 Here is how much of TeX's memory you used:
  13440 strings out of 478276
  215354 string characters out of 5846489
- 528967 words of memory out of 5000000
+ 528973 words of memory out of 5000000
  31358 multiletter control sequences out of 15000+600000
  486006 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -654,7 +654,7 @@ type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
 pe1/public/cm-super/sfti1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/public/cm-super/sftt0800.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
 public/cm-super/sftt1000.pfb>
-Output written on lab2.pdf (12 pages, 728625 bytes).
+Output written on lab2.pdf (12 pages, 729249 bytes).
 PDF statistics:
  358 PDF objects out of 1000 (max. 8388607)
  277 compressed objects within 3 object streams
