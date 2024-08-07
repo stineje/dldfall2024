@@ -373,10 +373,10 @@ operations to complete before it can move forward.
 The computation of the hash function is a combination of rotations,
 shifts, and additions.  Addition is tricky as it has to be done not to
 exceed the size of the addition (in this case, since it is a block of
-$32$-bits, then it should not exceed $2^{32}$ or modulo $32$.  This is
+$32$-bits, then it should not exceed $2^{32}$ or modulo $2^{32}$.  This is
 called modular arithmetic and can be summarized in the following equation.
 \begin{eqnarray*}
-  \mid X+Y \mid_m = \Biggl\{
+  \mid X+Y \mid_m ~= \Biggl\{
    \begin{array}{@{}ll@{}}
       X+Y,      & \text{ if $X+Y < m$}  \\
       X+Y-m,    & \text{ if $X+Y \geq m$} 
@@ -384,7 +384,7 @@ called modular arithmetic and can be summarized in the following equation.
 \end{eqnarray*}  
 Modular arithmetic is key to many cryptographic algorithm.
 Fortunately, for our implementation it is quite easy as we just have
-to drop off the MSB.
+to drop off the MSB since it is a modulo addition for a power of $2^n$.
 
 \subsubsection{constants}
 \label{constants.sec}
@@ -454,13 +454,14 @@ message digest.
 The words of the message schedule are labeled
 $W_0, W_1, \ldots, W_{63}$. The
 eight working variables are labeled $a$, $b$, $c$, $d$, $e$, $f$, $g$,
-and $h$.
+and $h$ and computed within each of the $64$ hash computation blocks.
 The words of the hash value are labeled $H_0^i, H_1^i, \ldots H_7^i$.
 which will hold the initial hash value, $H^0$, replaced by each
 successive intermediate hash value
 (after each message block is processed), $H^i$, and ending with the
 final hash value, $H^N$.  For cryptographic systems, this is sometimes
-called a round.
+called a round and is a common word utilized in these types of systems
+to randomize inputs similar to shuffling a deck of cards.
 
 The operation looks more complicated than it is but its just a series
 of computations similar to the RCA in Lab 1.  The key is to get the order of
@@ -546,7 +547,7 @@ addition (+) is performed modulo $2^{32}$ as described in Section~\ref{modular.s
   times.
   \begin{figure}
   \centering
-  \includegraphics[scale=0.85]{sha256compression.png}
+  \includegraphics[scale=0.95]{sha256compression.png}
   \caption{Hash Computation Block}
   \label{sha256compression.fig}
   \end{figure}
@@ -702,7 +703,9 @@ writing HDL or software, it is sometimes useful to \textit{stub} your
 code.  A stubbed piece of code is a blank piece of software that has
 most of your functions you believe will work for your design.
 Fortunately, I have stubbed out your SV for you and you can use this
-as a guide.  I also put some comments in the SV to help you know where
+as a guide.  However, the design is up to you and you can change it if
+you think it will help you optimize your design more effectively.
+I also put some comments in the SV to help you know where
 to instantiate certain items.
 
 I have also utilized a more advanced testbench that reads your
@@ -821,6 +824,20 @@ the Python code) or implementing SHA-512, as well.  By the way, once
 you get SHA-256 working, it should not be difficult to extend to
 SHA-512.
 
+\subsection{Sources on the Internet}
+
+This laboratory is unique to Oklahoma State University and I am not
+oblivious that there are other implementations out there on GitHub.
+You are welcome to look at these, but I encourage you to do your own
+work.  It is not a bad idea to see what others design with HDL, but I
+have been
+designing HDL for a long time and I know when something is bad (most
+often, copied from the Internet) and/or not your own work.  It is your job
+to learn from this laboratory to become the awesome engineer I know
+you can become.  Copying from others is just a bad solution and does
+not get you anywhere nor does it help you learn the material.
+Therefore, please make sure you to do your own
+work here!
 
 
 \section{Submission}

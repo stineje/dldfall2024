@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  6 AUG 2024 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  6 AUG 2024 21:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,7 +557,7 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<github.png, id=94, 915.42pt x 190.7125pt>
+<github.png, id=98, 915.42pt x 190.7125pt>
 File: github.png Graphic file (type png)
 <use github.png>
 Package pdftex.def Info: github.png  used on input line 184.
@@ -568,7 +568,7 @@ Overfull \hbox (1.18527pt too wide) in paragraph at lines 218--238
  []
 
 [2 <./github.png>]
-<sha256.png, id=107, 235.2539pt x 333.11954pt>
+<sha256.png, id=111, 235.2539pt x 333.11954pt>
 File: sha256.png Graphic file (type png)
 <use sha256.png>
 Package pdftex.def Info: sha256.png  used on input line 257.
@@ -578,56 +578,59 @@ Overfull \hbox (11.32933pt too wide) in paragraph at lines 294--314
  [][] 
  []
 
-<padding.png, id=129, 813.0375pt x 157.58875pt>
+<padding.png, id=133, 813.0375pt x 157.58875pt>
 File: padding.png Graphic file (type png)
 <use padding.png>
 Package pdftex.def Info: padding.png  used on input line 343.
 (pdftex.def)             Requested size: 325.20924pt x 63.03436pt.
 [4] [5 <./padding.png>] [6]
-<sha256compression.png, id=165, 328.97906pt x 185.19188pt>
+<sha256compression.png, id=168, 328.97906pt x 185.19188pt>
 File: sha256compression.png Graphic file (type png)
 <use sha256compression.png>
-Package pdftex.def Info: sha256compression.png  used on input line 549.
-(pdftex.def)             Requested size: 279.63351pt x 157.41382pt.
- [7 <./sha256compression.png>]
-<analysis.png, id=178, 2095.83pt x 445.665pt>
+Package pdftex.def Info: sha256compression.png  used on input line 550.
+(pdftex.def)             Requested size: 312.52834pt x 175.93126pt.
+ [7]
+<analysis.png, id=183, 2095.83pt x 445.665pt>
 File: analysis.png Graphic file (type png)
 <use analysis.png>
-Package pdftex.def Info: analysis.png  used on input line 611.
+Package pdftex.def Info: analysis.png  used on input line 612.
 (pdftex.def)             Requested size: 628.75386pt x 133.70053pt.
- [8 <./analysis.png>]
+ [8 <./sha256compression.png> <./analysis.png>]
 [9]
-<modelsim.png, id=211, 1437.37pt x 795.97375pt>
+<modelsim.png, id=215, 1437.37pt x 795.97375pt>
 File: modelsim.png Graphic file (type png)
 <use modelsim.png>
-Package pdftex.def Info: modelsim.png  used on input line 735.
+Package pdftex.def Info: modelsim.png  used on input line 738.
 (pdftex.def)             Requested size: 431.21432pt x 238.79396pt.
  [10 <./modelsim.png>]
-<modelsim-tips1.png, id=222, 589.70313pt x 507.8975pt>
+<modelsim-tips1.png, id=226, 589.70313pt x 507.8975pt>
 File: modelsim-tips1.png Graphic file (type png)
 <use modelsim-tips1.png>
-Package pdftex.def Info: modelsim-tips1.png  used on input line 802.
+Package pdftex.def Info: modelsim-tips1.png  used on input line 805.
 (pdftex.def)             Requested size: 235.87706pt x 203.1554pt.
-<modelsim-tips2.png, id=223, 1290.32062pt x 122.95938pt>
+<modelsim-tips2.png, id=227, 1290.32062pt x 122.95938pt>
 File: modelsim-tips2.png Graphic file (type png)
 <use modelsim-tips2.png>
-Package pdftex.def Info: modelsim-tips2.png  used on input line 808.
+Package pdftex.def Info: modelsim-tips2.png  used on input line 811.
 (pdftex.def)             Requested size: 412.91104pt x 39.3478pt.
- [11 <./modelsim-tips1.png> <./modelsim-tips2.png>]
-(./lab2.bbl) 
+ [11 <./modelsim-tips1.png>] (./lab2.bbl)
+
 AED: lastpage setting LastPage
-[12] (./lab2.aux)
+[12 <./modelsim-tips2.png>] (./lab2.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `lab2.out' has not changed.
-(rerunfilecheck)             Checksum: DEF92A5473E266BF6C0C00627CB84A4D;2310.
+(rerunfilecheck)             Checksum: CCBB9D9798C5C25A0C4DC1D224228165;2492.
  ) 
 Here is how much of TeX's memory you used:
- 13440 strings out of 478276
- 215354 string characters out of 5846489
+ 13442 strings out of 478276
+ 215384 string characters out of 5846489
  528973 words of memory out of 5000000
- 31358 multiletter control sequences out of 15000+600000
+ 31359 multiletter control sequences out of 15000+600000
  486006 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,16n,76p,386b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,16n,76p,386b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/ascii-font/ASCII.pfb></us
@@ -654,10 +657,10 @@ type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2021/texmf-dist/fonts/ty
 pe1/public/cm-super/sfti1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/public/cm-super/sftt0800.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
 public/cm-super/sftt1000.pfb>
-Output written on lab2.pdf (12 pages, 729249 bytes).
+Output written on lab2.pdf (12 pages, 730776 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 362 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
