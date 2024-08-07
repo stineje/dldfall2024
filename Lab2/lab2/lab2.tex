@@ -525,7 +525,7 @@ addition (+) is performed modulo $2^{32}$ as described in Section~\ref{modular.s
       multiplexor.
       The values of $\Sigma_1^{256}$ and $\Sigma_0^{256}$
       are similar to the lower case versions above or except that it
-      is only composed of xor and ror (i.e., there are no right shifts).
+      is only composed of xor and ror operations (i.e., there are no right shifts).
       \begin{eqnarray*}
         \Sigma_0^{256}(x) = \text{ror}^{2}(x) \oplus \text{ror}^{13}(x) \oplus \text{ror}^{22}(x)    \\
         \Sigma_1^{256}(x) = \text{ror}^{6}(x) \oplus \text{ror}^{11}(x) \oplus \text{ror}^{25}(x)    
