@@ -407,9 +407,12 @@ $H^0$, must be set. For SHA-256, the size and number of words in $H^0$
 depends on the message digest size.  These words area obtained by
 taking the first thirty-two bits of the fractional parts of the square
 roots of the first eight prime numbers to ensure the numbers are
-random.  That is, the fractional parts of $2, 3, 5, 7, 11, 13, 17,
-19$.  These value are different for differt versions of the Secure
-Hash Standard~\cite{1250396}.
+random.  That is, the fractional parts of the square root of the following numbers
+$2, 3, 5, 7, 11, 13, 17, 19$ (e.g., $\sqrt{2} = 1.414213562373090488016887
+\rightarrow 0.414213562373090488016887$ which is equal to (more or less)
+\verb!0.01101010000010011110011001101000! in binary).
+These value are different for different versions of the Secure
+Hash Standard (e.g., SHA-384)~\cite{1250396}.
 \begin{eqnarray*}
   H_0^0 & = & \verb!0x6a09e667!\\
   H_1^0 & = & \verb!0xbb67ae85!\\
@@ -424,7 +427,7 @@ Hash Standard~\cite{1250396}.
 There are some additional constants utilized within the main hash
 computation.  These are computed similar based on the cube roots of
 the first sixty-four prime numbers and labeled
-$K_0^{256}, K_1^{256}, \ldots K_{63}^{256}$.
+$K_0^{256}, K_1^{256}, \ldots K_{63}^{256}$, as shown here.
 \begin{verbatim}
 428a2f98 71374491 b5c0fbcf e9b5dba5 3956c25b 59f111f1 923f82a4 ab1c5ed5
 d807aa98 12835b01 243185be 550c7dc3 72be5d74 80deb1fe 9bdc06a7 c19bf174

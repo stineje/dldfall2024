@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.15)  7 AUG 2024 09:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.15)  7 AUG 2024 10:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -606,31 +606,30 @@ Package pdftex.def Info: padding.png  used on input line 355.
 <sha256compression.png, id=170, 328.97906pt x 185.19188pt>
 File: sha256compression.png Graphic file (type png)
 <use sha256compression.png>
-Package pdftex.def Info: sha256compression.png  used on input line 562.
+Package pdftex.def Info: sha256compression.png  used on input line 565.
 (pdftex.def)             Requested size: 230.28377pt x 129.6334pt.
- [7 <./sha256compression.png>]
+ [7]
 <analysis.png, id=184, 2095.83pt x 445.665pt>
 File: analysis.png Graphic file (type png)
 <use analysis.png>
-Package pdftex.def Info: analysis.png  used on input line 624.
+Package pdftex.def Info: analysis.png  used on input line 627.
 (pdftex.def)             Requested size: 628.75386pt x 133.70053pt.
- [8 <./analysis.png>]
-[9]
+ [8 <./sha256compression.png>] [9 <./analysis.png>]
 <modelsim.png, id=216, 1437.37pt x 795.97375pt>
 File: modelsim.png Graphic file (type png)
 <use modelsim.png>
-Package pdftex.def Info: modelsim.png  used on input line 759.
+Package pdftex.def Info: modelsim.png  used on input line 762.
 (pdftex.def)             Requested size: 431.21432pt x 238.79396pt.
  [10 <./modelsim.png>]
 <modelsim-tips1.png, id=227, 589.70313pt x 507.8975pt>
 File: modelsim-tips1.png Graphic file (type png)
 <use modelsim-tips1.png>
-Package pdftex.def Info: modelsim-tips1.png  used on input line 826.
+Package pdftex.def Info: modelsim-tips1.png  used on input line 829.
 (pdftex.def)             Requested size: 235.87706pt x 203.1554pt.
 <modelsim-tips2.png, id=228, 1290.32062pt x 122.95938pt>
 File: modelsim-tips2.png Graphic file (type png)
 <use modelsim-tips2.png>
-Package pdftex.def Info: modelsim-tips2.png  used on input line 832.
+Package pdftex.def Info: modelsim-tips2.png  used on input line 835.
 (pdftex.def)             Requested size: 412.91104pt x 39.3478pt.
  [11] (./lab2.bbl) [12 <./modelsim-tips1.png> <./modelsim-tips2.png>] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -639,6 +638,10 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `lab2.out' has not changed.
 (rerunfilecheck)             Checksum: CCBB9D9798C5C25A0C4DC1D224228165;2492.
  ) 
@@ -649,7 +652,7 @@ Here is how much of TeX's memory you used:
  35873 multiletter control sequences out of 15000+600000
  574816 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,79p,541b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,16n,79p,541b,646s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/ascii-font/ASCII.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
 usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
@@ -674,7 +677,7 @@ ts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts
 /type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/t
 ype1/public/cm-super/sftt0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
 e1/public/cm-super/sftt1000.pfb>
-Output written on lab2.pdf (12 pages, 737138 bytes).
+Output written on lab2.pdf (12 pages, 737798 bytes).
 PDF statistics:
  363 PDF objects out of 1000 (max. 8388607)
  282 compressed objects within 3 object streams
