@@ -540,7 +540,7 @@ addition (+) is performed modulo $2^{32}$ as described in Section~\ref{modular.s
   \item $b = a$
   \item $a = T_1 + T_2$
   \end{itemize}
-  This block is done $64$ times and each value of $a$ is passed to the
+  This block is done $64$ times and each value of $a$-$h$ is passed to the
   next block (e.g., The output $a$ will be the next value of $H_0^1$
   from Step~$3$.  Figure~\ref{sha256compression.fig} shows a visual idea
   of what this step is accomplishing - again, its performed $64$
