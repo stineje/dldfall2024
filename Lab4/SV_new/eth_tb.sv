@@ -1,6 +1,10 @@
 `timescale 1ns/1ps
 module stimulus;
 
+integer 	  handle3;
+integer 	  desc3; 
+
+
 //Parameters
 parameter TARGET = "GENERIC"; //probably should be "SIM" or "XILINX"
 
@@ -15,7 +19,7 @@ logic       phy_rx_dv;
 logic       phy_rx_er;
 logic       phy_tx_clk;
 logic       phy_col;
-logic       phy_crs;                           
+logic       phy_crs;
 logic       uart_rxd;
 
 //Outputs - may need to change outputs to better define sim
@@ -40,20 +44,19 @@ logic       phy_tx_en;
 logic       phy_reset_n;
 logic       uart_txd;
 
-module fpga_core #(
+fpga_core #(
     .TARGET(TARGET)
-)
+    )
 dut (
     /*
      * Clock: 125MHz
      * Synchronous reset
      */
-    clk(clk),
-    rst(rst),
+    .clk(clk),
+    .rst(rst),
+    
+    // GPIO
 
-    /*
-     * GPIO
-     */
     .btn(btn),
     .sw(sw),
     .led0_r(led0_r),
@@ -96,15 +99,25 @@ dut (
 
 // Clock generation
 initial begin
-    clk = 0;
+    clk = 1'b0;
     forever #4 clk = ~clk; // 125 MHz clock (8ns period)
+end
+
+initial begin
+    phy_rx_clk = 1'b0;
+    forever #4 phy_rx_clk = ~phy_rx_clk; // 125 MHz clock (8ns period)
+end
+
+initial begin
+    phy_tx_clk = 1'b0;
+    forever #4 phy_tx_clk = ~phy_tx_clk; // 125 MHz clock (8ns period)
 end
 
 initial begin
     handle3 = $fopen("ethernet.out");
     //$readmemh("d.tv", testvectors);	
-    vectornum = 0;
-    errors = 0;		
+    //vectornum = 0;
+    //errors = 0;		
     desc3 = handle3;
 end
 
@@ -114,11 +127,11 @@ initial begin
     rst = 1;
     btn = 0;
     sw = 0;
-    phy_rx_clk = 0;
+    //phy_rx_clk = 0;
     phy_rxd = 4'b0000;
     phy_rx_dv = 0;
     phy_rx_er = 0;
-    phy_tx_clk = 0;
+    //phy_tx_clk = 0;
     uart_rxd = 0;
 
     // Apply reset
