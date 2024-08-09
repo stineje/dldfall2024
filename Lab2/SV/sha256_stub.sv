@@ -46,7 +46,7 @@ module sha256 #(parameter PADDED_SIZE = 512)
 		       32'h8cc70208, 32'h90befffa, 32'ha4506ceb, 32'hbef9a3f7,
 		       32'hc67178f2};
 
-   // Definie your intermediate variables here
+   // Definie your intermediate variables here (forgetting them assumes variables are 1-bit)
    logic [31:0]   a, b, c, d, e, f, g, h;
    logic [31:0]   a0_out, b0_out, c0_out, d0_out, e0_out, f0_out, g0_out, h0_out;
 
@@ -55,29 +55,86 @@ module sha256 #(parameter PADDED_SIZE = 512)
 
    // Initialize 
    assign a = H[255:224];
-   assign b = H[223:192];
-   assign c = H[191:160];
-   assign d = H[159:128];
-   assign e = H[127:96];
-   assign f = H[95:64];
-   assign g = H[63:32];
-   assign h = H[31:0];
+   // add b through h here
+   
+   // 64 hash computations   
+   main_comp mc01 ( ); // add arguments within parenthesis
+   main_comp mc02 ( ); // add arguments within parenthesis
+   main_comp mc03 ( ); // add arguments within parenthesis
+   main_comp mc04 ( ); // add arguments within parenthesis
+   main_comp mc05 ( ); // add arguments within parenthesis
+   main_comp mc06 ( ); // add arguments within parenthesis
+   main_comp mc07 ( ); // add arguments within parenthesis
+   main_comp mc08 ( ); // add arguments within parenthesis
+   main_comp mc09 ( ); // add arguments within parenthesis
+   
+   main_comp mc10 ( ); // add arguments within parenthesis
+   main_comp mc11 ( ); // add arguments within parenthesis   
+   main_comp mc12 ( ); // add arguments within parenthesis   
+   main_comp mc13 ( ); // add arguments within parenthesis
+   main_comp mc14 ( ); // add arguments within parenthesis
+   main_comp mc15 ( ); // add arguments within parenthesis
+   main_comp mc16 ( ); // add arguments within parenthesis
+   main_comp mc17 ( ); // add arguments within parenthesis
+   main_comp mc18 ( ); // add arguments within parenthesis
+   main_comp mc19 ( ); // add arguments within parenthesis
 
-   main_comp mc01 (a, b, c, d, 
-		   e, f, g, h, 
-		   K[2047:2016], W0,
-		   a0_out, b0_out, c0_out, d0_out, 
-		   e0_out, f0_out, g0_out, h0_out);
+   main_comp mc20 ( ); // add arguments within parenthesis
+   main_comp mc21 ( ); // add arguments within parenthesis   
+   main_comp mc22 ( ); // add arguments within parenthesis   
+   main_comp mc23 ( ); // add arguments within parenthesis
+   main_comp mc24 ( ); // add arguments within parenthesis
+   main_comp mc25 ( ); // add arguments within parenthesis
+   main_comp mc26 ( ); // add arguments within parenthesis
+   main_comp mc27 ( ); // add arguments within parenthesis
+   main_comp mc28 ( ); // add arguments within parenthesis
+   main_comp mc29 ( ); // add arguments within parenthesis
 
-   // 63 additional hash computations
+   main_comp mc30 ( ); // add arguments within parenthesis
+   main_comp mc31 ( ); // add arguments within parenthesis   
+   main_comp mc32 ( ); // add arguments within parenthesis   
+   main_comp mc33 ( ); // add arguments within parenthesis
+   main_comp mc34 ( ); // add arguments within parenthesis
+   main_comp mc35 ( ); // add arguments within parenthesis
+   main_comp mc36 ( ); // add arguments within parenthesis
+   main_comp mc37 ( ); // add arguments within parenthesis
+   main_comp mc38 ( ); // add arguments within parenthesis
+   main_comp mc39 ( ); // add arguments within parenthesis
+
+   main_comp mc40 ( ); // add arguments within parenthesis
+   main_comp mc41 ( ); // add arguments within parenthesis   
+   main_comp mc42 ( ); // add arguments within parenthesis   
+   main_comp mc43 ( ); // add arguments within parenthesis
+   main_comp mc44 ( ); // add arguments within parenthesis
+   main_comp mc45 ( ); // add arguments within parenthesis
+   main_comp mc46 ( ); // add arguments within parenthesis
+   main_comp mc47 ( ); // add arguments within parenthesis
+   main_comp mc48 ( ); // add arguments within parenthesis
+   main_comp mc49 ( ); // add arguments within parenthesis
+
+   main_comp mc50 ( ); // add arguments within parenthesis
+   main_comp mc51 ( ); // add arguments within parenthesis   
+   main_comp mc52 ( ); // add arguments within parenthesis   
+   main_comp mc53 ( ); // add arguments within parenthesis
+   main_comp mc54 ( ); // add arguments within parenthesis
+   main_comp mc55 ( ); // add arguments within parenthesis
+   main_comp mc56 ( ); // add arguments within parenthesis
+   main_comp mc57 ( ); // add arguments within parenthesis
+   main_comp mc58 ( ); // add arguments within parenthesis
+   main_comp mc59 ( ); // add arguments within parenthesis
+
+   main_comp mc60 ( ); // add arguments within parenthesis
+   main_comp mc61 ( ); // add arguments within parenthesis   
+   main_comp mc62 ( ); // add arguments within parenthesis   
+   main_comp mc63 ( ); // add arguments within parenthesis
+   main_comp mc64 ( ); // add arguments within parenthesis
 
    intermediate_hash ih1 (a63_out, b63_out, c63_out, d63_out,
 			  e63_out, f63_out, g63_out, h63_out,
 			  a, b, c, d, e, f, g, h,
 			  h0, h1, h2, h3, h4, h5, h6, h7);
-
-   assign hashed = {h0, h1, h2, h3, h4, h5, h6, h7};
-
+   // Final output
+   assign hashed = {};
 
 endmodule // sha_main
 
@@ -137,8 +194,6 @@ endmodule // choice
 
 module Sigma0 (input logic [31:0] x, output logic [31:0] Sig0);
 
-   // (x ror 2) ^ (x ror 13) ^ (x ror 22)
-   assign Sig0 = {x[1:0],x[31:2]} ^ {x[12:0],x[31:13]} ^ {x[21:0],x[31:22]};
 
 endmodule // Sigma0
 
