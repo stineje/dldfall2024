@@ -33,36 +33,36 @@ vlog ../Arty/fpga/rtl/fpga_core.v
 #vlog ../../verilog-ethernet/lib/axis/rtl/*.v
 vlog eth_tb.sv
 
-vlog ../../verilog-ethernet/rtl/eth_mac_mii_fifo.v
-vlog ../../verilog-ethernet/rtl/eth_mac_mii.v
-vlog ../../verilog-ethernet/rtl/ssio_sdr_in.v
-vlog ../../verilog-ethernet/rtl/mii_phy_if.v
-vlog ../../verilog-ethernet/rtl/eth_mac_1g.v
-vlog ../../verilog-ethernet/rtl/axis_gmii_rx.v
-vlog ../../verilog-ethernet/rtl/axis_gmii_tx.v
-vlog ../../verilog-ethernet/rtl/lfsr.v
-vlog ../../verilog-ethernet/rtl/eth_axis_rx.v 
-vlog ../../verilog-ethernet/rtl/eth_axis_tx.v
-vlog ../../verilog-ethernet/rtl/udp_complete.v 
-vlog ../../verilog-ethernet/rtl/udp_checksum_gen.v
-vlog ../../verilog-ethernet/rtl/udp.v
-vlog ../../verilog-ethernet/rtl/udp_ip_rx.v
-vlog ../../verilog-ethernet/rtl/udp_ip_tx.v
-vlog ../../verilog-ethernet/rtl/ip_complete.v 
-vlog ../../verilog-ethernet/rtl/ip.v 
-vlog ../../verilog-ethernet/rtl/ip_eth_rx.v
-vlog ../../verilog-ethernet/rtl/ip_eth_tx.v 
-vlog ../../verilog-ethernet/rtl/ip_arb_mux.v  
-vlog ../../verilog-ethernet/rtl/arp.v
-vlog ../../verilog-ethernet/rtl/arp_cache.v
-vlog ../../verilog-ethernet/rtl/arp_eth_rx.v
-vlog ../../verilog-ethernet/rtl/arp_eth_tx.v
-vlog ../../verilog-ethernet/rtl/eth_arb_mux.v
-vlog ../../verilog-ethernet/lib/axis/rtl/arbiter.v
-vlog ../../verilog-ethernet/lib/axis/rtl/priority_encoder.v
-vlog ../../verilog-ethernet/lib/axis/rtl/axis_fifo.v
-vlog ../../verilog-ethernet/lib/axis/rtl/axis_async_fifo.v
-vlog ../../verilog-ethernet/lib/axis/rtl/axis_async_fifo_adapter.v
+vlog ../src/eth_mac_mii_fifo.v
+vlog ../src/eth_mac_mii.v
+vlog ../src/ssio_sdr_in.v
+vlog ../src/mii_phy_if.v
+vlog ../src/eth_mac_1g.v
+vlog ../src/axis_gmii_rx.v
+vlog ../src/axis_gmii_tx.v
+vlog ../src/lfsr.v
+vlog ../src/eth_axis_rx.v 
+vlog ../src/eth_axis_tx.v
+vlog ../src/udp_complete.v 
+vlog ../src/udp_checksum_gen.v
+vlog ../src/udp.v
+vlog ../src/udp_ip_rx.v
+vlog ../src/udp_ip_tx.v
+vlog ../src/ip_complete.v 
+vlog ../src/ip.v 
+vlog ../src/ip_eth_rx.v
+vlog ../src/ip_eth_tx.v 
+vlog ../src/ip_arb_mux.v  
+vlog ../src/arp.v
+vlog ../src/arp_cache.v
+vlog ../src/arp_eth_rx.v
+vlog ../src/arp_eth_tx.v
+vlog ../src/eth_arb_mux.v
+vlog ../src/arbiter.v
+vlog ../src/priority_encoder.v
+vlog ../src/axis_fifo.v
+vlog ../src/axis_async_fifo.v
+vlog ../src/axis_async_fifo_adapter.v
 
 
 # start and run simulation
@@ -74,6 +74,11 @@ view wave
 -- display input and output signals as hexidecimal values
 # Diplays All Signals recursively
 #add wave -hex -r /stimulus/*
+
+#Misc
+add wave -noupdate -divider -height 32 "Misc"
+add wave -hex -r /stimulus/dut/eth_mac_inst/tx_fifo/fifo_inst/*
+#add wave -hex -r /stimulus/dut/eth_mac_inst/rx_fifo/fifo_inst/* //both tx and rx instantiations
 
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"

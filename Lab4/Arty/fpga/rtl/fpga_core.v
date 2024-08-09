@@ -94,7 +94,7 @@ wire rx_axis_tlast;
 wire rx_axis_tuser;
 
 wire [7:0] tx_axis_tdata;
-wire tx_axis_tkeep;
+//wire tx_axis_tkeep; //added to match, may not need
 wire tx_axis_tvalid;
 wire tx_axis_tready;
 wire tx_axis_tlast;
@@ -335,13 +335,14 @@ eth_mac_inst (
     .logic_rst(rst),
 
     .tx_axis_tdata(tx_axis_tdata),
+    .tx_axis_tkeep(), //missing pin
     .tx_axis_tvalid(tx_axis_tvalid),
     .tx_axis_tready(tx_axis_tready),
-    .tx_axis_tkeep(tx_axis_tkeep), //added to match
     .tx_axis_tlast(tx_axis_tlast),
     .tx_axis_tuser(tx_axis_tuser),
 
     .rx_axis_tdata(rx_axis_tdata),
+    .rx_axis_tkeep(), //missing pin
     .rx_axis_tvalid(rx_axis_tvalid),
     .rx_axis_tready(rx_axis_tready),
     .rx_axis_tlast(rx_axis_tlast),
@@ -356,6 +357,7 @@ eth_mac_inst (
     .mii_tx_en(phy_tx_en),
     .mii_tx_er(),
 
+    .tx_error_underflow(), //missing pin
     .tx_fifo_overflow(),
     .tx_fifo_bad_frame(),
     .tx_fifo_good_frame(),
@@ -376,6 +378,7 @@ eth_axis_rx_inst (
     .rst(rst),
     // AXI input
     .s_axis_tdata(rx_axis_tdata),
+    .s_axis_tkeep(), //missing pin
     .s_axis_tvalid(rx_axis_tvalid),
     .s_axis_tready(rx_axis_tready),
     .s_axis_tlast(rx_axis_tlast),
@@ -387,6 +390,7 @@ eth_axis_rx_inst (
     .m_eth_src_mac(rx_eth_src_mac),
     .m_eth_type(rx_eth_type),
     .m_eth_payload_axis_tdata(rx_eth_payload_axis_tdata),
+    .m_eth_payload_axis_tkeep(), //missing pin
     .m_eth_payload_axis_tvalid(rx_eth_payload_axis_tvalid),
     .m_eth_payload_axis_tready(rx_eth_payload_axis_tready),
     .m_eth_payload_axis_tlast(rx_eth_payload_axis_tlast),
@@ -407,12 +411,14 @@ eth_axis_tx_inst (
     .s_eth_src_mac(tx_eth_src_mac),
     .s_eth_type(tx_eth_type),
     .s_eth_payload_axis_tdata(tx_eth_payload_axis_tdata),
+    .s_eth_payload_axis_tkeep(), //missing pin
     .s_eth_payload_axis_tvalid(tx_eth_payload_axis_tvalid),
     .s_eth_payload_axis_tready(tx_eth_payload_axis_tready),
     .s_eth_payload_axis_tlast(tx_eth_payload_axis_tlast),
     .s_eth_payload_axis_tuser(tx_eth_payload_axis_tuser),
     // AXI output
     .m_axis_tdata(tx_axis_tdata),
+    .m_axis_tkeep(), //missing pin
     .m_axis_tvalid(tx_axis_tvalid),
     .m_axis_tready(tx_axis_tready),
     .m_axis_tlast(tx_axis_tlast),
@@ -587,7 +593,13 @@ udp_payload_fifo (
     .m_axis_tdest(),
     .m_axis_tuser(tx_fifo_udp_payload_axis_tuser),
 
+    //Pause
+    .pause_req(), //missing pin
+    .pause_ack(), //missing pin
+
     // Status
+    .status_depth(), //missing pin
+    .status_depth_commit(), //missing pin
     .status_overflow(),
     .status_bad_frame(),
     .status_good_frame()
