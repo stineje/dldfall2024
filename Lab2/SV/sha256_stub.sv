@@ -48,14 +48,10 @@ module sha256 #(parameter PADDED_SIZE = 512)
 
    // Definie your intermediate variables here (forgetting them assumes variables are 1-bit)
    logic [31:0]   a, b, c, d, e, f, g, h;
-   logic [31:0]   a0_out, b0_out, c0_out, d0_out, e0_out, f0_out, g0_out, h0_out;
-
    logic [31:0]   a63_out, b63_out, c63_out, d63_out, e63_out, f63_out, g63_out, h63_out;
    logic [31:0]   h0, h1, h2, h3, h4, h5, h6, h7;
 
-   // Initialize 
-   assign a = H[255:224];
-   // add b through h here
+   // Initialize a through h
    
    // 64 hash computations   
    main_comp mc01 ( ); // add arguments within parenthesis
