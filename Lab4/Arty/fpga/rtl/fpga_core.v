@@ -68,22 +68,22 @@ module fpga_core #
     /*
      * Ethernet: 100BASE-T MII
      */
-    input  wire       phy_rx_clk,
-    input  wire [3:0] phy_rxd,
-    input  wire       phy_rx_dv,
-    input  wire       phy_rx_er,
-    input  wire       phy_tx_clk,
-    output wire [3:0] phy_txd,
-    output wire       phy_tx_en,
-    input  wire       phy_col,
-    input  wire       phy_crs,
-    output wire       phy_reset_n,
+    input  wire       phy_rx_clk, //Clock signal for receiving data.
+    input  wire [3:0] phy_rxd, //4-bit data input from the physical layer.
+    input  wire       phy_rx_dv, //Data Valid signal, indicating when phy_rxd holds valid data
+    input  wire       phy_rx_er, //Error signal indicating if there is an error in the received data.
+    input  wire       phy_tx_clk, //Clock signal for transmitting data
+    output wire [3:0] phy_txd, //4-bit data output to the physical layer.
+    output wire       phy_tx_en, //Transmit Enable signal, indicating when to send data on 'phy_txd'
+    input  wire       phy_col, // Collision signal, often used in Ethernet to indicate data collisions on the network
+    input  wire       phy_crs, //Carrier Sense signal, indicating that the network medium is active
+    output wire       phy_reset_n, //Reset signal, active low, used to reset the PHY (physical layer) device.
 
     /*
      * UART: 115200 bps, 8N1
      */
-    input  wire       uart_rxd,
-    output wire       uart_txd
+    input  wire       uart_rxd, // UART receive data input
+    output wire       uart_txd // UART transmit data output
 );
 
 // AXI between MAC and Ethernet modules

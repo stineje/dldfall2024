@@ -232,7 +232,12 @@ payload_fifo (
     .m_axis_tid(),
     .m_axis_tdest(),
     .m_axis_tuser(m_udp_payload_fifo_tuser),
+    // Pause (both missing pin)
+    .pause_req(),
+    .pause_ack(),
     // Status
+    .status_depth(), //missing pin
+    .status_depth_commit(), //missing pin
     .status_overflow(),
     .status_bad_frame(),
     .status_good_frame()
