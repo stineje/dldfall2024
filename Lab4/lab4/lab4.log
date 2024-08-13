@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  12 AUG 2024 19:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  12 AUG 2024 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -513,43 +513,39 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]
 No file lab4.bbl.
 
 AED: lastpage setting LastPage
-[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-]
-(./lab4.aux)
-
-Package rerunfilecheck Warning: File `lab4.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `lab4.out':
-(rerunfilecheck)             Before: 9814C2D956916ADB9290ECA4E25C967A;103
-(rerunfilecheck)             After:  44F1DD6BA60C6145FB598F9FB607654F;243.
+[2] (./lab4.aux)
+Package rerunfilecheck Info: File `lab4.out' has not changed.
+(rerunfilecheck)             Checksum: 44F1DD6BA60C6145FB598F9FB607654F;243.
  ) 
 Here is how much of TeX's memory you used:
- 12277 strings out of 478276
- 197802 string characters out of 5846489
- 484286 words of memory out of 5000000
- 30304 multiletter control sequences out of 15000+600000
- 476657 words of font info for 44 fonts, out of 8000000 for 9000
+ 12282 strings out of 478276
+ 197859 string characters out of 5846489
+ 495294 words of memory out of 5000000
+ 30307 multiletter control sequences out of 15000+600000
+ 476992 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,13n,76p,240b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,13n,76p,240b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab4.pdf (1 page, 116042 bytes).
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/
+texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on lab4.pdf (2 pages, 143195 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 79 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 

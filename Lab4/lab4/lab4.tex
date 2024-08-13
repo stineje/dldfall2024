@@ -69,6 +69,115 @@ and understand how to use it.
 
 \subsection{Ethernet Packets}
 
+Ethernet is the most widely used LAN technology and is defined under
+the IEEE standards 802.3. The reason behind its wide usability is that
+Ethernet is easy to understand, implement, and maintain, and, most
+importantly, allows a
+low-cost network implementation. Also, Ethernet offers flexibility in
+terms of the topologies that are allowed. Ethernet generally uses a
+bus topology where each item connects to the Ether.
+Ethernet operates in two layers of the OSI model, the
+physical layer and the data link layer. For Ethernet, the protocol
+data unit is a frame since we mainly deal with DLLs. In order to
+handle collisions, the Access control mechanism used in Ethernet is
+CSMA/CD.
+
+Although Ethernet has been largely replaced by wireless networks,
+wired networking still uses Ethernet more frequently. Wi-Fi eliminates
+the need for cables by enabling users to connect their smartphones or
+laptops to a network wirelessly. The 802.11ac Wi-Fi standard offers
+faster maximum data transfer rates when compared to Gigabit
+Ethernet. However, wired connections are more secure and less
+susceptible to interference than wireless networks. This is the main
+justification for why so many companies and organizations continue to
+use Ethernet.
+
+The basic frame format which is required for all MAC implementation is
+defined in IEEE 802.3 standard. Though several optional formats are
+being used to extend the protocol’s basic capability. Ethernet frame
+starts with Preamble and SFD, both work at the physical
+layer. Ethernet header contains both the Source and Destination MAC
+address, after which the payload of the frame is present. The last
+field is CRC which is used to detect the error. Now, let’s study each
+field of basic frame format.
+
+The size of an Ethernet frame by the IEEE 802.3 varies from $64$ bytes
+to $1,518$ bytes including the data length (i.e., $46$ to $1,500$
+bytes).  T
+
+% https://www.geeksforgeeks.org/ethernet-frame-format/
+\begin{itemize}
+\item PRE (preamble) – Ethernet frame starts with a $7$-Bytes preamble. This
+  is a pattern of alternative $0$’s and $1$’s which indicates starting of
+  the frame and allow sender and receiver to establish bit
+  synchronization. Initially, the PRE (Preamble) is introduced to allow
+  for the loss of a few bits due to signal delays. But today’s
+  high-speed Ethernet doesn’t need the Preamble to protect the frame
+  bits. PRE (Preamble) indicates the receiver that frame is coming and
+  allow the receiver to lock onto the data stream before the actual
+  frame begins.  
+\item Start of frame delimiter (SFD) – This is a $1$-Byte field that is
+  always set to \verb!1010_1011!. SFD indicates that upcoming bits are
+  starting the frame, which is the destination address. Sometimes SFD
+  is considered part of PRE, this is the reason Preamble is described
+  as 8 Bytes in many places. The SFD warns station or stations that
+  this is the last chance for synchronization.  
+\item Destination Address – This is a $6$-Byte field that contains the
+  MAC address of the machine for which data is destined.  
+\item Source Address – This is a $6$-Byte field that contains the MAC
+  address of the source machine. As Source Address is always an
+  individual address (Unicast), the least significant bit of the first
+  byte is always $0$.  
+\item Length – Length is a $2$-Byte field, which indicates the length of
+  the entire Ethernet frame. This 16-bit field can hold a length value
+  between $0$ to $65,534$, but length cannot be larger than $1,500$ Bytes
+  because of some own limitations of Ethernet.  
+\item Data – This is the place where actual data is inserted, also
+  known as Payload. Both IP header and data will be inserted here if
+  Internet Protocol is used over Ethernet. The maximum data present
+  may be as long as $1,500$ Bytes. In case data length is less than
+  minimum length (i.e., $46$ bytes), then padding $0$’s is added to meet the
+  minimum possible length.
+\item Cyclic Redundancy Check (CRC) – CRC is $4$ Byte field. This field
+  contains a $32$-bits hash code of data, which is generated over the
+  Destination Address, Source Address, Length, and Data field. If the
+  checksum computed by destination is not the same as sent checksum
+  value, data received is corrupted.  
+\item VLAN Tagging – The Ethernet frame can also include a VLAN
+  (Virtual Local Area Network) tag, which is a $4$-byte field inserted
+  after the source address and before the EtherType field. This tag
+  allows network administrators to logically separate a physical
+  network into multiple virtual networks, each with its own VLAN ID.  
+\item Jumbo Frames – In addition to the standard Ethernet frame size
+  of $1,518$ bytes, some network devices support Jumbo Frames, which are
+  frames with a payload larger than $1,500$ bytes. Jumbo Frames can
+  increase network throughput by reducing the overhead associated with
+  transmitting a large number of small frames.  
+\item Ether Type Field – The EtherType field in the Ethernet frame
+  header identifies the protocol carried in the payload of the
+  frame. For example, a value of \verb!0x0800! indicates that the payload is
+  an IP packet, while a value of \verb!0x0806! indicates that the payload is
+  an ARP (Address Resolution Protocol) packet.  
+\item Multicast and Broadcast Frames –  In addition to Unicast frames
+  (which are sent to a specific destination MAC address), Ethernet
+  also supports Multicast and Broadcast frames. Multicast frames are
+  sent to a specific group of devices that have joined a multicast
+  group, while Broadcast frames are sent to all devices on the
+  network.  
+\item Collision Detection – In half-duplex Ethernet networks,
+  collisions can occur when two devices attempt to transmit data at
+  the same time. To detect collisions, Ethernet uses a Carrier Sense
+  Multiple Access with Collision Detection (CSMA/CD) protocol, which
+  listens for activity on the network before transmitting data and
+  backs off if a collision is detected.
+\end{itemize}
+  
+
+
+
+
+
+
 
 \bibliographystyle{IEEEbib}
 \bibliography{lab4}
