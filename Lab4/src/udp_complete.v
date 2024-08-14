@@ -372,29 +372,29 @@ ip_arb_mux_inst (
     // IP frame inputs
     .s_ip_hdr_valid({s_ip_hdr_valid, udp_tx_ip_hdr_valid}),
     .s_ip_hdr_ready({s_ip_hdr_ready, udp_tx_ip_hdr_ready}),
-    .s_eth_dest_mac(0),
-    .s_eth_src_mac(0),
-    .s_eth_type(0),
-    .s_ip_version(0),
-    .s_ip_ihl(0),
+    .s_eth_dest_mac('0), //changed from 0 to '0
+    .s_eth_src_mac('0), //changed from 0 to '0
+    .s_eth_type(0), //0 matches bc default is 32 bits but changed to '0 anyway
+    .s_ip_version('0), //changed from 0 to '0
+    .s_ip_ihl('0), //changed from 0 to '0
     .s_ip_dscp({s_ip_dscp, udp_tx_ip_dscp}),
     .s_ip_ecn({s_ip_ecn, udp_tx_ip_ecn}),
     .s_ip_length({s_ip_length, udp_tx_ip_length}),
-    .s_ip_identification(0),
-    .s_ip_flags(0),
-    .s_ip_fragment_offset(0),
+    .s_ip_identification('0),
+    .s_ip_flags('0),
+    .s_ip_fragment_offset('0),
     .s_ip_ttl({s_ip_ttl, udp_tx_ip_ttl}),
     .s_ip_protocol({s_ip_protocol, udp_tx_ip_protocol}),
-    .s_ip_header_checksum(0),
+    .s_ip_header_checksum('0),
     .s_ip_source_ip({s_ip_source_ip, udp_tx_ip_source_ip}),
     .s_ip_dest_ip({s_ip_dest_ip, udp_tx_ip_dest_ip}),
     .s_ip_payload_axis_tdata({s_ip_payload_axis_tdata, udp_tx_ip_payload_axis_tdata}),
-    .s_ip_payload_axis_tkeep(0),
+    .s_ip_payload_axis_tkeep('0),
     .s_ip_payload_axis_tvalid({s_ip_payload_axis_tvalid, udp_tx_ip_payload_axis_tvalid}),
     .s_ip_payload_axis_tready({s_ip_payload_axis_tready, udp_tx_ip_payload_axis_tready}),
     .s_ip_payload_axis_tlast({s_ip_payload_axis_tlast, udp_tx_ip_payload_axis_tlast}),
-    .s_ip_payload_axis_tid(0),
-    .s_ip_payload_axis_tdest(0),
+    .s_ip_payload_axis_tid('0),
+    .s_ip_payload_axis_tdest('0),
     .s_ip_payload_axis_tuser({s_ip_payload_axis_tuser, udp_tx_ip_payload_axis_tuser}),
     // IP frame output
     .m_ip_hdr_valid(ip_tx_ip_hdr_valid),
