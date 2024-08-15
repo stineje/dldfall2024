@@ -216,12 +216,12 @@ payload_fifo (
     .rst(rst),
     // AXI input
     .s_axis_tdata(s_udp_payload_fifo_tdata),
-    .s_axis_tkeep(0),
+    .s_axis_tkeep('0),
     .s_axis_tvalid(s_udp_payload_fifo_tvalid),
     .s_axis_tready(s_udp_payload_fifo_tready),
     .s_axis_tlast(s_udp_payload_fifo_tlast),
-    .s_axis_tid(0),
-    .s_axis_tdest(0),
+    .s_axis_tid('0),
+    .s_axis_tdest('0),
     .s_axis_tuser(s_udp_payload_fifo_tuser),
     // AXI output
     .m_axis_tdata(m_udp_payload_fifo_tdata),

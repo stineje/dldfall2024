@@ -556,7 +556,7 @@ udp_complete_inst (
     .local_ip(local_ip),
     .gateway_ip(gateway_ip),
     .subnet_mask(subnet_mask),
-    .clear_arp_cache(0)
+    .clear_arp_cache('0) //changed from 0 to '0 for dynamic port size
 );
 
 axis_fifo #(
@@ -575,12 +575,12 @@ udp_payload_fifo (
 
     // AXI input
     .s_axis_tdata(rx_fifo_udp_payload_axis_tdata),
-    .s_axis_tkeep(0),
+    .s_axis_tkeep('0),
     .s_axis_tvalid(rx_fifo_udp_payload_axis_tvalid),
     .s_axis_tready(rx_fifo_udp_payload_axis_tready),
     .s_axis_tlast(rx_fifo_udp_payload_axis_tlast),
-    .s_axis_tid(0),
-    .s_axis_tdest(0),
+    .s_axis_tid('0),
+    .s_axis_tdest('0),
     .s_axis_tuser(rx_fifo_udp_payload_axis_tuser),
 
     // AXI output
