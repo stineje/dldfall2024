@@ -221,7 +221,7 @@ add wave -color blue -hex /stimulus/uart_txd
 -- Set Wave Output Items 
 TreeUpdate [SetDefaultTree]
 WaveRestoreZoom {0 ps} {75 ns}
-configure wave -namecolwidth 150
+configure wave -namecolwidth 300
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
