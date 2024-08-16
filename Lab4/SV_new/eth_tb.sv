@@ -21,6 +21,7 @@ logic       phy_tx_clk;
 logic       phy_col;
 logic       phy_crs;
 logic       uart_rxd;
+//logic [47:0] tx_eth_dest_mac;
 
 //Outputs - may need to change outputs to better define sim
 logic       led0_r;
@@ -79,6 +80,7 @@ dut (
     /*
      * Ethernet: 100BASE-T MII
      */
+    //.tx_eth_dest_mac(tx_eth_dest_mac),
     .phy_rx_clk(phy_rx_clk),
     .phy_rxd(phy_rxd),
     .phy_rx_dv(phy_rx_dv),
@@ -127,6 +129,7 @@ initial begin
     rst = 1;
     btn = 0;
     sw = 0;
+    //tx_eth_dest_mac = 48'h020000000000;
     //phy_rx_clk = 0;
     phy_rxd = 4'b0000;
     phy_rx_dv = 0;

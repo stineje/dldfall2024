@@ -68,6 +68,7 @@ module fpga_core #
     /*
      * Ethernet: 100BASE-T MII
      */
+    //input wire [47:0] tx_eth_dest_mac,
     input  wire       phy_rx_clk, //Clock signal for receiving data.
     input  wire [3:0] phy_rxd, //4-bit data input from the physical layer.
     input  wire       phy_rx_dv, //Data Valid signal, indicating when phy_rxd holds valid data
@@ -114,7 +115,7 @@ wire rx_eth_payload_axis_tuser;
 
 wire tx_eth_hdr_ready;
 wire tx_eth_hdr_valid;
-wire [47:0] tx_eth_dest_mac;
+wire [47:0] tx_eth_dest_mac; //undo the comment
 wire [47:0] tx_eth_src_mac;
 wire [15:0] tx_eth_type;
 wire [7:0] tx_eth_payload_axis_tdata;
@@ -426,6 +427,7 @@ eth_axis_tx_inst (
     // Status signals
     .busy()
 );
+
 
 udp_complete
 udp_complete_inst (
