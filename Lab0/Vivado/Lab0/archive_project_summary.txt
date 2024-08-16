@@ -37,9 +37,6 @@
 * Section (4) - JOURNAL/LOG FILES
 *  This section summarizes the list of journal/log files that were added to the archive
 *
-* Section (5) - CONFIGURATION SETTINGS/FILES
-*  This section summarizes the configuration settings/files that were added to the archive
-*
 ***************************************************************************************
 
 Section (1) - PROJECT INFORMATION
@@ -133,9 +130,4 @@ Archived Location = ./Lab0/vivado.jou
 
 Source File = C:/Users/james/AppData/Roaming/Xilinx/Vivado/vivado.log
 Archived Location = ./Lab0/vivado.log
-
-Section (5) - CONFIGURATION SETTINGS/FILES
-------------------------------------------
-List of configuration settings/files that were added to the archived project:-
-
 
