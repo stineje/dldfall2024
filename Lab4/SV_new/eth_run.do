@@ -79,6 +79,7 @@ view wave
 #add wave -noupdate -divider -height 32 "Misc"
 #add wave -hex -r /stimulus/dut/eth_mac_inst/tx_fifo/fifo_inst/*
 #add wave -hex -r /stimulus/dut/eth_mac_inst/rx_fifo/fifo_inst/* //both tx and rx instantiations
+add wave -hex -r /stimulus/dut/eth_axis_tx_inst/*
 
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"

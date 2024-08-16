@@ -94,7 +94,7 @@ wire rx_axis_tlast;
 wire rx_axis_tuser;
 
 wire [7:0] tx_axis_tdata;
-//wire tx_axis_tkeep; //added to match, may not need
+//wire tx_axis_tkeep; //added to match, instant in eth_mac_inst
 wire tx_axis_tvalid;
 wire tx_axis_tready;
 wire tx_axis_tlast;
@@ -333,21 +333,21 @@ eth_mac_inst (
     .rst(rst),
     .logic_clk(clk),
     .logic_rst(rst),
-
+    // AXI INPUT
     .tx_axis_tdata(tx_axis_tdata),
     .tx_axis_tkeep(), //missing pin
     .tx_axis_tvalid(tx_axis_tvalid),
     .tx_axis_tready(tx_axis_tready),
     .tx_axis_tlast(tx_axis_tlast),
     .tx_axis_tuser(tx_axis_tuser),
-
+    // AXI OUTPUT
     .rx_axis_tdata(rx_axis_tdata),
     .rx_axis_tkeep(), //missing pin
     .rx_axis_tvalid(rx_axis_tvalid),
     .rx_axis_tready(rx_axis_tready),
     .rx_axis_tlast(rx_axis_tlast),
     .rx_axis_tuser(rx_axis_tuser),
-
+    // MII Interface
     .mii_rx_clk(phy_rx_clk),
     .mii_rxd(phy_rxd),
     .mii_rx_dv(phy_rx_dv),
@@ -356,7 +356,7 @@ eth_mac_inst (
     .mii_txd(phy_txd),
     .mii_tx_en(phy_tx_en),
     .mii_tx_er(),
-
+    // Status
     .tx_error_underflow(), //missing pin
     .tx_fifo_overflow(),
     .tx_fifo_bad_frame(),
@@ -366,7 +366,7 @@ eth_mac_inst (
     .rx_fifo_overflow(),
     .rx_fifo_bad_frame(),
     .rx_fifo_good_frame(),
-
+    // Configuration
     .cfg_ifg(8'd12),
     .cfg_tx_enable(1'b1),
     .cfg_rx_enable(1'b1)

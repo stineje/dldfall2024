@@ -109,7 +109,7 @@ mii_phy_if #(
 )
 mii_phy_if_inst (
     .rst(rst),
-
+    //MII interface to MAC
     .mac_mii_rx_clk(rx_clk),
     .mac_mii_rx_rst(rx_rst),
     .mac_mii_rxd(mac_mii_rxd),
@@ -117,10 +117,11 @@ mii_phy_if_inst (
     .mac_mii_rx_er(mac_mii_rx_er),
     .mac_mii_tx_clk(tx_clk),
     .mac_mii_tx_rst(tx_rst),
-    .mac_mii_txd(mac_mii_txd[3:0]),
+    .mac_mii_txd(mac_mii_txd[3:0]), //Input
     .mac_mii_tx_en(mac_mii_tx_en),
     .mac_mii_tx_er(mac_mii_tx_er),
 
+    //MII interface to PHY
     .phy_mii_rx_clk(mii_rx_clk),
     .phy_mii_rxd(mii_rxd),
     .phy_mii_rx_dv(mii_rx_dv),
@@ -152,7 +153,7 @@ eth_mac_1g_inst (
     .gmii_rxd({4'b0, mac_mii_rxd}),
     .gmii_rx_dv(mac_mii_rx_dv),
     .gmii_rx_er(mac_mii_rx_er),
-    .gmii_txd(mac_mii_txd),
+    .gmii_txd(mac_mii_txd), //output
     .gmii_tx_en(mac_mii_tx_en),
     .gmii_tx_er(mac_mii_tx_er),
     .rx_clk_enable(1'b1),
