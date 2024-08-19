@@ -45,7 +45,7 @@ module stimulus;
    logic 	  phy_reset_n;
    logic 	  uart_txd;
 
-   logic [7:0] 	  data [0:7] = {8'h12, 8'h35, 8'h8a, 8'he8, 8'h3b, 8'h7c, 8'ha5, 8'had};   
+   logic [7:0] 	  data [0:7] = {8'h12, 8'h35, 8'h8a, 8'he8, 8'h3b, 8'h7c, 8'ha5, 8'had}; //how we will send data over
 
    fpga_core #(
 	       .TARGET(TARGET)
