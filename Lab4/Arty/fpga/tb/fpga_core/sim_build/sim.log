@@ -1,0 +1,13 @@
+Reading pref.tcl
+
+# 2023.4_3
+
+# do sim_build/runsim.do
+# QuestaSim-64 vmap 2023.4_3 Lib Mapping Utility 2024.02 Feb 17 2024
+# vmap -c 
+# ** Warning: Local modelsim.ini already exists and will not be overwritten. -c will be ignored.
+# ** Error (suppressible): (vdel-19) Failed to access library 'sim_build/work' at "sim_build/work".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vdel-57) Library 'sim_build/work' is missing or is not a valid QuestaSim library.
+# ** Error: /opt/questasim/linux_x86_64/vdel failed.
+# Executing ONERROR command at macro ./sim_build/runsim.do line 6

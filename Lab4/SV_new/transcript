@@ -1,7 +1,7 @@
 # //  Questa Sim-64
-# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
+# //  Version 2023.4_3 linux_x86_64 Feb 17 2024
 # //
-# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  Copyright 1991-2024 Mentor Graphics Corporation
 # //  All Rights Reserved.
 # //
 # //  QuestaSim and its associated documentation contain trade
@@ -13,305 +13,307 @@
 # //  18 U.S.C. Section 1905.
 # //
 # do eth_run.do
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:47 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
 # -- Compiling module fpga_core
 # 
 # Top level modules:
 # 	fpga_core
-# End time: 15:25:47 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:47 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 eth_tb.sv 
 # -- Compiling module stimulus
 # 
 # Top level modules:
 # 	stimulus
-# End time: 15:25:47 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:47 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
 # -- Compiling module eth_mac_mii_fifo
 # 
 # Top level modules:
 # 	eth_mac_mii_fifo
-# End time: 15:25:47 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:47 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_mac_mii.v 
 # -- Compiling module eth_mac_mii
 # 
 # Top level modules:
 # 	eth_mac_mii
-# End time: 15:25:47 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:47 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ssio_sdr_in.v 
 # -- Compiling module ssio_sdr_in
 # 
 # Top level modules:
 # 	ssio_sdr_in
-# End time: 15:25:47 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:47 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../src/mii_phy_if.v 
 # -- Compiling module mii_phy_if
 # 
 # Top level modules:
 # 	mii_phy_if
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:01
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_mac_1g.v 
 # -- Compiling module eth_mac_1g
 # 
 # Top level modules:
 # 	eth_mac_1g
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_gmii_rx.v 
 # -- Compiling module axis_gmii_rx
 # 
 # Top level modules:
 # 	axis_gmii_rx
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_gmii_tx.v 
 # -- Compiling module axis_gmii_tx
 # 
 # Top level modules:
 # 	axis_gmii_tx
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../src/lfsr.v 
 # -- Compiling module lfsr
 # 
 # Top level modules:
 # 	lfsr
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:34 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:34 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_axis_rx.v 
 # -- Compiling module eth_axis_rx
 # 
 # Top level modules:
 # 	eth_axis_rx
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_axis_tx.v 
 # -- Compiling module eth_axis_tx
 # 
 # Top level modules:
 # 	eth_axis_tx
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp_complete.v 
 # -- Compiling module udp_complete
 # 
 # Top level modules:
 # 	udp_complete
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp_checksum_gen.v 
 # -- Compiling module udp_checksum_gen
 # 
 # Top level modules:
 # 	udp_checksum_gen
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp.v 
 # -- Compiling module udp
 # 
 # Top level modules:
 # 	udp
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp_ip_rx.v 
 # -- Compiling module udp_ip_rx
 # 
 # Top level modules:
 # 	udp_ip_rx
-# End time: 15:25:48 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:48 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp_ip_tx.v 
 # -- Compiling module udp_ip_tx
 # 
 # Top level modules:
 # 	udp_ip_tx
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:01
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip_complete.v 
 # -- Compiling module ip_complete
 # 
 # Top level modules:
 # 	ip_complete
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip.v 
 # -- Compiling module ip
 # 
 # Top level modules:
 # 	ip
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip_eth_rx.v 
 # -- Compiling module ip_eth_rx
 # 
 # Top level modules:
 # 	ip_eth_rx
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip_eth_tx.v 
 # -- Compiling module ip_eth_tx
 # 
 # Top level modules:
 # 	ip_eth_tx
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip_arb_mux.v 
 # -- Compiling module ip_arb_mux
 # 
 # Top level modules:
 # 	ip_arb_mux
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arp.v 
 # -- Compiling module arp
 # 
 # Top level modules:
 # 	arp
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arp_cache.v 
 # -- Compiling module arp_cache
 # 
 # Top level modules:
 # 	arp_cache
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arp_eth_rx.v 
 # -- Compiling module arp_eth_rx
 # 
 # Top level modules:
 # 	arp_eth_rx
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arp_eth_tx.v 
 # -- Compiling module arp_eth_tx
 # 
 # Top level modules:
 # 	arp_eth_tx
-# End time: 15:25:49 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:49 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_arb_mux.v 
 # -- Compiling module eth_arb_mux
 # 
 # Top level modules:
 # 	eth_arb_mux
-# End time: 15:25:50 on Aug 16,2024, Elapsed time: 0:00:01
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:50 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arbiter.v 
 # -- Compiling module arbiter
 # 
 # Top level modules:
 # 	arbiter
-# End time: 15:25:50 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:50 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/priority_encoder.v 
 # -- Compiling module priority_encoder
 # 
 # Top level modules:
 # 	priority_encoder
-# End time: 15:25:50 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:50 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_fifo.v 
 # -- Compiling module axis_fifo
 # 
 # Top level modules:
 # 	axis_fifo
-# End time: 15:25:50 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:50 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_async_fifo.v 
 # -- Compiling module axis_async_fifo
 # 
 # Top level modules:
 # 	axis_async_fifo
-# End time: 15:25:50 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:25:50 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 13:11:35 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
 # -- Compiling module axis_async_fifo_adapter
 # 
 # Top level modules:
 # 	axis_async_fifo_adapter
-# End time: 15:25:50 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 13:11:35 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 15:25:50 on Aug 16,2024
+# Start time: 13:11:35 on Aug 19,2024
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in module "udp_checksum_gen(fast)".
-# ** Note: (vopt-143) Recognized 1 FSM in module "ip_eth_rx(fast)".
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vopt-143) Recognized 1 FSM in module "udp_ip_rx(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "ip_eth_tx(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "udp_ip_tx(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "axis_gmii_tx(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "axis_gmii_rx(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "ip(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "udp_checksum_gen(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ip_eth_rx(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
 # Loading work.stimulus(fast)
 # Loading work.fpga_core(fast)
@@ -349,309 +351,313 @@
 # Loading work.udp_ip_rx(fast)
 # Loading work.udp_ip_tx(fast)
 # Loading work.axis_fifo(fast__1)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (96) does not match connection size (48) for port 's_eth_dest_mac'. The port definition is at: ../src/ip_arb_mux.v(60).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/udp_complete_inst/ip_arb_mux_inst File: ../src/udp_complete.v Line: 369
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
-# ** Note: $finish    : eth_tb.sv(167)
+# ** Note: $finish    : eth_tb.sv(169)
 #    Time: 1160 ns  Iteration: 0  Instance: /stimulus
 # 1
-# Break in Module stimulus at eth_tb.sv line 167
+# Break in Module stimulus at eth_tb.sv line 169
 do eth_run.do
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is jstine@mimi.ecen.okstate.edu.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:22 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
 # -- Compiling module fpga_core
 # 
 # Top level modules:
 # 	fpga_core
-# End time: 15:26:22 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:22 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 eth_tb.sv 
 # -- Compiling module stimulus
 # 
 # Top level modules:
 # 	stimulus
-# End time: 15:26:22 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:22 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
 # -- Compiling module eth_mac_mii_fifo
 # 
 # Top level modules:
 # 	eth_mac_mii_fifo
-# End time: 15:26:22 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:22 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_mac_mii.v 
 # -- Compiling module eth_mac_mii
 # 
 # Top level modules:
 # 	eth_mac_mii
-# End time: 15:26:22 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:22 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ssio_sdr_in.v 
 # -- Compiling module ssio_sdr_in
 # 
 # Top level modules:
 # 	ssio_sdr_in
-# End time: 15:26:22 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:22 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/mii_phy_if.v 
 # -- Compiling module mii_phy_if
 # 
 # Top level modules:
 # 	mii_phy_if
-# End time: 15:26:22 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:22 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_mac_1g.v 
 # -- Compiling module eth_mac_1g
 # 
 # Top level modules:
 # 	eth_mac_1g
-# End time: 15:26:22 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:22 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_gmii_rx.v 
 # -- Compiling module axis_gmii_rx
 # 
 # Top level modules:
 # 	axis_gmii_rx
-# End time: 15:26:22 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:22 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_gmii_tx.v 
 # -- Compiling module axis_gmii_tx
 # 
 # Top level modules:
 # 	axis_gmii_tx
-# End time: 15:26:22 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/lfsr.v 
 # -- Compiling module lfsr
 # 
 # Top level modules:
 # 	lfsr
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_axis_rx.v 
 # -- Compiling module eth_axis_rx
 # 
 # Top level modules:
 # 	eth_axis_rx
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:43 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:43 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_axis_tx.v 
 # -- Compiling module eth_axis_tx
 # 
 # Top level modules:
 # 	eth_axis_tx
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp_complete.v 
 # -- Compiling module udp_complete
 # 
 # Top level modules:
 # 	udp_complete
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp_checksum_gen.v 
 # -- Compiling module udp_checksum_gen
 # 
 # Top level modules:
 # 	udp_checksum_gen
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp.v 
 # -- Compiling module udp
 # 
 # Top level modules:
 # 	udp
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp_ip_rx.v 
 # -- Compiling module udp_ip_rx
 # 
 # Top level modules:
 # 	udp_ip_rx
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/udp_ip_tx.v 
 # -- Compiling module udp_ip_tx
 # 
 # Top level modules:
 # 	udp_ip_tx
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip_complete.v 
 # -- Compiling module ip_complete
 # 
 # Top level modules:
 # 	ip_complete
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip.v 
 # -- Compiling module ip
 # 
 # Top level modules:
 # 	ip
-# End time: 15:26:23 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:23 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip_eth_rx.v 
 # -- Compiling module ip_eth_rx
 # 
 # Top level modules:
 # 	ip_eth_rx
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:01
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip_eth_tx.v 
 # -- Compiling module ip_eth_tx
 # 
 # Top level modules:
 # 	ip_eth_tx
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/ip_arb_mux.v 
 # -- Compiling module ip_arb_mux
 # 
 # Top level modules:
 # 	ip_arb_mux
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arp.v 
 # -- Compiling module arp
 # 
 # Top level modules:
 # 	arp
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arp_cache.v 
 # -- Compiling module arp_cache
 # 
 # Top level modules:
 # 	arp_cache
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arp_eth_rx.v 
 # -- Compiling module arp_eth_rx
 # 
 # Top level modules:
 # 	arp_eth_rx
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arp_eth_tx.v 
 # -- Compiling module arp_eth_tx
 # 
 # Top level modules:
 # 	arp_eth_tx
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/eth_arb_mux.v 
 # -- Compiling module eth_arb_mux
 # 
 # Top level modules:
 # 	eth_arb_mux
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/arbiter.v 
 # -- Compiling module arbiter
 # 
 # Top level modules:
 # 	arbiter
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/priority_encoder.v 
 # -- Compiling module priority_encoder
 # 
 # Top level modules:
 # 	priority_encoder
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:24 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_fifo.v 
 # -- Compiling module axis_fifo
 # 
 # Top level modules:
 # 	axis_fifo
-# End time: 15:26:24 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:25 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_async_fifo.v 
 # -- Compiling module axis_async_fifo
 # 
 # Top level modules:
 # 	axis_async_fifo
-# End time: 15:26:25 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:25 on Aug 16,2024
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 15:24:44 on Aug 19,2024
 # vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
 # -- Compiling module axis_async_fifo_adapter
 # 
 # Top level modules:
 # 	axis_async_fifo_adapter
-# End time: 15:26:25 on Aug 16,2024, Elapsed time: 0:00:00
+# End time: 15:24:44 on Aug 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 15:26:25 on Aug 16,2024, Elapsed time: 0:00:35
-# Errors: 0, Warnings: 0
+# End time: 15:24:45 on Aug 19,2024, Elapsed time: 2:13:10
+# Errors: 0, Warnings: 2
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 15:26:25 on Aug 16,2024
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 15:24:45 on Aug 19,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
 # Loading work.stimulus(fast)
 # Loading work.fpga_core(fast)
@@ -689,351 +695,13 @@ do eth_run.do
 # Loading work.udp_ip_rx(fast)
 # Loading work.udp_ip_tx(fast)
 # Loading work.axis_fifo(fast__1)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (96) does not match connection size (48) for port 's_eth_dest_mac'. The port definition is at: ../src/ip_arb_mux.v(60).
+#    Time: 0 ps  Iteration: 0  Instance: /stimulus/dut/udp_complete_inst/ip_arb_mux_inst File: ../src/udp_complete.v Line: 369
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
-# ** Note: $finish    : eth_tb.sv(167)
+# ** Note: $finish    : eth_tb.sv(169)
 #    Time: 1160 ns  Iteration: 0  Instance: /stimulus
 # 1
-# Break in Module stimulus at eth_tb.sv line 167
-do eth_run.do
-# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is jstine@mimi.ecen.okstate.edu.
-# ** Warning: (vlib-34) Library already exists at "work".
-# Errors: 0, Warnings: 1
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:40 on Aug 16,2024
-# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
-# -- Compiling module fpga_core
-# 
-# Top level modules:
-# 	fpga_core
-# End time: 15:26:40 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:40 on Aug 16,2024
-# vlog -reportprogress 300 eth_tb.sv 
-# -- Compiling module stimulus
-# 
-# Top level modules:
-# 	stimulus
-# End time: 15:26:40 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:40 on Aug 16,2024
-# vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
-# -- Compiling module eth_mac_mii_fifo
-# 
-# Top level modules:
-# 	eth_mac_mii_fifo
-# End time: 15:26:40 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:40 on Aug 16,2024
-# vlog -reportprogress 300 ../src/eth_mac_mii.v 
-# -- Compiling module eth_mac_mii
-# 
-# Top level modules:
-# 	eth_mac_mii
-# End time: 15:26:40 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:40 on Aug 16,2024
-# vlog -reportprogress 300 ../src/ssio_sdr_in.v 
-# -- Compiling module ssio_sdr_in
-# 
-# Top level modules:
-# 	ssio_sdr_in
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/mii_phy_if.v 
-# -- Compiling module mii_phy_if
-# 
-# Top level modules:
-# 	mii_phy_if
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/eth_mac_1g.v 
-# -- Compiling module eth_mac_1g
-# 
-# Top level modules:
-# 	eth_mac_1g
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/axis_gmii_rx.v 
-# -- Compiling module axis_gmii_rx
-# 
-# Top level modules:
-# 	axis_gmii_rx
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/axis_gmii_tx.v 
-# -- Compiling module axis_gmii_tx
-# 
-# Top level modules:
-# 	axis_gmii_tx
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/lfsr.v 
-# -- Compiling module lfsr
-# 
-# Top level modules:
-# 	lfsr
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/eth_axis_rx.v 
-# -- Compiling module eth_axis_rx
-# 
-# Top level modules:
-# 	eth_axis_rx
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/eth_axis_tx.v 
-# -- Compiling module eth_axis_tx
-# 
-# Top level modules:
-# 	eth_axis_tx
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/udp_complete.v 
-# -- Compiling module udp_complete
-# 
-# Top level modules:
-# 	udp_complete
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/udp_checksum_gen.v 
-# -- Compiling module udp_checksum_gen
-# 
-# Top level modules:
-# 	udp_checksum_gen
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/udp.v 
-# -- Compiling module udp
-# 
-# Top level modules:
-# 	udp
-# End time: 15:26:41 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:41 on Aug 16,2024
-# vlog -reportprogress 300 ../src/udp_ip_rx.v 
-# -- Compiling module udp_ip_rx
-# 
-# Top level modules:
-# 	udp_ip_rx
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/udp_ip_tx.v 
-# -- Compiling module udp_ip_tx
-# 
-# Top level modules:
-# 	udp_ip_tx
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/ip_complete.v 
-# -- Compiling module ip_complete
-# 
-# Top level modules:
-# 	ip_complete
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/ip.v 
-# -- Compiling module ip
-# 
-# Top level modules:
-# 	ip
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/ip_eth_rx.v 
-# -- Compiling module ip_eth_rx
-# 
-# Top level modules:
-# 	ip_eth_rx
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/ip_eth_tx.v 
-# -- Compiling module ip_eth_tx
-# 
-# Top level modules:
-# 	ip_eth_tx
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/ip_arb_mux.v 
-# -- Compiling module ip_arb_mux
-# 
-# Top level modules:
-# 	ip_arb_mux
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/arp.v 
-# -- Compiling module arp
-# 
-# Top level modules:
-# 	arp
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/arp_cache.v 
-# -- Compiling module arp_cache
-# 
-# Top level modules:
-# 	arp_cache
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/arp_eth_rx.v 
-# -- Compiling module arp_eth_rx
-# 
-# Top level modules:
-# 	arp_eth_rx
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/arp_eth_tx.v 
-# -- Compiling module arp_eth_tx
-# 
-# Top level modules:
-# 	arp_eth_tx
-# End time: 15:26:42 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:42 on Aug 16,2024
-# vlog -reportprogress 300 ../src/eth_arb_mux.v 
-# -- Compiling module eth_arb_mux
-# 
-# Top level modules:
-# 	eth_arb_mux
-# End time: 15:26:43 on Aug 16,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:43 on Aug 16,2024
-# vlog -reportprogress 300 ../src/arbiter.v 
-# -- Compiling module arbiter
-# 
-# Top level modules:
-# 	arbiter
-# End time: 15:26:43 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:43 on Aug 16,2024
-# vlog -reportprogress 300 ../src/priority_encoder.v 
-# -- Compiling module priority_encoder
-# 
-# Top level modules:
-# 	priority_encoder
-# End time: 15:26:43 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:43 on Aug 16,2024
-# vlog -reportprogress 300 ../src/axis_fifo.v 
-# -- Compiling module axis_fifo
-# 
-# Top level modules:
-# 	axis_fifo
-# End time: 15:26:43 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:43 on Aug 16,2024
-# vlog -reportprogress 300 ../src/axis_async_fifo.v 
-# -- Compiling module axis_async_fifo
-# 
-# Top level modules:
-# 	axis_async_fifo
-# End time: 15:26:43 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 15:26:43 on Aug 16,2024
-# vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
-# -- Compiling module axis_async_fifo_adapter
-# 
-# Top level modules:
-# 	axis_async_fifo_adapter
-# End time: 15:26:43 on Aug 16,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:26:43 on Aug 16,2024, Elapsed time: 0:00:18
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.stimulus 
-# Start time: 15:26:43 on Aug 16,2024
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading sv_std.std
-# Loading work.stimulus(fast)
-# Loading work.fpga_core(fast)
-# Loading work.eth_mac_mii_fifo(fast)
-# Loading work.eth_mac_mii(fast)
-# Loading work.mii_phy_if(fast)
-# Loading work.ssio_sdr_in(fast)
-# Loading work.eth_mac_1g(fast)
-# Loading work.axis_gmii_rx(fast)
-# Loading work.lfsr(fast)
-# Loading work.axis_gmii_tx(fast)
-# Loading work.axis_async_fifo_adapter(fast)
-# Loading work.axis_async_fifo(fast)
-# Loading work.axis_async_fifo_adapter(fast__1)
-# Loading work.axis_async_fifo(fast__1)
-# Loading work.eth_axis_rx(fast)
-# Loading work.eth_axis_tx(fast)
-# Loading work.udp_complete(fast)
-# Loading work.ip_arb_mux(fast)
-# Loading work.arbiter(fast)
-# Loading work.priority_encoder(fast)
-# Loading work.ip_complete(fast)
-# Loading work.eth_arb_mux(fast)
-# Loading work.ip(fast)
-# Loading work.ip_eth_rx(fast)
-# Loading work.ip_eth_tx(fast)
-# Loading work.arp(fast)
-# Loading work.arp_eth_rx(fast)
-# Loading work.arp_eth_tx(fast)
-# Loading work.arp_cache(fast)
-# Loading work.lfsr(fast__1)
-# Loading work.udp(fast)
-# Loading work.udp_checksum_gen(fast)
-# Loading work.axis_fifo(fast)
-# Loading work.udp_ip_rx(fast)
-# Loading work.udp_ip_tx(fast)
-# Loading work.axis_fifo(fast__1)
-# .main_pane.list.interior.cs.body
-# .main_pane.wave.interior.cs.body.pw.wf
-# ** Note: $finish    : eth_tb.sv(167)
-#    Time: 1160 ns  Iteration: 0  Instance: /stimulus
-# 1
-# Break in Module stimulus at eth_tb.sv line 167
-# End time: 15:38:49 on Aug 16,2024, Elapsed time: 0:12:06
-# Errors: 0, Warnings: 0
+# Break in Module stimulus at eth_tb.sv line 169
+# End time: 16:22:42 on Aug 19,2024, Elapsed time: 0:57:57
+# Errors: 0, Warnings: 2

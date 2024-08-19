@@ -372,7 +372,8 @@ ip_arb_mux_inst (
     // IP frame inputs
     .s_ip_hdr_valid({s_ip_hdr_valid, udp_tx_ip_hdr_valid}),
     .s_ip_hdr_ready({s_ip_hdr_ready, udp_tx_ip_hdr_ready}),
-    .s_eth_dest_mac('0), //changed from 0 to '0
+    .s_eth_dest_mac('0), //changed from 0 to '0 //reg [47:0] eth_dest_mac_reg = 48'h020000000000;
+    //.s_eth_dest_mac(48'h020000000000), //reg [47:0] eth_dest_mac_reg = 48'h020000000000; (eth_axis_tx)
     .s_eth_src_mac('0), //changed from 0 to '0
     .s_eth_type(0), //0 matches bc default is 32 bits but changed to '0 anyway
     .s_ip_version('0), //changed from 0 to '0
@@ -399,7 +400,7 @@ ip_arb_mux_inst (
     // IP frame output
     .m_ip_hdr_valid(ip_tx_ip_hdr_valid),
     .m_ip_hdr_ready(ip_tx_ip_hdr_ready),
-    .m_eth_dest_mac(),
+    .m_eth_dest_mac(), //added instance of dest mac, may not need
     .m_eth_src_mac(),
     .m_eth_type(),
     .m_ip_version(),
