@@ -119,6 +119,7 @@ reg [PTR_WIDTH-1:0] ptr_reg = 0, ptr_next;
 reg flush_save;
 reg transfer_in_save;
 
+//reg [47:0] eth_dest_mac_reg = 48'd0;
 reg [47:0] eth_dest_mac_reg = 48'h020000000000;
 // reg [47:0] eth_src_mac_reg = 48'd0;
 reg [47:0] eth_src_mac_reg = 48'h5a5152535455;

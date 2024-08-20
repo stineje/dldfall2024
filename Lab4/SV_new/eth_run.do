@@ -79,7 +79,8 @@ view wave
 #add wave -noupdate -divider -height 32 "Misc"
 #add wave -hex -r /stimulus/dut/eth_mac_inst/tx_fifo/fifo_inst/*
 #add wave -hex -r /stimulus/dut/eth_mac_inst/rx_fifo/fifo_inst/* //both tx and rx instantiations
-add wave -hex -r /stimulus/dut/eth_axis_tx_inst/*
+#add wave -hex -r /stimulus/dut/eth_axis_tx_inst/*
+add wave -hex /stimulus/dut/tx_eth_dest_mac
 
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"
@@ -98,26 +99,26 @@ add wave -hex /stimulus/uart_rxd
 
 #Outputs
 add wave -noupdate -divider -height 32 "Outputs"
-add wave -color blue -hex /stimulus/led0_r
-add wave -color blue -hex /stimulus/led0_g
-add wave -color blue -hex /stimulus/led0_b
-add wave -color blue -hex /stimulus/led1_r
-add wave -color blue -hex /stimulus/led1_g
-add wave -color blue -hex /stimulus/led1_b
-add wave -color blue -hex /stimulus/led2_r
-add wave -color blue -hex /stimulus/led2_g
-add wave -color blue -hex /stimulus/led2_b
-add wave -color blue -hex /stimulus/led3_r
-add wave -color blue -hex /stimulus/led3_g
-add wave -color blue -hex /stimulus/led3_b
-add wave -color blue -hex /stimulus/led4
-add wave -color blue -hex /stimulus/led5
-add wave -color blue -hex /stimulus/led6
-add wave -color blue -hex /stimulus/led7
-add wave -color blue -hex /stimulus/phy_txd
-add wave -color blue -hex /stimulus/phy_tx_en
-add wave -color blue -hex /stimulus/phy_reset_n
-add wave -color blue -hex /stimulus/uart_txd
+add wave -color yellow -hex /stimulus/led0_r
+add wave -color yellow -hex /stimulus/led0_g
+add wave -color yellow -hex /stimulus/led0_b
+add wave -color yellow -hex /stimulus/led1_r
+add wave -color yellow -hex /stimulus/led1_g
+add wave -color yellow -hex /stimulus/led1_b
+add wave -color yellow -hex /stimulus/led2_r
+add wave -color yellow -hex /stimulus/led2_g
+add wave -color yellow -hex /stimulus/led2_b
+add wave -color yellow -hex /stimulus/led3_r
+add wave -color yellow -hex /stimulus/led3_g
+add wave -color yellow -hex /stimulus/led3_b
+add wave -color yellow -hex /stimulus/led4
+add wave -color yellow -hex /stimulus/led5
+add wave -color yellow -hex /stimulus/led6
+add wave -color yellow -hex /stimulus/led7
+add wave -color yellow -hex /stimulus/phy_txd
+add wave -color yellow -hex /stimulus/phy_tx_en
+add wave -color yellow -hex /stimulus/phy_reset_n
+add wave -color yellow -hex /stimulus/uart_txd
 
 #add wave -hex /stimulus/rx_clk
 #add wave -hex /stimulus/rx_rst

@@ -129,7 +129,7 @@ reg frame_error_reg = 1'b0, frame_error_next;
 reg [7:0] frame_ptr_reg = 0, frame_ptr_next;
 reg [MIN_LEN_WIDTH-1:0] frame_min_count_reg = 0, frame_min_count_next;
 
-reg [7:0] gmii_txd_reg = 8'd0, gmii_txd_next;
+reg [7:0] gmii_txd_reg = 8'b00000000, gmii_txd_next; // was 8'd0
 reg gmii_tx_en_reg = 1'b0, gmii_tx_en_next;
 reg gmii_tx_er_reg = 1'b0, gmii_tx_er_next;
 
@@ -208,7 +208,7 @@ always @* begin
         end
     end
 
-    gmii_txd_next = {DATA_WIDTH{1'b0}};
+    gmii_txd_next = {DATA_WIDTH{1'b1}}; //this could be causing issue - was {DATA_WIDTH{1'b0}}
     gmii_tx_en_next = 1'b0;
     gmii_tx_er_next = 1'b0;
 

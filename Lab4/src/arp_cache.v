@@ -86,7 +86,7 @@ reg query_request_ready_reg = 0, query_request_ready_next;
 
 reg query_response_valid_reg = 0, query_response_valid_next;
 reg query_response_error_reg = 0, query_response_error_next;
-reg [47:0] query_response_mac_reg = 0;
+reg [47:0] query_response_mac_reg = 0; //tried changing - no win
 
 reg write_request_ready_reg = 0, write_request_ready_next;
 
@@ -139,7 +139,7 @@ initial begin
     for (i = 0; i < 2**CACHE_ADDR_WIDTH; i = i + 1) begin
         valid_mem[i] = 1'b0;
         ip_addr_mem[i] = 32'd0;
-        mac_addr_mem[i] = 48'd0;
+        mac_addr_mem[i] = 48'd0; //attempt changing
     end
 end
 

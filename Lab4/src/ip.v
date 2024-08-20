@@ -148,7 +148,7 @@ reg [1:0] state_reg = STATE_IDLE, state_next;
 
 reg outgoing_ip_hdr_valid_reg = 1'b0, outgoing_ip_hdr_valid_next;
 wire outgoing_ip_hdr_ready;
-reg [47:0] outgoing_eth_dest_mac_reg = 48'h000000000000, outgoing_eth_dest_mac_next;
+reg [47:0] outgoing_eth_dest_mac_reg = 48'h00000000, outgoing_eth_dest_mac_next; //NOTE THIS
 wire outgoing_ip_payload_axis_tready;
 
 /*

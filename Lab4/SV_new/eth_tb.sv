@@ -45,7 +45,7 @@ module stimulus;
    logic 	  phy_reset_n;
    logic 	  uart_txd;
 
-   logic [7:0] 	  data [0:7] = {8'h12, 8'h35, 8'h8a, 8'he8, 8'h3b, 8'h7c, 8'ha5, 8'had}; //how we will send data over
+//   logic [7:0] 	  data [0:7] = {8'h12, 8'h35, 8'h8a, 8'he8, 8'h3b, 8'h7c, 8'ha5, 8'had}; //how we will send data over
 
    fpga_core #(
 	       .TARGET(TARGET)
@@ -104,7 +104,7 @@ module stimulus;
    // Clock generation
    initial begin
       clk = 1'b0;
-      forever #4 clk = ~clk; // 125 MHz clock (8ns period)
+      forever #5 clk = ~clk; // 100 MHz clock (8ns period)
    end
 
    initial begin
@@ -129,30 +129,32 @@ module stimulus;
    initial begin
       // Initialize inputs
       rst = 1;
-      btn = 0;
-      sw = 0;
+      btn = 4'b0000;
+      sw = 4'b0000;
       //tx_eth_dest_mac = 48'h020000000000;
       //phy_rx_clk = 0;
-      phy_rxd = 4'b0000;
-      phy_rx_dv = 0;
-      phy_rx_er = 0;
+      phy_rxd = 4'b1010;
+      phy_rx_dv = 1'b0;
+      phy_rx_er = 1'b0;
       //phy_tx_clk = 0;
-      uart_rxd = 0;
+      uart_rxd = 1'b1;
+      phy_col = 1'b0;
+      phy_crs = 1'b0;
 
       // Apply reset
       #20;
-      rst = 0;
+      rst = 1'b0;
 
       // Apply stimulus here
       // Example: Set buttons and switches
       #10;
-      btn = 4'b0001;
-      sw = 4'b1010;
+      //btn = 4'b0001;
+      //sw = 4'b0010;
 
       // Example: Stimulate Ethernet interface
-      #10;
-      phy_rx_dv = 1;
-      phy_rxd = 4'b1100;
+      // #10;
+      // phy_rx_dv = 1;
+      // phy_rxd = 4'b1100;
 
       // Example: Apply UART signal
       #10;
