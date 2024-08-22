@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.15)  16 AUG 2024 10:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.15)  22 AUG 2024 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -531,7 +531,7 @@ Package pdftex.def Info: dsdb1.png  used on input line 296.
 <top_demo.png, id=109, 1702.36pt x 1163.34625pt>
 File: top_demo.png Graphic file (type png)
 <use top_demo.png>
-Package pdftex.def Info: top_demo.png  used on input line 418.
+Package pdftex.def Info: top_demo.png  used on input line 417.
 (pdftex.def)             Requested size: 340.46597pt x 232.66513pt.
 \openout3 = `lab0-1.cpt'.
 
@@ -539,7 +539,7 @@ Package pdftex.def Info: top_demo.png  used on input line 418.
 <Utilization.png, id=137, 1573.88pt x 1091.07625pt>
 File: Utilization.png Graphic file (type png)
 <use Utilization.png>
-Package pdftex.def Info: Utilization.png  used on input line 513.
+Package pdftex.def Info: Utilization.png  used on input line 512.
 (pdftex.def)             Requested size: 314.77043pt x 218.21138pt.
  [7 <./Utilization.png>] (./lab0.bbl) [8] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -573,7 +573,7 @@ ve/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2
 024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/202
 4/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab0.pdf (8 pages, 622633 bytes).
+Output written on lab0.pdf (8 pages, 622079 bytes).
 PDF statistics:
  226 PDF objects out of 1000 (max. 8388607)
  179 compressed objects within 2 object streams
