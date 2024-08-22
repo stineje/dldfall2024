@@ -2,8 +2,300 @@
 # QuestaSim-64 vmap 2023.4_3 Lib Mapping Utility 2024.02 Feb 17 2024
 # vmap -c 
 # ** Warning: Local modelsim.ini already exists and will not be overwritten. -c will be ignored.
-# ** Error (suppressible): (vdel-19) Failed to access library 'sim_build/work' at "sim_build/work".
-# No such file or directory. (errno = ENOENT)
-# ** Warning: (vdel-57) Library 'sim_build/work' is missing or is not a valid QuestaSim library.
-# ** Error: /opt/questasim/linux_x86_64/vdel failed.
-# Executing ONERROR command at macro ./sim_build/runsim.do line 6
+# QuestaSim-64 vmap 2023.4_3 Lib Mapping Utility 2024.02 Feb 17 2024
+# vmap work sim_build/work 
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:35:23 on Aug 21,2024
+# vlog -work work "+define+COCOTB_SIM" -sv -timescale 1ns/1ps -mfcu "+acc" ../../rtl/fpga_core.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ssio_sdr_in.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/mii_phy_if.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_1g.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/axis_gmii_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/axis_gmii_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/lfsr.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_axis_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_axis_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_ip_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_ip_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_complete.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_eth_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_eth_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp_cache.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp_eth_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp_eth_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_arb_mux.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/arbiter.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/priority_encoder.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo_adapter.v 
+# -- Compiling module fpga_core
+# -- Compiling module eth_mac_mii_fifo
+# -- Compiling module eth_mac_mii
+# -- Compiling module ssio_sdr_in
+# -- Compiling module mii_phy_if
+# -- Compiling module eth_mac_1g
+# -- Compiling module axis_gmii_rx
+# -- Compiling module axis_gmii_tx
+# -- Compiling module lfsr
+# -- Compiling module eth_axis_rx
+# -- Compiling module eth_axis_tx
+# -- Compiling module udp_complete
+# -- Compiling module udp_checksum_gen
+# -- Compiling module udp
+# -- Compiling module udp_ip_rx
+# -- Compiling module udp_ip_tx
+# -- Compiling module ip_complete
+# -- Compiling module ip
+# -- Compiling module ip_eth_rx
+# -- Compiling module ip_eth_tx
+# -- Compiling module ip_arb_mux
+# -- Compiling module arp
+# -- Compiling module arp_cache
+# -- Compiling module arp_eth_rx
+# -- Compiling module arp_eth_tx
+# -- Compiling module eth_arb_mux
+# -- Compiling module arbiter
+# -- Compiling module priority_encoder
+# -- Compiling module axis_fifo
+# -- Compiling module axis_async_fifo
+# -- Compiling module axis_async_fifo_adapter
+# 
+# Top level modules:
+# 	fpga_core
+# End time: 16:35:23 on Aug 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish exit -pli "/home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/eth_env/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_modelsim.so" sim_build/work.fpga_core 
+# Start time: 16:35:23 on Aug 21,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vsim-3865) Due to PLI being present, global +acc is being enabled automatically. This will cause your simulation to run very slowly. Please use vsim -no_autoacc to disable this feature. This feature is now deprecated and will be removed from future releases.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ip_eth_tx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "udp_ip_tx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axis_gmii_tx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axis_gmii_rx(fast)".
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_complete.v(401): (vopt-2685) [TFMPC] - Too few port connections for 'arp_inst'.  Expected 36, found 34.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_complete.v(401): (vopt-2718) [TFMPC] - Missing connection for port 'm_eth_payload_axis_tkeep'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_complete.v(401): (vopt-2718) [TFMPC] - Missing connection for port 's_eth_payload_axis_tkeep'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ip(fast)".
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(202): (vopt-2685) [TFMPC] - Too few port connections for 'eth_mac_1g_mii_inst'.  Expected 30, found 28.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(202): (vopt-2718) [TFMPC] - Missing connection for port 'rx_start_packet'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(202): (vopt-2718) [TFMPC] - Missing connection for port 'tx_start_packet'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(252): (vopt-2685) [TFMPC] - Too few port connections for 'tx_fifo'.  Expected 34, found 26.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(252): (vopt-2718) [TFMPC] - Missing connection for port 'm_status_depth_commit'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(252): (vopt-2718) [TFMPC] - Missing connection for port 'm_status_depth'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(252): (vopt-2718) [TFMPC] - Missing connection for port 's_status_depth_commit'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(252): (vopt-2718) [TFMPC] - Missing connection for port 's_status_depth'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(252): (vopt-2718) [TFMPC] - Missing connection for port 'm_pause_ack'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(252): (vopt-2718) [TFMPC] - Missing connection for port 'm_pause_req'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(252): (vopt-2718) [TFMPC] - Missing connection for port 's_pause_ack'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(252): (vopt-2718) [TFMPC] - Missing connection for port 's_pause_req'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(303): (vopt-2685) [TFMPC] - Too few port connections for 'rx_fifo'.  Expected 34, found 26.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(303): (vopt-2718) [TFMPC] - Missing connection for port 'm_status_depth_commit'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(303): (vopt-2718) [TFMPC] - Missing connection for port 'm_status_depth'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(303): (vopt-2718) [TFMPC] - Missing connection for port 's_status_depth_commit'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(303): (vopt-2718) [TFMPC] - Missing connection for port 's_status_depth'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(303): (vopt-2718) [TFMPC] - Missing connection for port 'm_pause_ack'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(303): (vopt-2718) [TFMPC] - Missing connection for port 'm_pause_req'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(303): (vopt-2718) [TFMPC] - Missing connection for port 's_pause_ack'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v(303): (vopt-2718) [TFMPC] - Missing connection for port 's_pause_req'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2685) [TFMPC] - Too few port connections for 'eth_mac_1g_inst'.  Expected 98, found 31.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_rx_pfc_en'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_rx_pfc_opcode'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_rx_lfc_en'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_rx_lfc_opcode'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_refresh'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_quanta'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_en'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_opcode'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_eth_type'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_eth_src'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_pfc_eth_dst'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_refresh'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_quanta'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_en'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_opcode'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_eth_type'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_eth_src'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_tx_lfc_eth_dst'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_enable'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_forward'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_opcode_pfc'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_opcode_pfc'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_opcode_lfc'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_opcode_lfc'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_eth_type'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_eth_src'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_eth_src'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_eth_dst_ucast'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_eth_dst_ucast'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_check_eth_dst_mcast'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'cfg_mcf_rx_eth_dst_mcast'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_pfc_paused'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_pfc_xoff'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_pfc_xon'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_pfc_pkt'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_lfc_paused'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_lfc_xoff'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_lfc_xon'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_lfc_pkt'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_pfc_paused'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_pfc_xoff'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_pfc_xon'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_pfc_pkt'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_lfc_paused'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_lfc_xoff'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_lfc_xon'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_lfc_pkt'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_rx_mcf'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'stat_tx_mcf'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_pause_ack'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_pause_req'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_lfc_pause_en'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'rx_pfc_ack'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'rx_pfc_req'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'rx_pfc_en'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_pfc_resend'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_pfc_req'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'rx_lfc_ack'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'rx_lfc_req'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'rx_lfc_en'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_lfc_resend'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_lfc_req'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_axis_ptp_ts_valid'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_axis_ptp_ts_tag'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_axis_ptp_ts'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'rx_ptp_ts'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v(138): (vopt-2718) [TFMPC] - Missing connection for port 'tx_ptp_ts'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo.v(327): (vopt-2697) End index 16 of part-select into 'm_axis' is out of bounds.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo.v(328): (vopt-2697) End index 16 of part-select into 'm_axis' is out of bounds.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo.v(327): (vopt-2697) End index 16 of part-select into 'm_axis' is out of bounds.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo.v(328): (vopt-2697) End index 16 of part-select into 'm_axis' is out of bounds.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v(237): (vopt-2697) End index 16 of part-select into 'm_axis' is out of bounds.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v(238): (vopt-2697) End index 16 of part-select into 'm_axis' is out of bounds.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v(237): (vopt-2697) End index 16 of part-select into 'm_axis' is out of bounds.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v(238): (vopt-2697) End index 16 of part-select into 'm_axis' is out of bounds.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v(214): (vopt-2685) [TFMPC] - Too few port connections for 'payload_fifo'.  Expected 25, found 21.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v(214): (vopt-2718) [TFMPC] - Missing connection for port 'status_depth_commit'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v(214): (vopt-2718) [TFMPC] - Missing connection for port 'status_depth'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v(214): (vopt-2718) [TFMPC] - Missing connection for port 'pause_ack'.
+# ** Warning: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v(214): (vopt-2718) [TFMPC] - Missing connection for port 'pause_req'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "udp_checksum_gen(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ip_eth_rx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "udp_ip_rx(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=107.
+# //  Questa Sim-64
+# //  Version 2023.4_3 linux_x86_64 Feb 17 2024
+# //
+# //  Copyright 1991-2024 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.fpga_core(fast)
+# Loading work.eth_mac_mii_fifo(fast)
+# Loading work.eth_mac_mii(fast)
+# Loading work.mii_phy_if(fast)
+# Loading work.ssio_sdr_in(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# Loading work.axis_async_fifo_adapter(fast)
+# Loading work.axis_async_fifo(fast)
+# Loading work.axis_async_fifo_adapter(fast__1)
+# Loading work.axis_async_fifo(fast__1)
+# Loading work.eth_axis_rx(fast)
+# Loading work.eth_axis_tx(fast)
+# Loading work.udp_complete(fast)
+# Loading work.ip_arb_mux(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading work.ip_complete(fast)
+# Loading work.eth_arb_mux(fast)
+# Loading work.ip(fast)
+# Loading work.ip_eth_rx(fast)
+# Loading work.ip_eth_tx(fast)
+# Loading work.arp(fast)
+# Loading work.arp_eth_rx(fast)
+# Loading work.arp_eth_tx(fast)
+# Loading work.arp_cache(fast)
+# Loading work.lfsr(fast__1)
+# Loading work.udp(fast)
+# Loading work.udp_checksum_gen(fast)
+# Loading work.axis_fifo(fast)
+# Loading work.udp_ip_rx(fast)
+# Loading work.udp_ip_tx(fast)
+# Loading work.axis_fifo(fast__1)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'gmii_rxd'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_1g.v(76).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (4) for port 'gmii_txd'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_1g.v(79).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tid'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo_adapter.v(109).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/eth_mac_inst/tx_fifo File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v Line: 252
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tdest'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo_adapter.v(110).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/eth_mac_inst/tx_fifo File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v Line: 252
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 's_axis_tkeep'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo_adapter.v(105).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/eth_mac_inst/rx_fifo File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v Line: 303
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tid'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo_adapter.v(109).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/eth_mac_inst/rx_fifo File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v Line: 303
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tdest'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo_adapter.v(110).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/eth_mac_inst/rx_fifo File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v Line: 303
+# ** Warning: (vsim-3015) [PCDPC] - Port size (96) does not match connection size (32) for port 's_eth_dest_mac'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v(60).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v Line: 369
+# ** Warning: (vsim-3015) [PCDPC] - Port size (96) does not match connection size (32) for port 's_eth_src_mac'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v(61).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v Line: 369
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_ip_version'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v(63).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v Line: 369
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_ip_ihl'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v(64).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v Line: 369
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (32) for port 's_ip_flags'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v(69).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v Line: 369
+# ** Warning: (vsim-3015) [PCDPC] - Port size (26) does not match connection size (32) for port 's_ip_fragment_offset'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v(70).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v Line: 369
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (32) for port 's_ip_payload_axis_tkeep'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v(77).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v Line: 369
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 's_ip_payload_axis_tid'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v(81).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v Line: 369
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 's_ip_payload_axis_tdest'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v(82).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v Line: 369
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (32) for port 's_eth_payload_axis_tkeep'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_arb_mux.v(64).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_complete.v Line: 269
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 's_eth_payload_axis_tid'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_arb_mux.v(68).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_complete.v Line: 269
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 's_eth_payload_axis_tdest'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_arb_mux.v(69).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_complete.v Line: 269
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 's_axis_tkeep'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v(101).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/udp_inst/genblk1/udp_checksum_gen_inst/payload_fifo File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v Line: 214
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tid'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v(105).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/udp_inst/genblk1/udp_checksum_gen_inst/payload_fifo File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v Line: 214
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tdest'. The port definition is at: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v(106).
+#    Time: 0 ps  Iteration: 0  Instance: /fpga_core/udp_complete_inst/udp_inst/genblk1/udp_checksum_gen_inst/payload_fifo File: ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v Line: 214
+# Loading /home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/eth_env/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_modelsim.so
+#      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:105  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/eth_env/bin/python
+#      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+#      0.00ns INFO     cocotb                             Running on ModelSim for Questa-64 version 2023.2 2024.02
+#      0.00ns INFO     cocotb                             Running tests with cocotb v1.8.1 from /home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/eth_env/lib/python3.12/site-packages/cocotb
+#      0.00ns INFO     cocotb                             Seeding Python random module with 1724276123
+#      0.00ns INFO     cocotb.regression                  Found test test_fpga_core.run_test
+#      0.00ns INFO     cocotb.regression                  running run_test (1/1)
+#      0.00ns INFO     cocotb.fpga_core.phy_txd           MII sink
+#      0.00ns INFO     cocotb.fpga_core.phy_txd           cocotbext-eth version 0.1.22
+#      0.00ns INFO     cocotb.fpga_core.phy_txd           Copyright (c) 2020 Alex Forencich
+#      0.00ns INFO     cocotb.fpga_core.phy_txd           https://github.com/alexforencich/cocotbext-eth
+#      0.00ns INFO     cocotb.fpga_core.phy_txd           Reset de-asserted
+#      0.00ns INFO     cocotb.fpga_core.phy_rxd           MII source
+#      0.00ns INFO     cocotb.fpga_core.phy_rxd           cocotbext-eth version 0.1.22
+#      0.00ns INFO     cocotb.fpga_core.phy_rxd           Copyright (c) 2020 Alex Forencich
+#      0.00ns INFO     cocotb.fpga_core.phy_rxd           https://github.com/alexforencich/cocotbext-eth
+#      0.00ns INFO     cocotb.fpga_core.phy_rxd           Reset de-asserted
+#    152.00ns INFO     cocotb.tb                          test UDP RX packet
+#    152.00ns INFO     cocotb.tb                          GmiiFrame(data=bytearray(b'UUUUUUU\xd5\x02\x00\x00\x00\x00\x00ZQRSTU\x08\x00E\x00\x01\x1c\x00\x01\x00\x00@\x11\xf5\x9b\xc0\xa8\x01d\xc0\xa8\x01\x80\x16.\x04\xd2\x01\x08\x9ei\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xffLl+\xcf'), error=None, sim_time_start=None, sim_time_sfd=None, sim_time_end=None)
+#    152.00ns INFO     cocotb.tb                          receive ARP request
+#    180.00ns INFO     cocotb.fpga_core.phy_rxd           TX frame: GmiiFrame(data=bytearray(b'UUUUUUU\xd5\x02\x00\x00\x00\x00\x00ZQRSTU\x08\x00E\x00\x01\x1c\x00\x01\x00\x00@\x11\xf5\x9b\xc0\xa8\x01d\xc0\xa8\x01\x80\x16.\x04\xd2\x01\x08\x9ei\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xffLl+\xcf'), error=None, sim_time_start=180000, sim_time_sfd=None, sim_time_end=None)
+#  34100.00ns INFO     cocotb.fpga_core.phy_txd           RX frame: GmiiFrame(data=bytearray(b'UUUUUUU\xd5\xff\xff\xff\xff\xff\xff\x02\x00\x00\x00\x00\x00\x08\x06\x00\x01\x08\x00\x06\x04\x00\x01\x02\x00\x00\x00\x00\x00\xc0\xa8\x01\x80\x00\x00\x00\x00\x00\x00\xc0\xa8\x01d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa6\xdf\x10\xd8'), error=None, sim_time_start=28340000, sim_time_sfd=28940000, sim_time_end=34100000)
+#  34100.00ns INFO     cocotb.tb                          RX packet: <Ether  dst=ff:ff:ff:ff:ff:ff src=02:00:00:00:00:00 type=ARP |<ARP  hwtype=Ethernet (10Mb) ptype=IPv4 hwlen=6 plen=4 op=who-has hwsrc=02:00:00:00:00:00 psrc=192.168.1.128 hwdst=00:00:00:00:00:00 pdst=192.168.1.100 |<Padding  load='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' |>>>
+#  34100.00ns INFO     cocotb.tb                          send ARP response
+#  34100.00ns INFO     cocotb.tb                          receive UDP packet
+#  34140.00ns INFO     cocotb.fpga_core.phy_rxd           TX frame: GmiiFrame(data=bytearray(b'UUUUUUU\xd5\x02\x00\x00\x00\x00\x00ZQRSTU\x08\x06\x00\x01\x08\x00\x06\x04\x00\x02ZQRSTU\xc0\xa8\x01d\x02\x00\x00\x00\x00\x00\xc0\xa8\x01\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00E}\xdc\x15'), error=None, sim_time_start=34140000, sim_time_sfd=None, sim_time_end=None)
+#  68140.00ns INFO     cocotb.fpga_core.phy_txd           RX frame: GmiiFrame(data=bytearray(b'UUUUUUU\xd5ZQRSTU\x02\x00\x00\x00\x00\x00\x08\x00E\x00\x01\x1c\x00\x00@\x00@\x11\xb5\x9c\xc0\xa8\x01\x80\xc0\xa8\x01d\x04\xd2\x16.\x01\x08\x9ei\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xffQ7B\x84'), error=None, sim_time_start=43340000, sim_time_sfd=43940000, sim_time_end=68140000)
+#  68140.00ns INFO     cocotb.tb                          RX packet: <Ether  dst=5a:51:52:53:54:55 src=02:00:00:00:00:00 type=IPv4 |<IP  version=4 ihl=5 tos=0x0 len=284 id=0 flags=DF frag=0 ttl=64 proto=udp chksum=0xb59c src=192.168.1.128 dst=192.168.1.100 |<UDP  sport=1234 dport=5678 len=264 chksum=0x9e69 |<Raw  load='\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f\\x80\\x81\\x82\\x83\\x84\\x85\\x86\\x87\\x88\\x89\\x8a\\x8b\\x8c\\x8d\\x8e\\x8f\\x90\\x91\\x92\\x93\\x94\\x95\\x96\\x97\\x98\\x99\\x9a\\x9b\\x9c\\x9d\\x9e\\x9f\\xa0\\xa1\\xa2\\xa3\\xa4\\xa5\\xa6\\xa7\\xa8\\xa9\\xaa\\xab\\xac\\xad\\xae\\xaf\\xb0\\xb1\\xb2\\xb3\\xb4\\xb5\\xb6\\xb7\\xb8\\xb9\\xba\\xbb\\xbc\\xbd\\xbe\\xbf\\xc0\\xc1\\xc2\\xc3\\xc4\\xc5\\xc6\\xc7\\xc8\\xc9\\xca\\xcb\\xcc\\xcd\\xce\\xcf\\xd0\\xd1\\xd2\\xd3\\xd4\\xd5\\xd6\\xd7\\xd8\\xd9\\xda\\xdb\\xdc\\xdd\\xde\\xdf\\xe0\\xe1\\xe2\\xe3\\xe4\\xe5\\xe6\\xe7\\xe8\\xe9\\xea\\xeb\\xec\\xed\\xee\\xef\\xf0\\xf1\\xf2\\xf3\\xf4\\xf5\\xf6\\xf7\\xf8\\xf9\\xfa\\xfb\\xfc\\xfd\\xfe\\xff' |>>>>
+#  68152.00ns INFO     cocotb.regression                  run_test passed
+#  68152.00ns INFO     cocotb.regression                  **************************************************************************************
+#                                                         ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+#                                                         **************************************************************************************
+#                                                         ** test_fpga_core.run_test        PASS       68152.00           0.45     153008.11  **
+#                                                         **************************************************************************************
+#                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0              68152.00           0.61     111442.62  **
+#                                                         **************************************************************************************
+#                                                         
+# ** Note: $finish
+#    Time: 68152001 ps  Iteration: 0  Instance: /fpga_core
+# End time: 16:35:24 on Aug 21,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 129

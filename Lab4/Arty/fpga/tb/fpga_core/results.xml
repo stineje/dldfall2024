@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1724276123" />
+    <testcase name="run_test" classname="test_fpga_core" file="/home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/test_fpga_core.py" lineno="75" time="0.44541430473327637" sim_time_ns="68152.001" ratio_time="153008.11014772163" />
+  </testsuite>
+</testsuites>
