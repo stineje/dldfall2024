@@ -33,7 +33,7 @@ THE SOFTWARE.
  */
 module udp #
 (
-    parameter CHECKSUM_GEN_ENABLE = 1,
+    parameter CHECKSUM_GEN_ENABLE = 1, //change this to 0 - dont need
     parameter CHECKSUM_PAYLOAD_FIFO_DEPTH = 2048,
     parameter CHECKSUM_HEADER_FIFO_DEPTH = 8
 )
