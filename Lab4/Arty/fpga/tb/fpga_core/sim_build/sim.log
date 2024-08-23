@@ -10,7 +10,7 @@ Reading pref.tcl
 # vmap work sim_build/work 
 # Modifying modelsim.ini
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 16:35:23 on Aug 21,2024
+# Start time: 23:01:00 on Aug 22,2024
 # vlog -work work "+define+COCOTB_SIM" -sv -timescale 1ns/1ps -mfcu "+acc" ../../rtl/fpga_core.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii_fifo.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_mii.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ssio_sdr_in.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/mii_phy_if.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_mac_1g.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/axis_gmii_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/axis_gmii_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/lfsr.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_axis_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_axis_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_complete.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_checksum_gen.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_ip_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/udp_ip_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_complete.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_eth_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_eth_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/ip_arb_mux.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp_cache.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp_eth_rx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/arp_eth_tx.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/rtl/eth_arb_mux.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/arbiter.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/priority_encoder.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_fifo.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo.v ../../lib/eth/verilog-ethernet/example/Arty/fpga/lib/eth/lib/axis/rtl/axis_async_fifo_adapter.v 
 # -- Compiling module fpga_core
 # -- Compiling module eth_mac_mii_fifo
@@ -46,10 +46,10 @@ Reading pref.tcl
 # 
 # Top level modules:
 # 	fpga_core
-# End time: 16:35:23 on Aug 21,2024, Elapsed time: 0:00:00
+# End time: 23:01:00 on Aug 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -onfinish exit -pli "/home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/eth_env/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_modelsim.so" sim_build/work.fpga_core 
-# Start time: 16:35:23 on Aug 21,2024
+# Start time: 23:01:00 on Aug 22,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vsim-3865) Due to PLI being present, global +acc is being enabled automatically. This will cause your simulation to run very slowly. Please use vsim -no_autoacc to disable this feature. This feature is now deprecated and will be removed from future releases.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
@@ -266,7 +266,7 @@ Reading pref.tcl
 #      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
 #      0.00ns INFO     cocotb                             Running on ModelSim for Questa-64 version 2023.2 2024.02
 #      0.00ns INFO     cocotb                             Running tests with cocotb v1.8.1 from /home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/eth_env/lib/python3.12/site-packages/cocotb
-#      0.00ns INFO     cocotb                             Seeding Python random module with 1724276123
+#      0.00ns INFO     cocotb                             Seeding Python random module with 1724385661
 #      0.00ns INFO     cocotb.regression                  Found test test_fpga_core.run_test
 #      0.00ns INFO     cocotb.regression                  running run_test (1/1)
 #      0.00ns INFO     cocotb.fpga_core.phy_txd           MII sink
@@ -280,7 +280,6 @@ Reading pref.tcl
 #      0.00ns INFO     cocotb.fpga_core.phy_rxd           https://github.com/alexforencich/cocotbext-eth
 #      0.00ns INFO     cocotb.fpga_core.phy_rxd           Reset de-asserted
 #    152.00ns INFO     cocotb.tb                          test UDP RX packet
-#    152.00ns INFO     cocotb.tb                          GmiiFrame(data=bytearray(b'UUUUUUU\xd5\x02\x00\x00\x00\x00\x00ZQRSTU\x08\x00E\x00\x01\x1c\x00\x01\x00\x00@\x11\xf5\x9b\xc0\xa8\x01d\xc0\xa8\x01\x80\x16.\x04\xd2\x01\x08\x9ei\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xffLl+\xcf'), error=None, sim_time_start=None, sim_time_sfd=None, sim_time_end=None)
 #    152.00ns INFO     cocotb.tb                          receive ARP request
 #    180.00ns INFO     cocotb.fpga_core.phy_rxd           TX frame: GmiiFrame(data=bytearray(b'UUUUUUU\xd5\x02\x00\x00\x00\x00\x00ZQRSTU\x08\x00E\x00\x01\x1c\x00\x01\x00\x00@\x11\xf5\x9b\xc0\xa8\x01d\xc0\xa8\x01\x80\x16.\x04\xd2\x01\x08\x9ei\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xffLl+\xcf'), error=None, sim_time_start=180000, sim_time_sfd=None, sim_time_end=None)
 #  34100.00ns INFO     cocotb.fpga_core.phy_txd           RX frame: GmiiFrame(data=bytearray(b'UUUUUUU\xd5\xff\xff\xff\xff\xff\xff\x02\x00\x00\x00\x00\x00\x08\x06\x00\x01\x08\x00\x06\x04\x00\x01\x02\x00\x00\x00\x00\x00\xc0\xa8\x01\x80\x00\x00\x00\x00\x00\x00\xc0\xa8\x01d\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa6\xdf\x10\xd8'), error=None, sim_time_start=28340000, sim_time_sfd=28940000, sim_time_end=34100000)
@@ -294,12 +293,12 @@ Reading pref.tcl
 #  68152.00ns INFO     cocotb.regression                  **************************************************************************************
 #                                                         ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
 #                                                         **************************************************************************************
-#                                                         ** test_fpga_core.run_test        PASS       68152.00           0.45     153008.11  **
+#                                                         ** test_fpga_core.run_test        PASS       68152.00           0.45     151057.83  **
 #                                                         **************************************************************************************
-#                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0              68152.00           0.61     111442.62  **
+#                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0              68152.00           0.62     110400.98  **
 #                                                         **************************************************************************************
 #                                                         
 # ** Note: $finish
 #    Time: 68152001 ps  Iteration: 0  Instance: /fpga_core
-# End time: 16:35:24 on Aug 21,2024, Elapsed time: 0:00:01
+# End time: 23:01:01 on Aug 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 129
