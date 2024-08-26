@@ -41,7 +41,7 @@ module ssio_sdr_in #
     // Use BUFIO2 for Spartan-6
     parameter CLOCK_INPUT_STYLE = "BUFIO2",
     // Width of register in bits
-    parameter WIDTH = 1
+    parameter WIDTH = 1 //this should be 6?
 )
 (
     input  wire             input_clk,

@@ -288,7 +288,7 @@ assign tx_fifo_udp_payload_axis_tready = tx_udp_payload_axis_tready;
 assign tx_udp_payload_axis_tlast = tx_fifo_udp_payload_axis_tlast;
 assign tx_udp_payload_axis_tuser = tx_fifo_udp_payload_axis_tuser;
 
-assign rx_fifo_udp_payload_axis_tdata = rx_udp_payload_axis_tdata;
+assign rx_fifo_udp_payload_axis_tdata = rx_udp_payload_axis_tdata; //changes this after tx assigned to output from it (for next transmission?)
 assign rx_fifo_udp_payload_axis_tvalid = rx_udp_payload_axis_tvalid && match_cond_reg;
 assign rx_udp_payload_axis_tready = (rx_fifo_udp_payload_axis_tready && match_cond_reg) || no_match_reg;
 assign rx_fifo_udp_payload_axis_tlast = rx_udp_payload_axis_tlast;
@@ -304,7 +304,7 @@ always @(posedge clk) begin
     end else begin
         if (tx_udp_payload_axis_tvalid) begin
             if (!valid_last) begin
-                led_reg <= tx_udp_payload_axis_tdata;
+                led_reg <= tx_udp_payload_axis_tdata; //placing output of tx_udp... on LEDs
                 valid_last <= 1'b1;
             end
             if (tx_udp_payload_axis_tlast) begin
