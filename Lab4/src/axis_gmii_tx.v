@@ -208,7 +208,7 @@ always @* begin
         end
     end
 
-    gmii_txd_next = {DATA_WIDTH{1'b1}}; //this could be causing issue - was {DATA_WIDTH{1'b0}}
+    gmii_txd_next = {DATA_WIDTH{1'b0}}; //this could be causing issue - was {DATA_WIDTH{1'b0}}
     gmii_tx_en_next = 1'b0;
     gmii_tx_er_next = 1'b0;
 

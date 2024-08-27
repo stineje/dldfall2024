@@ -169,7 +169,7 @@ eth_mac_1g_inst (
     .cfg_tx_enable(cfg_tx_enable),
     .cfg_rx_enable(cfg_rx_enable),
 
-    // missing pins
+    // missing pins - SOURCE OF ALL DATA maybe
     .cfg_rx_pfc_en('0),
     .cfg_rx_pfc_opcode('0),
     .cfg_rx_lfc_en('0),
@@ -179,15 +179,15 @@ eth_mac_1g_inst (
     .cfg_tx_pfc_en('0),
     .cfg_tx_pfc_opcode('0),
     .cfg_tx_pfc_eth_type('0),
-    .cfg_tx_pfc_eth_src('0),
-    .cfg_tx_pfc_eth_dst('0),
+    .cfg_tx_pfc_eth_src(48'h5a5152535455),
+    .cfg_tx_pfc_eth_dst(48'h020000000000),
     .cfg_tx_lfc_refresh('0),
     .cfg_tx_lfc_quanta('0),
     .cfg_tx_lfc_en('0),
     .cfg_tx_lfc_opcode('0),
     .cfg_tx_lfc_eth_type('0),
-    .cfg_tx_lfc_eth_src('0),
-    .cfg_tx_lfc_eth_dst('0),
+    .cfg_tx_lfc_eth_src(48'h5a5152535455),
+    .cfg_tx_lfc_eth_dst(48'h020000000000),
     .cfg_mcf_rx_enable('0),
     .cfg_mcf_rx_forward('0),
     .cfg_mcf_rx_check_opcode_pfc('0),

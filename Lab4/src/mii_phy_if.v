@@ -79,7 +79,7 @@ ssio_sdr_in #
 )
 rx_ssio_sdr_inst (
     .input_clk(phy_mii_rx_clk),
-    .input_d({phy_mii_rxd, phy_mii_rx_dv, phy_mii_rx_er}),
+    .input_d({phy_mii_rxd, phy_mii_rx_dv, phy_mii_rx_er}), //input_d should be 6 bits
     .output_clk(mac_mii_rx_clk),
     .output_q({mac_mii_rxd, mac_mii_rx_dv, mac_mii_rx_er})
 );
