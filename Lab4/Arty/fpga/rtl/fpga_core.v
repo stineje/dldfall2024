@@ -68,7 +68,7 @@ module fpga_core #
     /*
      * Ethernet: 100BASE-T MII
      */
-    //input wire [47:0] tx_eth_dest_mac,
+
     input  wire       phy_rx_clk, //Clock signal for receiving data.
     input  wire [3:0] phy_rxd, //4-bit data input from the physical layer.
     input  wire       phy_rx_dv, //Data Valid signal, indicating when phy_rxd holds valid data
