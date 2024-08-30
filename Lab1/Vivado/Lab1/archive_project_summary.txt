@@ -41,8 +41,8 @@
 
 Section (1) - PROJECT INFORMATION
 ---------------------------------
-Name      = Lab0
-Directory = C:/Users/james/OneDrive/Desktop/Lab0
+Name      = Lab1
+Directory = C:/Users/james/OneDrive/Desktop/Lab1
 
 WARNING: Please verify the compiled library directory path for the following property in the
          current project. The path may point to an invalid location after opening this project.
@@ -87,12 +87,14 @@ Section (3.2) - REMOTE SOURCES
 List of referenced 'remote' design files that were 'imported' into the archived project:-
 
 <constrs_1>
-C:/Users/james/OneDrive/Desktop/constr.xdc
+None
 
 <sim_1>
 None
 
 <sources_1>
+C:/Users/james/OneDrive/Desktop/digit2segments.sv
+C:/Users/james/OneDrive/Desktop/segment_driver.sv
 C:/Users/james/OneDrive/Desktop/top_demo.sv
 
 <utils_1>
@@ -103,10 +105,12 @@ Section (3.3) - SOURCES SUMMARY
 List of all the source files present in the archived project:-
 
 <sources_1>
-./Lab0.srcs/sources_1/imports/Desktop/top_demo.sv
+./Lab1.srcs/sources_1/imports/Desktop/digit2segments.sv
+./Lab1.srcs/sources_1/imports/Desktop/segment_driver.sv
+./Lab1.srcs/sources_1/imports/Desktop/top_demo.sv
 
 <constrs_1>
-./Lab0.srcs/constrs_1/imports/Desktop/constr.xdc
+None
 
 <sim_1>
 None
@@ -126,8 +130,8 @@ Section (4) - JOURNAL/LOG FILES
 List of Journal/Log files that were added to the archived project:-
 
 Source File = C:/Users/james/AppData/Roaming/Xilinx/Vivado/vivado.jou
-Archived Location = ./Lab0/vivado.jou
+Archived Location = ./Lab1/vivado.jou
 
 Source File = C:/Users/james/AppData/Roaming/Xilinx/Vivado/vivado.log
-Archived Location = ./Lab0/vivado.log
+Archived Location = ./Lab1/vivado.log
 
