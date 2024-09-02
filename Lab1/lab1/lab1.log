@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  1 SEP 2024 22:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  1 SEP 2024 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -537,12 +537,10 @@ Package pdftex.def Info: f05-05-9780128000564-eps-converted-to.pdf  used on inp
 ut line 328.
 (pdftex.def)             Requested size: 411.0346pt x 86.0713pt.
 
-[3] [4 <./f05-05-9780128000564-eps-converted-to.pdf>]
+[3] [4]
 \openout3 = `lab1-1.cpt'.
 
- (./lab1-1.cpt)
-(./lab1-1.cpt) [5
-
+ (./lab1-1.cpt) (./lab1-1.cpt) [5 <./f05-05-9780128000564-eps-converted-to.pdf>
 ] [6] (./lab1.bbl) 
 AED: lastpage setting LastPage
 [7] (./lab1.aux)
@@ -550,10 +548,10 @@ Package rerunfilecheck Info: File `lab1.out' has not changed.
 (rerunfilecheck)             Checksum: DA1466AB866E5FDA010F020FFDB7F622;1782.
  ) 
 Here is how much of TeX's memory you used:
- 12365 strings out of 478276
- 198674 string characters out of 5846489
- 495622 words of memory out of 5000000
- 30337 multiletter control sequences out of 15000+600000
+ 12367 strings out of 478276
+ 198703 string characters out of 5846489
+ 496729 words of memory out of 5000000
+ 30338 multiletter control sequences out of 15000+600000
  484140 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,14n,76p,284b,641s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -576,10 +574,10 @@ ve/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab1.pdf (7 pages, 330567 bytes).
+Output written on lab1.pdf (7 pages, 330904 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
  107 words of extra memory for PDF output out of 10000 (max. 10000000)
 

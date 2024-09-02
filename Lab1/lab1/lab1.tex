@@ -335,10 +335,11 @@ In order to create a RCA, you will have to use hierarchy similar to
 what you will do for the testbench.  You will have to instantiate four
 ($4$) full adder (FA) blocks from Lab~$0$ to create your $4$-bit
 ripple-carry adder.  This will be similar to the following piece of
-SystemVerilog where the design is coded structurall or how it looks.
+SystemVerilog shown in Figure~\ref{rca4_sv.fig}
+where the design is coded structurall.
 Since we have more than $1$ bit as an input, remember to use your
 Backus-Naur format (BNF) to efficiently create $4$ bits as an input.
-\clearpage
+\begin{figure}
 \begin{verbatim}
 module rca4 (input logic [3:0] a, b, input logic cin, output logic [4:0] sum);
 
@@ -349,6 +350,11 @@ module rca4 (input logic [3:0] a, b, input logic cin, output logic [4:0] sum);
 
 endmodule
 \end{verbatim}
+\caption{Overall basic structure for $4$-bit Ripple-Carry Adder (RCA) Implementation.}
+\label{rca4_sv.fig}
+\end{figure}
+
+
 There are more advanced SV features that
 allow one to automate repeated instantiations (e.g., for-generate
 blocks), but we will just instantiate our full adder $4$ times in this
