@@ -333,29 +333,46 @@ where time is of the essence.
 
 In order to create a RCA, you will have to use hierarchy similar to
 what you will do for the testbench.  You will have to instantiate four
-($4$) full adder (FA) blocks from Lab 0 to create your $4$-bit
-ripple-carry adder.  There are more advanced SV features that
+($4$) full adder (FA) blocks from Lab~$0$ to create your $4$-bit
+ripple-carry adder.  This will be similar to the following piece of
+SystemVerilog where the design is coded structurall or how it looks.
+Since we have more than $1$ bit as an input, remember to use your
+Backus-Naur format (BNF) to efficiently create $4$ bits as an input.
+\clearpage
+\begin{verbatim}
+module rca4 (input logic [3:0] a, b, input logic cin, output logic [4:0] sum);
+
+  full_adder add1 ( );
+  full_adder add2 ( );
+  full_adder add3 ( );
+  full_adder add4 ( );
+
+endmodule
+\end{verbatim}
+There are more advanced SV features that
 allow one to automate repeated instantiations (e.g., for-generate
 blocks), but we will just instantiate our full adder $4$ times in this
-laboratory.
+laboratory.  It is important note that the sum output is $5$-bits as
+the carry out can be used for the Most Significant Bit (MSB).
 
 To create a good known golden vector for your adder, you will have to
 use a behavior construct to help you compute the correct sum or
-result.  Although
+result within the testbench.  Although
 behavior constructs in SV have gotten much better over the
-years, they still have a ways to go for some pieces of digital logic.
+years, they still have a ways to go for some pieces of digital logic
+to efficiently synthesize well.
 Until you get comfortable designing digital logic structurally, it is
-best to use only the behavior HDL blocks we recommend.  To compute a
+best to use only the behavior HDL blocks that we recommend.  To compute a
 known sum to compare versus your output, you should
 use this behavior construct within your SV testbench:
 \begin{verbatim}
 assign Sum_correct = A + B + Cin
 \end{verbatim}
 In this example, it is important to note the use of the $+$ operator
-is not an OR statement.  Interestingly, these operators
+is \textbf{not} an OR statement.  Interestingly, these operators
 are rather awesome in that they actually synthesize very good
-implementations.  However, for this laboratory your job is to use this
-behavior construct to compare the result of your $4$-bit RCA is
+digital implementations.  In conclusion, for this laboratory your job is to use this
+behavior construct to compare the correct result of your $4$-bit RCA is
 correct.
 
 \section{Implementation}
@@ -476,10 +493,10 @@ The following are items will be needed to complete this laboratory:
     ripple-carry adder (RCA) in depth,
     the idea should be easy to understand from
     Figure~\ref{rca.fig} above and Figure~$5.5$ in your text.  What
-    you should do is instantiate $4$ full adders and connect them
+    you need to do is instantiate $4$ full adders and connect them
     appropriately.  
     \item Create a testbench from the \verb!silly_tb.sv! testbench from
-      Lab 0 to test your RCA.  
+      Lab~$0$ to test your RCA.  
     \item Integrate a self-validating structure into your testbench so
       that it checks the answer automatically.  Test, at least, $175$
       different vectors and demonstrate that the sum is indeed
