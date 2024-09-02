@@ -86,6 +86,7 @@ async def run_test(dut):
     ip = IP(src='192.168.1.100', dst='192.168.1.128')
     udp = UDP(sport=5678, dport=1234)
     test_pkt = eth / ip / udp / payload
+    #print(test_pkt.build())
 
     test_frame = GmiiFrame.from_payload(test_pkt.build())
 

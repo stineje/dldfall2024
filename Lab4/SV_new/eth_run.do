@@ -63,6 +63,12 @@ vlog ../src/priority_encoder.v
 vlog ../src/axis_fifo.v
 vlog ../src/axis_async_fifo.v
 vlog ../src/axis_async_fifo_adapter.v
+vlog ../src/mac_ctrl_tx.v
+vlog ../src/mac_ctrl_rx.v
+vlog ../src/mac_pause_ctrl_tx.v
+vlog ../src/mac_pause_ctrl_rx.v
+
+
 
 
 # start and run simulation
@@ -80,7 +86,14 @@ view wave
 #add wave -hex -r /stimulus/dut/eth_mac_inst/tx_fifo/fifo_inst/*
 #add wave -hex -r /stimulus/dut/eth_mac_inst/rx_fifo/fifo_inst/* //both tx and rx instantiations
 #add wave -hex -r /stimulus/dut/eth_axis_tx_inst/*
-add wave -hex /stimulus/dut/tx_eth_dest_mac
+#add wave -hex /stimulus/dut/tx_eth_dest_mac
+#add wave -hex /stimulus/dut/tx_eth_src_mac
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/MAC_CTRL_ENABLE
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/tx_mcf_eth_dst
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_pause_ctrl_tx_inst/*
+#add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/*
+#add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/*
+add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/arp_inst/*
 
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"

@@ -44,7 +44,7 @@ module eth_mac_1g #
     parameter TX_PTP_TAG_WIDTH = 16,
     parameter TX_USER_WIDTH = (PTP_TS_ENABLE ? (TX_PTP_TAG_ENABLE ? TX_PTP_TAG_WIDTH : 0) + (TX_PTP_TS_CTRL_IN_TUSER ? 1 : 0) : 0) + 1,
     parameter RX_USER_WIDTH = (PTP_TS_ENABLE ? PTP_TS_WIDTH : 0) + 1,
-    parameter PFC_ENABLE = 0,
+    parameter PFC_ENABLE = 1, //changed this
     parameter PAUSE_ENABLE = PFC_ENABLE
 )
 (
@@ -364,8 +364,8 @@ if (MAC_CTRL_ENABLE) begin : mac_ctrl
         .s_axis_tvalid(tx_axis_tvalid),
         .s_axis_tready(tx_axis_tready),
         .s_axis_tlast(tx_axis_tlast),
-        .s_axis_tid(0),
-        .s_axis_tdest(0),
+        .s_axis_tid('0),
+        .s_axis_tdest('0),
         .s_axis_tuser(tx_axis_tuser_in),
 
         /*
@@ -390,9 +390,9 @@ if (MAC_CTRL_ENABLE) begin : mac_ctrl
         .mcf_eth_type(tx_mcf_eth_type),
         .mcf_opcode(tx_mcf_opcode),
         .mcf_params(tx_mcf_params),
-        .mcf_id(0),
-        .mcf_dest(0),
-        .mcf_user(0),
+        .mcf_id('0),
+        .mcf_dest('0),
+        .mcf_user('0),
 
         /*
          * Pause interface
@@ -428,8 +428,8 @@ if (MAC_CTRL_ENABLE) begin : mac_ctrl
         .s_axis_tvalid(rx_axis_tvalid_int),
         .s_axis_tready(),
         .s_axis_tlast(rx_axis_tlast_int),
-        .s_axis_tid(0),
-        .s_axis_tdest(0),
+        .s_axis_tid('0),
+        .s_axis_tdest('0),
         .s_axis_tuser(rx_axis_tuser_int),
 
         /*
@@ -528,7 +528,8 @@ if (MAC_CTRL_ENABLE) begin : mac_ctrl
         .cfg_tx_pfc_en(cfg_tx_pfc_en),
         .cfg_tx_pfc_quanta(cfg_tx_pfc_quanta),
         .cfg_tx_pfc_refresh(cfg_tx_pfc_refresh),
-        .cfg_quanta_step(tx_mii_select ? (4*256)/512 : (8*256)/512),
+        //.cfg_quanta_step(tx_mii_select ? (4*256)/512 : (8*256)/512),
+        .cfg_quanta_step('0),
         .cfg_quanta_clk_en(tx_clk_enable),
 
         /*
@@ -583,7 +584,8 @@ if (MAC_CTRL_ENABLE) begin : mac_ctrl
         .cfg_rx_lfc_en(cfg_rx_lfc_en),
         .cfg_rx_pfc_opcode(cfg_rx_pfc_opcode),
         .cfg_rx_pfc_en(cfg_rx_pfc_en),
-        .cfg_quanta_step(rx_mii_select ? (4*256)/512 : (8*256)/512),
+        //.cfg_quanta_step(rx_mii_select ? (4*256)/512 : (8*256)/512),
+        .cfg_quanta_step('0),
         .cfg_quanta_clk_en(rx_clk_enable),
 
         /*

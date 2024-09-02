@@ -1,0 +1,70 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.3_1 2021.08, Aug 15 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jstine/ecen2233/dldfall2024/sample
+T_opt
+Z1 !s110 1724793199
+V[mCn;FJzRGFdcM_1?0L;F3
+04 8 4 work stimulus fast 0
+=1-cc483a29a3f0-66ce416f-59159-22e
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.3_1;73
+vsample
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R1
+!i10b 1
+!s100 3A6fC;P>SaS7O]O?dPl7@2
+I=jZPkfe582U9Wfkeb`]OK0
+S1
+R0
+w1660855177
+8sample.sv
+Fsample.sv
+!i122 0
+L0 1 5
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.3_1;73
+r1
+!s85 0
+31
+Z6 !s108 1724793199.000000
+Z7 !s107 tb_sample.sv|sample.sv|
+Z8 !s90 sample.sv|tb_sample.sv|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vstimulus
+R3
+R1
+!i10b 1
+!s100 eTS3UIUNmKWimaf=lcV`W2
+Ig_nE`UA4YMKddU1mFSb`O1
+S1
+R0
+w1724793189
+8tb_sample.sv
+Ftb_sample.sv
+!i122 0
+L0 8 68
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R2

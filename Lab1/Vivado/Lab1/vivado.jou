@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Aug 30 10:33:56 2024
+# Process ID: 25664
+# Current directory: C:/Users/James Stine/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26648
+# Log file: C:/Users/James Stine/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/James Stine/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Running On: DESKTOP-4ROMOJN, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 16853 MB
+#-----------------------------------------------------------
+start_gui
+create_project Lab1 {C:/Users/James Stine/OneDrive - Oklahoma A and M System/Desktop/dldfall2024/Lab1/Vivado/Lab1} -part xc7z020clg484-1
+import_files -norecurse {{C:/Users/James Stine/OneDrive - Oklahoma A and M System/Desktop/segment_driver.sv} {C:/Users/James Stine/OneDrive - Oklahoma A and M System/Desktop/top_demo.sv} {C:/Users/James Stine/OneDrive - Oklahoma A and M System/Desktop/digit2segments.sv}}
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse {{C:/Users/James Stine/OneDrive - Oklahoma A and M System/Desktop/constr.xdc}}
+import_files -fileset constrs_1 {{C:/Users/James Stine/OneDrive - Oklahoma A and M System/Desktop/constr.xdc}}
+archive_project {C:/Users/James Stine/OneDrive - Oklahoma A and M System/Desktop/Lab1.xpr.zip} -temp_dir {C:/Users/James Stine/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-25664-DESKTOP-4ROMOJN} -force -exclude_run_results -include_local_ip_cache -include_config_settings
