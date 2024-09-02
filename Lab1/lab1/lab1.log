@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  1 SEP 2024 22:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2023.12.17)  1 SEP 2024 22:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -541,7 +541,13 @@ ut line 328.
 \openout3 = `lab1-1.cpt'.
 
  (./lab1-1.cpt) (./lab1-1.cpt) [5 <./f05-05-9780128000564-eps-converted-to.pdf>
-] [6] (./lab1.bbl) 
+]
+Overfull \hbox (15.07497pt too wide) in paragraph at lines 514--519
+[]\T1/cmr/m/n/10 Once your RCA works, im-ple-ment your de-sign on the RCA us-in
+g the demo pro-gram from the [][]\T1/cmtt/m/n/10 Lab1.xpr.zip
+ []
+
+[6] (./lab1.bbl) 
 AED: lastpage setting LastPage
 [7] (./lab1.aux)
 Package rerunfilecheck Info: File `lab1.out' has not changed.
@@ -574,7 +580,7 @@ ve/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on lab1.pdf (7 pages, 330904 bytes).
+Output written on lab1.pdf (7 pages, 330913 bytes).
 PDF statistics:
  240 PDF objects out of 1000 (max. 8388607)
  191 compressed objects within 2 object streams
