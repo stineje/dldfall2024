@@ -1,16 +1,16 @@
-# do sample.do
+# do comp.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 16:13:19 on Aug 27,2024
-# vlog sample.sv tb_sample.sv 
-# -- Compiling module sample
+# Start time: 13:17:01 on Sep 03,2024
+# vlog comp.sv tb_comp.sv 
+# -- Compiling module comp
 # -- Compiling module stimulus
 # 
 # Top level modules:
 # 	stimulus
-# End time: 16:13:19 on Aug 27,2024, Elapsed time: 0:00:00
+# End time: 13:17:01 on Sep 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 16:13:19 on Aug 27,2024
+# Start time: 13:17:01 on Sep 03,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # //  Questa Sim-64
 # //  Version 2021.3_1 linux_x86_64 Aug 15 2021
@@ -28,7 +28,7 @@
 # //
 # Loading sv_std.std
 # Loading work.stimulus(fast)
-# Loading work.sample(fast)
+# Loading work.comp(fast)
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
@@ -37,8 +37,9 @@
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
-#         64 tests completed with          0 errors
-# ** Note: $finish    : tb_sample.sv(72)
-#    Time: 645 ns  Iteration: 2  Instance: /stimulus
-# End time: 16:13:19 on Aug 27,2024, Elapsed time: 0:00:00
+# 10 10 || 0 1 0 || 1 0 0
+#         16 tests completed with          1 errors
+# ** Note: $finish    : tb_comp.sv(79)
+#    Time: 165 ns  Iteration: 2  Instance: /stimulus
+# End time: 13:17:02 on Sep 03,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
