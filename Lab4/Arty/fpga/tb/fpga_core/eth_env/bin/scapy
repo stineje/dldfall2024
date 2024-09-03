@@ -1,4 +1,4 @@
-#!/home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/eth_env/bin/python
+#!/home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/eth_env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

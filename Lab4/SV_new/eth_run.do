@@ -93,7 +93,25 @@ view wave
 #add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_pause_ctrl_tx_inst/*
 #add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/*
 #add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/*
-add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/arp_inst/*
+#add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/arp_inst/*
+
+#Analyzing the path from received data to MAC in order to find where data set
+add wave -hex /stimulus/dut/tx_eth_dest_mac
+add wave -hex /stimulus/dut/tx_eth_src_mac
+add wave -hex /stimulus/dut/phy_rxd
+add wave -hex /stimulus/dut/eth_mac_inst/mii_rxd
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_rxd
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/phy_mii_rxd
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/rx_ssio_sdr_inst/input_d
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/rx_ssio_sdr_inst/output_q
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/mac_mii_rxd
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mac_mii_rxd
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/gmii_rxd
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd_d*
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/rx_axis_tdata_int
+
+
 
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"
@@ -245,6 +263,6 @@ configure wave -rowmargin 4
 configure wave -childrowmargin 2
 
 -- Run the Simulation
-run 10000ns
+run 240ns
 
 

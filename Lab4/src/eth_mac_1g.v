@@ -44,7 +44,7 @@ module eth_mac_1g #
     parameter TX_PTP_TAG_WIDTH = 16,
     parameter TX_USER_WIDTH = (PTP_TS_ENABLE ? (TX_PTP_TAG_ENABLE ? TX_PTP_TAG_WIDTH : 0) + (TX_PTP_TS_CTRL_IN_TUSER ? 1 : 0) : 0) + 1,
     parameter RX_USER_WIDTH = (PTP_TS_ENABLE ? PTP_TS_WIDTH : 0) + 1,
-    parameter PFC_ENABLE = 1, //changed this
+    parameter PFC_ENABLE = 0, //changed this
     parameter PAUSE_ENABLE = PFC_ENABLE
 )
 (

@@ -133,7 +133,7 @@ module stimulus;
       sw = 4'b0000;
       //tx_eth_dest_mac = 48'h020000000000;
       //phy_rx_clk = 0;
-      phy_rxd = 4'b1010;
+      phy_rxd = 4'b0000;
       phy_rx_dv = 1'b0;
       phy_rx_er = 1'b0;
       //phy_tx_clk = 0;
@@ -144,10 +144,14 @@ module stimulus;
       // Apply reset
       #20;
       rst = 1'b0;
+      #20
+
+      //start receiving data
+      receive_frame();
 
       // Apply stimulus here
       // Example: Set buttons and switches
-      #10;
+      //#10;
       //btn = 4'b0001;
       //sw = 4'b0010;
 
@@ -157,8 +161,8 @@ module stimulus;
       // phy_rxd = 4'b1100;
 
       // Example: Apply UART signal
-      #10;
-      uart_rxd = 1;
+      // #10;
+      // uart_rxd = 1; //probably unneeded
 
       // Release reset and check functionality
       #100;
@@ -167,9 +171,58 @@ module stimulus;
       rst = 0;
 
       // Wait for simulation to finish
-      #1000;
+      //#1000;
       $finish;
    end
+
+   // adding task here to see if input data at least works
+   task receive_frame;
+      // Frame: `UUUUUUU\xd5\x02\x00\x00\x00\x00\x00ZQRSTU\x08\x00...` (similar to the cocotb frames sent)
+      // Define your frame data here
+      reg [7:0] frame_data [0:63]; // Adjust the size according to your frame length
+      integer i;
+
+      begin
+         // Example frame data (Replace with actual data)
+         frame_data[0] = 8'h55; // Start of preamble
+         frame_data[1] = 8'h55; // Continue preamble
+         frame_data[2] = 8'h55; // Continue preamble
+         frame_data[3] = 8'h55; // Continue preamble
+         frame_data[4] = 8'h55; // Continue preamble
+         frame_data[5] = 8'h55; // Continue preamble
+         frame_data[6] = 8'h55; // Continue preamble
+         frame_data[7] = 8'hD5; // SFD
+         frame_data[8] = 8'h02; //beginning of MAC destination
+         frame_data[9] = 8'h00;
+         frame_data[10] = 8'h00;
+         frame_data[11] = 8'h00;
+         frame_data[12] = 8'h00;
+         frame_data[13] = 8'h00;
+         frame_data[14] = 8'h5A; // Example data byte (Z) (beginning of MAC source)
+         frame_data[15] = 8'h51; // Example data byte (Q)
+         frame_data[16] = 8'h52; // Example data byte (R)
+         frame_data[17] = 8'h53; // Example data byte (S)
+         frame_data[18] = 8'h54; // Example data byte (T)
+         frame_data[19] = 8'h55; // Example data byte (U)
+
+         // Add more data bytes according to data that needs to be received
+
+         // Start receiving dtaa
+         phy_rx_dv = 1'b1; // Enable transmission
+         
+         // Send each byte
+         for (i = 0; i < 64; i = i + 1) begin
+            #4; // Wait for one clock period (Adjust as needed)
+            phy_rxd = frame_data[i][7:4]; // Send lower nibble
+            #4; // Wait for next clock period
+            phy_rxd = frame_data[i][3:0]; // Send upper nibble
+         end
+
+         //phy_rxd = 4'b1100; //value set for debugging
+         // End transmission
+         phy_rx_dv = 1'b0;
+      end
+   endtask
 
    // Monitor outputs
    initial begin
