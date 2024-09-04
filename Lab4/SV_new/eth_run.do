@@ -109,6 +109,7 @@ add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mac_mii_rxd
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/gmii_rxd
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd_d*
+# more data to fill in in between here...
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/rx_axis_tdata_int
 
 
@@ -263,6 +264,6 @@ configure wave -rowmargin 4
 configure wave -childrowmargin 2
 
 -- Run the Simulation
-run 240ns
+run 480ns
 
 

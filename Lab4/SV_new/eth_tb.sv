@@ -207,14 +207,14 @@ module stimulus;
 
          // Add more data bytes according to data that needs to be received
 
-         // Start receiving dtaa
-         phy_rx_dv = 1'b1; // Enable transmission
+         // Start receiving data
+         phy_rx_dv = 1'b1; // Enable receiving
          
          // Send each byte
          for (i = 0; i < 64; i = i + 1) begin
-            #4; // Wait for one clock period (Adjust as needed)
+            #8; // Wait for one clock period (Adjust as needed)
             phy_rxd = frame_data[i][7:4]; // Send lower nibble
-            #4; // Wait for next clock period
+            #8; // Wait for next clock period
             phy_rxd = frame_data[i][3:0]; // Send upper nibble
          end
 
