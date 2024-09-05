@@ -1,3 +1,4 @@
+# SHA256 Constants (See FIPS 180 4.2.2)
 K = [
     0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
     0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,
@@ -11,6 +12,9 @@ K = [
 
 
 def generate_hash(message: bytearray) -> bytearray:
+    """
+        generate SHA256 Hash Function
+    """
 
     if isinstance(message, str):
         message = bytearray(message, 'ascii')
@@ -42,7 +46,7 @@ def generate_hash(message: bytearray) -> bytearray:
     h6 = 0x1f83d9ab
     h7 = 0x5be0cd19
 
-    # SHA-256 Hash Computation
+    # SHA-256 Hash Computation (See FIPS 180 6.2.1)
     for message_block in blocks:
         # Prepare message schedule
         message_schedule = []
@@ -71,15 +75,8 @@ def generate_hash(message: bytearray) -> bytearray:
         print("-------------")
 
         # Initialize working variables
-        a = h0
-        b = h1
-        c = h2
-        d = h3
-        e = h4
-        f = h5
-        g = h6
-        h = h7
-        print("Initial working variables")
+        a, b, c, d, e, f, g, h = h0, h1, h2, h3, h4, h5, h6, h7
+        # print("Initial working variables")
         print("a = " + hex(a))
         print("b = " + hex(b))
         print("c = " + hex(c))
@@ -90,6 +87,7 @@ def generate_hash(message: bytearray) -> bytearray:
         print("h = " + hex(h))
         print("-------------")
 
+        # Compression Function (See FIPS 180 6.2.2)
         # Iterate for t=0 to 63 (main computation)
         for t in range(64):
             # addition module 2^{32}
@@ -132,30 +130,22 @@ def generate_hash(message: bytearray) -> bytearray:
 
 
 def sigma0(num: int):
-    num = (ror(num, 7) ^
-           ror(num, 18) ^
-           (num >> 3))
+    num = (ror(num, 7) ^ ror(num, 18) ^ (num >> 3))
     return num
 
 
 def sigma1(num: int):
-    num = (ror(num, 17) ^
-           ror(num, 19) ^
-           (num >> 10))
+    num = (ror(num, 17) ^ ror(num, 19) ^ (num >> 10))
     return num
 
 
 def Sigma0(num: int):
-    num = (ror(num, 2) ^
-           ror(num, 13) ^
-           ror(num, 22))
+    num = (ror(num, 2) ^ ror(num, 13) ^ ror(num, 22))
     return num
 
 
 def Sigma1(num: int):
-    num = (ror(num, 6) ^
-           ror(num, 11) ^
-           ror(num, 25))
+    num = (ror(num, 6) ^ ror(num, 11) ^ ror(num, 25))
     return num
 
 
