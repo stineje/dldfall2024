@@ -9,6 +9,7 @@ K = [
     0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2
 ]
 
+
 def generate_hash(message: bytearray) -> bytearray:
 
     if isinstance(message, str):
@@ -19,16 +20,16 @@ def generate_hash(message: bytearray) -> bytearray:
         raise TypeError
 
     # Padding
-    length = len(message) * 8 # len(message) is number of BYTES!!!
+    length = len(message) * 8  # len(message) is number of BYTES!!!
     message.append(0x80)
     while (len(message) * 8 + 64) % 512 != 0:
         message.append(0x00)
-    message += length.to_bytes(8, 'big') # pad to 8 bytes or 64 bits
+    message += length.to_bytes(8, 'big')  # pad to 8 bytes or 64 bits
     assert (len(message) * 8) % 512 == 0, "Padding did not complete properly!"
 
     # Parsing
-    blocks = [] # contains 512-bit chunks of message
-    for i in range(0, len(message), 64): # 64 bytes is 512 bits
+    blocks = []  # contains 512-bit chunks of message
+    for i in range(0, len(message), 64):  # 64 bytes is 512 bits
         blocks.append(message[i:i+64])
 
     # Setting Initial Hash Value
@@ -51,7 +52,8 @@ def generate_hash(message: bytearray) -> bytearray:
                 # starting from leftmost word
                 # 4 bytes at a time
                 message_schedule.append(bytes(message_block[t*4:(t*4)+4]))
-                print("W_" + str(t) + "= " + hex(int.from_bytes(message_schedule[t], 'big')))
+                print("W_" + str(t) + "= " +
+                      hex(int.from_bytes(message_schedule[t], 'big')))
             else:
                 term1 = sigma1(int.from_bytes(message_schedule[t-2], 'big'))
                 term2 = int.from_bytes(message_schedule[t-7], 'big')
@@ -59,12 +61,14 @@ def generate_hash(message: bytearray) -> bytearray:
                 term4 = int.from_bytes(message_schedule[t-16], 'big')
 
                 # append a 4-byte byte object
-                schedule = ((term1 + term2 + term3 + term4) % 2**32).to_bytes(4, 'big')
+                schedule = ((term1 + term2 + term3 + term4) %
+                            2**32).to_bytes(4, 'big')
                 message_schedule.append(schedule)
-                print("W_" + str(t) + "= " + hex(int.from_bytes(message_schedule[t], 'big')))
+                print("W_" + str(t) + "= " +
+                      hex(int.from_bytes(message_schedule[t], 'big')))
 
         assert len(message_schedule) == 64
-        print("-------------")        
+        print("-------------")
 
         # Initialize working variables
         a = h0
@@ -126,11 +130,13 @@ def generate_hash(message: bytearray) -> bytearray:
             (h4).to_bytes(4, 'big') + (h5).to_bytes(4, 'big') +
             (h6).to_bytes(4, 'big') + (h7).to_bytes(4, 'big'))
 
+
 def sigma0(num: int):
     num = (ror(num, 7) ^
            ror(num, 18) ^
            (num >> 3))
     return num
+
 
 def sigma1(num: int):
     num = (ror(num, 17) ^
@@ -138,11 +144,13 @@ def sigma1(num: int):
            (num >> 10))
     return num
 
+
 def Sigma0(num: int):
     num = (ror(num, 2) ^
            ror(num, 13) ^
            ror(num, 22))
     return num
+
 
 def Sigma1(num: int):
     num = (ror(num, 6) ^
@@ -150,14 +158,18 @@ def Sigma1(num: int):
            ror(num, 25))
     return num
 
+
 def ch(x: int, y: int, z: int):
     return (x & y) ^ (~x & z)
+
 
 def maj(x: int, y: int, z: int):
     return (x & y) ^ (x & z) ^ (y & z)
 
+
 def ror(num: int, shift: int, size: int = 32):
     return (num >> shift) | (num << size - shift)
+
 
 if __name__ == "__main__":
     print(generate_hash("Hello, SHA-256!").hex())

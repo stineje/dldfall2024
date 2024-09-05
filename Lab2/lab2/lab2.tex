@@ -558,12 +558,12 @@ addition (+) is performed modulo $2^{32}$ as described in Section~\ref{modular.s
   This block is done $64$ times and each value of $a$-$h$ is passed to the
   next block (e.g., The output $a$ will be the next value of $H_0^1$
   from Step~$3$.  Figure~\ref{sha256compression.fig} shows a visual idea
-  of what this step is accomplishing - again, it is performed $64$
-  times.
+  of what this step is accomplishing and is sometimes called a compression function
+  - again, it is performed $64$ times.
   \begin{figure} [t!]
   \centering
-  \includegraphics[scale=0.7]{sha256compression.png}
-  \caption{Hash Computation Block}
+  \includegraphics[scale=0.8]{sha256compression.png}
+  \caption{SHA256 Compression Function Block}
   \label{sha256compression.fig}
   \end{figure}
   
