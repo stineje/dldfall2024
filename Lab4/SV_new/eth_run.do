@@ -99,7 +99,7 @@ view wave
 add wave -hex /stimulus/dut/tx_eth_dest_mac
 add wave -hex /stimulus/dut/tx_eth_src_mac
 
-#Analyzing the path from received data to MAC in order to find where data set
+#Analyzing the path from received data to PHY/MAC in order to find where data set
 #add wave -hex /stimulus/dut/phy_rxd
 #add wave -hex /stimulus/dut/eth_mac_inst/mii_rxd
 #add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_rxd
@@ -112,12 +112,24 @@ add wave -hex /stimulus/dut/tx_eth_src_mac
 #add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd
 #add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd_d*
 # gap between steps here...
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/rx_axis_tdata_int
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/rx_axis_tdata_int
 #data seems to have made it to rx_axis_tdata_int - need to find how transmitted out
 
 #analyszing path being transmitted out
+add wave -hex /stimulus/phy_txd
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_enable
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_pfc_en
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_pfc_eth_src
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_lfc_eth_src
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_pause_ctrl_tx_inst/mcf_eth_src
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/mcf_eth_src
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/m_axis_tdata
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/tx_axis_tdata_int
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_tx_inst/s_axis_tdata
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/gmii_txd
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mac_mii_txd
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/phy_mii_txd 
+
 
 
 
@@ -248,7 +260,7 @@ add wave -color yellow -hex /stimulus/uart_txd
 #add wave -hex /stimulus/cfg_rx_lfc_en
 #add wave -hex /stimulus/cfg_rx_pfc_opcode
 #add wave -hex /stimulus/cfg_rx_pfc_enq
-#add wave -noupdate -divider -height 32 "Priority Flow Control (PFC) (IEEE 802.3 annex 31D PFC"
+#add wave -noupdate -divider -height 32 "Priority Flow Control (PFC) (IEEE 802.3 annex 31D PFC)
 #add wave -hex /stimulus/tx_pfc_req   
 #add wave -hex /stimulus/tx_pfc_resend   
 #add wave -hex /stimulus/rx_pfc_en   
