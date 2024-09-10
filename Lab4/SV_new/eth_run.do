@@ -95,22 +95,29 @@ view wave
 #add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/*
 #add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/arp_inst/*
 
-#Analyzing the path from received data to MAC in order to find where data set
+#path to tx_eth variables to see if they changed at all during testing
 add wave -hex /stimulus/dut/tx_eth_dest_mac
 add wave -hex /stimulus/dut/tx_eth_src_mac
-add wave -hex /stimulus/dut/phy_rxd
-add wave -hex /stimulus/dut/eth_mac_inst/mii_rxd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_rxd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/phy_mii_rxd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/rx_ssio_sdr_inst/input_d
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/rx_ssio_sdr_inst/output_q
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/mac_mii_rxd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mac_mii_rxd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/gmii_rxd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd_d*
-# more data to fill in in between here...
+
+#Analyzing the path from received data to MAC in order to find where data set
+#add wave -hex /stimulus/dut/phy_rxd
+#add wave -hex /stimulus/dut/eth_mac_inst/mii_rxd
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_rxd
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/phy_mii_rxd
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/rx_ssio_sdr_inst/input_d
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/rx_ssio_sdr_inst/output_q
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/mac_mii_rxd
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mac_mii_rxd
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/gmii_rxd
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/gmii_rxd_d*
+# gap between steps here...
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/rx_axis_tdata_int
+#data seems to have made it to rx_axis_tdata_int - need to find how transmitted out
+
+#analyszing path being transmitted out
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_enable
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_pfc_en
 
 
 
