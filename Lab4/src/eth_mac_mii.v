@@ -165,25 +165,25 @@ eth_mac_1g_inst (
     .rx_start_packet(rx_start_packet),
     .rx_error_bad_frame(rx_error_bad_frame),
     .rx_error_bad_fcs(rx_error_bad_fcs),
+
+    // Configuration - potentially source of hardcoded data
     .cfg_ifg(cfg_ifg),
     .cfg_tx_enable(cfg_tx_enable),
     .cfg_rx_enable(cfg_rx_enable),
-
-    // missing pins - SOURCE OF ALL DATA maybe
     .cfg_rx_pfc_en('0),
     .cfg_rx_pfc_opcode('0),
     .cfg_rx_lfc_en('0),
     .cfg_rx_lfc_opcode('0),
     .cfg_tx_pfc_refresh('0),
     .cfg_tx_pfc_quanta('0),
-    .cfg_tx_pfc_en('0),
+    .cfg_tx_pfc_en(cfg_tx_enable), //changed this from 0
     .cfg_tx_pfc_opcode('0),
     .cfg_tx_pfc_eth_type('0),
     .cfg_tx_pfc_eth_src(48'h5a5152535455),
     .cfg_tx_pfc_eth_dst(48'h020000000000),
     .cfg_tx_lfc_refresh('0),
     .cfg_tx_lfc_quanta('0),
-    .cfg_tx_lfc_en('0),
+    .cfg_tx_lfc_en(cfg_tx_enable), //changed this from '0
     .cfg_tx_lfc_opcode('0),
     .cfg_tx_lfc_eth_type('0),
     .cfg_tx_lfc_eth_src(48'h5a5152535455),
