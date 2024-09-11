@@ -117,12 +117,20 @@ add wave -hex /stimulus/dut/tx_eth_src_mac
 
 #analyszing path being transmitted out
 add wave -hex /stimulus/phy_txd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_enable
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_pfc_en
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_pfc_eth_src
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_lfc_eth_src
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_pause_ctrl_tx_inst/mcf_eth_src
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/mcf_eth_src
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_enable
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_pfc_en
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_pfc_eth_src
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_lfc_eth_src
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_pause_ctrl_tx_inst/mcf_eth_src
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/mcf_eth_src
+
+
+add wave -hex /stimulus/dut/eth_mac_inst/tx_fifo/fifo_inst/m_axis_tdata
+add wave -hex /stimulus/dut/eth_mac_inst/tx_fifo/m_axis_tdata
+add wave -hex /stimulus/dut/eth_mac_inst/tx_fifo_axis_tdata
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/tx_axis_tdata
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/tx_axis_tdata
+add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/s_axis_tdata
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/m_axis_tdata
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/tx_axis_tdata_int
 add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_tx_inst/s_axis_tdata
