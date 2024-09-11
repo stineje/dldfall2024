@@ -99,7 +99,7 @@ view wave
 add wave -hex /stimulus/dut/tx_eth_dest_mac
 add wave -hex /stimulus/dut/tx_eth_src_mac
 
-#Analyzing the path from received data to PHY/MAC in order to find where data set
+#Analyzing the path from received data to PHY/MAC in order to find where data set (phy_rxd)
 #add wave -hex /stimulus/dut/phy_rxd
 #add wave -hex /stimulus/dut/eth_mac_inst/mii_rxd
 #add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_rxd
@@ -115,7 +115,7 @@ add wave -hex /stimulus/dut/tx_eth_src_mac
 #add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/rx_axis_tdata_int
 #data seems to have made it to rx_axis_tdata_int - need to find how transmitted out
 
-#analyszing path being transmitted out
+#analyszing path being transmitted out (phy_txd)
 add wave -hex /stimulus/phy_txd
 #add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_enable
 #add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/cfg_tx_pfc_en
