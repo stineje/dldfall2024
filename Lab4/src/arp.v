@@ -305,7 +305,7 @@ always @* begin
                 if (incoming_arp_tpa == local_ip) begin
                     // send reply frame to valid incoming request
                     outgoing_frame_valid_next = 1'b1;
-                    outgoing_eth_dest_mac_next = incoming_eth_src_mac;
+                    outgoing_eth_dest_mac_next = incoming_eth_src_mac; //tried to change this to 48'hffffffffffff - didn't work
                     outgoing_arp_oper_next = ARP_OPER_ARP_REPLY;
                     outgoing_arp_tha_next = incoming_arp_sha;
                     outgoing_arp_tpa_next = incoming_arp_spa;
@@ -315,7 +315,7 @@ always @* begin
                 if (incoming_arp_tha == local_mac) begin
                     // send reply frame to valid incoming request
                     outgoing_frame_valid_next = 1'b1;
-                    outgoing_eth_dest_mac_next = incoming_eth_src_mac;
+                    outgoing_eth_dest_mac_next = incoming_eth_src_mac; //was  = incoming_eth_src_mac
                     outgoing_arp_oper_next = ARP_OPER_INARP_REPLY;
                     outgoing_arp_tha_next = incoming_arp_sha;
                     outgoing_arp_tpa_next = incoming_arp_spa;

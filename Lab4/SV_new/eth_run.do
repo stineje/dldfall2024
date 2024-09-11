@@ -125,21 +125,22 @@ add wave -hex /stimulus/phy_txd
 #add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/mcf_eth_src
 
 
-add wave -hex /stimulus/dut/eth_mac_inst/tx_fifo/fifo_inst/m_axis_tdata
-add wave -hex /stimulus/dut/eth_mac_inst/tx_fifo/m_axis_tdata
-add wave -hex /stimulus/dut/eth_mac_inst/tx_fifo_axis_tdata
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/tx_axis_tdata
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/tx_axis_tdata
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/s_axis_tdata
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/m_axis_tdata
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/tx_axis_tdata_int
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_tx_inst/s_axis_tdata
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/gmii_txd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mac_mii_txd
-add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/phy_mii_txd 
+#add wave -hex /stimulus/dut/eth_mac_inst/tx_fifo/fifo_inst/m_axis_tdata
+#add wave -hex /stimulus/dut/eth_mac_inst/tx_fifo/m_axis_tdata
+#add wave -hex /stimulus/dut/eth_mac_inst/tx_fifo_axis_tdata
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/tx_axis_tdata
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/tx_axis_tdata
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/s_axis_tdata
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/mac_ctrl/mac_ctrl_tx_inst/m_axis_tdata
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/tx_axis_tdata_int
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/axis_gmii_tx_inst/s_axis_tdata
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/eth_mac_1g_inst/gmii_txd
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mac_mii_txd
+#add wave -hex /stimulus/dut/eth_mac_inst/eth_mac_1g_mii_inst/mii_phy_if_inst/phy_mii_txd 
 
-
-
+add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/grant_encoded
+add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/s_eth_dest_mac
+add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/m_eth_dest_mac
 
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"

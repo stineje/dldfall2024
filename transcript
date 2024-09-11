@@ -1,17 +1,2 @@
-# //  Questa Sim-64
-# //  Version 2023.4_3 linux_x86_64 Feb 17 2024
-# //
-# //  Copyright 1991-2024 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  QuestaSim and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
-# //
-# eth_run.do
-# invalid command name "eth_run.do"
-# Break key hit
+# run.do
+# invalid command name "run.do"
