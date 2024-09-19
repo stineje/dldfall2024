@@ -223,7 +223,7 @@ wire tx_fifo_udp_payload_axis_tlast;
 wire tx_fifo_udp_payload_axis_tuser;
 
 // Configuration
-wire [47:0] local_mac   = 48'h02_00_00_00_00_00;
+wire [47:0] local_mac   = 48'h02_f0_00_00_00_00;
 wire [31:0] local_ip    = {8'd192, 8'd168, 8'd1,   8'd128};
 wire [31:0] gateway_ip  = {8'd192, 8'd168, 8'd1,   8'd1};
 wire [31:0] subnet_mask = {8'd255, 8'd255, 8'd255, 8'd0};

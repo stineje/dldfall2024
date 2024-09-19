@@ -272,8 +272,8 @@ eth_arb_mux_inst (
     // Ethernet frame inputs
     .s_eth_hdr_valid({ip_tx_eth_hdr_valid, arp_tx_eth_hdr_valid}),
     .s_eth_hdr_ready({ip_tx_eth_hdr_ready, arp_tx_eth_hdr_ready}),
-    .s_eth_dest_mac({ip_tx_eth_dest_mac, arp_tx_eth_dest_mac}), //hard coding this to get some type of response
-    //.s_eth_dest_mac(96'hffffffffffff_ffffffffffff),
+    .s_eth_dest_mac({ip_tx_eth_dest_mac, arp_tx_eth_dest_mac}),
+    //.s_eth_dest_mac(96'hffffffffffff_ffffffffffff), //hard coding this to get some type of response
     .s_eth_src_mac({ip_tx_eth_src_mac, arp_tx_eth_src_mac}),
     .s_eth_type({ip_tx_eth_type, arp_tx_eth_type}),
     .s_eth_payload_axis_tdata({ip_tx_eth_payload_axis_tdata, arp_tx_eth_payload_axis_tdata}),

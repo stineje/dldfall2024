@@ -187,7 +187,8 @@ arp_eth_tx_inst (
     // ARP frame input
     .s_frame_valid(outgoing_frame_valid_reg),
     .s_frame_ready(outgoing_frame_ready),
-    .s_eth_dest_mac(outgoing_eth_dest_mac_reg),
+    .s_eth_dest_mac(48'hffffffffffff), //see if changing this does anything - it DOES
+//  .s_eth_dest_mac(outgoing_eth_dest_mac_reg), //changed this to above
     .s_eth_src_mac(local_mac),
     .s_eth_type(16'h0806),
     .s_arp_htype(16'h0001),

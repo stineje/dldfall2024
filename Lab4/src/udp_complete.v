@@ -323,7 +323,7 @@ assign udp_rx_ip_payload_axis_tvalid = s_select_udp_reg && ip_rx_ip_payload_axis
 assign udp_rx_ip_payload_axis_tlast = ip_rx_ip_payload_axis_tlast;
 assign udp_rx_ip_payload_axis_tuser = ip_rx_ip_payload_axis_tuser;
 
-// External IP frame output
+// External IP frame output //change these values for change in data??
 assign m_ip_hdr_valid = s_select_ip && ip_rx_ip_hdr_valid;
 assign m_ip_eth_dest_mac = ip_rx_ip_eth_dest_mac;
 assign m_ip_eth_src_mac = ip_rx_ip_eth_src_mac;

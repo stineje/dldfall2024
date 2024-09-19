@@ -180,7 +180,8 @@ always @* begin
     m_eth_payload_axis_tlast_int = 1'b0;
     m_eth_payload_axis_tuser_int = 1'b0;
 
-    if (s_frame_ready && s_frame_valid) begin
+//    if (s_frame_ready && s_frame_valid) begin //took this out for testing
+    if (1'b1) begin //hardcoded so it is easier to see data transmitted
         store_frame = 1'b1;
         m_eth_hdr_valid_next = 1'b1;
         ptr_next = 0;

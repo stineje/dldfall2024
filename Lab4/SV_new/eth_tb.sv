@@ -134,7 +134,7 @@ module stimulus;
       //tx_eth_dest_mac = 48'h020000000000;
       //phy_rx_clk = 0;
       phy_rxd = 4'b0000;
-      phy_rx_dv = 1'b0;
+      phy_rx_dv = 1'b1;
       phy_rx_er = 1'b0;
       //phy_tx_clk = 0;
       uart_rxd = 1'b1;

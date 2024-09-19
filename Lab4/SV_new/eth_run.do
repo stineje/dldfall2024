@@ -141,7 +141,14 @@ add wave -hex /stimulus/phy_txd
 add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/grant_encoded
 add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/s_eth_dest_mac
 add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/m_eth_dest_mac
-
+add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/arp_inst/m_eth_dest_mac
+add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/arp_inst/m_eth_dest_mac
+add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_tx_inst/s_eth_dest_mac
+add wave -hex /stimulus/dut/eth_axis_tx_inst/s_eth_dest_mac
+add wave -hex /stimulus/dut/eth_axis_tx_inst/s_eth_payload_axis_tdata
+add wave -hex /stimulus/dut/eth_axis_tx_inst/m_axis_tdata
+add wave -hex /stimulus/dut/udp_complete_inst/m_eth_payload_axis_tdata
+add wave -hex /stimulus/dut/udp_complete_inst/ip_rx_ip_payload_axis_tdata
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"
 add wave -hex /stimulus/clk
