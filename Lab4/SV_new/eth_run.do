@@ -149,6 +149,9 @@ add wave -hex /stimulus/dut/eth_axis_tx_inst/s_eth_payload_axis_tdata
 add wave -hex /stimulus/dut/eth_axis_tx_inst/m_axis_tdata
 add wave -hex /stimulus/dut/udp_complete_inst/m_eth_payload_axis_tdata
 add wave -hex /stimulus/dut/udp_complete_inst/ip_rx_ip_payload_axis_tdata
+
+#tracking back the header info, could on
+
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"
 add wave -hex /stimulus/clk
