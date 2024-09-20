@@ -2,69 +2,93 @@ m255
 K4
 z2
 !s99 nomlopt
-!s11f vlog 2021.3_1 2021.08, Aug 15 2021
+!s11f vlog 2021.3 2021.07, Jul 13 2021
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/jstine/ecen2233/dldfall2024/tb_advanced
+Z0 dC:/Users/James Stine/VLSIARCH - OSU Dropbox/James Stine/ecen 2233 F24/dldfall2024/tb_advanced
 T_opt
-!s110 1725387422
-VikV@VYaI=Go:m]englZZD3
+!s110 1726850603
+VzVKWoKnIP`l^AMiHNUCmT3
 04 8 4 work stimulus fast 0
-=1-b07b25d4a6a8-66d7529d-d8198-a44f
+=1-6c3c8cfa8abb-66eda62b-24-4fdc
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
 Z1 tCvgOpt 0
 n@_opt
-OL;O;2021.3_1;73
-vcomp
+OL;O;2021.3;73
+vfull_adder
 Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 !s110 1725387421
+Z3 !s110 1726850602
 !i10b 1
-!s100 a;jDA8BON@gX7fJZ5bWKV2
-Ii=zgV90G1XjEI[ELOf?C]1
+!s100 j<><N^I[BD@Xk;6G[je`h0
+ICBho`IjkFMaDl0A5b7>]30
 S1
 R0
-w1725387138
-8comp.sv
-Fcomp.sv
+Z4 w1726850069
+Z5 8hier.sv
+Z6 Fhier.sv
 !i122 0
-L0 1 29
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 OL;L;2021.3_1;73
+L0 14 6
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2021.3;73
 r1
 !s85 0
 31
-Z6 !s108 1725387421.000000
-Z7 !s107 tb_comp.sv|comp.sv|
-Z8 !s90 comp.sv|tb_comp.sv|
+Z9 !s108 1726850602.000000
+Z10 !s107 tb_hier.sv|hier.sv|
+Z11 !s90 hier.sv|tb_hier.sv|
 !i113 0
-Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vhier
+R2
+R3
+!i10b 1
+!s100 <aRA?O8c?;J;OJ[T^_an80
+IlJd8hd@:FdlTkAV3P0Gbl1
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 1 12
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
 R1
 vstimulus
 R2
 R3
 !i10b 1
-!s100 ;>mFTI:Tf1BklH?Z<80Z]1
-IBkhgVUiHAfBVBL5Khho723
+!s100 d]zhN`P<VIPLE?;JH7NYD1
+INl8XNfG1ZS6F:5fhA3HVC2
 S1
 R0
-w1725387419
-8tb_comp.sv
-Ftb_comp.sv
+w1726850599
+8tb_hier.sv
+Ftb_hier.sv
 !i122 0
-L0 8 75
-R4
-R5
+L0 8 72
+R7
+R8
 r1
 !s85 0
 31
-R6
-R7
-R8
-!i113 0
 R9
+R10
+R11
+!i113 0
+R12
 R1
