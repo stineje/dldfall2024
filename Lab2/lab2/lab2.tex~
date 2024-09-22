@@ -336,7 +336,7 @@ fit a size of a multiple of $512$ bit. For the internal processing, the
 padded message must then be divided into blocks. This will be
 dependent on the size of the message you plan on sending (e.g., SHA-256).
 
-For example, assume that we have a message $x$ with a length of $l$
+For example, Assume that we have a message $x$ with a length of $l$
 bits. To obtain an overall message size of a multiple of $512$ bits, we
 append a single “1” followed by $k$ zero bits and the binary $64$-bit
 representation of $l$. Consequently, the number of required zeros $k$ is
@@ -367,10 +367,7 @@ assign padded = {message, 1'b1, {zero_width{1'b0}},  {back_0_width{1'b0}}, MSG_S
 The key to this is computing each value correctly.  The
 \verb!MSG_SIZE! should be the message length to correctly fill the
 message size to $512$ bits.  This value of $512$ is specific to
-SHA-256 and is different for other SHA variants (e.g., SHA-512).  The
-padding process is part of the SHA-256 algorithm applying the
-Merkle-Damg{\aa}rd construction that is used to build cryptographic hash functions
-from a fixed-length compression function~\cite{10.5555/1721909}.
+SHA-256 and is different for other SHA variants (e.g., SHA-512).
 
 
 \subsection{Hash Computation}
