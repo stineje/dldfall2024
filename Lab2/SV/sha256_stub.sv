@@ -46,7 +46,7 @@ module sha256 #(parameter PADDED_SIZE = 512)
 		       32'h8cc70208, 32'h90befffa, 32'ha4506ceb, 32'hbef9a3f7,
 		       32'hc67178f2};
 
-   // Definie your intermediate variables here (forgetting them assumes variables are 1-bit)
+   // Define your intermediate variables here (forgetting them assumes variables are 1-bit)
    logic [31:0]   a, b, c, d, e, f, g, h;
    logic [31:0]   a63_out, b63_out, c63_out, d63_out, e63_out, f63_out, g63_out, h63_out;
    logic [31:0]   h0, h1, h2, h3, h4, h5, h6, h7;
