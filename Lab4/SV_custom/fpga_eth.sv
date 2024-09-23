@@ -1,4 +1,4 @@
-module fpga_core #
+module fpga_eth #
 (   
     parameter logic [31:0] timeout = 32'd4,
     parameter logic [31:0] delay = 32'd2
@@ -37,13 +37,14 @@ module fpga_core #
      * Ethernet: 100BASE-T MII
      */
 
+    input  logic valid,
     input  logic       phy_rx_clk, //Clock signal for receiving data.
     input  logic [3:0] phy_rxd, //4-bit data input from the physical layer.
     input  logic       phy_rx_dv, //Data Valid signal, indicating when phy_rxd holds valid data
     input  logic       phy_rx_er, //Error signal indicating if there is an error in the received data.
     
     input  logic       phy_tx_clk, //Clock signal for transmitting data
-    output logoc [31:0] phy_tx_data,
+    output logic [31:0] phy_tx_data,
     output logic [3:0] phy_txd, //4-bit data output to the physical layer.
     output logic       phy_tx_en, //Transmit Enable signal, indicating when to send data on 'phy_txd'
     input  logic       phy_col, // Collision signal, often used in Ethernet to indicate data collisions on the network
@@ -140,7 +141,7 @@ module fpga_core #
     end
 
     //Data = 1'b1;
-    Data = 96'h68_65_6C_6C_6F_20_77_6F_72_6C_64 //ASCII for "Hello World"
+    assign Data = 96'h68_65_6C_6C_6F_20_77_6F_72_6C_64; //ASCII for "Hello World"
 
     assign Length = {4'b0, BytesInFrame};
     assign TotalFrame = {17'b0, EthType, DstMac, SrcMac, Data}; //type should come after dest/source

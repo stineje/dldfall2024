@@ -11,6 +11,7 @@ module stimulus;
    //Inputs 
    logic 	  clk;
    logic 	  rst;
+   logic valid;
    logic [3:0] 	  btn;
    logic [3:0] 	  sw;
    logic 	  phy_rx_clk;
@@ -21,7 +22,7 @@ module stimulus;
    logic 	  phy_col;
    logic 	  phy_crs;
    logic 	  uart_rxd;
-   logic      phy_tx_ready
+   logic      phy_tx_ready;
 
    //Outputs - may need to change outputs to better define sim
    logic 	  led0_r;
@@ -47,9 +48,8 @@ module stimulus;
 
    logic 	  uart_txd;
 
-    fpga_core #(
-	       .TARGET(TARGET)
-	       )
+   fpga_eth 
+   //took out the constant parameters bc they were throwing issues
    dut (
 	/*
 	 * Clock: 125MHz
@@ -83,6 +83,7 @@ module stimulus;
 	 * Ethernet: 100BASE-T MII
 	 */
 	//.tx_eth_dest_mac(tx_eth_dest_mac),
+   .valid(valid),
 	.phy_rx_clk(phy_rx_clk),
 	.phy_rxd(phy_rxd),
 	.phy_rx_dv(phy_rx_dv),
@@ -174,3 +175,4 @@ module stimulus;
       //#1000;
       $finish;
    end
+endmodule
