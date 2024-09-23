@@ -1,6 +1,8 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1725397608" />
-    <testcase name="run_test" classname="test_fpga_core" file="/home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/test_fpga_core.py" lineno="75" time="0.6461131572723389" sim_time_ns="68152.001" ratio_time="105479.97704877832" />
+    <property name="random_seed" value="1727057935" />
+    <testcase name="run_test" classname="test_fpga_core" file="/home/casager/dldfall2024/Lab4/Arty/fpga/tb/fpga_core/test_fpga_core.py" lineno="75" time="0.3334372043609619" sim_time_ns="34100.001" ratio_time="102268.13491119933">
+      <failure message="Test failed with RANDOM_SEED=1727057935" />
+    </testcase>
   </testsuite>
 </testsuites>
