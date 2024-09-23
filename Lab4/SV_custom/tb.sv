@@ -6,7 +6,7 @@ module stimulus;
 
 
    //Parameters
-   //parameter TARGET = "GENERIC"; //probably should be "SIM" or "XILINX"
+   parameter TARGET = "GENERIC"; //probably should be "SIM" or "XILINX"
 
    //Inputs 
    logic 	  clk;
@@ -21,7 +21,7 @@ module stimulus;
    logic 	  phy_col;
    logic 	  phy_crs;
    logic 	  uart_rxd;
-   //logic [47:0] tx_eth_dest_mac;
+   logic      phy_tx_ready
 
    //Outputs - may need to change outputs to better define sim
    logic 	  led0_r;
@@ -43,11 +43,11 @@ module stimulus;
    logic [3:0] 	  phy_txd;
    logic 	  phy_tx_en;
    logic 	  phy_reset_n;
+    logic       phy_tx_last;
+
    logic 	  uart_txd;
 
-//   logic [7:0] 	  data [0:7] = {8'h12, 8'h35, 8'h8a, 8'he8, 8'h3b, 8'h7c, 8'ha5, 8'had}; //how we will send data over
-
-   fpga_core #(
+    fpga_core #(
 	       .TARGET(TARGET)
 	       )
    dut (
@@ -93,6 +93,8 @@ module stimulus;
 	.phy_col(phy_col),
 	.phy_crs(phy_crs),
 	.phy_reset_n(phy_reset_n),
+    .phy_tx_ready(phy_tx_ready),
+    .phy_tx_last(phy_tx_last),
 
 	/*
 	 * UART: 115200 bps, 8N1
@@ -131,12 +133,10 @@ module stimulus;
       rst = 1;
       btn = 4'b0000;
       sw = 4'b0000;
-      //tx_eth_dest_mac = 48'h020000000000;
-      //phy_rx_clk = 0;
-      phy_rxd = 4'b0000;
+      //phy_rxd = 4'b0000;
       phy_rx_dv = 1'b1;
+      phy_tx_ready = 1'b1;
       phy_rx_er = 1'b0;
-      //phy_tx_clk = 0;
       uart_rxd = 1'b1;
       phy_col = 1'b0;
       phy_crs = 1'b0;
@@ -147,7 +147,7 @@ module stimulus;
       #20
 
       //start receiving data
-      receive_frame();
+      //receive_frame();
 
       // Apply stimulus here
       // Example: Set buttons and switches
@@ -174,61 +174,3 @@ module stimulus;
       //#1000;
       $finish;
    end
-
-   // adding task here to see if input data at least works
-   task receive_frame;
-      // Frame: `UUUUUUU\xd5\x02\x00\x00\x00\x00\x00ZQRSTU\x08\x00...` (similar to the cocotb frames sent)
-      // Define your frame data here
-      reg [7:0] frame_data [0:63]; // Adjust the size according to your frame length
-      integer i;
-
-      begin
-         // Example frame data (Replace with actual data)
-         frame_data[0] = 8'h55; // Start of preamble
-         frame_data[1] = 8'h55; // Continue preamble
-         frame_data[2] = 8'h55; // Continue preamble
-         frame_data[3] = 8'h55; // Continue preamble
-         frame_data[4] = 8'h55; // Continue preamble
-         frame_data[5] = 8'h55; // Continue preamble
-         frame_data[6] = 8'h55; // Continue preamble
-         frame_data[7] = 8'hD5; // SFD
-         frame_data[8] = 8'h02; //beginning of MAC destination
-         frame_data[9] = 8'h00;
-         frame_data[10] = 8'h00;
-         frame_data[11] = 8'h00;
-         frame_data[12] = 8'h00;
-         frame_data[13] = 8'h00;
-         frame_data[14] = 8'h5A; // Example data byte (Z) (beginning of MAC source)
-         frame_data[15] = 8'h51; // Example data byte (Q)
-         frame_data[16] = 8'h52; // Example data byte (R)
-         frame_data[17] = 8'h53; // Example data byte (S)
-         frame_data[18] = 8'h54; // Example data byte (T)
-         frame_data[19] = 8'h55; // Example data byte (U)
-
-         // Add more data bytes according to data that needs to be received
-
-         // Start receiving data
-         phy_rx_dv = 1'b1; // Enable receiving
-         
-         // Send each byte
-         for (i = 0; i < 64; i = i + 1) begin
-            #8; // Wait for one clock period (Adjust as needed)
-            phy_rxd = frame_data[i][7:4]; // Send lower nibble
-            #8; // Wait for next clock period
-            phy_rxd = frame_data[i][3:0]; // Send upper nibble
-         end
-
-         //phy_rxd = 4'b1100; //value set for debugging
-         // End transmission
-         phy_rx_dv = 1'b0;
-      end
-   endtask
-
-   // Monitor outputs
-   initial begin
-      $fdisplay(desc3, "Time: %0t | LED0: %b %b %b | LED1: %b %b %b | LED2: %b %b %b | LED3: %b %b %b | LED4: %b | LED5: %b | LED6: %b | LED7: %b",
-                $time, led0_r, led0_g, led0_b, led1_r, led1_g, led1_b, led2_r, led2_g, led2_b, led3_r, led3_g, led3_b, led4, led5, led6, led7);
-   end
-
-endmodule
-

@@ -41,14 +41,17 @@ module fpga_core #
     input  logic [3:0] phy_rxd, //4-bit data input from the physical layer.
     input  logic       phy_rx_dv, //Data Valid signal, indicating when phy_rxd holds valid data
     input  logic       phy_rx_er, //Error signal indicating if there is an error in the received data.
+    
     input  logic       phy_tx_clk, //Clock signal for transmitting data
+    output logoc [31:0] phy_tx_data,
     output logic [3:0] phy_txd, //4-bit data output to the physical layer.
     output logic       phy_tx_en, //Transmit Enable signal, indicating when to send data on 'phy_txd'
     input  logic       phy_col, // Collision signal, often used in Ethernet to indicate data collisions on the network
     input  logic       phy_crs, //Carrier Sense signal, indicating that the network medium is active
     output logic       phy_reset_n, //Reset signal, active low, used to reset the PHY (physical layer) device.
 
-    input logic phy_tx_ready //added this for some control
+    input logic         phy_tx_ready, //added this for some control
+    output logic        phy_tx_last,
 
     /*
      * UART: 115200 bps, 8N1
@@ -57,7 +60,8 @@ module fpga_core #
     output logic       uart_txd // UART transmit data output
 );
 
-    localparam TotalFrameLengthBits = 2*48+17+16+187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12);
+    //localparam TotalFrameLengthBits = 2*48+17+16+187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12);
+    localparam TotalFrameLengthBits = 512;
     localparam TotalFrameLengthBytes = TotalFrameLengthBits / 8;
 
     logic [9:0]              WordCount;
@@ -76,10 +80,14 @@ module fpga_core #
 
     typedef enum {STATE_RST, STATE_COUNT, STATE_RDY, STATE_WAIT, STATE_TRANS, STATE_TRANS_INSERT_DELAY} statetype;
     statetype CurrState, NextState;
+    
+    logic [31:0] 	    RstCount;
+    logic [31:0] 	    FrameCount;
+    logic 		    RstCountRst, RstCountEn, CountFlag, DelayFlag;
 
 
     always_ff @(posedge phy_tx_clk) begin
-        if(~phy_reset_n) CurrState <= STATE_RST;
+        if(phy_reset_n) CurrState <= STATE_RST; //may need to flip reset state
         else               CurrState <= NextState;
     end
 
@@ -115,7 +123,7 @@ module fpga_core #
     assign CountFlag = RstCount == timeout;
     assign DelayFlag = RstCount == delay;
 
-    counter #(32) framecounter(m_axi_aclk, ~phy_reset_n, (phy_tx_ready & RvviAxiWlast), FrameCount);
+    //counter #(32) framecounter(phy_tx_clk, ~phy_reset_n, (phy_tx_ready & phy_tx_last), FrameCount); //Doesnt seem to be used anywhere
 
     //may need to store delay?
     //flopenr #(187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12)) rvvireg(m_axi_aclk, ~m_axi_aresetn, valid, rvvi, rvviDelay);
@@ -131,17 +139,21 @@ module fpga_core #
         assign TotalFrameWords[index] = TotalFrame[(index*32)+32-1 : (index*32)];
     end
 
+    //Data = 1'b1;
+    Data = 96'h68_65_6C_6C_6F_20_77_6F_72_6C_64 //ASCII for "Hello World"
+
     assign Length = {4'b0, BytesInFrame};
-    assign TotalFrame = {17'b0, rvviDelay, EthType, DstMac, SrcMac}; //type should come after dest/source
+    assign TotalFrame = {17'b0, EthType, DstMac, SrcMac, Data}; //type should come after dest/source
 
     // *** fix me later
     assign DstMac = 48'h8F54_0000_1654; // made something up
     assign SrcMac = 48'h4502_1111_6843;
     assign Tag = 32'b0;
-    assign EthType = 16'h005c;
+    //assign EthType = 16'h005c; //may need to change this
+    assign EthType = 16'h0800;
 
     assign phy_tx_data = TotalFrameWords[WordCount[4:0]];
-    assign phy_tx_strb = '1;
+    assign phy_txd = '1;
     assign phy_tx_last = BurstDone & (CurrState == STATE_TRANS);
     assign phy_tx_dv = (CurrState == STATE_TRANS);
   
