@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.15)  24 SEP 2024 08:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.15)  24 SEP 2024 09:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,18 +624,18 @@ Package pdftex.def Info: sha256-block.png  used on input line 687.
 <modelsim.png, id=221, 1437.37pt x 795.97375pt>
 File: modelsim.png Graphic file (type png)
 <use modelsim.png>
-Package pdftex.def Info: modelsim.png  used on input line 779.
+Package pdftex.def Info: modelsim.png  used on input line 781.
 (pdftex.def)             Requested size: 431.21432pt x 238.79396pt.
  [10 <./sha256-block.png>] [11 <./modelsim.png>]
 <modelsim-tips1.png, id=239, 589.70313pt x 507.8975pt>
 File: modelsim-tips1.png Graphic file (type png)
 <use modelsim-tips1.png>
-Package pdftex.def Info: modelsim-tips1.png  used on input line 846.
+Package pdftex.def Info: modelsim-tips1.png  used on input line 848.
 (pdftex.def)             Requested size: 235.87706pt x 203.1554pt.
 <modelsim-tips2.png, id=240, 1290.32062pt x 122.95938pt>
 File: modelsim-tips2.png Graphic file (type png)
 <use modelsim-tips2.png>
-Package pdftex.def Info: modelsim-tips2.png  used on input line 852.
+Package pdftex.def Info: modelsim-tips2.png  used on input line 854.
 (pdftex.def)             Requested size: 412.91104pt x 39.3478pt.
  [12 <./modelsim-tips1.png> <./modelsim-tips2.png>] (./lab2.bbl) [13]
 
