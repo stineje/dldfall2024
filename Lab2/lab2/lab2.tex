@@ -677,15 +677,26 @@ is to take things slowly and debug things step by step first.
 
 Verification is extremely difficult
 because there are so many moving parts.  Use the
-Python program to verify each block out of the HDL.  There is also a
-great web page that can be used to debug things at
-\url{http://sha256algorithm.com}, as well.
+Python program to verify each block out of the HDL.  There is also some
+great web pages that can be used to verify your design at
+\url{http://sha256algorithm.com} and
+\url{https://stepansnigirev.github.io/visual-sha256/}, as well.
+\begin{figure} [t!]
+  \centering
+  \includegraphics[scale=0.76]{sha256-block.png}
+  \caption{Basic block diagram of SHA-256 of \texttt{sha256\_stub.sv}}
+  \label{sha256-block.fig}
+\end{figure}
 
 The main tasks for this laboratory
 will be the following elements:
 \begin{enumerate}
   \item Design the SHA-256 combinational block for generating the hash
-    in SystemVerilog and simulate with ModelSim.
+    in SystemVerilog and simulate with ModelSim.  A basic block
+    diagram of what your final SV design should be is shown in
+    Figure~\ref{sha256-block.fig}.  Figure~\ref{sha256-block.fig}
+    represents what your final version should look what you edit your
+    stubbed SV design.
   \item Use the Python output or the following web page to help you with verifying the
     correct operation within ModelSim.
     There is also a decent online
