@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.15)  24 SEP 2024 08:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.15)  24 SEP 2024 08:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -603,10 +603,10 @@ File: padding.png Graphic file (type png)
 Package pdftex.def Info: padding.png  used on input line 355.
 (pdftex.def)             Requested size: 325.20924pt x 63.03436pt.
 [4] [5 <./padding.png>] [6]
-<sha256compression.png, id=173, 329.43076pt x 185.493pt>
-File: sha256compression.png Graphic file (type png)
-<use sha256compression.png>
-Package pdftex.def Info: sha256compression.png  used on input line 568.
+<sha256compression2.png, id=173, 329.43076pt x 185.493pt>
+File: sha256compression2.png Graphic file (type png)
+<use sha256compression2.png>
+Package pdftex.def Info: sha256compression2.png  used on input line 568.
 (pdftex.def)             Requested size: 263.54495pt x 148.39459pt.
  [7]
 <analysis.png, id=186, 2095.83pt x 445.665pt>
@@ -614,12 +614,12 @@ File: analysis.png Graphic file (type png)
 <use analysis.png>
 Package pdftex.def Info: analysis.png  used on input line 630.
 (pdftex.def)             Requested size: 628.75386pt x 133.70053pt.
- [8 <./sha256compression.png>]
-<sha256-block.png, id=202, 127.07475pt x 223.43475pt>
+ [8 <./sha256compression2.png>]
+<sha256-block.png, id=202, 127.07475pt x 219.219pt>
 File: sha256-block.png Graphic file (type png)
 <use sha256-block.png>
 Package pdftex.def Info: sha256-block.png  used on input line 686.
-(pdftex.def)             Requested size: 96.57587pt x 169.80876pt.
+(pdftex.def)             Requested size: 96.57587pt x 166.60481pt.
  [9 <./analysis.png>]
 <modelsim.png, id=222, 1437.37pt x 795.97375pt>
 File: modelsim.png Graphic file (type png)
@@ -651,7 +651,7 @@ Package rerunfilecheck Info: File `lab2.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  13745 strings out of 474050
- 215972 string characters out of 5742263
+ 215979 string characters out of 5742263
  1964751 words of memory out of 5000000
  35881 multiletter control sequences out of 15000+600000
  574816 words of font info for 78 fonts, out of 8000000 for 9000
@@ -681,7 +681,7 @@ ts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts
 /type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/t
 ype1/public/cm-super/sftt0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
 e1/public/cm-super/sftt1000.pfb>
-Output written on lab2.pdf (13 pages, 744810 bytes).
+Output written on lab2.pdf (13 pages, 745225 bytes).
 PDF statistics:
  375 PDF objects out of 1000 (max. 8388607)
  292 compressed objects within 3 object streams
