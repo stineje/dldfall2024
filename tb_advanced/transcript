@@ -1,21 +1,18 @@
-# do hier.do
-# Error 133: Unable to remove directory "C:/Users/James Stine/VLSIARCH - OSU Dropbox/James Stine/ecen 2233 F24/dldfall2024/tb_advanced/work".
+# do hier_error.do
 # Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 11:43:22 on Sep 20,2024
-# vlog hier.sv tb_hier.sv 
+# Start time: 15:26:33 on Sep 24,2024
+# vlog hier_error.sv tb_hier_error.sv 
 # -- Compiling module hier
 # -- Compiling module full_adder
 # -- Compiling module stimulus
 # 
 # Top level modules:
 # 	stimulus
-# End time: 11:43:22 on Sep 20,2024, Elapsed time: 0:00:00
+# End time: 15:26:33 on Sep 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 11:43:22 on Sep 20,2024
+# Start time: 15:26:33 on Sep 24,2024
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-31) Unable to unlink file "C:/Users/James Stine/VLSIARCH - OSU Dropbox/James Stine/ecen 2233 F24/dldfall2024/tb_advanced/work/_lock".
-# Permission denied. (errno = EACCES)
 # //  ModelSim SE-64 2021.3 Jul 13 2021
 # //
 # //  Copyright 1991-2021 Mentor Graphics Corporation
@@ -41,8 +38,18 @@
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
-#         10 tests completed with          0 errors
-# ** Note: $finish    : tb_hier.sv(76)
+# 00 01 1 || 01 10
+# 11 01 1 || 00 11
+# 01 10 1 || 01 10
+# 01 10 1 || 01 10
+# 01 00 1 || 01 10
+# 10 01 0 || 10 11
+# 01 11 0 || 01 10
+# 11 10 0 || 01 11
+# 00 01 0 || 00 01
+# 01 01 1 || 00 11
+#         10 tests completed with         10 errors
+# ** Note: $finish    : tb_hier_error.sv(76)
 #    Time: 105 ns  Iteration: 2  Instance: /stimulus
-# End time: 11:43:23 on Sep 20,2024, Elapsed time: 0:00:01
+# End time: 15:26:34 on Sep 24,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
