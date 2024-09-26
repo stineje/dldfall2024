@@ -173,9 +173,9 @@ module prepare (input logic [31:0] M0, M1, M2, M3,
 		output logic [31:0] W55, W56, W57, W58, W59,
 		output logic [31:0] W60, W61, W62, W63);
 
-   logic [31:0] 		    W14_sigma1_out;
+   logic [31:0] 		    W14_sigma1_out, W15_sigma1_out;
    
-   logic [31:0] 		    W1_sigma0_out;
+   logic [31:0] 		    W1_sigma0_out, W2_sigma0_out;
 
    // Equation for W_i (top of page 7)
    assign W0 = M0;
