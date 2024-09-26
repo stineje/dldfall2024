@@ -23,7 +23,7 @@ if [file exists work] {
 }
 vlib work
 # compile source files
-vlog sha256.sv tb_sha256.sv
+vlog sha256_stub.sv tb_sha256.sv
 
 # start and run simulation
 vsim -voptargs=+acc work.stimulus

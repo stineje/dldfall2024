@@ -8,6 +8,9 @@ module top #(parameter MSG_SIZE = 24,
     output logic [255:0] hashed);
 
    logic [PADDED_SIZE-1:0] padded;
+
+   sha_padder #(.MSG_SIZE(MSG_SIZE), .PADDED_SIZE(PADDED_SIZE)) padder (.message(message), .padded(padded));
+   sha256 #(.PADDED_SIZE(PADDED_SIZE)) main (.padded(padded), .hashed(hashed));
    
    
 endmodule // sha_256
@@ -17,6 +20,7 @@ module sha_padder #(parameter MSG_SIZE = 24,
    (input logic [MSG_SIZE-1:0] message,
     output logic [PADDED_SIZE-1:0] padded);
 
+   // Pad your output (Section 2.2)
 
 endmodule // sha_padder
 
@@ -53,11 +57,26 @@ module sha256 #(parameter PADDED_SIZE = 512)
 
    // Initialize a through h
    assign a = H[255:224];
-   prepare p1 ( ); // add W0 through W63 output
+   assign b = H[223:192];
+   assign c = H[191:160];
+   assign d = H[159:128];
+   assign e = H[127:96];
+   assign f = H[95:64];
+   assign g = H[63:32];
+   assign h = H[31:0];
    
-   // 64 hash computations   
-   main_comp mc01 ( ); // add arguments within parenthesis
-   main_comp mc02 ( ); // add arguments within parenthesis
+   // 64 hash computations
+   // Each main_comp block computes according to Sec 2.3.3
+   main_comp mc01 (a, b, c, d, 
+                   e, f, g, h, 
+                   K[2047:2016], W0,
+                   a0_out, b0_out, c0_out, d0_out, 
+                   e0_out, f0_out, g0_out, h0_out);
+   main_comp mc02 (a0_out, b0_out, c0_out, d0_out, 
+                   e0_out, f0_out, g0_out, h0_out, 
+                   K[2015:1984], W1,
+                   a1_out, b1_out, c1_out, d1_out, 
+                   e1_out, f1_out, g1_out, h1_out);
    main_comp mc03 ( ); // add arguments within parenthesis
    main_comp mc04 ( ); // add arguments within parenthesis
    main_comp mc05 ( ); // add arguments within parenthesis
@@ -131,7 +150,7 @@ module sha256 #(parameter PADDED_SIZE = 512)
 			  e63_out, f63_out, g63_out, h63_out,
 			  a, b, c, d, e, f, g, h,
 			  h0, h1, h2, h3, h4, h5, h6, h7);
-   // Final output
+   // Final output concatenating h0 through h7 outputs
    assign hashed = {};
 
 endmodule // sha_main
@@ -154,6 +173,40 @@ module prepare (input logic [31:0] M0, M1, M2, M3,
 		output logic [31:0] W55, W56, W57, W58, W59,
 		output logic [31:0] W60, W61, W62, W63);
 
+   // Equation for W_i (top of page 7)
+   assign W0 = M0;
+   assign W1 = M1;
+   assign W2 = M2;
+   assign W3 = M3;
+   assign W4 = M4;
+   assign W5 = M5;
+   assign W6 = M6;
+   assign W7 = M7;
+   assign W8 = M8;
+   assign W9 = M9;
+   assign W10 = M10;
+   assign W11 = M11;
+   assign W12 = M12;
+   assign W13 = M13;
+   assign W14 = M14;
+   assign W15 = M15;
+
+   // sigma 1 (see bottom of page 6)
+   sigma1 sig1_1 (W14, W14_sigma1_out);
+
+   // fill in other sigma1 blocks
+
+   // sigma 0 (see bottom of page 6)
+   sigma0 sig0_1 (W1, W1_sigma0_out);
+
+   // fill in other sigma0 blocks
+
+   // Equation for W_i (top of page 7)3
+   assign W16 = W14_sigma1_out + W9 + W1_sigma0_out + W0;
+   assign W17 = W15_sigma1_out + W10 + W2_sigma0_out + W1;
+
+   // fill in other W18 through W63   
+
 endmodule // prepare
 
 
@@ -161,6 +214,8 @@ module main_comp (input logic [31:0] a_in, b_in, c_in, d_in, e_in, f_in, g_in, h
 		  input logic [31:0] K_in, W_in,
 		  output logic [31:0] a_out, b_out, c_out, d_out, e_out, f_out, g_out,
 		  output logic [31:0] h_out);
+
+   // Figure 4
 
 
 endmodule // main_comp
@@ -182,30 +237,42 @@ endmodule
 			  
 module majority (input logic [31:0] x, y, z, output logic [31:0] maj);
 
+   // See Section 2.3.3, Number 4
 
 endmodule // majority
 
 module choice (input logic [31:0] x, y, z, output logic [31:0] ch);
+
+   // See Section 2.3.3, Number 4
 
 
 endmodule // choice
 
 module Sigma0 (input logic [31:0] x, output logic [31:0] Sig0);
 
+   // See Section 2.3.3, Number 4
+
 
 endmodule // Sigma0
 
 module sigma0 (input logic [31:0] x, output logic [31:0] sig0);
 
+      // See Section 2.3.3, Number 2
+   
 
 endmodule // sigma0
 
 module Sigma1 (input logic [31:0] x, output logic [31:0] Sig1);
 
+   // See Section 2.3.3, Number 4
+   
 
 endmodule // Sigma1
 
 module sigma1 (input logic [31:0] x, output logic [31:0] sig1);
+
+      // See Section 2.3.3, Number 2
+   
 
 
 endmodule // sigma1
