@@ -1,8 +1,36 @@
 m255
 K4
 z2
-!s12c _opt
-Z0 !s99 nomlopt
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
 !s11f vlog 2023.4_3 2024.02, Feb 17 2024
 13
 !s112 1.1
@@ -10,117 +38,117 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 d/home/casager/dldfall2024/Lab4/SV_custom
+Z2 d/home/casager/dldfall2024/Lab4/SV_custom
 T_opt
-Z2 !s110 1727124808
-V3C4ncWQYOg_I[efARHHYD2
+Z3 !s110 1727389563
+VPN3@TSOd6nF?a72HnoXJ60
 04 8 4 work stimulus fast 0
-=1-000ae431a4f1-66f1d548-87786-29a1
-R0
+=1-000ae431a4f1-66f5df7b-b10ac-bccd
+R1
 !s12f OEM100
 !s12b OEM100
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
-Z3 tCvgOpt 0
+Z4 tCvgOpt 0
 n@_opt
 OL;O;2023.4_3;77
 vcounter
 2src/counter.sv
-Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R2
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R3
 !i10b 1
 !s100 6];lk[]U=CfBU?BSzM6J=1
 I?`?dBY6zn9N^RKdCm4^3B2
 S1
-R1
+R2
 w1727124728
 8src/counter.sv
 Fsrc/counter.sv
 !i122 2
 L0 28 10
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OL;L;2023.4_3;77
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2023.4_3;77
 r1
 !s85 0
 31
-Z7 !s108 1727124808.000000
+Z8 !s108 1727389562.000000
 !s107 src/counter.sv|
-!s90 src/counter.sv|
+!s90 -reportprogress|300|src/counter.sv|
 !i113 0
-Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
 vflopenr
 2src/flopenr.sv
-R4
-R2
+R5
+R3
 !i10b 1
 !s100 GUIA:XFSOUZhe@<8@d2811
 IM1>HFDJ^i<5ijd3>:NWAV0
 S1
-R1
+R2
 w1727124789
 8src/flopenr.sv
 Fsrc/flopenr.sv
 !i122 3
 L0 28 9
-R5
 R6
+R7
 r1
 !s85 0
 31
-R7
+!s108 1727389563.000000
 !s107 src/flopenr.sv|
-!s90 src/flopenr.sv|
+!s90 -reportprogress|300|src/flopenr.sv|
 !i113 0
-R8
-R3
+R9
+R4
 vfpga_eth
 2fpga_eth.sv
-R4
-R2
+R5
+Z10 !s110 1727389562
 !i10b 1
-!s100 fZ:U`1aCANMRcLSiWI6T30
-INO4GEzJ2P4BeaOWoORPXT1
+!s100 X1I:>E^g;a;^P8_>HI64f3
+Iaj^[1Wej=X12AEK>IlSk_3
 S1
-R1
-w1727124587
+R2
+w1727389555
 8fpga_eth.sv
 Ffpga_eth.sv
 !i122 0
-L0 1 161
-R5
+L0 1 165
 R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 fpga_eth.sv|
-!s90 fpga_eth.sv|
-!i113 0
 R8
-R3
+!s107 fpga_eth.sv|
+!s90 -reportprogress|300|fpga_eth.sv|
+!i113 0
+R9
+R4
 vstimulus
 2tb.sv
-R4
-R2
+R5
+R10
 !i10b 1
-!s100 QQO]iN0;ajW;1jCR0inzn1
-IR0M5X_=<L?^4zMa7WkONb0
+!s100 jJf4?IoeCOa?>RbVa1E?R3
+IJmn<8GU^bJh>LZiQd7i0;0
 S1
-R1
-w1727124673
+R2
+w1727388482
 8tb.sv
 Ftb.sv
 !i122 1
-L0 2 177
-R5
+L0 2 180
 R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 tb.sv|
-!s90 tb.sv|
-!i113 0
 R8
-R3
+!s107 tb.sv|
+!s90 -reportprogress|300|tb.sv|
+!i113 0
+R9
+R4

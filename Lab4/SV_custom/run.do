@@ -45,6 +45,18 @@ view wave
 
 #tracking back the header info, could on
 
+#Misc
+add wave -hex /stimulus/dut/WordCount
+add wave -hex /stimulus/dut/TotalFrameWords
+add wave -hex /stimulus/dut/TotalFrame
+add wave -hex /stimulus/dut/phy_tx_data
+add wave -hex /stimulus/dut/phy_tx_clk
+add wave -hex /stimulus/dut/CountFlag
+add wave -hex /stimulus/dut/WordCountEnable
+add wave -hex /stimulus/dut/RstCount
+add wave -hex /stimulus/dut/timeout
+add wave -hex /stimulus/dut/delay
+
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"
 add wave -hex /stimulus/clk
@@ -78,11 +90,14 @@ add wave -color yellow -hex /stimulus/led4
 add wave -color yellow -hex /stimulus/led5
 add wave -color yellow -hex /stimulus/led6
 add wave -color yellow -hex /stimulus/led7
+add wave -color yellow -hex /stimulus/phy_tx_data
 add wave -color yellow -hex /stimulus/phy_txd
 add wave -color yellow -hex /stimulus/phy_tx_en
 add wave -color yellow -hex /stimulus/phy_reset_n
 add wave -color yellow -hex /stimulus/uart_txd
 
+#all signals
+add wave -color green -hex -r /stimulus/dut/*
 #add list -hex /stimulus/-r /tb/*
 #add log -r /*
 

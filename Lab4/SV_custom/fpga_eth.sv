@@ -62,7 +62,7 @@ module fpga_eth #
 );
 
     //localparam TotalFrameLengthBits = 2*48+17+16+187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12);
-    localparam TotalFrameLengthBits = 512;
+    localparam TotalFrameLengthBits = 256;
     localparam TotalFrameLengthBytes = TotalFrameLengthBits / 8;
 
     logic [9:0]              WordCount;
@@ -76,6 +76,7 @@ module fpga_eth #
     logic [31:0]             Tag;
     logic [TotalFrameLengthBits-1:0] TotalFrame;
     logic [31:0] TotalFrameWords [TotalFrameLengthBytes/4-1:0];
+    logic [95:0] Data;
 
     //logic [187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12)-1:0] rvviDelay;
 
@@ -112,7 +113,7 @@ module fpga_eth #
 
     assign Stall = CurrState != STATE_RDY;
     assign TransReady = 1'b1; //may change since not definite
-    assign phy_tx_en = (CurrState == STATE_RDY & valid) | (CurrState == STATE_TRANS & TransReady);
+    assign WordCountEnable = (CurrState == STATE_RDY & valid) | (CurrState == STATE_TRANS & TransReady);
     assign WordCountReset = CurrState == STATE_RDY;
 
     assign RstCountEn = CurrState == STATE_COUNT | CurrState == STATE_TRANS_INSERT_DELAY;
@@ -129,7 +130,7 @@ module fpga_eth #
     //may need to store delay?
     //flopenr #(187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12)) rvvireg(m_axi_aclk, ~m_axi_aresetn, valid, rvvi, rvviDelay);
 
-    counter #(10) WordCounter(m_axi_aclk, WordCountReset, WordCountEnable, WordCount);
+    counter #(10) WordCounter(phy_tx_clk, WordCountReset, WordCountEnable, WordCount);
     // *** BUG BytesInFrame will eventually depend on the length of the data stored into the ethernet frame
     // for now this will be exactly 608 bits (76 bytes, 19 words) + the ethernet frame overhead and 2-byte padding = 92-bytes
     assign BytesInFrame = 12'd2 + 12'd76 + 12'd6 + 12'd6 + 12'd2; //understand the values here, only need min 64 bytes
@@ -141,19 +142,22 @@ module fpga_eth #
     end
 
     //Data = 1'b1;
-    assign Data = 96'h68_65_6C_6C_6F_20_77_6F_72_6C_64; //ASCII for "Hello World"
+    assign Data = 96'h00_68_65_6C_6C_6F_20_77_6F_72_6C_64; //ASCII for "Hello World"
 
     assign Length = {4'b0, BytesInFrame};
-    assign TotalFrame = {17'b0, EthType, DstMac, SrcMac, Data}; //type should come after dest/source
+    //assign TotalFrame = {16'h0000, EthType, DstMac, SrcMac, Data}; //type should come after dest/source
+    assign TotalFrame = {16'h0000, EthType, DstMac, SrcMac, Data}; 
 
     // *** fix me later
     assign DstMac = 48'h8F54_0000_1654; // made something up
-    assign SrcMac = 48'h4502_1111_6843;
+    assign SrcMac = 48'h4502_4444_6843;
     assign Tag = 32'b0;
     //assign EthType = 16'h005c; //may need to change this
     assign EthType = 16'h0800;
 
-    assign phy_tx_data = TotalFrameWords[WordCount[4:0]];
+    assign phy_tx_data = TotalFrameWords[(TotalFrameLengthBytes/4) - WordCount[4:0]]; //reversed this in order to get transmission in proper order
+    assign phy_txd = TotalFrame[1:0]; //may have to create "nibble counter" in order to send over nibbles at a time 
+
     assign phy_txd = '1;
     assign phy_tx_last = BurstDone & (CurrState == STATE_TRANS);
     assign phy_tx_dv = (CurrState == STATE_TRANS);

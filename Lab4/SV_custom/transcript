@@ -1,48 +1,3 @@
-# do run.do
-# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 15:53:28 on Sep 23,2024
-# vlog fpga_eth.sv 
-# -- Compiling module fpga_eth
-# 
-# Top level modules:
-# 	fpga_eth
-# End time: 15:53:28 on Sep 23,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 15:53:28 on Sep 23,2024
-# vlog tb.sv 
-# -- Compiling module stimulus
-# 
-# Top level modules:
-# 	stimulus
-# End time: 15:53:28 on Sep 23,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 15:53:28 on Sep 23,2024
-# vlog src/counter.sv 
-# -- Compiling module counter
-# 
-# Top level modules:
-# 	counter
-# End time: 15:53:28 on Sep 23,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 15:53:28 on Sep 23,2024
-# vlog src/flopenr.sv 
-# -- Compiling module flopenr
-# 
-# Top level modules:
-# 	flopenr
-# End time: 15:53:28 on Sep 23,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.stimulus 
-# Start time: 15:53:28 on Sep 23,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
-# ** Warning: tb.sv(53): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 36, found 35.
-# ** Warning: tb.sv(53): (vopt-2718) [TFMPC] - Missing connection for port 'phy_tx_data'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
 # //  Questa Sim-64
 # //  Version 2023.4_3 linux_x86_64 Feb 17 2024
 # //
@@ -57,6 +12,49 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
+# do run.do
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:08:48 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:08:48 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:08:48 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:08:48 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:08:48 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:08:48 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:08:48 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:08:48 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:08:48 on Sep 26,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
 # Loading work.stimulus(fast)
 # Loading work.fpga_eth(fast)
@@ -64,11 +62,1230 @@
 # Loading work.flopenr(fast)
 # Loading work.counter(fast__1)
 # Loading work.flopenr(fast__1)
-# .list
-# ** UI-Msg (Warning): (vish-4014) No objects found matching '/stimulus/dut/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/grant_encoded'.
-# Error in macro ./run.do line 63
-# ** UI-Msg (Warning): (vish-4014) No objects found matching '/stimulus/dut/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/grant_encoded'.
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:11:09 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:11:09 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:11:09 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:11:09 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:11:09 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:11:09 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:11:09 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:11:09 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:11:10 on Sep 26,2024, Elapsed time: 0:02:22
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:11:10 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:16:26 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:16:26 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:16:26 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:16:26 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:16:26 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:16:26 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:16:26 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:16:26 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:16:27 on Sep 26,2024, Elapsed time: 0:05:17
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:16:27 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+# Break key hit
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:18:15 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:18:15 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:18:15 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:18:15 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:18:15 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:18:15 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:18:15 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:18:15 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:18:16 on Sep 26,2024, Elapsed time: 0:01:49
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:18:16 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:18:59 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:18:59 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:18:59 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:18:59 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:18:59 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:18:59 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:18:59 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:18:59 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:18:59 on Sep 26,2024, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:18:59 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:19:58 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:19:58 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:19:58 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:19:58 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:19:58 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:19:59 on Sep 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:19:59 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:19:59 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:19:59 on Sep 26,2024, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:19:59 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:20:17 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:20:17 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:20:17 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:20:17 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:20:17 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:20:17 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:20:17 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:20:17 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:20:17 on Sep 26,2024, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:20:17 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:20:43 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:20:43 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:20:43 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:20:43 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:20:43 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:20:43 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:20:43 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:20:43 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:20:43 on Sep 26,2024, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:20:43 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:21:07 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:21:07 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:21:07 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:21:07 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:21:07 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:21:07 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:21:07 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:21:07 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:21:08 on Sep 26,2024, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:21:08 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:22:02 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# ** Error: (vlog-13069) fpga_eth.sv(83): near "typedef": syntax error, unexpected "SystemVerilog keyword 'typedef'", expecting ';'.
+# End time: 16:22:02 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /opt/questasim/linux_x86_64/vlog failed.
+# Error in macro ./run.do line 31
+# /opt/questasim/linux_x86_64/vlog failed.
 #     while executing
-# "add wave -hex /stimulus/dut/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/grant_encoded"
-# End time: 15:54:50 on Sep 23,2024, Elapsed time: 0:01:22
-# Errors: 0, Warnings: 3
+# "vlog fpga_eth.sv"
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:22:16 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:22:16 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:22:16 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:22:16 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:22:16 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:22:16 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:22:16 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:22:16 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:22:16 on Sep 26,2024, Elapsed time: 0:01:08
+# Errors: 1, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:22:16 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:22:36 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:22:36 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:22:36 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:22:36 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:22:36 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:22:36 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:22:36 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:22:36 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:22:37 on Sep 26,2024, Elapsed time: 0:00:21
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:22:37 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:24:07 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:24:07 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:24:07 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:24:07 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:24:07 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:24:07 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:24:07 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:24:08 on Sep 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 16:24:08 on Sep 26,2024, Elapsed time: 0:01:31
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:24:08 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:27:11 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:27:11 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:27:11 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:27:11 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:27:11 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:27:11 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:27:11 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:27:11 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:27:11 on Sep 26,2024, Elapsed time: 0:03:03
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:27:11 on Sep 26,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:28:32 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:28:32 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:28:32 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:28:33 on Sep 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:28:33 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:28:33 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:28:33 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:28:33 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:28:33 on Sep 26,2024, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:28:33 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:29:22 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:29:22 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:29:22 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:29:22 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:29:22 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:29:22 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:29:22 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:29:22 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:29:23 on Sep 26,2024, Elapsed time: 0:00:50
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:29:23 on Sep 26,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:31:05 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:31:05 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:31:05 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:31:05 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:31:05 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:31:05 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:31:05 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:31:05 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:31:06 on Sep 26,2024, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:31:06 on Sep 26,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:31:42 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:31:42 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:31:42 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:31:42 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:31:42 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:31:42 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:31:42 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:31:42 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:31:42 on Sep 26,2024, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:31:42 on Sep 26,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:41:01 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:41:01 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:41:02 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:41:02 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:41:02 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:41:02 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:41:02 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:41:02 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:41:02 on Sep 26,2024, Elapsed time: 0:09:20
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:41:02 on Sep 26,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:48:04 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 16:48:04 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:48:04 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 16:48:04 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:48:04 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 16:48:04 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 16:48:04 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 16:48:04 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:48:04 on Sep 26,2024, Elapsed time: 0:07:02
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:48:04 on Sep 26,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(178)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 178
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 17:08:05 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 17:08:05 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 17:08:05 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 17:08:05 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 17:08:05 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 17:08:05 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 17:08:05 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 17:08:05 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:08:09 on Sep 26,2024, Elapsed time: 0:20:05
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 17:08:09 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(179)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 179
+# Causality operation skipped due to absence of debug database file
+do run.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@stone.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 17:26:02 on Sep 26,2024
+# vlog -reportprogress 300 fpga_eth.sv 
+# -- Compiling module fpga_eth
+# 
+# Top level modules:
+# 	fpga_eth
+# End time: 17:26:02 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 17:26:02 on Sep 26,2024
+# vlog -reportprogress 300 tb.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 17:26:02 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 17:26:02 on Sep 26,2024
+# vlog -reportprogress 300 src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 17:26:03 on Sep 26,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 17:26:03 on Sep 26,2024
+# vlog -reportprogress 300 src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 17:26:03 on Sep 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:26:03 on Sep 26,2024, Elapsed time: 0:17:54
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 17:26:03 on Sep 26,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "fpga_eth(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_eth(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.counter(fast__1)
+# Loading work.flopenr(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Note: $finish    : tb.sv(179)
+#    Time: 150 ns  Iteration: 0  Instance: /stimulus
+# 1
+# Break in Module stimulus at tb.sv line 179
+# End time: 17:31:09 on Sep 26,2024, Elapsed time: 0:05:06
+# Errors: 0, Warnings: 1

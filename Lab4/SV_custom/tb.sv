@@ -41,6 +41,7 @@ module stimulus;
    logic 	  led5;
    logic 	  led6;
    logic 	  led7;
+   logic [31:0] phy_tx_data;
    logic [3:0] 	  phy_txd;
    logic 	  phy_tx_en;
    logic 	  phy_reset_n;
@@ -85,6 +86,7 @@ module stimulus;
 	//.tx_eth_dest_mac(tx_eth_dest_mac),
    .valid(valid),
 	.phy_rx_clk(phy_rx_clk),
+   .phy_tx_data(phy_tx_data),
 	.phy_rxd(phy_rxd),
 	.phy_rx_dv(phy_rx_dv),
 	.phy_rx_er(phy_rx_er),
@@ -132,6 +134,7 @@ module stimulus;
    initial begin
       // Initialize inputs
       rst = 1;
+      valid = 1;
       btn = 4'b0000;
       sw = 4'b0000;
       //phy_rxd = 4'b0000;
