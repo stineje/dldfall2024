@@ -169,6 +169,7 @@ module stimulus;
       // uart_rxd = 1; //probably unneeded
 
       // Release reset and check functionality
+      #1000
       #100;
       rst = 1;
       #10;

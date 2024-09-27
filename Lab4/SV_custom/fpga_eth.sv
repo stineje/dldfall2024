@@ -75,7 +75,9 @@ module fpga_eth #
     logic [15:0]             EthType, Length;
     logic [31:0]             Tag;
     logic [TotalFrameLengthBits-1:0] TotalFrame;
-    logic [31:0] TotalFrameWords [TotalFrameLengthBytes/4-1:0];
+    logic [31:0] TotalFrameWords [TotalFrameLengthBytes/4-1:0]; // this maybe should just be 32 bits
+    logic [7:0] TotalFrameBytes [TotalFrameLengthBytes-1:0]; //left size is the size of each element within the array
+    logic [3:0] TotalFrameNibs [TotalFrameLengthBytes*2-1:0];
     logic [95:0] Data;
 
     //logic [187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12)-1:0] rvviDelay;
@@ -134,11 +136,21 @@ module fpga_eth #
     // *** BUG BytesInFrame will eventually depend on the length of the data stored into the ethernet frame
     // for now this will be exactly 608 bits (76 bytes, 19 words) + the ethernet frame overhead and 2-byte padding = 92-bytes
     assign BytesInFrame = 12'd2 + 12'd76 + 12'd6 + 12'd6 + 12'd2; //understand the values here, only need min 64 bytes
-    assign BurstDone = WordCount == (BytesInFrame[11:2] - 1'b1);
+    assign BurstDone = WordCount == (BytesInFrame[11:2] - 1'b1); //change this to accomodate "nibbles in frame", so doesnt reset
 
     genvar index;
     for (index = 0; index < TotalFrameLengthBytes/4; index++) begin 
         assign TotalFrameWords[index] = TotalFrame[(index*32)+32-1 : (index*32)];
+    end
+
+    genvar index2;
+    for (index2 = 0; index2 < TotalFrameLengthBytes; index2++) begin 
+        assign TotalFrameBytes[index2] = TotalFrame[(index2*8)+8-1 : (index2*8)];
+    end
+
+    genvar index3;
+    for (index3 = 0; index3 < TotalFrameLengthBytes*2; index3++) begin 
+        assign TotalFrameNibs[index3] = TotalFrame[(index3*4)+4-1 : (index3*4)];
     end
 
     //Data = 1'b1;
@@ -156,9 +168,9 @@ module fpga_eth #
     assign EthType = 16'h0800;
 
     assign phy_tx_data = TotalFrameWords[(TotalFrameLengthBytes/4) - WordCount[4:0]]; //reversed this in order to get transmission in proper order
-    assign phy_txd = TotalFrame[1:0]; //may have to create "nibble counter" in order to send over nibbles at a time 
-
-    assign phy_txd = '1;
+    //assign phy_txd = TotalFrameBytes[TotalFrameLengthBytes - WordCount[4:0]]; //may have to create "nibble counter" in order to send over nibbles at a time 
+    assign phy_txd = TotalFrameNibs[(TotalFrameLengthBytes*2) - WordCount[4:0]];
+    //assign phy_txd = '1;
     assign phy_tx_last = BurstDone & (CurrState == STATE_TRANS);
     assign phy_tx_dv = (CurrState == STATE_TRANS);
   

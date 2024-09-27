@@ -48,7 +48,10 @@ view wave
 #Misc
 add wave -hex /stimulus/dut/WordCount
 add wave -hex /stimulus/dut/TotalFrameWords
+add wave -hex /stimulus/dut/TotalFrameBytes
+add wave -hex /stimulus/dut/TotalFrameNibs
 add wave -hex /stimulus/dut/TotalFrame
+add wave -hex /stimulus/dut/phy_txd
 add wave -hex /stimulus/dut/phy_tx_data
 add wave -hex /stimulus/dut/phy_tx_clk
 add wave -hex /stimulus/dut/CountFlag
