@@ -8,63 +8,66 @@ module fpga_eth #
      * Clock: 125MHz
      * Synchronous reset
      */
-    input  logic       clk,
+    input  logic       CLK100MHZ, //may need to change this as input
     input  logic       rst,
 
     /*
      * GPIO
-     */
-    input  logic [3:0] btn,
-    input  logic [3:0] sw,
-    output logic       led0_r,
-    output logic       led0_g,
-    output logic       led0_b,
-    output logic       led1_r,
-    output logic       led1_g,
-    output logic       led1_b,
-    output logic       led2_r,
-    output logic       led2_g,
-    output logic       led2_b,
-    output logic       led3_r,
-    output logic       led3_g,
-    output logic       led3_b,
-    output logic       led4,
-    output logic       led5,
-    output logic       led6,
-    output logic       led7,
+//     */
+//    input  logic [3:0] btn,
+//    input  logic [3:0] sw,
+//    output logic       led0_r,
+//    output logic       led0_g,
+//    output logic       led0_b,
+//    output logic       led1_r,
+//    output logic       led1_g,
+//    output logic       led1_b,
+//    output logic       led2_r,
+//    output logic       led2_g,
+//    output logic       led2_b,
+//    output logic       led3_r,
+//    output logic       led3_g,
+//    output logic       led3_b,
+//    output logic       led4,
+//    output logic       led5,
+//    output logic       led6,
+//    output logic       led7,
 
     /*
      * Ethernet: 100BASE-T MII
      */
 
-    input  logic valid,
-    input  logic       phy_rx_clk, //Clock signal for receiving data.
-    input  logic [3:0] phy_rxd, //4-bit data input from the physical layer.
+//    input  logic       phy_rx_clk, //Clock signal for receiving data.
+//    input  logic [3:0] phy_rxd, //4-bit data input from the physical layer.
     input  logic       phy_rx_dv, //Data Valid signal, indicating when phy_rxd holds valid data
-    input  logic       phy_rx_er, //Error signal indicating if there is an error in the received data.
+//    input  logic       phy_rx_er, //Error signal indicating if there is an error in the received data.
     
-    input  logic       phy_tx_clk, //Clock signal for transmitting data
-    output logic [31:0] phy_tx_data,
+//    input  logic       phy_tx_clk, //Clock signal for transmitting data
     output logic [3:0] phy_txd, //4-bit data output to the physical layer.
-    output logic       phy_tx_en, //Transmit Enable signal, indicating when to send data on 'phy_txd'
-    input  logic       phy_col, // Collision signal, often used in Ethernet to indicate data collisions on the network
-    input  logic       phy_crs, //Carrier Sense signal, indicating that the network medium is active
-    output logic       phy_reset_n, //Reset signal, active low, used to reset the PHY (physical layer) device.
+    output logic       phy_tx_en //Transmit Enable signal, indicating when to send data on 'phy_txd'
+  //  input  logic       phy_col, // Collision signal, often used in Ethernet to indicate data collisions on the network
+  //  input  logic       phy_crs, //Carrier Sense signal, indicating that the network medium is active
+   // output logic       phy_reset_n //Reset signal, active low, used to reset the PHY (physical layer) device.
 
-    input logic         phy_tx_ready, //added this for some control
-    output logic        phy_tx_last,
+   // input logic         phy_tx_ready //added this for some control
 
     /*
      * UART: 115200 bps, 8N1
      */
-    input  logic       uart_rxd, // UART receive data input
-    output logic       uart_txd // UART transmit data output
+//    input  logic       uart_rxd, // UART receive data input
+//    output logic       uart_txd // UART transmit data output
 );
 
     //localparam TotalFrameLengthBits = 2*48+17+16+187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12);
     localparam TotalFrameLengthBits = 256;
     localparam TotalFrameLengthBytes = TotalFrameLengthBits / 8;
+    
+    logic clk;
 
+    logic phy_tx_last;
+    logic [31:0] phy_tx_data;
+    logic valid;
+    
     logic [9:0]              WordCount;
     logic [11:0]             BytesInFrame;
     logic                    TransReady;
@@ -88,10 +91,14 @@ module fpga_eth #
     logic [31:0] 	    RstCount;
     logic [31:0] 	    FrameCount;
     logic 		    RstCountRst, RstCountEn, CountFlag, DelayFlag;
+    
+   
+    assign clk = CLK100MHZ; 
+    assign valid = phy_rx_dv;
 
 
-    always_ff @(posedge phy_tx_clk) begin
-        if(phy_reset_n) CurrState <= STATE_RST; //may need to flip reset state
+    always_ff @(posedge clk) begin
+        if(rst) CurrState <= STATE_RST; //may need to flip reset state
         else               CurrState <= NextState;
     end
 
@@ -123,7 +130,7 @@ module fpga_eth #
 
     // have to count at least 250 ms after reset pulled to wait for the phy to actually be ready
     // at 20MHz 250 ms is 250e-3 / (1/20e6) = 5,000,000.
-    counter #(32) rstcounter(phy_tx_clk, RstCountRst, RstCountEn, RstCount);
+    counter #(32) rstcounter(clk, RstCountRst, RstCountEn, RstCount);
     assign CountFlag = RstCount == timeout;
     assign DelayFlag = RstCount == delay;
 
@@ -132,7 +139,7 @@ module fpga_eth #
     //may need to store delay?
     //flopenr #(187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12)) rvvireg(m_axi_aclk, ~m_axi_aresetn, valid, rvvi, rvviDelay);
 
-    counter #(10) WordCounter(phy_tx_clk, WordCountReset, WordCountEnable, WordCount);
+    counter #(10) WordCounter(clk, WordCountReset, WordCountEnable, WordCount);
     // *** BUG BytesInFrame will eventually depend on the length of the data stored into the ethernet frame
     // for now this will be exactly 608 bits (76 bytes, 19 words) + the ethernet frame overhead and 2-byte padding = 92-bytes
     assign BytesInFrame = 12'd2 + 12'd76 + 12'd6 + 12'd6 + 12'd2; //understand the values here, only need min 64 bytes
@@ -160,8 +167,9 @@ module fpga_eth #
     //assign TotalFrame = {16'h0000, EthType, DstMac, SrcMac, Data}; //type should come after dest/source
     assign TotalFrame = {16'h0000, EthType, DstMac, SrcMac, Data}; 
 
-    // *** fix me later
-    assign DstMac = 48'h8F54_0000_1654; // made something up
+//    // *** fix me later
+//    assign DstMac = 48'h8F54_0000_1654; // made something up
+    assign DstMac = 48'h1098_1973_6759;
     assign SrcMac = 48'h4502_4444_6843;
     assign Tag = 32'b0;
     //assign EthType = 16'h005c; //may need to change this
@@ -173,6 +181,7 @@ module fpga_eth #
     //assign phy_txd = '1;
     assign phy_tx_last = BurstDone & (CurrState == STATE_TRANS);
     assign phy_tx_dv = (CurrState == STATE_TRANS);
+    assign phy_tx_en = 1'b1;
   
 endmodule
  

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  1 19:02:33 2024
+# Process ID: 86145
+# Current directory: /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/synth_1
+# Command line: vivado -log fpga_eth.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_eth.tcl
+# Log file: /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/synth_1/fpga_eth.vds
+# Journal file: /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/synth_1/vivado.jou
+# Running On: falcon, OS: Linux, CPU Frequency: 1368.470 MHz, CPU Physical cores: 24, Host memory: 33311 MB
+#-----------------------------------------------------------
+source fpga_eth.tcl -notrace
