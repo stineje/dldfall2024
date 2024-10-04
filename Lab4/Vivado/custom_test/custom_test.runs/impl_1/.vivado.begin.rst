@@ -33,3 +33,23 @@
     <Process Command="vivado" Owner="casager" Host="falcon" Pid="80232" HostCore="32" HostMemory="32530684">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="casager" Host="stone" Pid="8872" HostCore="48" HostMemory="131742140">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="casager" Host="stone" Pid="14745" HostCore="48" HostMemory="131742140">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="casager" Host="stone" Pid="28803" HostCore="48" HostMemory="131742140">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="casager" Host="stone" Pid="34252" HostCore="48" HostMemory="131742140">
+    </Process>
+</ProcessHandle>

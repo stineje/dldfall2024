@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Tue Oct  1 19:02:55 2024
-| Host         : falcon running 64-bit Ubuntu 22.04.5 LTS
+| Date         : Thu Oct  3 22:46:06 2024
+| Host         : stone running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file fpga_eth_utilization_synth.rpt -pb fpga_eth_utilization_synth.pb
 | Design       : fpga_eth
 | Device       : xc7a100tcsg324-3
@@ -31,13 +31,13 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |   29 |     0 |          0 |     63400 |  0.05 |
-|   LUT as Logic          |   29 |     0 |          0 |     63400 |  0.05 |
+| Slice LUTs*             |   27 |     0 |          0 |     63400 |  0.04 |
+|   LUT as Logic          |   27 |     0 |          0 |     63400 |  0.04 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |   47 |     0 |          0 |    126800 |  0.04 |
-|   Register as Flip Flop |   47 |     0 |          0 |    126800 |  0.04 |
+| Slice Registers         |   43 |     0 |          0 |    126800 |  0.03 |
+|   Register as Flip Flop |   43 |     0 |          0 |    126800 |  0.03 |
 |   Register as Latch     |    0 |     0 |          0 |    126800 |  0.00 |
-| F7 Muxes                |    0 |     0 |          0 |     31700 |  0.00 |
+| F7 Muxes                |    1 |     0 |          0 |     31700 | <0.01 |
 | F8 Muxes                |    0 |     0 |          0 |     15850 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -59,7 +59,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 46    |          Yes |       Reset |            - |
+| 42    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,16 +148,17 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   46 |        Flop & Latch |
-| LUT6     |   10 |                 LUT |
-| LUT5     |   10 |                 LUT |
-| LUT4     |    8 |                 LUT |
+| FDRE     |   42 |        Flop & Latch |
+| LUT6     |    9 |                 LUT |
 | CARRY4   |    8 |          CarryLogic |
+| LUT5     |    6 |                 LUT |
 | OBUF     |    5 |                  IO |
+| LUT4     |    5 |                 LUT |
 | LUT2     |    5 |                 LUT |
+| LUT3     |    4 |                 LUT |
 | IBUF     |    3 |                  IO |
-| LUT3     |    2 |                 LUT |
 | LUT1     |    2 |                 LUT |
+| MUXF7    |    1 |               MuxFx |
 | FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+

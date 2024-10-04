@@ -59,7 +59,7 @@ module fpga_eth #
 );
 
     //localparam TotalFrameLengthBits = 2*48+17+16+187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12);
-    localparam TotalFrameLengthBits = 256;
+    localparam TotalFrameLengthBits = 512;
     localparam TotalFrameLengthBytes = TotalFrameLengthBits / 8;
     
     logic clk;
@@ -143,7 +143,8 @@ module fpga_eth #
     // *** BUG BytesInFrame will eventually depend on the length of the data stored into the ethernet frame
     // for now this will be exactly 608 bits (76 bytes, 19 words) + the ethernet frame overhead and 2-byte padding = 92-bytes
     assign BytesInFrame = 12'd2 + 12'd76 + 12'd6 + 12'd6 + 12'd2; //understand the values here, only need min 64 bytes
-    assign BurstDone = WordCount == (BytesInFrame[11:2] - 1'b1); //change this to accomodate "nibbles in frame", so doesnt reset
+    //assign BurstDone = WordCount == (BytesInFrame[11:2] - 1'b1); //change this to accomodate "nibbles in frame", so doesnt reset
+    assign BurstDone = 1'b0;
 
     genvar index;
     for (index = 0; index < TotalFrameLengthBytes/4; index++) begin 
@@ -165,7 +166,7 @@ module fpga_eth #
 
     assign Length = {4'b0, BytesInFrame};
     //assign TotalFrame = {16'h0000, EthType, DstMac, SrcMac, Data}; //type should come after dest/source
-    assign TotalFrame = {16'h0000, EthType, DstMac, SrcMac, Data}; 
+    assign TotalFrame = {56'h55_55_55_55_55_55_55, 8'hAB, DstMac, SrcMac, EthType, Data};
 
 //    // *** fix me later
 //    assign DstMac = 48'h8F54_0000_1654; // made something up
@@ -177,7 +178,7 @@ module fpga_eth #
 
     assign phy_tx_data = TotalFrameWords[(TotalFrameLengthBytes/4) - WordCount[4:0]]; //reversed this in order to get transmission in proper order
     //assign phy_txd = TotalFrameBytes[TotalFrameLengthBytes - WordCount[4:0]]; //may have to create "nibble counter" in order to send over nibbles at a time 
-    assign phy_txd = TotalFrameNibs[(TotalFrameLengthBytes*2) - WordCount[4:0]];
+    assign phy_txd = TotalFrameNibs[(TotalFrameLengthBytes*2) - WordCount[9:0]];
     //assign phy_txd = '1;
     assign phy_tx_last = BurstDone & (CurrState == STATE_TRANS);
     assign phy_tx_dv = (CurrState == STATE_TRANS);

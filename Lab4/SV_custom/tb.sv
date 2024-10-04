@@ -10,6 +10,7 @@ module stimulus;
 
    //Inputs 
    logic 	  clk;
+   logic CLK100MHZ;
    logic 	  rst;
    logic valid;
    logic [3:0] 	  btn;
@@ -56,60 +57,62 @@ module stimulus;
 	 * Clock: 125MHz
 	 * Synchronous reset
 	 */
-	.clk(clk),
+   .CLK100MHZ(CLK100MHZ),
+
+	//.clk(clk),
 	.rst(rst),
       
 	// GPIO
 
-	.btn(btn),
-	.sw(sw),
-	.led0_r(led0_r),
-	.led0_g(led0_g),
-	.led0_b(led0_b),
-	.led1_r(led1_r),
-	.led1_g(led1_g),
-	.led1_b(led1_b),
-	.led2_r(led2_r),
-	.led2_g(led2_g),
-	.led2_b(led2_b),
-	.led3_r(led3_r),
-	.led3_g(led3_g),
-	.led3_b(led3_b),
-	.led4(led4),
-	.led5(led5),
-	.led6(led6),
-	.led7(led7),
+	//.btn(btn),
+	//.sw(sw),
+	//.led0_r(led0_r),
+	//.led0_g(led0_g),
+	//.led0_b(led0_b),
+	//.led1_r(led1_r),
+	//.led1_g(led1_g),
+	//.led1_b(led1_b),
+	//.led2_r(led2_r),
+	//.led2_g(led2_g),
+	//.led2_b(led2_b),
+	//.led3_r(led3_r),
+	//.led3_g(led3_g),
+	//.led3_b(led3_b),
+	//.led4(led4),
+	//.led5(led5),
+	//.led6(led6),
+	//.led7(led7),
 
 	/*
 	 * Ethernet: 100BASE-T MII
 	 */
 	//.tx_eth_dest_mac(tx_eth_dest_mac),
-   .valid(valid),
-	.phy_rx_clk(phy_rx_clk),
-   .phy_tx_data(phy_tx_data),
-	.phy_rxd(phy_rxd),
+   //.valid(valid),
+	//.phy_rx_clk(phy_rx_clk),
+   //.phy_tx_data(phy_tx_data),
+	//.phy_rxd(phy_rxd),
 	.phy_rx_dv(phy_rx_dv),
-	.phy_rx_er(phy_rx_er),
-	.phy_tx_clk(phy_tx_clk),
+	//.phy_rx_er(phy_rx_er),
+	//.phy_tx_clk(phy_tx_clk),
 	.phy_txd(phy_txd),
-	.phy_tx_en(phy_tx_en),
-	.phy_col(phy_col),
-	.phy_crs(phy_crs),
-	.phy_reset_n(phy_reset_n),
-    .phy_tx_ready(phy_tx_ready),
-    .phy_tx_last(phy_tx_last),
+	.phy_tx_en(phy_tx_en)
+	//.phy_col(phy_col),
+	//.phy_crs(phy_crs),
+	//.phy_reset_n(phy_reset_n),
+   // .phy_tx_ready(phy_tx_ready),
+   // .phy_tx_last(phy_tx_last),
 
 	/*
 	 * UART: 115200 bps, 8N1
 	 */
-	.uart_rxd(uart_rxd),
-	.uart_txd(uart_txd)
+	//.uart_rxd(uart_rxd),
+	//.uart_txd(uart_txd)
 	);
 
    // Clock generation
    initial begin
-      clk = 1'b0;
-      forever #5 clk = ~clk; // 100 MHz clock (8ns period)
+      CLK100MHZ = 1'b0;
+      forever #5 CLK100MHZ = ~CLK100MHZ; // 100 MHz clock (8ns period)
    end
 
    initial begin

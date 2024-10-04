@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Thu Oct  3 22:47:35 2024
+| Host         : stone running 64-bit Ubuntu 24.04.1 LTS
+| Command      : report_bus_skew -warn_on_violation -file fpga_eth_bus_skew_routed.rpt -pb fpga_eth_bus_skew_routed.pb -rpx fpga_eth_bus_skew_routed.rpx
+| Design       : fpga_eth
+| Device       : 7a100t-csg324
+| Speed File   : -3  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

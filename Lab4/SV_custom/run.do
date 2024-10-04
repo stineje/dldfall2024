@@ -51,56 +51,59 @@ add wave -hex /stimulus/dut/TotalFrameWords
 add wave -hex /stimulus/dut/TotalFrameBytes
 add wave -hex /stimulus/dut/TotalFrameNibs
 add wave -hex /stimulus/dut/TotalFrame
+add wave -hex /stimulus/dut/TotalFrameLengthBytes
 add wave -hex /stimulus/dut/phy_txd
-add wave -hex /stimulus/dut/phy_tx_data
-add wave -hex /stimulus/dut/phy_tx_clk
-add wave -hex /stimulus/dut/CountFlag
+add wave -hex /stimulus/dut/valid
+#add wave -hex /stimulus/dut/phy_tx_data
+#add wave -hex /stimulus/dut/phy_tx_clk
+#add wave -hex /stimulus/dut/CountFlag
 add wave -hex /stimulus/dut/WordCountEnable
-add wave -hex /stimulus/dut/RstCount
-add wave -hex /stimulus/dut/timeout
-add wave -hex /stimulus/dut/delay
+add wave -hex /stimulus/dut/WordCountReset
+#add wave -hex /stimulus/dut/RstCount
+#add wave -hex /stimulus/dut/timeout
+#add wave -hex /stimulus/dut/delay
 
 #Inputs 
-add wave -noupdate -divider -height 32 "Inputs"
+#add wave -noupdate -divider -height 32 "Inputs"
 add wave -hex /stimulus/clk
-add wave -hex /stimulus/rst
-add wave -hex /stimulus/btn
-add wave -hex /stimulus/sw
-add wave -hex /stimulus/phy_rx_clk
-add wave -hex /stimulus/phy_rxd
-add wave -hex /stimulus/phy_rx_dv
-add wave -hex /stimulus/phy_rx_er
-add wave -hex /stimulus/phy_tx_clk
-add wave -hex /stimulus/phy_col
-add wave -hex /stimulus/phy_crs
-add wave -hex /stimulus/uart_rxd
+#add wave -hex /stimulus/rst
+#add wave -hex /stimulus/btn
+#add wave -hex /stimulus/sw
+#add wave -hex /stimulus/phy_rx_clk
+#add wave -hex /stimulus/phy_rxd
+#add wave -hex /stimulus/phy_rx_dv
+#add wave -hex /stimulus/phy_rx_er
+#add wave -hex /stimulus/phy_tx_clk
+#add wave -hex /stimulus/phy_col
+#add wave -hex /stimulus/phy_crs
+#add wave -hex /stimulus/uart_rxd
 
 #Outputs
-add wave -noupdate -divider -height 32 "Outputs"
-add wave -color yellow -hex /stimulus/led0_r
-add wave -color yellow -hex /stimulus/led0_g
-add wave -color yellow -hex /stimulus/led0_b
-add wave -color yellow -hex /stimulus/led1_r
-add wave -color yellow -hex /stimulus/led1_g
-add wave -color yellow -hex /stimulus/led1_b
-add wave -color yellow -hex /stimulus/led2_r
-add wave -color yellow -hex /stimulus/led2_g
-add wave -color yellow -hex /stimulus/led2_b
-add wave -color yellow -hex /stimulus/led3_r
-add wave -color yellow -hex /stimulus/led3_g
-add wave -color yellow -hex /stimulus/led3_b
-add wave -color yellow -hex /stimulus/led4
-add wave -color yellow -hex /stimulus/led5
-add wave -color yellow -hex /stimulus/led6
-add wave -color yellow -hex /stimulus/led7
-add wave -color yellow -hex /stimulus/phy_tx_data
-add wave -color yellow -hex /stimulus/phy_txd
-add wave -color yellow -hex /stimulus/phy_tx_en
-add wave -color yellow -hex /stimulus/phy_reset_n
-add wave -color yellow -hex /stimulus/uart_txd
+#add wave -noupdate -divider -height 32 "Outputs"
+#add wave -color yellow -hex /stimulus/led0_r
+#add wave -color yellow -hex /stimulus/led0_g
+#add wave -color yellow -hex /stimulus/led0_b
+#add wave -color yellow -hex /stimulus/led1_r
+#add wave -color yellow -hex /stimulus/led1_g
+#add wave -color yellow -hex /stimulus/led1_b
+#add wave -color yellow -hex /stimulus/led2_r
+#add wave -color yellow -hex /stimulus/led2_g
+#add wave -color yellow -hex /stimulus/led2_b
+#add wave -color yellow -hex /stimulus/led3_r
+#add wave -color yellow -hex /stimulus/led3_g
+#add wave -color yellow -hex /stimulus/led3_b
+#add wave -color yellow -hex /stimulus/led4
+#add wave -color yellow -hex /stimulus/led5
+#add wave -color yellow -hex /stimulus/led6
+#add wave -color yellow -hex /stimulus/led7
+#add wave -color yellow -hex /stimulus/phy_tx_data
+#add wave -color yellow -hex /stimulus/phy_txd
+#add wave -color yellow -hex /stimulus/phy_tx_en
+#add wave -color yellow -hex /stimulus/phy_reset_n
+#add wave -color yellow -hex /stimulus/uart_txd
 
 #all signals
-add wave -color green -hex -r /stimulus/dut/*
+#add wave -color green -hex -r /stimulus/dut/*
 #add list -hex /stimulus/-r /tb/*
 #add log -r /*
 
@@ -117,4 +120,4 @@ configure wave -rowmargin 4
 configure wave -childrowmargin 2
 
 -- Run the Simulation
-run 480ns
+run 600ns

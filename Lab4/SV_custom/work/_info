@@ -1,8 +1,26 @@
 m255
 K4
 z2
-!s12c _opt
-Z0 !s99 nomlopt
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
 !s11f vlog 2023.4_3 2024.02, Feb 17 2024
 13
 !s112 1.1
@@ -10,13 +28,13 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 d/home/casager/dldfall2024/Lab4/SV_custom
+Z2 d/home/casager/dldfall2024/Lab4/SV_custom
 T_opt
-Z2 !s110 1727409425
-VKSJJzNjkaIEGSKaYdD=N43
+!s110 1728013248
+VIToDCo`U:YUJE@Kc7APjN1
 04 8 4 work stimulus fast 0
-=1-000ae431a4f1-66f62d11-1e738-686c
-R0
+=1-000ae431a4f1-66ff63c0-a50a8-6a57
+R1
 !s12f OEM100
 !s12b OEM100
 !s124 OEM100
@@ -24,103 +42,104 @@ o-quiet -auto_acc_if_foreign -work work +acc
 Z3 tCvgOpt 0
 n@_opt
 OL;O;2023.4_3;77
+R2
 vcounter
 2src/counter.sv
 Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z5 !s110 1727409424
+Z5 !s110 1728013399
 !i10b 1
 !s100 6];lk[]U=CfBU?BSzM6J=1
 I?`?dBY6zn9N^RKdCm4^3B2
 S1
-R1
-Z6 w1727299220
+R2
+w1727124728
 8src/counter.sv
 Fsrc/counter.sv
 !i122 2
 L0 28 10
-Z7 VDg1SIo80bB@j0V0VzS_@n1
-Z8 OL;L;2023.4_3;77
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2023.4_3;77
 r1
 !s85 0
 31
-Z9 !s108 1727409424.000000
+Z8 !s108 1728013399.000000
 !s107 src/counter.sv|
 !s90 -reportprogress|300|src/counter.sv|
 !i113 0
-Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 vflopenr
 2src/flopenr.sv
 R4
-R2
+R5
 !i10b 1
 !s100 GUIA:XFSOUZhe@<8@d2811
 IM1>HFDJ^i<5ijd3>:NWAV0
 S1
-R1
-R6
+R2
+w1727124789
 8src/flopenr.sv
 Fsrc/flopenr.sv
 !i122 3
 L0 28 9
+R6
 R7
-R8
 r1
 !s85 0
 31
-R9
+R8
 !s107 src/flopenr.sv|
 !s90 -reportprogress|300|src/flopenr.sv|
 !i113 0
-R10
+R9
 R3
 vfpga_eth
 2fpga_eth.sv
 R4
 R5
 !i10b 1
-!s100 WH6O=mTX@B`E@BhEd3]aV2
-I9j3L5z6e>QDO^02Md3=:H2
+!s100 EJ4=QF4?6<]ZF;X;2TOV;0
+ITlV5Yb7iB3D>jCnPLz5QE0
 S1
-R1
-w1727409110
+R2
+w1728013243
 8fpga_eth.sv
 Ffpga_eth.sv
 !i122 0
-L0 1 177
+L0 1 187
+R6
 R7
-R8
 r1
 !s85 0
 31
-R9
+R8
 !s107 fpga_eth.sv|
 !s90 -reportprogress|300|fpga_eth.sv|
 !i113 0
-R10
+R9
 R3
 vstimulus
 2tb.sv
 R4
 R5
 !i10b 1
-!s100 WmIKzK?kmZBP6X^B7mgfd2
-Io_8dRQ6V2O1eS>]SdiGaZ0
+!s100 VB13TY;0:;Kg4eVjOQZWz0
+IMczn=fh;]SkUYPn8haXb23
 S1
-R1
-w1727409404
+R2
+w1728011837
 8tb.sv
 Ftb.sv
 !i122 1
-L0 2 181
+L0 2 184
+R6
 R7
-R8
 r1
 !s85 0
 31
-R9
+R8
 !s107 tb.sv|
 !s90 -reportprogress|300|tb.sv|
 !i113 0
-R10
+R9
 R3
