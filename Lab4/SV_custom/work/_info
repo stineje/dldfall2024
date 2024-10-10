@@ -12,22 +12,22 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 d/home/casager/dldfall2024/Lab4/SV_custom
 T_opt
-Z2 !s110 1728537243
-Vg<g<H]2QO[h4B:iIm;GQd3
+!s110 1728587406
+VQ]nVYnUdDkfVV8fcZ=[Nb1
 04 8 4 work stimulus fast 0
-=1-000ae431a4f1-6707629b-ddc43-7c19
+=1-000ae431a4f1-6708268e-163b4-197c6
 R0
 !s12f OEM100
 !s12b OEM100
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
-Z3 tCvgOpt 0
+Z2 tCvgOpt 0
 n@_opt
 OL;O;2023.4_3;77
 vcounter
 2src/counter.sv
-Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R2
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1728587405
 !i10b 1
 !s100 6];lk[]U=CfBU?BSzM6J=1
 I?`?dBY6zn9N^RKdCm4^3B2
@@ -43,16 +43,16 @@ Z7 OL;L;2023.4_3;77
 r1
 !s85 0
 31
-Z8 !s108 1728537243.000000
+Z8 !s108 1728587405.000000
 !s107 src/counter.sv|
 !s90 -reportprogress|300|src/counter.sv|
 !i113 0
 Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
+R2
 vflopenr
 2src/flopenr.sv
+R3
 R4
-R2
 !i10b 1
 !s100 GUIA:XFSOUZhe@<8@d2811
 IM1>HFDJ^i<5ijd3>:NWAV0
@@ -73,17 +73,17 @@ R8
 !s90 -reportprogress|300|src/flopenr.sv|
 !i113 0
 R9
-R3
+R2
 vfpga_eth
 2fpga_eth.sv
+R3
 R4
-R2
 !i10b 1
-!s100 2_ZEjFeS8l<S3gjGbj]fa2
-IZj7oW9Hc7Q@4m1m63Z5E62
+!s100 Tn[S3:BE=:zn?zM>o3=R10
+I0kTnIj??a2DTchU[M?>j?3
 S1
 R1
-w1728536351
+w1728586256
 8fpga_eth.sv
 Ffpga_eth.sv
 !i122 0
@@ -98,17 +98,17 @@ R8
 !s90 -reportprogress|300|fpga_eth.sv|
 !i113 0
 R9
-R3
+R2
 vstimulus
 2tb.sv
+R3
 R4
-R2
 !i10b 1
-!s100 VB13TY;0:;Kg4eVjOQZWz0
-IMczn=fh;]SkUYPn8haXb23
+!s100 Z>:f>JNiE:Z<V<j4z[ZSe0
+IG^O_fI_XKc>8U?mNBaKE>1
 S1
 R1
-w1728057017
+w1728583603
 8tb.sv
 Ftb.sv
 !i122 1
@@ -123,4 +123,4 @@ R8
 !s90 -reportprogress|300|tb.sv|
 !i113 0
 R9
-R3
+R2

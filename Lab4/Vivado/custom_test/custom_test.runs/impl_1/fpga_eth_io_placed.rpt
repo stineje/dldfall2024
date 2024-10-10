@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date                      : Thu Oct  3 22:47:21 2024
-| Host                      : stone running 64-bit Ubuntu 24.04.1 LTS
+| Date                      : Thu Oct 10 14:05:35 2024
+| Host                      : falcon running 64-bit Ubuntu 22.04.5 LTS
 | Command                   : report_io -file fpga_eth_io_placed.rpt
 | Design                    : fpga_eth
 | Device                    : xc7a100t

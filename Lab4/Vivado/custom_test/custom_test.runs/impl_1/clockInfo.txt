@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Thu Oct  3 22:47:20 2024
-| Host         : stone
+| Date         : Thu Oct 10 14:05:32 2024
+| Host         : falcon
 | Design       : design_1
 | Device       : xc7a100t-csg324-3--
 -------------------------------------

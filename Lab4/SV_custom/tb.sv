@@ -136,7 +136,7 @@ module stimulus;
    // Test stimulus
    initial begin
       // Initialize inputs
-      rst = 1;
+      rst = 0;
       valid = 1;
       btn = 4'b0000;
       sw = 4'b0000;
@@ -150,7 +150,7 @@ module stimulus;
 
       // Apply reset
       #20;
-      rst = 1'b0;
+      rst = 1'b1;
       #20
 
       //start receiving data
@@ -174,9 +174,9 @@ module stimulus;
       // Release reset and check functionality
       #1000
       #100;
-      rst = 1;
-      #10;
       rst = 0;
+      #10;
+      rst = 1;
 
       // Wait for simulation to finish
       //#1000;

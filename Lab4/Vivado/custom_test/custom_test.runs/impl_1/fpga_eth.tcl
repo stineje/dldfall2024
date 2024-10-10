@@ -123,9 +123,8 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param xicom.use_bs_reader 1
-  set_param chipscope.maxJobs 12
-  set_param runs.launchOptions { -jobs 24  }
+  set_param chipscope.maxJobs 8
+  set_param runs.launchOptions { -jobs 16  }
   open_checkpoint fpga_eth_routed.dcp
   set_property webtalk.parent_dir /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.cache/wt [current_project]
 set_property TOP fpga_eth [current_fileset]

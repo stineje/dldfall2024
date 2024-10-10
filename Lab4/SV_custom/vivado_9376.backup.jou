@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Oct 10 13:12:02 2024
+# Process ID: 9376
+# Current directory: /home/casager/dldfall2024/Lab4/SV_custom
+# Command line: vivado
+# Log file: /home/casager/dldfall2024/Lab4/SV_custom/vivado.log
+# Journal file: /home/casager/dldfall2024/Lab4/SV_custom/vivado.jou
+# Running On: falcon, OS: Linux, CPU Frequency: 2143.381 MHz, CPU Physical cores: 24, Host memory: 33311 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list CLK100MHZ_IBUF_BUFG ]]
+set_property port_width 4 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {phy_txd_OBUF[0]} {phy_txd_OBUF[1]} {phy_txd_OBUF[2]} {phy_txd_OBUF[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {CurrState[0]} {CurrState[1]} {CurrState[2]} {CurrState[3]} {CurrState[4]} {CurrState[5]} {CurrState[6]} {CurrState[7]} {CurrState[8]} {CurrState[9]} {CurrState[10]} {CurrState[11]} {CurrState[12]} {CurrState[13]} {CurrState[14]} {CurrState[15]} {CurrState[16]} {CurrState[17]} {CurrState[18]} {CurrState[19]} {CurrState[20]} {CurrState[21]} {CurrState[22]} {CurrState[23]} {CurrState[24]} {CurrState[25]} {CurrState[26]} {CurrState[27]} {CurrState[28]} {CurrState[29]} {CurrState[30]} {CurrState[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {NextState[0]} {NextState[1]} {NextState[2]} {NextState[3]} {NextState[4]} {NextState[5]} {NextState[6]} {NextState[7]} {NextState[8]} {NextState[9]} {NextState[10]} {NextState[11]} {NextState[12]} {NextState[13]} {NextState[14]} {NextState[15]} {NextState[16]} {NextState[17]} {NextState[18]} {NextState[19]} {NextState[20]} {NextState[21]} {NextState[22]} {NextState[23]} {NextState[24]} {NextState[25]} {NextState[26]} {NextState[27]} {NextState[28]} {NextState[29]} {NextState[30]} {NextState[31]} ]]
+set_property target_constrs_file /home/casager/dldfall2024/Lab4/SV_custom/ArtyA7custom.xdc [current_fileset -constrset]
+save_constraints -force
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+close_design
+open_run impl_1
+set_property PROBES.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+set_property PROBES.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+open_run synth_1 -name synth_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { TYPE == "SIGNAL" } ]
+save_wave_config {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}

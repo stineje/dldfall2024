@@ -9,7 +9,7 @@ module fpga_eth #
      * Synchronous reset
      */
     input  logic       CLK100MHZ, //may need to change this as input
-    input  logic       rst,
+    (* mark_debug = "true" *) input logic  rst,
 
     /*
      * GPIO
@@ -43,7 +43,7 @@ module fpga_eth #
 //    input  logic       phy_rx_er, //Error signal indicating if there is an error in the received data.
     
 //    input  logic       phy_tx_clk, //Clock signal for transmitting data
-    output logic [3:0] phy_txd, //4-bit data output to the physical layer.
+ (* mark_debug = "true" *)   output logic [3:0] phy_txd, //4-bit data output to the physical layer.
     output logic       phy_tx_en //Transmit Enable signal, indicating when to send data on 'phy_txd'
   //  input  logic       phy_col, // Collision signal, often used in Ethernet to indicate data collisions on the network
   //  input  logic       phy_crs, //Carrier Sense signal, indicating that the network medium is active
@@ -86,7 +86,7 @@ module fpga_eth #
     //logic [187+(3*P.XLEN) + MAX_CSRS*(P.XLEN+12)-1:0] rvviDelay;
 
     typedef enum {STATE_RST, STATE_COUNT, STATE_RDY, STATE_WAIT, STATE_TRANS, STATE_TRANS_INSERT_DELAY} statetype;
-    statetype CurrState, NextState;
+    (* mark_debug = "true" *) statetype CurrState, NextState;
     
     logic [31:0] 	    RstCount;
     logic [31:0] 	    FrameCount;
@@ -98,7 +98,7 @@ module fpga_eth #
 
 
     always_ff @(posedge clk) begin
-        if(rst) CurrState <= STATE_RST; //may need to flip reset state
+        if(~rst) CurrState <= STATE_RST; //may need to flip reset state
         else               CurrState <= NextState;
     end
 

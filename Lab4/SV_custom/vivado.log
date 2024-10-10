@@ -3,13 +3,13 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed Oct  9 10:59:18 2024
-# Process ID: 10020
+# Start of session at: Thu Oct 10 13:51:53 2024
+# Process ID: 56802
 # Current directory: /home/casager/dldfall2024/Lab4/SV_custom
 # Command line: vivado
 # Log file: /home/casager/dldfall2024/Lab4/SV_custom/vivado.log
 # Journal file: /home/casager/dldfall2024/Lab4/SV_custom/vivado.jou
-# Running On: falcon, OS: Linux, CPU Frequency: 1922.443 MHz, CPU Physical cores: 24, Host memory: 33311 MB
+# Running On: falcon, OS: Linux, CPU Frequency: 799.669 MHz, CPU Physical cores: 24, Host memory: 33311 MB
 #-----------------------------------------------------------
 start_gui
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
@@ -30,5 +30,171 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2023.2/data/ip'.
 update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.srcs/utils_1/imports/synth_1/fpga_eth.dcp with file /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/synth_1/fpga_eth.dcp
+launch_runs synth_1 -jobs 16
+[Thu Oct 10 13:52:40 2024] Launched synth_1...
+Run output will be captured here: /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-3
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8205.266 ; gain = 0.000 ; free physical = 21994 ; free virtual = 29824
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/casager/dldfall2024/Lab4/SV_custom/ArtyA7custom.xdc]
+Finished Parsing XDC File [/home/casager/dldfall2024/Lab4/SV_custom/ArtyA7custom.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8361.098 ; gain = 0.000 ; free physical = 21903 ; free virtual = 29734
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 8593.457 ; gain = 624.754 ; free physical = 21697 ; free virtual = 29538
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list CLK100MHZ_IBUF_BUFG ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {CurrState[0]} {CurrState[1]} {CurrState[2]} {CurrState[3]} {CurrState[4]} {CurrState[5]} {CurrState[6]} {CurrState[7]} {CurrState[8]} {CurrState[9]} {CurrState[10]} {CurrState[11]} {CurrState[12]} {CurrState[13]} {CurrState[14]} {CurrState[15]} {CurrState[16]} {CurrState[17]} {CurrState[18]} {CurrState[19]} {CurrState[20]} {CurrState[21]} {CurrState[22]} {CurrState[23]} {CurrState[24]} {CurrState[25]} {CurrState[26]} {CurrState[27]} {CurrState[28]} {CurrState[29]} {CurrState[30]} {CurrState[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {NextState[0]} {NextState[1]} {NextState[2]} {NextState[3]} {NextState[4]} {NextState[5]} {NextState[6]} {NextState[7]} {NextState[8]} {NextState[9]} {NextState[10]} {NextState[11]} {NextState[12]} {NextState[13]} {NextState[14]} {NextState[15]} {NextState[16]} {NextState[17]} {NextState[18]} {NextState[19]} {NextState[20]} {NextState[21]} {NextState[22]} {NextState[23]} {NextState[24]} {NextState[25]} {NextState[26]} {NextState[27]} {NextState[28]} {NextState[29]} {NextState[30]} {NextState[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {phy_txd_OBUF[0]} {phy_txd_OBUF[1]} {phy_txd_OBUF[2]} {phy_txd_OBUF[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list p_0_in ]]
+save_constraints
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.srcs/utils_1/imports/synth_1/fpga_eth.dcp with file /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/synth_1/fpga_eth.dcp
+launch_runs synth_1 -jobs 16
+[Thu Oct 10 14:02:50 2024] Launched synth_1...
+Run output will be captured here: /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Oct 10 14:03:55 2024] Launched impl_1...
+Run output will be captured here: /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8628.152 ; gain = 0.000 ; free physical = 19583 ; free virtual = 27451
+INFO: [Netlist 29-17] Analyzing 125 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8638.152 ; gain = 0.000 ; free physical = 19577 ; free virtual = 27445
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9246.137 ; gain = 0.000 ; free physical = 19074 ; free virtual = 26931
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 9246.137 ; gain = 0.000 ; free physical = 19073 ; free virtual = 26931
+Read PlaceDB: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 9246.137 ; gain = 0.000 ; free physical = 19071 ; free virtual = 26929
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9246.137 ; gain = 0.000 ; free physical = 19071 ; free virtual = 26929
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 9246.137 ; gain = 0.000 ; free physical = 19070 ; free virtual = 26928
+Read Physdb Files: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.1 . Memory (MB): peak = 9246.137 ; gain = 0.000 ; free physical = 19070 ; free virtual = 26928
+Restored from archive | CPU: 0.120000 secs | Memory: 5.313934 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.1 . Memory (MB): peak = 9246.137 ; gain = 0.000 ; free physical = 19070 ; free virtual = 26928
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9246.137 ; gain = 0.000 ; free physical = 19070 ; free virtual = 26928
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 74 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 68 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+
+open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 9394.168 ; gain = 766.016 ; free physical = 21026 ; free virtual = 28894
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Oct 10 14:06:27 2024] Launched impl_1...
+Run output will be captured here: /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2023.2
+  **** Build date : Oct 13 2023 at 20:26:23
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2023.2.0
+  ****** Build date   : Oct 09 2023-23:01:56
+    **** Build number : 2023.2.1696910516
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210319B7CEE4A
+set_property PROGRAM.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-3222] Mismatch between the design programmed into the device xc7a100t (JTAG device index = 0) and the probes file(s) /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.ltx.
+ The hw_probe  in the probes file has port index 3. This port does not exist in the ILA core at location (uuid_23E7D65A79BC59F7BC47406C1714DFAE).
+set_property PROBES.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.runs/impl_1/fpga_eth.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes p_0_in -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Oct-10 14:08:20
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Oct-10 14:08:29
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Oct-10 14:08:49
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Oct-10 14:08:51
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Oct-10 14:08:55
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Oct-10 14:08:59
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Oct-10 14:09:03
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Oct-10 14:09:05
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2024-Oct-10 14:25:51
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2024-Oct-10 14:25:55
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {/home/casager/dldfall2024/Lab4/Vivado/custom_test/custom_test.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 12:19:09 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 10 14:27:32 2024...

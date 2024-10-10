@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Thu Oct  3 22:47:35 2024
-| Host             : stone running 64-bit Ubuntu 24.04.1 LTS
+| Date             : Thu Oct 10 14:06:06 2024
+| Host             : falcon running 64-bit Ubuntu 22.04.5 LTS
 | Command          : report_power -file fpga_eth_power_routed.rpt -pb fpga_eth_power_summary_routed.pb -rpx fpga_eth_power_routed.rpx
 | Design           : fpga_eth
 | Device           : xc7a100tcsg324-3
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.102        |
+| Total On-Chip Power (W)  | 0.113        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.005        |
+| Dynamic (W)              | 0.015        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 99.5         |
@@ -49,21 +49,24 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       87 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       26 |     63400 |            0.04 |
-|   CARRY4       |    <0.001 |        8 |     15850 |            0.05 |
-|   Register     |    <0.001 |       43 |    126800 |            0.03 |
-|   F7/F8 Muxes  |    <0.001 |        1 |     63400 |           <0.01 |
-|   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |       72 |       --- |             --- |
-| I/O            |     0.004 |        8 |       210 |            3.81 |
-| Static Power   |     0.097 |          |           |                 |
-| Total          |     0.102 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.009 |        4 |       --- |             --- |
+| Slice Logic              |     0.001 |     4311 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1216 |     63400 |            1.92 |
+|   Register               |    <0.001 |     2258 |    126800 |            1.78 |
+|   CARRY4                 |    <0.001 |       45 |     15850 |            0.28 |
+|   LUT as Shift Register  |    <0.001 |      135 |     19000 |            0.71 |
+|   LUT as Distributed RAM |    <0.001 |       24 |     19000 |            0.13 |
+|   F7/F8 Muxes            |    <0.001 |        4 |     63400 |           <0.01 |
+|   Others                 |     0.000 |      252 |       --- |             --- |
+| Signals                  |     0.001 |     3162 |       --- |             --- |
+| Block RAM                |     0.001 |        2 |       135 |            1.48 |
+| I/O                      |     0.002 |        8 |       210 |            3.81 |
+| Static Power             |     0.097 |          |           |                 |
+| Total                    |     0.113 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -72,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.028 |       0.013 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -125,11 +128,12 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------------+-----------+-----------------+
-| Clock       | Domain    | Constraint (ns) |
-+-------------+-----------+-----------------+
-| sys_clk_pin | CLK100MHZ |            10.0 |
-+-------------+-----------+-----------------+
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
+| Clock                                                                                      | Domain                                                            | Constraint (ns) |
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK |            33.0 |
+| sys_clk_pin                                                                                | CLK100MHZ                                                         |            10.0 |
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -138,10 +142,16 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------+-----------+
-| Name     | Power (W) |
-+----------+-----------+
-| fpga_eth |     0.005 |
-+----------+-----------+
++--------------------------+-----------+
+| Name                     | Power (W) |
++--------------------------+-----------+
+| fpga_eth                 |     0.015 |
+|   dbg_hub                |     0.003 |
+|     inst                 |     0.003 |
+|       BSCANID.u_xsdbm_id |     0.003 |
+|   u_ila_0                |     0.009 |
+|     inst                 |     0.009 |
+|       ila_core_inst      |     0.009 |
++--------------------------+-----------+
 
 
