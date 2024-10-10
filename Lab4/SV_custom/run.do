@@ -54,6 +54,7 @@ add wave -hex /stimulus/dut/TotalFrame
 add wave -hex /stimulus/dut/TotalFrameLengthBytes
 add wave -hex /stimulus/dut/phy_txd
 add wave -hex /stimulus/dut/valid
+add wave -hex /stimulus/dut/rst
 #add wave -hex /stimulus/dut/phy_tx_data
 #add wave -hex /stimulus/dut/phy_tx_clk
 #add wave -hex /stimulus/dut/CountFlag

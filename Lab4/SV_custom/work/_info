@@ -1,26 +1,8 @@
 m255
 K4
 z2
-Z0 !s12c _opt
-Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
+!s12c _opt
+Z0 !s99 nomlopt
 !s11f vlog 2023.4_3 2024.02, Feb 17 2024
 13
 !s112 1.1
@@ -28,13 +10,13 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 d/home/casager/dldfall2024/Lab4/SV_custom
+Z1 d/home/casager/dldfall2024/Lab4/SV_custom
 T_opt
-!s110 1728013248
-VIToDCo`U:YUJE@Kc7APjN1
+Z2 !s110 1728537243
+Vg<g<H]2QO[h4B:iIm;GQd3
 04 8 4 work stimulus fast 0
-=1-000ae431a4f1-66ff63c0-a50a8-6a57
-R1
+=1-000ae431a4f1-6707629b-ddc43-7c19
+R0
 !s12f OEM100
 !s12b OEM100
 !s124 OEM100
@@ -42,17 +24,16 @@ o-quiet -auto_acc_if_foreign -work work +acc
 Z3 tCvgOpt 0
 n@_opt
 OL;O;2023.4_3;77
-R2
 vcounter
 2src/counter.sv
 Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z5 !s110 1728013399
+R2
 !i10b 1
 !s100 6];lk[]U=CfBU?BSzM6J=1
 I?`?dBY6zn9N^RKdCm4^3B2
 S1
-R2
-w1727124728
+R1
+Z5 w1727125505
 8src/counter.sv
 Fsrc/counter.sv
 !i122 2
@@ -62,7 +43,7 @@ Z7 OL;L;2023.4_3;77
 r1
 !s85 0
 31
-Z8 !s108 1728013399.000000
+Z8 !s108 1728537243.000000
 !s107 src/counter.sv|
 !s90 -reportprogress|300|src/counter.sv|
 !i113 0
@@ -71,13 +52,13 @@ R3
 vflopenr
 2src/flopenr.sv
 R4
-R5
+R2
 !i10b 1
 !s100 GUIA:XFSOUZhe@<8@d2811
 IM1>HFDJ^i<5ijd3>:NWAV0
 S1
-R2
-w1727124789
+R1
+R5
 8src/flopenr.sv
 Fsrc/flopenr.sv
 !i122 3
@@ -96,13 +77,13 @@ R3
 vfpga_eth
 2fpga_eth.sv
 R4
-R5
-!i10b 1
-!s100 EJ4=QF4?6<]ZF;X;2TOV;0
-ITlV5Yb7iB3D>jCnPLz5QE0
-S1
 R2
-w1728013243
+!i10b 1
+!s100 2_ZEjFeS8l<S3gjGbj]fa2
+IZj7oW9Hc7Q@4m1m63Z5E62
+S1
+R1
+w1728536351
 8fpga_eth.sv
 Ffpga_eth.sv
 !i122 0
@@ -121,13 +102,13 @@ R3
 vstimulus
 2tb.sv
 R4
-R5
+R2
 !i10b 1
 !s100 VB13TY;0:;Kg4eVjOQZWz0
 IMczn=fh;]SkUYPn8haXb23
 S1
-R2
-w1728011837
+R1
+w1728057017
 8tb.sv
 Ftb.sv
 !i122 1
