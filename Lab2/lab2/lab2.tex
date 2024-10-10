@@ -734,12 +734,8 @@ first.  However, I would use the strategy that works the best for you.
 You should use the testbenches you utilized for Lab0 and Lab1 to help
 you test your design.  The design is completely combinational and
 should not be any different in terms of structure than both of these
-labs.  To get full credit, you should demonstrate that your design
-works for both encryption and decryption by testing at least $10$
-plaintext messages using at least $2$ different keys.  This is
-basically testing $20$ vectors - the more vectors tested and the
-methodology you use could possibly
-earn you extra credit on this laboratory.
+labs.  You can design the testbench to read in different messages to
+automate the process as we did in Lab~$1$.
 
 I have also given you some freebies to help you with this lab.  When
 writing HDL or software, it is sometimes useful to \textit{stub} your
@@ -750,14 +746,6 @@ as a guide.  However, the design is up to you and you can change it if
 you think it will help you optimize your design more effectively.
 I also put some comments in the SV to help you know where
 to instantiate certain items.
-
-I have also utilized a more advanced testbench that reads your
-message and generates the hash from a file.  These are included in the
-\verb!sha256.tv! files and $2$ examples are given.  The testbench should
-read in the values on each edge of the clock as in Lab 1.  Although
-this testbench outputs data to a file, you will find more information
-can be found through debugging in ModelSim as documented in the next
-subsection.
 
 \subsection{Getting to know ModelSim and Debugging more in depth}
 
