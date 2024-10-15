@@ -46,6 +46,7 @@ view wave
 #tracking back the header info, could on
 
 #Misc
+add wave -hex /stimulus/dut/CLK100MHZ
 add wave -hex /stimulus/dut/WordCount
 add wave -hex /stimulus/dut/TotalFrameWords
 add wave -hex /stimulus/dut/TotalFrameBytes
@@ -63,6 +64,7 @@ add wave -hex /stimulus/dut/WordCountReset
 #add wave -hex /stimulus/dut/RstCount
 #add wave -hex /stimulus/dut/timeout
 #add wave -hex /stimulus/dut/delay
+add wave -hex /stimulus/dut/NextState
 
 #Inputs 
 #add wave -noupdate -divider -height 32 "Inputs"

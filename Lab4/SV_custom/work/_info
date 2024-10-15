@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 d/home/casager/dldfall2024/Lab4/SV_custom
 T_opt
-!s110 1728587406
-VQ]nVYnUdDkfVV8fcZ=[Nb1
+!s110 1728591821
+VN[1=j^A_=Q;nV23l1:HQS1
 04 8 4 work stimulus fast 0
-=1-000ae431a4f1-6708268e-163b4-197c6
+=1-000ae431a4f1-670837cd-ba4a1-1b234
 R0
 !s12f OEM100
 !s12b OEM100
@@ -24,10 +24,11 @@ o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
 n@_opt
 OL;O;2023.4_3;77
+R1
 vcounter
 2src/counter.sv
 Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 !s110 1728587405
+Z4 !s110 1728591874
 !i10b 1
 !s100 6];lk[]U=CfBU?BSzM6J=1
 I?`?dBY6zn9N^RKdCm4^3B2
@@ -43,7 +44,7 @@ Z7 OL;L;2023.4_3;77
 r1
 !s85 0
 31
-Z8 !s108 1728587405.000000
+Z8 !s108 1728591874.000000
 !s107 src/counter.sv|
 !s90 -reportprogress|300|src/counter.sv|
 !i113 0

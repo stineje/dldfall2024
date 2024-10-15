@@ -167,6 +167,7 @@ module fpga_eth #
     assign Length = {4'b0, BytesInFrame};
     //assign TotalFrame = {16'h0000, EthType, DstMac, SrcMac, Data}; //type should come after dest/source
     assign TotalFrame = {56'h55_55_55_55_55_55_55, 8'hAB, DstMac, SrcMac, EthType, Data, {240{1'b0}}};
+    //56'h55_D5_55_55_55_55_55_55
 
 //    // *** fix me later
 //    assign DstMac = 48'h8F54_0000_1654; // made something up
