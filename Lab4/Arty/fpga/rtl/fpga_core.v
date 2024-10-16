@@ -223,7 +223,7 @@ wire tx_fifo_udp_payload_axis_tlast;
 wire tx_fifo_udp_payload_axis_tuser;
 
 // Configuration
-wire [47:0] local_mac   = 48'h02_f0_00_00_00_00;
+wire [47:0] local_mac   = 48'h02_00_00_00_00_00;
 wire [31:0] local_ip    = {8'd192, 8'd168, 8'd1,   8'd128};
 wire [31:0] gateway_ip  = {8'd192, 8'd168, 8'd1,   8'd1};
 wire [31:0] subnet_mask = {8'd255, 8'd255, 8'd255, 8'd0};
@@ -276,14 +276,14 @@ assign tx_udp_ip_dscp = 0;
 assign tx_udp_ip_ecn = 0;
 assign tx_udp_ip_ttl = 64;
 assign tx_udp_ip_source_ip = local_ip;
-assign tx_udp_ip_dest_ip = rx_udp_ip_source_ip;
-assign tx_udp_source_port = rx_udp_dest_port;
+assign tx_udp_ip_dest_ip = rx_udp_ip_source_ip; //change this to computer source
+assign tx_udp_source_port = rx_udp_dest_port; //change this to computer dest port
 assign tx_udp_dest_port = rx_udp_source_port;
 assign tx_udp_length = rx_udp_length;
 assign tx_udp_checksum = 0;
 
-assign tx_udp_payload_axis_tdata = tx_fifo_udp_payload_axis_tdata;
-assign tx_udp_payload_axis_tvalid = tx_fifo_udp_payload_axis_tvalid;
+assign tx_udp_payload_axis_tdata = tx_fifo_udp_payload_axis_tdata; //this will change based on a byte counter
+assign tx_udp_payload_axis_tvalid = tx_fifo_udp_payload_axis_tvalid; //tvalid, tready, tlast may be issues to resolve, could just hardcode to 1
 assign tx_fifo_udp_payload_axis_tready = tx_udp_payload_axis_tready;
 assign tx_udp_payload_axis_tlast = tx_fifo_udp_payload_axis_tlast;
 assign tx_udp_payload_axis_tuser = tx_fifo_udp_payload_axis_tuser;
@@ -315,7 +315,7 @@ always @(posedge clk) begin
 end
 
 //assign led = sw;
-assign {led0_g, led1_g, led2_g, led3_g, led4, led5, led6, led7} = led_reg;
+assign {led0_g, led1_g, led2_g, led3_g, led4, led5, led6, led7} = led_reg; //state of the LEDs is updated on the rising edge of the clock when a valid payload is transmitted
 assign phy_reset_n = !rst;
 
 assign uart_txd = 0;
