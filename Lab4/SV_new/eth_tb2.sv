@@ -44,10 +44,11 @@ module stimulus;
    logic 	        phy_reset_n;
    logic 	        uart_txd;
 
-   fpga_core #(
-	       .TARGET(TARGET)
-	       )
-   dut (
+//   fpga_core #(
+//	       .TARGET(TARGET)
+//	       )
+
+   fpga dut (
 	/*
 	 * Clock: 125MHz
 	 * Synchronous reset
