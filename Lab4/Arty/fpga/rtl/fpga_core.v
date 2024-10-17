@@ -288,11 +288,17 @@ assign tx_fifo_udp_payload_axis_tready = tx_udp_payload_axis_tready;
 assign tx_udp_payload_axis_tlast = tx_fifo_udp_payload_axis_tlast;
 assign tx_udp_payload_axis_tuser = tx_fifo_udp_payload_axis_tuser;
 
-assign rx_fifo_udp_payload_axis_tdata = rx_udp_payload_axis_tdata; //changes this after tx assigned to output from it (for next transmission?)
-assign rx_fifo_udp_payload_axis_tvalid = rx_udp_payload_axis_tvalid && match_cond_reg;
-assign rx_udp_payload_axis_tready = (rx_fifo_udp_payload_axis_tready && match_cond_reg) || no_match_reg;
-assign rx_fifo_udp_payload_axis_tlast = rx_udp_payload_axis_tlast;
-assign rx_fifo_udp_payload_axis_tuser = rx_udp_payload_axis_tuser;
+//assign rx_fifo_udp_payload_axis_tdata = rx_udp_payload_axis_tdata; //changes this after tx assigned to output from it (for next transmission?)
+//assign rx_fifo_udp_payload_axis_tvalid = rx_udp_payload_axis_tvalid && match_cond_reg;
+//assign rx_udp_payload_axis_tready = (rx_fifo_udp_payload_axis_tready && match_cond_reg) || no_match_reg;
+//assign rx_fifo_udp_payload_axis_tlast = rx_udp_payload_axis_tlast;
+//assign rx_fifo_udp_payload_axis_tuser = rx_udp_payload_axis_tuser;
+
+assign rx_fifo_udp_payload_axis_tdata = 8'h55; //changes this after tx assigned to output from it (for next transmission?)
+assign rx_fifo_udp_payload_axis_tvalid = 1'b1;
+assign rx_udp_payload_axis_tready = 1'b1;
+assign rx_fifo_udp_payload_axis_tlast = 1'b1;
+assign rx_fifo_udp_payload_axis_tuser = 1'b1;
 
 // Place first payload byte onto LEDs
 reg valid_last = 0;

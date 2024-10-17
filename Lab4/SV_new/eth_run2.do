@@ -79,6 +79,12 @@ view wave
 #add wave -hex -r /stimulus/*
 
 #Misc
+add wave -hex /stimulus/dut/tx_fifo_udp_payload_axis_tdata
+add wave -hex /stimulus/dut/tx_udp_payload_axis_tvalid
+add wave -hex /stimulus/dut/tx_fifo_udp_payload_axis_tready
+add wave -hex /stimulus/dut/tx_udp_payload_axis_tlast
+add wave -hex /stimulus/dut/tx_udp_payload_axis_tuser
+add wave -hex /stimulus/dut/led_reg
 
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"
