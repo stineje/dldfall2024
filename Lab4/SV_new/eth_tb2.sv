@@ -11,10 +11,10 @@ module stimulus;
    //Inputs 
    logic 	        clk;
    logic 	        rst;
-   logic [3:0] 	    btn;
-   logic [3:0] 	    sw;
+   logic [3:0] 	  btn;
+   logic [3:0] 	  sw;
    logic 	        phy_rx_clk;
-   logic [3:0] 	    phy_rxd;
+   logic [3:0] 	  phy_rxd;
    logic 	        phy_rx_dv;
    logic 	        phy_rx_er;
    logic 	        phy_tx_clk;
@@ -39,16 +39,16 @@ module stimulus;
    logic 	        led5;
    logic 	        led6;
    logic 	        led7;
-   logic [3:0] 	    phy_txd;
+   logic [3:0] 	  phy_txd;
    logic 	        phy_tx_en;
    logic 	        phy_reset_n;
    logic 	        uart_txd;
 
-//   fpga_core #(
-//	       .TARGET(TARGET)
-//	       )
+   fpga_core #(
+	       .TARGET(TARGET)
+	       )
 
-   fpga dut (
+   dut (
 	/*
 	 * Clock: 125MHz
 	 * Synchronous reset
@@ -58,8 +58,10 @@ module stimulus;
       
 	// GPIO
 
+	.sw(sw), //switched order for top fpga.v
 	.btn(btn),
-	.sw(sw),
+
+
 	.led0_r(led0_r),
 	.led0_g(led0_g),
 	.led0_b(led0_b),
@@ -80,7 +82,6 @@ module stimulus;
 	/*
 	 * Ethernet: 100BASE-T MII
 	 */
-
 	.phy_rx_clk(phy_rx_clk),
 	.phy_rxd(phy_rxd),
 	.phy_rx_dv(phy_rx_dv),

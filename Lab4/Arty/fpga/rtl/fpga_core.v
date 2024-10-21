@@ -246,7 +246,9 @@ assign tx_ip_payload_axis_tlast = 0;
 assign tx_ip_payload_axis_tuser = 0;
 
 // Loop back UDP
-wire match_cond = rx_udp_dest_port == 1234;
+// assign rx_udp_dest_port = 16'h1234; //added this 
+// assign rx_udp_source_port = 16'h5678; //added this
+wire match_cond = rx_udp_dest_port == 16'h1234;
 wire no_match = !match_cond;
 
 reg match_cond_reg = 0;
@@ -277,8 +279,10 @@ assign tx_udp_ip_ecn = 0;
 assign tx_udp_ip_ttl = 64;
 assign tx_udp_ip_source_ip = local_ip;
 assign tx_udp_ip_dest_ip = rx_udp_ip_source_ip; //change this to computer source
-assign tx_udp_source_port = rx_udp_dest_port; //change this to computer dest port
-assign tx_udp_dest_port = rx_udp_source_port;
+//assign tx_udp_source_port = rx_udp_dest_port; //change this to computer dest port
+//assign tx_udp_dest_port = rx_udp_src_port;
+assign tx_udp_source_port = 16'h1234;
+assign tx_udp_dest_port = 16'h5678;
 assign tx_udp_length = rx_udp_length;
 assign tx_udp_checksum = 0;
 

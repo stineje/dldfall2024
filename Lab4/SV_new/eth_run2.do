@@ -28,6 +28,7 @@ vlib work
 
 # compile source files
 
+vlog ../Arty/fpga/rtl/fpga.v
 vlog ../Arty/fpga/rtl/fpga_core.v
 #vlog ../../verilog-ethernet/rtl/*.v
 #vlog ../../verilog-ethernet/lib/axis/rtl/*.v
@@ -85,6 +86,25 @@ add wave -hex /stimulus/dut/tx_fifo_udp_payload_axis_tready
 add wave -hex /stimulus/dut/tx_udp_payload_axis_tlast
 add wave -hex /stimulus/dut/tx_udp_payload_axis_tuser
 add wave -hex /stimulus/dut/led_reg
+
+add wave -hex /stimulus/dut/tx_udp_hdr_valid
+add wave -hex /stimulus/dut/rx_udp_hdr_ready
+add wave -hex /stimulus/dut/tx_udp_ip_dscp
+add wave -hex /stimulus/dut/tx_udp_ip_ecn
+add wave -hex /stimulus/dut/tx_udp_ip_ttl
+add wave -hex /stimulus/dut/tx_udp_ip_source_ip
+add wave -hex /stimulus/dut/tx_udp_ip_dest_ip
+add wave -hex /stimulus/dut/tx_udp_source_port
+add wave -hex /stimulus/dut/tx_udp_dest_port
+add wave -hex /stimulus/dut/tx_udp_length
+add wave -hex /stimulus/dut/tx_udp_checksum
+
+#assign tx_udp_payload_axis_tdata = tx_fifo_udp_payload_axis_tdata; //this will change based on a byte counter
+#assign tx_udp_payload_axis_tvalid = tx_fifo_udp_payload_axis_tvalid; //tvalid, tready, tlast may be issues to resolve, could just hardcode to 1
+#assign tx_fifo_udp_payload_axis_tready = tx_udp_payload_axis_tready;
+#assign tx_udp_payload_axis_tlast = tx_fifo_udp_payload_axis_tlast;
+#assign tx_udp_payload_axis_tuser = tx_fifo_udp_payload_axis_tuser;
+
 
 #Inputs 
 add wave -noupdate -divider -height 32 "Inputs"
