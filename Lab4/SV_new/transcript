@@ -17,304 +17,322 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:04 on Oct 22,2024
 # vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
 # -- Compiling module fpga
 # 
 # Top level modules:
 # 	fpga
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:04 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:04 on Oct 22,2024
 # vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
 # -- Compiling module fpga_core
 # 
 # Top level modules:
 # 	fpga_core
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:04 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:04 on Oct 22,2024
 # vlog -reportprogress 300 eth_tb2.sv 
 # -- Compiling module stimulus
 # 
 # Top level modules:
 # 	stimulus
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:04 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:04 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
 # -- Compiling module eth_mac_mii_fifo
 # 
 # Top level modules:
 # 	eth_mac_mii_fifo
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:04 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:04 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_mac_mii.v 
 # -- Compiling module eth_mac_mii
 # 
 # Top level modules:
 # 	eth_mac_mii
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:04 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:04 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ssio_sdr_in.v 
 # -- Compiling module ssio_sdr_in
 # 
 # Top level modules:
 # 	ssio_sdr_in
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:04 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:04 on Oct 22,2024
 # vlog -reportprogress 300 ../src/mii_phy_if.v 
 # -- Compiling module mii_phy_if
 # 
 # Top level modules:
 # 	mii_phy_if
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:04 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:04 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_mac_1g.v 
 # -- Compiling module eth_mac_1g
 # 
 # Top level modules:
 # 	eth_mac_1g
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:04 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:04 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_gmii_rx.v 
 # -- Compiling module axis_gmii_rx
 # 
 # Top level modules:
 # 	axis_gmii_rx
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_gmii_tx.v 
 # -- Compiling module axis_gmii_tx
 # 
 # Top level modules:
 # 	axis_gmii_tx
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/lfsr.v 
 # -- Compiling module lfsr
 # 
 # Top level modules:
 # 	lfsr
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_axis_rx.v 
 # -- Compiling module eth_axis_rx
 # 
 # Top level modules:
 # 	eth_axis_rx
-# End time: 23:45:55 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:55 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_axis_tx.v 
 # -- Compiling module eth_axis_tx
 # 
 # Top level modules:
 # 	eth_axis_tx
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:01
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp_complete.v 
 # -- Compiling module udp_complete
 # 
 # Top level modules:
 # 	udp_complete
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp_checksum_gen.v 
 # -- Compiling module udp_checksum_gen
 # 
 # Top level modules:
 # 	udp_checksum_gen
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp.v 
 # -- Compiling module udp
 # 
 # Top level modules:
 # 	udp
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp_ip_rx.v 
 # -- Compiling module udp_ip_rx
 # 
 # Top level modules:
 # 	udp_ip_rx
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp_ip_tx.v 
 # -- Compiling module udp_ip_tx
 # 
 # Top level modules:
 # 	udp_ip_tx
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip_complete.v 
 # -- Compiling module ip_complete
 # 
 # Top level modules:
 # 	ip_complete
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip.v 
 # -- Compiling module ip
 # 
 # Top level modules:
 # 	ip
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip_eth_rx.v 
 # -- Compiling module ip_eth_rx
 # 
 # Top level modules:
 # 	ip_eth_rx
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip_eth_tx.v 
 # -- Compiling module ip_eth_tx
 # 
 # Top level modules:
 # 	ip_eth_tx
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip_arb_mux.v 
 # -- Compiling module ip_arb_mux
 # 
 # Top level modules:
 # 	ip_arb_mux
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arp.v 
 # -- Compiling module arp
 # 
 # Top level modules:
 # 	arp
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arp_cache.v 
 # -- Compiling module arp_cache
 # 
 # Top level modules:
 # 	arp_cache
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arp_eth_rx.v 
 # -- Compiling module arp_eth_rx
 # 
 # Top level modules:
 # 	arp_eth_rx
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arp_eth_tx.v 
 # -- Compiling module arp_eth_tx
 # 
 # Top level modules:
 # 	arp_eth_tx
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_arb_mux.v 
 # -- Compiling module eth_arb_mux
 # 
 # Top level modules:
 # 	eth_arb_mux
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arbiter.v 
 # -- Compiling module arbiter
 # 
 # Top level modules:
 # 	arbiter
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/priority_encoder.v 
 # -- Compiling module priority_encoder
 # 
 # Top level modules:
 # 	priority_encoder
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_fifo.v 
 # -- Compiling module axis_fifo
 # 
 # Top level modules:
 # 	axis_fifo
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:05 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:05 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_async_fifo.v 
 # -- Compiling module axis_async_fifo
 # 
 # Top level modules:
 # 	axis_async_fifo
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:06 on Oct 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:06 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
 # -- Compiling module axis_async_fifo_adapter
 # 
 # Top level modules:
 # 	axis_async_fifo_adapter
-# End time: 23:45:56 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:11:06 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:11:06 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:11:06 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:11:06 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:11:06 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 23:45:56 on Oct 21,2024
+# Start time: 14:11:06 on Oct 22,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vopt-143) Recognized 1 FSM in module "udp_ip_rx(fast)".
@@ -329,6 +347,8 @@
 # Loading sv_std.std
 # Loading work.stimulus(fast)
 # Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
 # Loading work.eth_mac_mii_fifo(fast)
 # Loading work.eth_mac_mii(fast)
 # Loading work.mii_phy_if(fast)
@@ -371,312 +391,332 @@ do eth_run2.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:43 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
 # -- Compiling module fpga
 # 
 # Top level modules:
 # 	fpga
-# End time: 23:46:43 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:43 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
 # -- Compiling module fpga_core
 # 
 # Top level modules:
 # 	fpga_core
-# End time: 23:46:43 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:43 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 eth_tb2.sv 
 # -- Compiling module stimulus
 # 
 # Top level modules:
 # 	stimulus
-# End time: 23:46:43 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:43 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
 # -- Compiling module eth_mac_mii_fifo
 # 
 # Top level modules:
 # 	eth_mac_mii_fifo
-# End time: 23:46:43 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:43 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_mac_mii.v 
 # -- Compiling module eth_mac_mii
 # 
 # Top level modules:
 # 	eth_mac_mii
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:01
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ssio_sdr_in.v 
 # -- Compiling module ssio_sdr_in
 # 
 # Top level modules:
 # 	ssio_sdr_in
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/mii_phy_if.v 
 # -- Compiling module mii_phy_if
 # 
 # Top level modules:
 # 	mii_phy_if
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_mac_1g.v 
 # -- Compiling module eth_mac_1g
 # 
 # Top level modules:
 # 	eth_mac_1g
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_gmii_rx.v 
 # -- Compiling module axis_gmii_rx
 # 
 # Top level modules:
 # 	axis_gmii_rx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_gmii_tx.v 
 # -- Compiling module axis_gmii_tx
 # 
 # Top level modules:
 # 	axis_gmii_tx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/lfsr.v 
 # -- Compiling module lfsr
 # 
 # Top level modules:
 # 	lfsr
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_axis_rx.v 
 # -- Compiling module eth_axis_rx
 # 
 # Top level modules:
 # 	eth_axis_rx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_axis_tx.v 
 # -- Compiling module eth_axis_tx
 # 
 # Top level modules:
 # 	eth_axis_tx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp_complete.v 
 # -- Compiling module udp_complete
 # 
 # Top level modules:
 # 	udp_complete
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp_checksum_gen.v 
 # -- Compiling module udp_checksum_gen
 # 
 # Top level modules:
 # 	udp_checksum_gen
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:26 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp.v 
 # -- Compiling module udp
 # 
 # Top level modules:
 # 	udp
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:26 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp_ip_rx.v 
 # -- Compiling module udp_ip_rx
 # 
 # Top level modules:
 # 	udp_ip_rx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/udp_ip_tx.v 
 # -- Compiling module udp_ip_tx
 # 
 # Top level modules:
 # 	udp_ip_tx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip_complete.v 
 # -- Compiling module ip_complete
 # 
 # Top level modules:
 # 	ip_complete
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip.v 
 # -- Compiling module ip
 # 
 # Top level modules:
 # 	ip
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip_eth_rx.v 
 # -- Compiling module ip_eth_rx
 # 
 # Top level modules:
 # 	ip_eth_rx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip_eth_tx.v 
 # -- Compiling module ip_eth_tx
 # 
 # Top level modules:
 # 	ip_eth_tx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/ip_arb_mux.v 
 # -- Compiling module ip_arb_mux
 # 
 # Top level modules:
 # 	ip_arb_mux
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arp.v 
 # -- Compiling module arp
 # 
 # Top level modules:
 # 	arp
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arp_cache.v 
 # -- Compiling module arp_cache
 # 
 # Top level modules:
 # 	arp_cache
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arp_eth_rx.v 
 # -- Compiling module arp_eth_rx
 # 
 # Top level modules:
 # 	arp_eth_rx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arp_eth_tx.v 
 # -- Compiling module arp_eth_tx
 # 
 # Top level modules:
 # 	arp_eth_tx
-# End time: 23:46:44 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:44 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/eth_arb_mux.v 
 # -- Compiling module eth_arb_mux
 # 
 # Top level modules:
 # 	eth_arb_mux
-# End time: 23:46:45 on Oct 21,2024, Elapsed time: 0:00:01
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:45 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/arbiter.v 
 # -- Compiling module arbiter
 # 
 # Top level modules:
 # 	arbiter
-# End time: 23:46:45 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:45 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/priority_encoder.v 
 # -- Compiling module priority_encoder
 # 
 # Top level modules:
 # 	priority_encoder
-# End time: 23:46:45 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:45 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_fifo.v 
 # -- Compiling module axis_fifo
 # 
 # Top level modules:
 # 	axis_fifo
-# End time: 23:46:45 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:45 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_async_fifo.v 
 # -- Compiling module axis_async_fifo
 # 
 # Top level modules:
 # 	axis_async_fifo
-# End time: 23:46:45 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
-# Start time: 23:46:45 on Oct 21,2024
+# Start time: 14:12:27 on Oct 22,2024
 # vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
 # -- Compiling module axis_async_fifo_adapter
 # 
 # Top level modules:
 # 	axis_async_fifo_adapter
-# End time: 23:46:45 on Oct 21,2024, Elapsed time: 0:00:00
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 23:46:45 on Oct 21,2024, Elapsed time: 0:00:49
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:12:27 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:12:27 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:12:27 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:12:28 on Oct 22,2024, Elapsed time: 0:01:22
 # Errors: 0, Warnings: 1
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 23:46:45 on Oct 21,2024
+# Start time: 14:12:28 on Oct 22,2024
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
 # Loading work.stimulus(fast)
 # Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
 # Loading work.eth_mac_mii_fifo(fast)
 # Loading work.eth_mac_mii(fast)
 # Loading work.mii_phy_if(fast)
@@ -713,5 +753,2953 @@ do eth_run2.do
 # Loading work.axis_fifo(fast__1)
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
-# End time: 00:03:39 on Oct 22,2024, Elapsed time: 0:16:54
+q
+do eth_run2.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@jarvis.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is casager@jarvis.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
+# -- Compiling module fpga
+# 
+# Top level modules:
+# 	fpga
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
+# -- Compiling module fpga_core
+# 
+# Top level modules:
+# 	fpga_core
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 eth_tb2.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
+# -- Compiling module eth_mac_mii_fifo
+# 
+# Top level modules:
+# 	eth_mac_mii_fifo
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii.v 
+# -- Compiling module eth_mac_mii
+# 
+# Top level modules:
+# 	eth_mac_mii
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ssio_sdr_in.v 
+# -- Compiling module ssio_sdr_in
+# 
+# Top level modules:
+# 	ssio_sdr_in
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/mii_phy_if.v 
+# -- Compiling module mii_phy_if
+# 
+# Top level modules:
+# 	mii_phy_if
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_1g.v 
+# -- Compiling module eth_mac_1g
+# 
+# Top level modules:
+# 	eth_mac_1g
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_rx.v 
+# -- Compiling module axis_gmii_rx
+# 
+# Top level modules:
+# 	axis_gmii_rx
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_tx.v 
+# -- Compiling module axis_gmii_tx
+# 
+# Top level modules:
+# 	axis_gmii_tx
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/lfsr.v 
+# -- Compiling module lfsr
+# 
+# Top level modules:
+# 	lfsr
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_rx.v 
+# -- Compiling module eth_axis_rx
+# 
+# Top level modules:
+# 	eth_axis_rx
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_tx.v 
+# -- Compiling module eth_axis_tx
+# 
+# Top level modules:
+# 	eth_axis_tx
+# End time: 14:13:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_complete.v 
+# -- Compiling module udp_complete
+# 
+# Top level modules:
+# 	udp_complete
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_checksum_gen.v 
+# -- Compiling module udp_checksum_gen
+# 
+# Top level modules:
+# 	udp_checksum_gen
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp.v 
+# -- Compiling module udp
+# 
+# Top level modules:
+# 	udp
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_rx.v 
+# -- Compiling module udp_ip_rx
+# 
+# Top level modules:
+# 	udp_ip_rx
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_tx.v 
+# -- Compiling module udp_ip_tx
+# 
+# Top level modules:
+# 	udp_ip_tx
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_complete.v 
+# -- Compiling module ip_complete
+# 
+# Top level modules:
+# 	ip_complete
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip.v 
+# -- Compiling module ip
+# 
+# Top level modules:
+# 	ip
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_rx.v 
+# -- Compiling module ip_eth_rx
+# 
+# Top level modules:
+# 	ip_eth_rx
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_tx.v 
+# -- Compiling module ip_eth_tx
+# 
+# Top level modules:
+# 	ip_eth_tx
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_arb_mux.v 
+# -- Compiling module ip_arb_mux
+# 
+# Top level modules:
+# 	ip_arb_mux
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp.v 
+# -- Compiling module arp
+# 
+# Top level modules:
+# 	arp
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_cache.v 
+# -- Compiling module arp_cache
+# 
+# Top level modules:
+# 	arp_cache
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_rx.v 
+# -- Compiling module arp_eth_rx
+# 
+# Top level modules:
+# 	arp_eth_rx
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_tx.v 
+# -- Compiling module arp_eth_tx
+# 
+# Top level modules:
+# 	arp_eth_tx
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_arb_mux.v 
+# -- Compiling module eth_arb_mux
+# 
+# Top level modules:
+# 	eth_arb_mux
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arbiter.v 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/priority_encoder.v 
+# -- Compiling module priority_encoder
+# 
+# Top level modules:
+# 	priority_encoder
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_fifo.v 
+# -- Compiling module axis_fifo
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo.v 
+# -- Compiling module axis_async_fifo
+# 
+# Top level modules:
+# 	axis_async_fifo
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
+# -- Compiling module axis_async_fifo_adapter
+# 
+# Top level modules:
+# 	axis_async_fifo_adapter
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:13:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:13:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:13:09 on Oct 22,2024, Elapsed time: 0:00:41
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 14:13:09 on Oct 22,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.eth_mac_mii_fifo(fast)
+# Loading work.eth_mac_mii(fast)
+# Loading work.mii_phy_if(fast)
+# Loading work.ssio_sdr_in(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# Loading work.axis_async_fifo_adapter(fast)
+# Loading work.axis_async_fifo(fast)
+# Loading work.axis_async_fifo_adapter(fast__1)
+# Loading work.axis_async_fifo(fast__1)
+# Loading work.eth_axis_rx(fast)
+# Loading work.eth_axis_tx(fast)
+# Loading work.udp_complete(fast)
+# Loading work.ip_arb_mux(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading work.ip_complete(fast)
+# Loading work.eth_arb_mux(fast)
+# Loading work.ip(fast)
+# Loading work.ip_eth_rx(fast)
+# Loading work.ip_eth_tx(fast)
+# Loading work.arp(fast)
+# Loading work.arp_eth_rx(fast)
+# Loading work.arp_eth_tx(fast)
+# Loading work.arp_cache(fast)
+# Loading work.lfsr(fast__1)
+# Loading work.udp(fast)
+# Loading work.udp_checksum_gen(fast)
+# Loading work.axis_fifo(fast)
+# Loading work.udp_ip_rx(fast)
+# Loading work.udp_ip_tx(fast)
+# Loading work.axis_fifo(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# Causality operation skipped due to absence of debug database file
+do eth_run2.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@jarvis.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is casager@jarvis.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:49 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
+# -- Compiling module fpga
+# 
+# Top level modules:
+# 	fpga
+# End time: 14:14:49 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:49 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
+# -- Compiling module fpga_core
+# 
+# Top level modules:
+# 	fpga_core
+# End time: 14:14:49 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:49 on Oct 22,2024
+# vlog -reportprogress 300 eth_tb2.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 14:14:49 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:49 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
+# -- Compiling module eth_mac_mii_fifo
+# 
+# Top level modules:
+# 	eth_mac_mii_fifo
+# End time: 14:14:49 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:49 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii.v 
+# -- Compiling module eth_mac_mii
+# 
+# Top level modules:
+# 	eth_mac_mii
+# End time: 14:14:49 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:49 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ssio_sdr_in.v 
+# -- Compiling module ssio_sdr_in
+# 
+# Top level modules:
+# 	ssio_sdr_in
+# End time: 14:14:49 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:49 on Oct 22,2024
+# vlog -reportprogress 300 ../src/mii_phy_if.v 
+# -- Compiling module mii_phy_if
+# 
+# Top level modules:
+# 	mii_phy_if
+# End time: 14:14:49 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:49 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_1g.v 
+# -- Compiling module eth_mac_1g
+# 
+# Top level modules:
+# 	eth_mac_1g
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_rx.v 
+# -- Compiling module axis_gmii_rx
+# 
+# Top level modules:
+# 	axis_gmii_rx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_tx.v 
+# -- Compiling module axis_gmii_tx
+# 
+# Top level modules:
+# 	axis_gmii_tx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/lfsr.v 
+# -- Compiling module lfsr
+# 
+# Top level modules:
+# 	lfsr
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_rx.v 
+# -- Compiling module eth_axis_rx
+# 
+# Top level modules:
+# 	eth_axis_rx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_tx.v 
+# -- Compiling module eth_axis_tx
+# 
+# Top level modules:
+# 	eth_axis_tx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_complete.v 
+# -- Compiling module udp_complete
+# 
+# Top level modules:
+# 	udp_complete
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_checksum_gen.v 
+# -- Compiling module udp_checksum_gen
+# 
+# Top level modules:
+# 	udp_checksum_gen
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp.v 
+# -- Compiling module udp
+# 
+# Top level modules:
+# 	udp
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_rx.v 
+# -- Compiling module udp_ip_rx
+# 
+# Top level modules:
+# 	udp_ip_rx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_tx.v 
+# -- Compiling module udp_ip_tx
+# 
+# Top level modules:
+# 	udp_ip_tx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_complete.v 
+# -- Compiling module ip_complete
+# 
+# Top level modules:
+# 	ip_complete
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip.v 
+# -- Compiling module ip
+# 
+# Top level modules:
+# 	ip
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_rx.v 
+# -- Compiling module ip_eth_rx
+# 
+# Top level modules:
+# 	ip_eth_rx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_tx.v 
+# -- Compiling module ip_eth_tx
+# 
+# Top level modules:
+# 	ip_eth_tx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_arb_mux.v 
+# -- Compiling module ip_arb_mux
+# 
+# Top level modules:
+# 	ip_arb_mux
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp.v 
+# -- Compiling module arp
+# 
+# Top level modules:
+# 	arp
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_cache.v 
+# -- Compiling module arp_cache
+# 
+# Top level modules:
+# 	arp_cache
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_rx.v 
+# -- Compiling module arp_eth_rx
+# 
+# Top level modules:
+# 	arp_eth_rx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_tx.v 
+# -- Compiling module arp_eth_tx
+# 
+# Top level modules:
+# 	arp_eth_tx
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_arb_mux.v 
+# -- Compiling module eth_arb_mux
+# 
+# Top level modules:
+# 	eth_arb_mux
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arbiter.v 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 14:14:50 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:50 on Oct 22,2024
+# vlog -reportprogress 300 ../src/priority_encoder.v 
+# -- Compiling module priority_encoder
+# 
+# Top level modules:
+# 	priority_encoder
+# End time: 14:14:51 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:51 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_fifo.v 
+# -- Compiling module axis_fifo
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 14:14:51 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:51 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo.v 
+# -- Compiling module axis_async_fifo
+# 
+# Top level modules:
+# 	axis_async_fifo
+# End time: 14:14:51 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:51 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
+# -- Compiling module axis_async_fifo_adapter
+# 
+# Top level modules:
+# 	axis_async_fifo_adapter
+# End time: 14:14:51 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:51 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:14:51 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:14:51 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:14:51 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:14:52 on Oct 22,2024, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 14:14:52 on Oct 22,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.eth_mac_mii_fifo(fast)
+# Loading work.eth_mac_mii(fast)
+# Loading work.mii_phy_if(fast)
+# Loading work.ssio_sdr_in(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# Loading work.axis_async_fifo_adapter(fast)
+# Loading work.axis_async_fifo(fast)
+# Loading work.axis_async_fifo_adapter(fast__1)
+# Loading work.axis_async_fifo(fast__1)
+# Loading work.eth_axis_rx(fast)
+# Loading work.eth_axis_tx(fast)
+# Loading work.udp_complete(fast)
+# Loading work.ip_arb_mux(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading work.ip_complete(fast)
+# Loading work.eth_arb_mux(fast)
+# Loading work.ip(fast)
+# Loading work.ip_eth_rx(fast)
+# Loading work.ip_eth_tx(fast)
+# Loading work.arp(fast)
+# Loading work.arp_eth_rx(fast)
+# Loading work.arp_eth_tx(fast)
+# Loading work.arp_cache(fast)
+# Loading work.lfsr(fast__1)
+# Loading work.udp(fast)
+# Loading work.udp_checksum_gen(fast)
+# Loading work.axis_fifo(fast)
+# Loading work.udp_ip_rx(fast)
+# Loading work.udp_ip_tx(fast)
+# Loading work.axis_fifo(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do eth_run2.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@jarvis.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is casager@jarvis.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
+# -- Compiling module fpga
+# 
+# Top level modules:
+# 	fpga
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
+# -- Compiling module fpga_core
+# 
+# Top level modules:
+# 	fpga_core
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 eth_tb2.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
+# -- Compiling module eth_mac_mii_fifo
+# 
+# Top level modules:
+# 	eth_mac_mii_fifo
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii.v 
+# -- Compiling module eth_mac_mii
+# 
+# Top level modules:
+# 	eth_mac_mii
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ssio_sdr_in.v 
+# -- Compiling module ssio_sdr_in
+# 
+# Top level modules:
+# 	ssio_sdr_in
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/mii_phy_if.v 
+# -- Compiling module mii_phy_if
+# 
+# Top level modules:
+# 	mii_phy_if
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_1g.v 
+# -- Compiling module eth_mac_1g
+# 
+# Top level modules:
+# 	eth_mac_1g
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_rx.v 
+# -- Compiling module axis_gmii_rx
+# 
+# Top level modules:
+# 	axis_gmii_rx
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_tx.v 
+# -- Compiling module axis_gmii_tx
+# 
+# Top level modules:
+# 	axis_gmii_tx
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/lfsr.v 
+# -- Compiling module lfsr
+# 
+# Top level modules:
+# 	lfsr
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_rx.v 
+# -- Compiling module eth_axis_rx
+# 
+# Top level modules:
+# 	eth_axis_rx
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_tx.v 
+# -- Compiling module eth_axis_tx
+# 
+# Top level modules:
+# 	eth_axis_tx
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_complete.v 
+# -- Compiling module udp_complete
+# 
+# Top level modules:
+# 	udp_complete
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_checksum_gen.v 
+# -- Compiling module udp_checksum_gen
+# 
+# Top level modules:
+# 	udp_checksum_gen
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp.v 
+# -- Compiling module udp
+# 
+# Top level modules:
+# 	udp
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_rx.v 
+# -- Compiling module udp_ip_rx
+# 
+# Top level modules:
+# 	udp_ip_rx
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_tx.v 
+# -- Compiling module udp_ip_tx
+# 
+# Top level modules:
+# 	udp_ip_tx
+# End time: 14:17:04 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:04 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_complete.v 
+# -- Compiling module ip_complete
+# 
+# Top level modules:
+# 	ip_complete
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip.v 
+# -- Compiling module ip
+# 
+# Top level modules:
+# 	ip
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_rx.v 
+# -- Compiling module ip_eth_rx
+# 
+# Top level modules:
+# 	ip_eth_rx
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_tx.v 
+# -- Compiling module ip_eth_tx
+# 
+# Top level modules:
+# 	ip_eth_tx
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_arb_mux.v 
+# -- Compiling module ip_arb_mux
+# 
+# Top level modules:
+# 	ip_arb_mux
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp.v 
+# -- Compiling module arp
+# 
+# Top level modules:
+# 	arp
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_cache.v 
+# -- Compiling module arp_cache
+# 
+# Top level modules:
+# 	arp_cache
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_rx.v 
+# -- Compiling module arp_eth_rx
+# 
+# Top level modules:
+# 	arp_eth_rx
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_tx.v 
+# -- Compiling module arp_eth_tx
+# 
+# Top level modules:
+# 	arp_eth_tx
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_arb_mux.v 
+# -- Compiling module eth_arb_mux
+# 
+# Top level modules:
+# 	eth_arb_mux
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arbiter.v 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/priority_encoder.v 
+# -- Compiling module priority_encoder
+# 
+# Top level modules:
+# 	priority_encoder
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_fifo.v 
+# -- Compiling module axis_fifo
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo.v 
+# -- Compiling module axis_async_fifo
+# 
+# Top level modules:
+# 	axis_async_fifo
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
+# -- Compiling module axis_async_fifo_adapter
+# 
+# Top level modules:
+# 	axis_async_fifo_adapter
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:05 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:17:05 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:17:08 on Oct 22,2024, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 14:17:08 on Oct 22,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.eth_mac_mii_fifo(fast)
+# Loading work.eth_mac_mii(fast)
+# Loading work.mii_phy_if(fast)
+# Loading work.ssio_sdr_in(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# Loading work.axis_async_fifo_adapter(fast)
+# Loading work.axis_async_fifo(fast)
+# Loading work.axis_async_fifo_adapter(fast__1)
+# Loading work.axis_async_fifo(fast__1)
+# Loading work.eth_axis_rx(fast)
+# Loading work.eth_axis_tx(fast)
+# Loading work.udp_complete(fast)
+# Loading work.ip_arb_mux(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading work.ip_complete(fast)
+# Loading work.eth_arb_mux(fast)
+# Loading work.ip(fast)
+# Loading work.ip_eth_rx(fast)
+# Loading work.ip_eth_tx(fast)
+# Loading work.arp(fast)
+# Loading work.arp_eth_rx(fast)
+# Loading work.arp_eth_tx(fast)
+# Loading work.arp_cache(fast)
+# Loading work.lfsr(fast__1)
+# Loading work.udp(fast)
+# Loading work.udp_checksum_gen(fast)
+# Loading work.axis_fifo(fast)
+# Loading work.udp_ip_rx(fast)
+# Loading work.udp_ip_tx(fast)
+# Loading work.axis_fifo(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do eth_run2.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@jarvis.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is casager@jarvis.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:32 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
+# -- Compiling module fpga
+# 
+# Top level modules:
+# 	fpga
+# End time: 14:17:32 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:32 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
+# -- Compiling module fpga_core
+# 
+# Top level modules:
+# 	fpga_core
+# End time: 14:17:32 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:32 on Oct 22,2024
+# vlog -reportprogress 300 eth_tb2.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 14:17:32 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:32 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
+# -- Compiling module eth_mac_mii_fifo
+# 
+# Top level modules:
+# 	eth_mac_mii_fifo
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii.v 
+# -- Compiling module eth_mac_mii
+# 
+# Top level modules:
+# 	eth_mac_mii
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ssio_sdr_in.v 
+# -- Compiling module ssio_sdr_in
+# 
+# Top level modules:
+# 	ssio_sdr_in
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/mii_phy_if.v 
+# -- Compiling module mii_phy_if
+# 
+# Top level modules:
+# 	mii_phy_if
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_1g.v 
+# -- Compiling module eth_mac_1g
+# 
+# Top level modules:
+# 	eth_mac_1g
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_rx.v 
+# -- Compiling module axis_gmii_rx
+# 
+# Top level modules:
+# 	axis_gmii_rx
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_tx.v 
+# -- Compiling module axis_gmii_tx
+# 
+# Top level modules:
+# 	axis_gmii_tx
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/lfsr.v 
+# -- Compiling module lfsr
+# 
+# Top level modules:
+# 	lfsr
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_rx.v 
+# -- Compiling module eth_axis_rx
+# 
+# Top level modules:
+# 	eth_axis_rx
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_tx.v 
+# -- Compiling module eth_axis_tx
+# 
+# Top level modules:
+# 	eth_axis_tx
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_complete.v 
+# -- Compiling module udp_complete
+# 
+# Top level modules:
+# 	udp_complete
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_checksum_gen.v 
+# -- Compiling module udp_checksum_gen
+# 
+# Top level modules:
+# 	udp_checksum_gen
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp.v 
+# -- Compiling module udp
+# 
+# Top level modules:
+# 	udp
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_rx.v 
+# -- Compiling module udp_ip_rx
+# 
+# Top level modules:
+# 	udp_ip_rx
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_tx.v 
+# -- Compiling module udp_ip_tx
+# 
+# Top level modules:
+# 	udp_ip_tx
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_complete.v 
+# -- Compiling module ip_complete
+# 
+# Top level modules:
+# 	ip_complete
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip.v 
+# -- Compiling module ip
+# 
+# Top level modules:
+# 	ip
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_rx.v 
+# -- Compiling module ip_eth_rx
+# 
+# Top level modules:
+# 	ip_eth_rx
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_tx.v 
+# -- Compiling module ip_eth_tx
+# 
+# Top level modules:
+# 	ip_eth_tx
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_arb_mux.v 
+# -- Compiling module ip_arb_mux
+# 
+# Top level modules:
+# 	ip_arb_mux
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp.v 
+# -- Compiling module arp
+# 
+# Top level modules:
+# 	arp
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_cache.v 
+# -- Compiling module arp_cache
+# 
+# Top level modules:
+# 	arp_cache
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:33 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_rx.v 
+# -- Compiling module arp_eth_rx
+# 
+# Top level modules:
+# 	arp_eth_rx
+# End time: 14:17:33 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:34 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_tx.v 
+# -- Compiling module arp_eth_tx
+# 
+# Top level modules:
+# 	arp_eth_tx
+# End time: 14:17:34 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:34 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_arb_mux.v 
+# -- Compiling module eth_arb_mux
+# 
+# Top level modules:
+# 	eth_arb_mux
+# End time: 14:17:34 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:34 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arbiter.v 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 14:17:34 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:34 on Oct 22,2024
+# vlog -reportprogress 300 ../src/priority_encoder.v 
+# -- Compiling module priority_encoder
+# 
+# Top level modules:
+# 	priority_encoder
+# End time: 14:17:34 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:34 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_fifo.v 
+# -- Compiling module axis_fifo
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 14:17:34 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:34 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo.v 
+# -- Compiling module axis_async_fifo
+# 
+# Top level modules:
+# 	axis_async_fifo
+# End time: 14:17:34 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:34 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
+# -- Compiling module axis_async_fifo_adapter
+# 
+# Top level modules:
+# 	axis_async_fifo_adapter
+# End time: 14:17:34 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:34 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:17:34 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:17:34 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:17:34 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:17:38 on Oct 22,2024, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 14:17:38 on Oct 22,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.eth_mac_mii_fifo(fast)
+# Loading work.eth_mac_mii(fast)
+# Loading work.mii_phy_if(fast)
+# Loading work.ssio_sdr_in(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# Loading work.axis_async_fifo_adapter(fast)
+# Loading work.axis_async_fifo(fast)
+# Loading work.axis_async_fifo_adapter(fast__1)
+# Loading work.axis_async_fifo(fast__1)
+# Loading work.eth_axis_rx(fast)
+# Loading work.eth_axis_tx(fast)
+# Loading work.udp_complete(fast)
+# Loading work.ip_arb_mux(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading work.ip_complete(fast)
+# Loading work.eth_arb_mux(fast)
+# Loading work.ip(fast)
+# Loading work.ip_eth_rx(fast)
+# Loading work.ip_eth_tx(fast)
+# Loading work.arp(fast)
+# Loading work.arp_eth_rx(fast)
+# Loading work.arp_eth_tx(fast)
+# Loading work.arp_cache(fast)
+# Loading work.lfsr(fast__1)
+# Loading work.udp(fast)
+# Loading work.udp_checksum_gen(fast)
+# Loading work.axis_fifo(fast)
+# Loading work.udp_ip_rx(fast)
+# Loading work.udp_ip_tx(fast)
+# Loading work.axis_fifo(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do eth_run2.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@jarvis.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is casager@jarvis.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
+# -- Compiling module fpga
+# 
+# Top level modules:
+# 	fpga
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
+# -- Compiling module fpga_core
+# 
+# Top level modules:
+# 	fpga_core
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 eth_tb2.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
+# -- Compiling module eth_mac_mii_fifo
+# 
+# Top level modules:
+# 	eth_mac_mii_fifo
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii.v 
+# -- Compiling module eth_mac_mii
+# 
+# Top level modules:
+# 	eth_mac_mii
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ssio_sdr_in.v 
+# -- Compiling module ssio_sdr_in
+# 
+# Top level modules:
+# 	ssio_sdr_in
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../src/mii_phy_if.v 
+# -- Compiling module mii_phy_if
+# 
+# Top level modules:
+# 	mii_phy_if
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_1g.v 
+# -- Compiling module eth_mac_1g
+# 
+# Top level modules:
+# 	eth_mac_1g
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_rx.v 
+# -- Compiling module axis_gmii_rx
+# 
+# Top level modules:
+# 	axis_gmii_rx
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_tx.v 
+# -- Compiling module axis_gmii_tx
+# 
+# Top level modules:
+# 	axis_gmii_tx
+# End time: 14:19:45 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:45 on Oct 22,2024
+# vlog -reportprogress 300 ../src/lfsr.v 
+# -- Compiling module lfsr
+# 
+# Top level modules:
+# 	lfsr
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_rx.v 
+# -- Compiling module eth_axis_rx
+# 
+# Top level modules:
+# 	eth_axis_rx
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_tx.v 
+# -- Compiling module eth_axis_tx
+# 
+# Top level modules:
+# 	eth_axis_tx
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_complete.v 
+# -- Compiling module udp_complete
+# 
+# Top level modules:
+# 	udp_complete
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_checksum_gen.v 
+# -- Compiling module udp_checksum_gen
+# 
+# Top level modules:
+# 	udp_checksum_gen
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp.v 
+# -- Compiling module udp
+# 
+# Top level modules:
+# 	udp
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_rx.v 
+# -- Compiling module udp_ip_rx
+# 
+# Top level modules:
+# 	udp_ip_rx
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_tx.v 
+# -- Compiling module udp_ip_tx
+# 
+# Top level modules:
+# 	udp_ip_tx
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_complete.v 
+# -- Compiling module ip_complete
+# 
+# Top level modules:
+# 	ip_complete
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip.v 
+# -- Compiling module ip
+# 
+# Top level modules:
+# 	ip
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_rx.v 
+# -- Compiling module ip_eth_rx
+# 
+# Top level modules:
+# 	ip_eth_rx
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_tx.v 
+# -- Compiling module ip_eth_tx
+# 
+# Top level modules:
+# 	ip_eth_tx
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_arb_mux.v 
+# -- Compiling module ip_arb_mux
+# 
+# Top level modules:
+# 	ip_arb_mux
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp.v 
+# -- Compiling module arp
+# 
+# Top level modules:
+# 	arp
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_cache.v 
+# -- Compiling module arp_cache
+# 
+# Top level modules:
+# 	arp_cache
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_rx.v 
+# -- Compiling module arp_eth_rx
+# 
+# Top level modules:
+# 	arp_eth_rx
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_tx.v 
+# -- Compiling module arp_eth_tx
+# 
+# Top level modules:
+# 	arp_eth_tx
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_arb_mux.v 
+# -- Compiling module eth_arb_mux
+# 
+# Top level modules:
+# 	eth_arb_mux
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arbiter.v 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/priority_encoder.v 
+# -- Compiling module priority_encoder
+# 
+# Top level modules:
+# 	priority_encoder
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_fifo.v 
+# -- Compiling module axis_fifo
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo.v 
+# -- Compiling module axis_async_fifo
+# 
+# Top level modules:
+# 	axis_async_fifo
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
+# -- Compiling module axis_async_fifo_adapter
+# 
+# Top level modules:
+# 	axis_async_fifo_adapter
+# End time: 14:19:46 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:46 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:19:47 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:19:47 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:19:47 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:19:51 on Oct 22,2024, Elapsed time: 0:02:13
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 14:19:51 on Oct 22,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.eth_mac_mii_fifo(fast)
+# Loading work.eth_mac_mii(fast)
+# Loading work.mii_phy_if(fast)
+# Loading work.ssio_sdr_in(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# Loading work.axis_async_fifo_adapter(fast)
+# Loading work.axis_async_fifo(fast)
+# Loading work.axis_async_fifo_adapter(fast__1)
+# Loading work.axis_async_fifo(fast__1)
+# Loading work.eth_axis_rx(fast)
+# Loading work.eth_axis_tx(fast)
+# Loading work.udp_complete(fast)
+# Loading work.ip_arb_mux(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading work.ip_complete(fast)
+# Loading work.eth_arb_mux(fast)
+# Loading work.ip(fast)
+# Loading work.ip_eth_rx(fast)
+# Loading work.ip_eth_tx(fast)
+# Loading work.arp(fast)
+# Loading work.arp_eth_rx(fast)
+# Loading work.arp_eth_tx(fast)
+# Loading work.arp_cache(fast)
+# Loading work.lfsr(fast__1)
+# Loading work.udp(fast)
+# Loading work.udp_checksum_gen(fast)
+# Loading work.axis_fifo(fast)
+# Loading work.udp_ip_rx(fast)
+# Loading work.udp_ip_tx(fast)
+# Loading work.axis_fifo(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do eth_run2.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@jarvis.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is casager@jarvis.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
+# -- Compiling module fpga
+# 
+# Top level modules:
+# 	fpga
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
+# -- Compiling module fpga_core
+# 
+# Top level modules:
+# 	fpga_core
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 eth_tb2.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
+# -- Compiling module eth_mac_mii_fifo
+# 
+# Top level modules:
+# 	eth_mac_mii_fifo
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii.v 
+# -- Compiling module eth_mac_mii
+# 
+# Top level modules:
+# 	eth_mac_mii
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ssio_sdr_in.v 
+# -- Compiling module ssio_sdr_in
+# 
+# Top level modules:
+# 	ssio_sdr_in
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/mii_phy_if.v 
+# -- Compiling module mii_phy_if
+# 
+# Top level modules:
+# 	mii_phy_if
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_1g.v 
+# -- Compiling module eth_mac_1g
+# 
+# Top level modules:
+# 	eth_mac_1g
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_rx.v 
+# -- Compiling module axis_gmii_rx
+# 
+# Top level modules:
+# 	axis_gmii_rx
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_tx.v 
+# -- Compiling module axis_gmii_tx
+# 
+# Top level modules:
+# 	axis_gmii_tx
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/lfsr.v 
+# -- Compiling module lfsr
+# 
+# Top level modules:
+# 	lfsr
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_rx.v 
+# -- Compiling module eth_axis_rx
+# 
+# Top level modules:
+# 	eth_axis_rx
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_tx.v 
+# -- Compiling module eth_axis_tx
+# 
+# Top level modules:
+# 	eth_axis_tx
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_complete.v 
+# -- Compiling module udp_complete
+# 
+# Top level modules:
+# 	udp_complete
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_checksum_gen.v 
+# -- Compiling module udp_checksum_gen
+# 
+# Top level modules:
+# 	udp_checksum_gen
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp.v 
+# -- Compiling module udp
+# 
+# Top level modules:
+# 	udp
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_rx.v 
+# -- Compiling module udp_ip_rx
+# 
+# Top level modules:
+# 	udp_ip_rx
+# End time: 14:21:11 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:11 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_tx.v 
+# -- Compiling module udp_ip_tx
+# 
+# Top level modules:
+# 	udp_ip_tx
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_complete.v 
+# -- Compiling module ip_complete
+# 
+# Top level modules:
+# 	ip_complete
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip.v 
+# -- Compiling module ip
+# 
+# Top level modules:
+# 	ip
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_rx.v 
+# -- Compiling module ip_eth_rx
+# 
+# Top level modules:
+# 	ip_eth_rx
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_tx.v 
+# -- Compiling module ip_eth_tx
+# 
+# Top level modules:
+# 	ip_eth_tx
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_arb_mux.v 
+# -- Compiling module ip_arb_mux
+# 
+# Top level modules:
+# 	ip_arb_mux
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp.v 
+# -- Compiling module arp
+# 
+# Top level modules:
+# 	arp
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_cache.v 
+# -- Compiling module arp_cache
+# 
+# Top level modules:
+# 	arp_cache
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_rx.v 
+# -- Compiling module arp_eth_rx
+# 
+# Top level modules:
+# 	arp_eth_rx
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_tx.v 
+# -- Compiling module arp_eth_tx
+# 
+# Top level modules:
+# 	arp_eth_tx
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_arb_mux.v 
+# -- Compiling module eth_arb_mux
+# 
+# Top level modules:
+# 	eth_arb_mux
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arbiter.v 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/priority_encoder.v 
+# -- Compiling module priority_encoder
+# 
+# Top level modules:
+# 	priority_encoder
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_fifo.v 
+# -- Compiling module axis_fifo
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo.v 
+# -- Compiling module axis_async_fifo
+# 
+# Top level modules:
+# 	axis_async_fifo
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
+# -- Compiling module axis_async_fifo_adapter
+# 
+# Top level modules:
+# 	axis_async_fifo_adapter
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:21:12 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:21:12 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:21:18 on Oct 22,2024, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 14:21:18 on Oct 22,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.eth_mac_mii_fifo(fast)
+# Loading work.eth_mac_mii(fast)
+# Loading work.mii_phy_if(fast)
+# Loading work.ssio_sdr_in(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# Loading work.axis_async_fifo_adapter(fast)
+# Loading work.axis_async_fifo(fast)
+# Loading work.axis_async_fifo_adapter(fast__1)
+# Loading work.axis_async_fifo(fast__1)
+# Loading work.eth_axis_rx(fast)
+# Loading work.eth_axis_tx(fast)
+# Loading work.udp_complete(fast)
+# Loading work.ip_arb_mux(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading work.ip_complete(fast)
+# Loading work.eth_arb_mux(fast)
+# Loading work.ip(fast)
+# Loading work.ip_eth_rx(fast)
+# Loading work.ip_eth_tx(fast)
+# Loading work.arp(fast)
+# Loading work.arp_eth_rx(fast)
+# Loading work.arp_eth_tx(fast)
+# Loading work.arp_cache(fast)
+# Loading work.lfsr(fast__1)
+# Loading work.udp(fast)
+# Loading work.udp_checksum_gen(fast)
+# Loading work.axis_fifo(fast)
+# Loading work.udp_ip_rx(fast)
+# Loading work.udp_ip_tx(fast)
+# Loading work.axis_fifo(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do eth_run2.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@jarvis.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is casager@jarvis.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:00 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
+# -- Compiling module fpga
+# 
+# Top level modules:
+# 	fpga
+# End time: 14:23:00 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:00 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
+# -- Compiling module fpga_core
+# ** Warning: ../Arty/fpga/rtl/fpga_core.v(337): (vlog-2697) MSB 4 of part-select into 'ByteCount' is out of bounds.
+# 
+# Top level modules:
+# 	fpga_core
+# End time: 14:23:00 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:00 on Oct 22,2024
+# vlog -reportprogress 300 eth_tb2.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 14:23:00 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:00 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
+# -- Compiling module eth_mac_mii_fifo
+# 
+# Top level modules:
+# 	eth_mac_mii_fifo
+# End time: 14:23:00 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:00 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii.v 
+# -- Compiling module eth_mac_mii
+# 
+# Top level modules:
+# 	eth_mac_mii
+# End time: 14:23:00 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:00 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ssio_sdr_in.v 
+# -- Compiling module ssio_sdr_in
+# 
+# Top level modules:
+# 	ssio_sdr_in
+# End time: 14:23:00 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:00 on Oct 22,2024
+# vlog -reportprogress 300 ../src/mii_phy_if.v 
+# -- Compiling module mii_phy_if
+# 
+# Top level modules:
+# 	mii_phy_if
+# End time: 14:23:00 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:00 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_1g.v 
+# -- Compiling module eth_mac_1g
+# 
+# Top level modules:
+# 	eth_mac_1g
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_rx.v 
+# -- Compiling module axis_gmii_rx
+# 
+# Top level modules:
+# 	axis_gmii_rx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_tx.v 
+# -- Compiling module axis_gmii_tx
+# 
+# Top level modules:
+# 	axis_gmii_tx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/lfsr.v 
+# -- Compiling module lfsr
+# 
+# Top level modules:
+# 	lfsr
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_rx.v 
+# -- Compiling module eth_axis_rx
+# 
+# Top level modules:
+# 	eth_axis_rx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_tx.v 
+# -- Compiling module eth_axis_tx
+# 
+# Top level modules:
+# 	eth_axis_tx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_complete.v 
+# -- Compiling module udp_complete
+# 
+# Top level modules:
+# 	udp_complete
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_checksum_gen.v 
+# -- Compiling module udp_checksum_gen
+# 
+# Top level modules:
+# 	udp_checksum_gen
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp.v 
+# -- Compiling module udp
+# 
+# Top level modules:
+# 	udp
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_rx.v 
+# -- Compiling module udp_ip_rx
+# 
+# Top level modules:
+# 	udp_ip_rx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_tx.v 
+# -- Compiling module udp_ip_tx
+# 
+# Top level modules:
+# 	udp_ip_tx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_complete.v 
+# -- Compiling module ip_complete
+# 
+# Top level modules:
+# 	ip_complete
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip.v 
+# -- Compiling module ip
+# 
+# Top level modules:
+# 	ip
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_rx.v 
+# -- Compiling module ip_eth_rx
+# 
+# Top level modules:
+# 	ip_eth_rx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_tx.v 
+# -- Compiling module ip_eth_tx
+# 
+# Top level modules:
+# 	ip_eth_tx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_arb_mux.v 
+# -- Compiling module ip_arb_mux
+# 
+# Top level modules:
+# 	ip_arb_mux
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp.v 
+# -- Compiling module arp
+# 
+# Top level modules:
+# 	arp
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_cache.v 
+# -- Compiling module arp_cache
+# 
+# Top level modules:
+# 	arp_cache
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_rx.v 
+# -- Compiling module arp_eth_rx
+# 
+# Top level modules:
+# 	arp_eth_rx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_tx.v 
+# -- Compiling module arp_eth_tx
+# 
+# Top level modules:
+# 	arp_eth_tx
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_arb_mux.v 
+# -- Compiling module eth_arb_mux
+# 
+# Top level modules:
+# 	eth_arb_mux
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arbiter.v 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 14:23:01 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:01 on Oct 22,2024
+# vlog -reportprogress 300 ../src/priority_encoder.v 
+# -- Compiling module priority_encoder
+# 
+# Top level modules:
+# 	priority_encoder
+# End time: 14:23:02 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:02 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_fifo.v 
+# -- Compiling module axis_fifo
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 14:23:02 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:02 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo.v 
+# -- Compiling module axis_async_fifo
+# 
+# Top level modules:
+# 	axis_async_fifo
+# End time: 14:23:02 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:02 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
+# -- Compiling module axis_async_fifo_adapter
+# 
+# Top level modules:
+# 	axis_async_fifo_adapter
+# End time: 14:23:02 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:02 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:23:02 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:02 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:23:02 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:23:06 on Oct 22,2024, Elapsed time: 0:01:48
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 14:23:06 on Oct 22,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: ../Arty/fpga/rtl/fpga_core.v(337): (vopt-2697) MSB 4 of part-select into 'ByteCount' is out of bounds.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.eth_mac_mii_fifo(fast)
+# Loading work.eth_mac_mii(fast)
+# Loading work.mii_phy_if(fast)
+# Loading work.ssio_sdr_in(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# Loading work.axis_async_fifo_adapter(fast)
+# Loading work.axis_async_fifo(fast)
+# Loading work.axis_async_fifo_adapter(fast__1)
+# Loading work.axis_async_fifo(fast__1)
+# Loading work.eth_axis_rx(fast)
+# Loading work.eth_axis_tx(fast)
+# Loading work.udp_complete(fast)
+# Loading work.ip_arb_mux(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading work.ip_complete(fast)
+# Loading work.eth_arb_mux(fast)
+# Loading work.ip(fast)
+# Loading work.ip_eth_rx(fast)
+# Loading work.ip_eth_tx(fast)
+# Loading work.arp(fast)
+# Loading work.arp_eth_rx(fast)
+# Loading work.arp_eth_tx(fast)
+# Loading work.arp_cache(fast)
+# Loading work.lfsr(fast__1)
+# Loading work.udp(fast)
+# Loading work.udp_checksum_gen(fast)
+# Loading work.axis_fifo(fast)
+# Loading work.udp_ip_rx(fast)
+# Loading work.udp_ip_tx(fast)
+# Loading work.axis_fifo(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+do eth_run2.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is casager@jarvis.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is casager@jarvis.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga.v 
+# -- Compiling module fpga
+# 
+# Top level modules:
+# 	fpga
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../Arty/fpga/rtl/fpga_core.v 
+# -- Compiling module fpga_core
+# 
+# Top level modules:
+# 	fpga_core
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 eth_tb2.sv 
+# -- Compiling module stimulus
+# 
+# Top level modules:
+# 	stimulus
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii_fifo.v 
+# -- Compiling module eth_mac_mii_fifo
+# 
+# Top level modules:
+# 	eth_mac_mii_fifo
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_mii.v 
+# -- Compiling module eth_mac_mii
+# 
+# Top level modules:
+# 	eth_mac_mii
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ssio_sdr_in.v 
+# -- Compiling module ssio_sdr_in
+# 
+# Top level modules:
+# 	ssio_sdr_in
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/mii_phy_if.v 
+# -- Compiling module mii_phy_if
+# 
+# Top level modules:
+# 	mii_phy_if
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_mac_1g.v 
+# -- Compiling module eth_mac_1g
+# 
+# Top level modules:
+# 	eth_mac_1g
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_rx.v 
+# -- Compiling module axis_gmii_rx
+# 
+# Top level modules:
+# 	axis_gmii_rx
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_gmii_tx.v 
+# -- Compiling module axis_gmii_tx
+# 
+# Top level modules:
+# 	axis_gmii_tx
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/lfsr.v 
+# -- Compiling module lfsr
+# 
+# Top level modules:
+# 	lfsr
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_rx.v 
+# -- Compiling module eth_axis_rx
+# 
+# Top level modules:
+# 	eth_axis_rx
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_axis_tx.v 
+# -- Compiling module eth_axis_tx
+# 
+# Top level modules:
+# 	eth_axis_tx
+# End time: 14:23:56 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:56 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_complete.v 
+# -- Compiling module udp_complete
+# 
+# Top level modules:
+# 	udp_complete
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_checksum_gen.v 
+# -- Compiling module udp_checksum_gen
+# 
+# Top level modules:
+# 	udp_checksum_gen
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp.v 
+# -- Compiling module udp
+# 
+# Top level modules:
+# 	udp
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_rx.v 
+# -- Compiling module udp_ip_rx
+# 
+# Top level modules:
+# 	udp_ip_rx
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/udp_ip_tx.v 
+# -- Compiling module udp_ip_tx
+# 
+# Top level modules:
+# 	udp_ip_tx
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_complete.v 
+# -- Compiling module ip_complete
+# 
+# Top level modules:
+# 	ip_complete
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip.v 
+# -- Compiling module ip
+# 
+# Top level modules:
+# 	ip
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_rx.v 
+# -- Compiling module ip_eth_rx
+# 
+# Top level modules:
+# 	ip_eth_rx
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_eth_tx.v 
+# -- Compiling module ip_eth_tx
+# 
+# Top level modules:
+# 	ip_eth_tx
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/ip_arb_mux.v 
+# -- Compiling module ip_arb_mux
+# 
+# Top level modules:
+# 	ip_arb_mux
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp.v 
+# -- Compiling module arp
+# 
+# Top level modules:
+# 	arp
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_cache.v 
+# -- Compiling module arp_cache
+# 
+# Top level modules:
+# 	arp_cache
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_rx.v 
+# -- Compiling module arp_eth_rx
+# 
+# Top level modules:
+# 	arp_eth_rx
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arp_eth_tx.v 
+# -- Compiling module arp_eth_tx
+# 
+# Top level modules:
+# 	arp_eth_tx
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/eth_arb_mux.v 
+# -- Compiling module eth_arb_mux
+# 
+# Top level modules:
+# 	eth_arb_mux
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/arbiter.v 
+# -- Compiling module arbiter
+# 
+# Top level modules:
+# 	arbiter
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/priority_encoder.v 
+# -- Compiling module priority_encoder
+# 
+# Top level modules:
+# 	priority_encoder
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_fifo.v 
+# -- Compiling module axis_fifo
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo.v 
+# -- Compiling module axis_async_fifo
+# 
+# Top level modules:
+# 	axis_async_fifo
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/axis_async_fifo_adapter.v 
+# -- Compiling module axis_async_fifo_adapter
+# 
+# Top level modules:
+# 	axis_async_fifo_adapter
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2023.4_3 Compiler 2024.02 Feb 17 2024
+# Start time: 14:23:57 on Oct 22,2024
+# vlog -reportprogress 300 ../src/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 14:23:57 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:24:02 on Oct 22,2024, Elapsed time: 0:00:56
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 14:24:02 on Oct 22,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.fpga_core(fast)
+# Loading work.counter(fast)
+# Loading work.flopenr(fast)
+# Loading work.eth_mac_mii_fifo(fast)
+# Loading work.eth_mac_mii(fast)
+# Loading work.mii_phy_if(fast)
+# Loading work.ssio_sdr_in(fast)
+# Loading work.eth_mac_1g(fast)
+# Loading work.axis_gmii_rx(fast)
+# Loading work.lfsr(fast)
+# Loading work.axis_gmii_tx(fast)
+# Loading work.axis_async_fifo_adapter(fast)
+# Loading work.axis_async_fifo(fast)
+# Loading work.axis_async_fifo_adapter(fast__1)
+# Loading work.axis_async_fifo(fast__1)
+# Loading work.eth_axis_rx(fast)
+# Loading work.eth_axis_tx(fast)
+# Loading work.udp_complete(fast)
+# Loading work.ip_arb_mux(fast)
+# Loading work.arbiter(fast)
+# Loading work.priority_encoder(fast)
+# Loading work.ip_complete(fast)
+# Loading work.eth_arb_mux(fast)
+# Loading work.ip(fast)
+# Loading work.ip_eth_rx(fast)
+# Loading work.ip_eth_tx(fast)
+# Loading work.arp(fast)
+# Loading work.arp_eth_rx(fast)
+# Loading work.arp_eth_tx(fast)
+# Loading work.arp_cache(fast)
+# Loading work.lfsr(fast__1)
+# Loading work.udp(fast)
+# Loading work.udp_checksum_gen(fast)
+# Loading work.axis_fifo(fast)
+# Loading work.udp_ip_rx(fast)
+# Loading work.udp_ip_tx(fast)
+# Loading work.axis_fifo(fast__1)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# End time: 14:28:39 on Oct 22,2024, Elapsed time: 0:04:37
 # Errors: 0, Warnings: 1

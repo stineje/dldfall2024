@@ -84,7 +84,9 @@ module fpga_core #
      * UART: 115200 bps, 8N1
      */
     input  wire       uart_rxd, // UART receive data input
-    output wire       uart_txd // UART transmit data output
+    output wire       uart_txd, // UART transmit data output
+
+    input wire countRst
 );
 
 // AXI between MAC and Ethernet modules
@@ -289,7 +291,8 @@ assign tx_udp_checksum = 0;
 assign tx_udp_payload_axis_tdata = tx_fifo_udp_payload_axis_tdata; //this will change based on a byte counter
 assign tx_udp_payload_axis_tvalid = tx_fifo_udp_payload_axis_tvalid; //tvalid, tready, tlast may be issues to resolve, could just hardcode to 1
 assign tx_fifo_udp_payload_axis_tready = tx_udp_payload_axis_tready;
-assign tx_udp_payload_axis_tlast = tx_fifo_udp_payload_axis_tlast;
+//assign tx_udp_payload_axis_tlast = tx_fifo_udp_payload_axis_tlast;
+//assign tx_udp_payload_axis_tlast = (ByteCount == 8'h0c); //change this to reflect end of frame
 assign tx_udp_payload_axis_tuser = tx_fifo_udp_payload_axis_tuser;
 
 //assign tx_udp_payload_axis_tdata = 8'h55; //this will change based on a byte counter
@@ -304,14 +307,38 @@ assign tx_udp_payload_axis_tuser = tx_fifo_udp_payload_axis_tuser;
 //assign rx_fifo_udp_payload_axis_tlast = rx_udp_payload_axis_tlast;
 //assign rx_fifo_udp_payload_axis_tuser = rx_udp_payload_axis_tuser;
 
-assign rx_fifo_udp_payload_axis_tdata = 8'h55; //changes this after tx assigned to output from it (for next transmission?)
+//assign rx_fifo_udp_payload_axis_tdata = 8'h55; //changes this after tx assigned to output from it (for next transmission?)
 assign rx_fifo_udp_payload_axis_tvalid = 1'b1;
 assign rx_udp_payload_axis_tready = 1'b1;
-assign rx_fifo_udp_payload_axis_tlast = 1'b1;
+assign rx_fifo_udp_payload_axis_tlast = 1'b0;
 assign rx_fifo_udp_payload_axis_tuser = 1'b1;
 
+//counter logic
+localparam msgLength = 96; //change this for longer message
+wire [7:0] ByteCount; //can change this along w/ counter para
+wire ByteCountEnable;
+wire ByteCountReset;
+wire [msgLength-1:0] message; //change this for longer message
+wire [7:0] messageBytes [msgLength/8-1:0];
+
+assign ByteCountEnable = 1'b1;
+//assign ByteCountReset = 1'b1;
+assign ByteCountReset = countRst; //coming from testbench, added a countRst
+assign tx_udp_payload_axis_tlast = (ByteCount >= 8'h0a); //change this to reflect end of frame
+
+//counter added to iterate through transmitted message
+counter #(8) ByteCounter(clk, ByteCountReset, ByteCountEnable, ByteCount);
+assign message = 96'h55_68_65_6C_6C_6F_20_77_6F_72_6C_64;
+genvar index;
+for (index = 0; index < msgLength/8; index = index + 1) begin 
+    assign messageBytes[index] = message[(index*8)+8-1 : (index*8)];
+end
+//assign rx_fifo_udp_payload_axis_tdata = messageBytes[ByteCount[4:0]];
+assign tx_fifo_udp_payload_axis_tdata = messageBytes[ByteCount[4:0]]; //may need to reverse this? (moving in reverse)
+//assign rx_udp_payload_axis_tdata = messageBytes[ByteCount[4:0]];
+
 // Place first payload byte onto LEDs
-reg valid_last = 0;
+reg valid_last = 1; //changed this from 0 in order to get the last byte value
 reg [7:0] led_reg = 0;
 
 always @(posedge clk) begin //editing this out for now
@@ -320,7 +347,7 @@ always @(posedge clk) begin //editing this out for now
     end else begin
         if (tx_udp_payload_axis_tvalid) begin
             if (!valid_last) begin
-                led_reg <= tx_udp_payload_axis_tdata; //placing output of tx_udp... on LEDs
+                led_reg <= tx_udp_payload_axis_tdata; //placing last output of tx_udp... on LEDs
                 valid_last <= 1'b1;
             end
             if (tx_udp_payload_axis_tlast) begin
@@ -551,11 +578,11 @@ udp_complete_inst (
     .m_udp_dest_port(rx_udp_dest_port),
     .m_udp_length(rx_udp_length),
     .m_udp_checksum(rx_udp_checksum),
-    .m_udp_payload_axis_tdata(rx_udp_payload_axis_tdata),
-    .m_udp_payload_axis_tvalid(rx_udp_payload_axis_tvalid),
-    .m_udp_payload_axis_tready(rx_udp_payload_axis_tready),
-    .m_udp_payload_axis_tlast(rx_udp_payload_axis_tlast),
-    .m_udp_payload_axis_tuser(rx_udp_payload_axis_tuser),
+    .m_udp_payload_axis_tdata(rx_udp_payload_axis_tdata),  //may change so they can be hardwired   
+    .m_udp_payload_axis_tvalid(rx_udp_payload_axis_tvalid),//may change so they can be hardwired
+    .m_udp_payload_axis_tready(rx_udp_payload_axis_tready),//may change so they can be hardwired
+    .m_udp_payload_axis_tlast(rx_udp_payload_axis_tlast),//may change so they can be hardwired
+    .m_udp_payload_axis_tuser(rx_udp_payload_axis_tuser),//may change so they can be hardwired
     // Status signals
     .ip_rx_busy(),
     .ip_tx_busy(),

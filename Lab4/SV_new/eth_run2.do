@@ -69,6 +69,10 @@ vlog ../src/axis_async_fifo_adapter.v
 #vlog ../src/mac_pause_ctrl_tx.v
 #vlog ../src/mac_pause_ctrl_rx.v
 
+vlog ../src/counter.sv
+vlog ../src/flopenr.sv
+
+
 # start and run simulation
 vsim -voptargs=+acc work.stimulus
 
@@ -98,6 +102,11 @@ add wave -hex /stimulus/dut/tx_udp_source_port
 add wave -hex /stimulus/dut/tx_udp_dest_port
 add wave -hex /stimulus/dut/tx_udp_length
 add wave -hex /stimulus/dut/tx_udp_checksum
+add wave -hex /stimulus/dut/messageBytes
+add wave -hex /stimulus/dut/message
+add wave -hex /stimulus/dut/ByteCount
+
+add wave -hex /stimulus/dut/rx_fifo_udp_payload_axis_tdata
 
 #assign tx_udp_payload_axis_tdata = tx_fifo_udp_payload_axis_tdata; //this will change based on a byte counter
 #assign tx_udp_payload_axis_tvalid = tx_fifo_udp_payload_axis_tvalid; //tvalid, tready, tlast may be issues to resolve, could just hardcode to 1

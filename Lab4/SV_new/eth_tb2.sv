@@ -44,6 +44,8 @@ module stimulus;
    logic 	        phy_reset_n;
    logic 	        uart_txd;
 
+   logic countRst;
+
    fpga_core #(
 	       .TARGET(TARGET)
 	       )
@@ -97,13 +99,23 @@ module stimulus;
 	 * UART: 115200 bps, 8N1
 	 */
 	.uart_rxd(uart_rxd),
-	.uart_txd(uart_txd)
+	.uart_txd(uart_txd),
+
+   .countRst(countRst)
 	);
 
    // Clock generation
    initial begin
       clk = 1'b0;
       forever #4 clk = ~clk; // 125 MHz clock (8ns period)
+   end
+
+   // Test stimulus
+   initial begin
+      countRst = 1'b1; // Apply reset for ByteCounter
+      #20;
+      countRst = 1'b0;
+      #20;
    end
 
    initial begin
