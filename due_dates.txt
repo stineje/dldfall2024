@@ -13,9 +13,9 @@ Assigned: 9/23
 Due: 10/21
 
 Lab 3
-Assigned 10/14
+Assigned 10/21
 Due: 11/4
 
 Project
-Assigned: 11/11
+Assigned: 11/4
 Due: 12/6
