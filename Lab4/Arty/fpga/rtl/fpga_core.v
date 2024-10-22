@@ -292,6 +292,12 @@ assign tx_fifo_udp_payload_axis_tready = tx_udp_payload_axis_tready;
 assign tx_udp_payload_axis_tlast = tx_fifo_udp_payload_axis_tlast;
 assign tx_udp_payload_axis_tuser = tx_fifo_udp_payload_axis_tuser;
 
+//assign tx_udp_payload_axis_tdata = 8'h55; //this will change based on a byte counter
+//assign tx_udp_payload_axis_tvalid = 1'b1; //tvalid, tready, tlast may be issues to resolve, could just hardcode to 1
+//assign tx_fifo_udp_payload_axis_tready = 1'b1;
+//assign tx_udp_payload_axis_tlast = 1'b0;
+//assign tx_udp_payload_axis_tuser = 1'b1;
+
 //assign rx_fifo_udp_payload_axis_tdata = rx_udp_payload_axis_tdata; //changes this after tx assigned to output from it (for next transmission?)
 //assign rx_fifo_udp_payload_axis_tvalid = rx_udp_payload_axis_tvalid && match_cond_reg;
 //assign rx_udp_payload_axis_tready = (rx_fifo_udp_payload_axis_tready && match_cond_reg) || no_match_reg;
@@ -308,7 +314,7 @@ assign rx_fifo_udp_payload_axis_tuser = 1'b1;
 reg valid_last = 0;
 reg [7:0] led_reg = 0;
 
-always @(posedge clk) begin
+always @(posedge clk) begin //editing this out for now
     if (rst) begin
         led_reg <= 0;
     end else begin
@@ -323,6 +329,7 @@ always @(posedge clk) begin
         end
     end
 end
+
 
 //assign led = sw;
 assign {led0_g, led1_g, led2_g, led3_g, led4, led5, led6, led7} = led_reg; //state of the LEDs is updated on the rising edge of the clock when a valid payload is transmitted
