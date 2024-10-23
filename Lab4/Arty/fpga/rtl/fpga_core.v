@@ -86,7 +86,7 @@ module fpga_core #
     input  wire       uart_rxd, // UART receive data input
     output wire       uart_txd, // UART transmit data output
 
-    input wire countRst
+    input wire countRst //changed this to a button in board
 );
 
 // AXI between MAC and Ethernet modules
@@ -630,7 +630,8 @@ udp_payload_fifo (
     .s_axis_tuser(rx_fifo_udp_payload_axis_tuser),
 
     // AXI output
-    .m_axis_tdata(tx_fifo_udp_payload_axis_tdata),
+    //.m_axis_tdata(tx_fifo_udp_payload_axis_tdata), //changed this so values are not overlapping
+    .m_axis_tdata(),
     .m_axis_tkeep(),
     .m_axis_tvalid(tx_fifo_udp_payload_axis_tvalid),
     .m_axis_tready(tx_fifo_udp_payload_axis_tready),
