@@ -1,36 +1,36 @@
-# do sha256.do
-# Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 11:37:37 on Oct 31,2024
-# vlog flopenr.sv sha256.sv tb_sha256.sv 
+# do datapath.do
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 21:12:51 on Nov 10,2024
+# vlog mux.sv flopenr.sv datapath.sv tb_datapath.sv 
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module mux4
+# -- Compiling module mux5
+# -- Compiling module mux6
+# -- Compiling module mux16
 # -- Compiling module flopenr
-# -- Compiling module top
-# -- Compiling module sha_padder
-# -- Compiling module sha256
-# -- Compiling module prepare
-# -- Compiling module main_comp
-# -- Compiling module intermediate_hash
-# -- Compiling module majority
-# -- Compiling module choice
-# -- Compiling module Sigma0
-# -- Compiling module sigma0
-# -- Compiling module Sigma1
-# -- Compiling module sigma1
-# -- Compiling module stimulus
+# -- Compiling module datapath
+# -- Compiling module tb
 # 
 # Top level modules:
-# 	intermediate_hash
-# 	stimulus
-# End time: 11:37:37 on Oct 31,2024, Elapsed time: 0:00:00
+# 	mux3
+# 	mux4
+# 	mux5
+# 	mux6
+# 	mux16
+# 	tb
+# End time: 21:12:51 on Nov 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.stimulus 
-# Start time: 11:37:37 on Oct 31,2024
+# vsim -voptargs="+acc" work.tb 
+# Start time: 21:12:51 on Nov 10,2024
 # ** Note: (vsim-3812) Design is being optimized...
-# //  ModelSim SE-64 2021.3 Jul 13 2021
+# //  Questa Sim-64
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
 # //
 # //  Copyright 1991-2021 Mentor Graphics Corporation
 # //  All Rights Reserved.
 # //
-# //  ModelSim SE-64 and its associated documentation contain trade
+# //  QuestaSim and its associated documentation contain trade
 # //  secrets and commercial or financial information that are the property of
 # //  Mentor Graphics Corporation and are privileged, confidential,
 # //  and exempt from disclosure under the Freedom of Information Act,
@@ -39,18 +39,9 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading sv_std.std
-# Loading work.stimulus(fast)
-# Loading work.top(fast)
-# Loading work.sha_padder(fast)
-# Loading work.sha256(fast)
-# Loading work.prepare(fast)
-# Loading work.sigma1(fast)
-# Loading work.sigma0(fast)
-# Loading work.main_comp(fast)
-# Loading work.Sigma1(fast)
-# Loading work.Sigma0(fast)
-# Loading work.choice(fast)
-# Loading work.majority(fast)
+# Loading work.tb(fast)
+# Loading work.datapath(fast)
+# Loading work.mux2(fast)
 # Loading work.flopenr(fast)
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
@@ -60,5 +51,5 @@
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
-# End time: 11:37:38 on Oct 31,2024, Elapsed time: 0:00:01
+# End time: 21:12:51 on Nov 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
