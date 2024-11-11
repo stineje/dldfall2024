@@ -21,12 +21,14 @@ module tb ();
    initial
      begin
 	#0  reset = 1'b1;
-	#0  init = 1'b0;
+	#0  init = 1'b1;
 	#0  en1 = 1'b0;
 	#0  A = 16'h3010;
 	#51 reset = 1'b0;
 	#5  en1 = 1'b1;
-	#10 init = 1'b1;	
+	#10 init = 1'b0;
+	#85 en1 = 1'b0;
+	
 	
      end
 

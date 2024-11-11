@@ -31,7 +31,14 @@ view wave
 
 -- display input and output signals as hexidecimal values
 # Diplays All Signals recursively
-add wave -hex -r /tb/*
+#add wave -hex -r /tb/*
+add wave -color gold -hex /tb/clk
+add wave -noupdate -divider -height 32 "Datapath"
+add wave -noupdate -expand -group tb /tb/A
+add wave -noupdate -expand -group tb /tb/Z
+add wave -noupdate -divider -height 32 "Control"
+add wave -noupdate -expand -group control /tb/dut/init
+add wave -noupdate -expand -group control /tb/dut/en1
 
 
 -- Set Wave Output Items 
@@ -47,5 +54,5 @@ configure wave -rowmargin 4
 configure wave -childrowmargin 2
 
 -- Run the Simulation 
-run 25 ns
+run 175 ns
 quit

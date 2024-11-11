@@ -1,7 +1,21 @@
+# //  Questa Sim-64
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
 # do datapath.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 21:12:51 on Nov 10,2024
-# vlog mux.sv flopenr.sv datapath.sv tb_datapath.sv 
+# Start time: 08:01:20 on Nov 11,2024
+# vlog -reportprogress 300 mux.sv flopenr.sv datapath.sv tb_datapath.sv 
 # -- Compiling module mux2
 # -- Compiling module mux3
 # -- Compiling module mux4
@@ -19,37 +33,53 @@
 # 	mux6
 # 	mux16
 # 	tb
-# End time: 21:12:51 on Nov 10,2024, Elapsed time: 0:00:00
+# End time: 08:01:20 on Nov 11,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.tb 
-# Start time: 21:12:51 on Nov 10,2024
+# Start time: 08:01:20 on Nov 11,2024
 # ** Note: (vsim-3812) Design is being optimized...
-# //  Questa Sim-64
-# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
-# //
-# //  Copyright 1991-2021 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  QuestaSim and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
-# //
 # Loading sv_std.std
 # Loading work.tb(fast)
 # Loading work.datapath(fast)
 # Loading work.mux2(fast)
 # Loading work.flopenr(fast)
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# configure wave not supported in batch mode
-# End time: 21:12:51 on Nov 10,2024, Elapsed time: 0:00:00
+# .main_pane.wave.interior.cs.body.pw.wf
+do datapath.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is jstine@mimi.ecen.okstate.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 08:02:56 on Nov 11,2024
+# vlog -reportprogress 300 mux.sv flopenr.sv datapath.sv tb_datapath.sv 
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module mux4
+# -- Compiling module mux5
+# -- Compiling module mux6
+# -- Compiling module mux16
+# -- Compiling module flopenr
+# -- Compiling module datapath
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	mux3
+# 	mux4
+# 	mux5
+# 	mux6
+# 	mux16
+# 	tb
+# End time: 08:02:56 on Nov 11,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 08:02:57 on Nov 11,2024, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.tb 
+# Start time: 08:02:57 on Nov 11,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.datapath(fast)
+# Loading work.mux2(fast)
+# Loading work.flopenr(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# End time: 08:06:21 on Nov 11,2024, Elapsed time: 0:03:24
 # Errors: 0, Warnings: 0

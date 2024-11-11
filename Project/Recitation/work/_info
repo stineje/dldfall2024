@@ -11,24 +11,25 @@ z2
 cModel Technology
 Z0 d/home/jstine/ecen2233/dldfall2024/Project/Recitation
 T_opt
-Z1 !s110 1731294771
-Va5am822SkZnYBeNGffH?71
+!s110 1731333681
+VGE8gkeJTGSb5Ra]KcBU1>2
 04 2 4 work tb fast 0
-=1-b07b25d4a6a8-67317633-687fb-372f
+=1-cc483a29a3f1-67320e31-1cdd2-cc26
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+Z1 tCvgOpt 0
 n@_opt
 OL;O;2021.3_1;73
+R0
 vdatapath
-Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R1
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1731333776
 !i10b 1
-!s100 9C`dRH]:XgHbd3N_3mL?Z2
-I]X?z4V5mmDU`=QB>hUSV43
+!s100 ZM`N0S^F9S<Yn]^h[WKUR2
+I@iOIYKc0SJRlnb4Jz84kO3
 S1
 R0
-w1731294716
+w1731333328
 8datapath.sv
 Fdatapath.sv
 !i122 0
@@ -38,15 +39,15 @@ Z5 OL;L;2021.3_1;73
 r1
 !s85 0
 31
-Z6 !s108 1731294771.000000
-Z7 !s107 tb_datapath.sv|datapath.sv|flopenr.sv|mux.sv|
-Z8 !s90 mux.sv|flopenr.sv|datapath.sv|tb_datapath.sv|
+Z6 !s108 1731333776.000000
+!s107 tb_datapath.sv|datapath.sv|flopenr.sv|mux.sv|
+Z7 !s90 -reportprogress|300|mux.sv|flopenr.sv|datapath.sv|tb_datapath.sv|
 !i113 0
-Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
-vflopenr
-R3
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
+vflopenr
+R2
+R3
 !i10b 1
 !s100 >H53_[VzEd=<^J85CUzQ61
 IF@VNY1HJW0NSRQ68@VL0j2
@@ -63,14 +64,14 @@ r1
 !s85 0
 31
 R6
+Z9 !s107 tb_datapath.sv|datapath.sv|flopenr.sv|mux.sv|
 R7
-R8
 !i113 0
-R9
-R2
-vmux16
-R3
+R8
 R1
+vmux16
+R2
+R3
 !i10b 1
 !s100 FBn<bCHGI=@B50]U;H43B2
 IWHTMj;HK]8S?g7i?lHb0h3
@@ -87,14 +88,14 @@ r1
 !s85 0
 31
 R6
-R7
-R8
-!i113 0
 R9
-R2
-vmux2
-R3
+R7
+!i113 0
+R8
 R1
+vmux2
+R2
+R3
 !i10b 1
 !s100 1iOj[UCQz<Po`YZl4WSmn3
 IOaZhWHb^R:fSe?8QL8jS52
@@ -111,14 +112,14 @@ r1
 !s85 0
 31
 R6
-R7
-R8
-!i113 0
 R9
-R2
-vmux3
-R3
+R7
+!i113 0
+R8
 R1
+vmux3
+R2
+R3
 !i10b 1
 !s100 HX>mWWJQ@5Y@GIiTOFUT;2
 ImaUGR<dQSG?Jm6oFzmHfm2
@@ -135,14 +136,14 @@ r1
 !s85 0
 31
 R6
-R7
-R8
-!i113 0
 R9
-R2
-vmux4
-R3
+R7
+!i113 0
+R8
 R1
+vmux4
+R2
+R3
 !i10b 1
 !s100 1<o<^B1zKMNiLzkN2V@RI0
 I?eH=m0FebZmX?2ECEbXCm0
@@ -159,14 +160,14 @@ r1
 !s85 0
 31
 R6
-R7
-R8
-!i113 0
 R9
-R2
-vmux5
-R3
+R7
+!i113 0
+R8
 R1
+vmux5
+R2
+R3
 !i10b 1
 !s100 3F>N`O6VA^0_zKPRk1zV23
 II_7FQ04`[Jfz3=C6i<2;:0
@@ -183,14 +184,14 @@ r1
 !s85 0
 31
 R6
-R7
-R8
-!i113 0
 R9
-R2
-vmux6
-R3
+R7
+!i113 0
+R8
 R1
+vmux6
+R2
+R3
 !i10b 1
 !s100 N1:PhA8]DVZOH:jPVlU0=3
 I]hZ5d[M0EEfEIFAej=NT20
@@ -207,32 +208,32 @@ r1
 !s85 0
 31
 R6
-R7
-R8
-!i113 0
 R9
-R2
-vtb
-R3
+R7
+!i113 0
+R8
 R1
+vtb
+R2
+R3
 !i10b 1
-!s100 [k9KGP_F;hdolB72HczXZ0
-IELSXI2A7d<dR36WnTY_DL0
+!s100 6M=70_e>ao;PNi?Mki5I_2
+IebbbS]zIH4RQT?ZN`]oTV0
 S1
 R0
-w1731294768
+w1731333598
 8tb_datapath.sv
 Ftb_datapath.sv
 !i122 0
-L0 2 33
+L0 2 35
 R4
 R5
 r1
 !s85 0
 31
 R6
-R7
-R8
-!i113 0
 R9
-R2
+R7
+!i113 0
+R8
+R1
